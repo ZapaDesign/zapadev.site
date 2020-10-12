@@ -1,0 +1,41 @@
+{
+	"read-more": "Read More",
+	"published-at": "Published at:",
+	"blog-description": "Hello! My name is Sergey Zaparenko and it's site-portfolio site",
+	"also-available-in": "Also available in",
+	"links": {
+		"home": "What am I doing",
+		"about": "Let's get acquainted",
+		"skills": "Skills",
+		"portfolio": "Portfolio",
+		"wprocess": "How to cooperate",
+		"blog": "Blog",
+		"english": "English version",
+		"russian": "Версия на русском",
+		"ukrainian": "Версія на ураїінській"
+	},
+	"home": {
+		"title": "DESIGN AND DEVELOPMENT OF INTERNET SITES",
+		"description": ""
+	},
+	"about": {
+		"title": "LET'S GET ACQUAINTED",
+		"description": "| brief information about me"
+	},
+	"portfolio": {
+		"title": "PORTFOLIO",
+		"description": "| examples of my work"
+	},
+	"skills": {
+		"title": "SKILLS",
+		"description": "| the skills and technologies that I use in my work"
+	},
+	"wprocess": {
+		"title": "Wprocess",
+		"description": "| This page is made to give you more informations."
+	},
+	"blog": {
+		"title": "Blog",
+		"description": "| my personal blog"
+	}
+}

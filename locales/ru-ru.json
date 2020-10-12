@@ -1,0 +1,40 @@
+{
+	"read-more": "Читать далее",
+	"published-at": "Опубликовано:",
+	"blog-description": "Привет! Меня зовут Сергей и вы попали на мой сайт-портфолио",
+	"also-available-in": "También disponible en",
+	"links": {
+		"home": "Чем занимаюсь",
+		"about": "Давай знакомиться",
+		"skills": "Умею в...",
+		"portfolio": "Портфолио",
+		"wprocess": "Как сотрудничаем",
+		"blog": "Блог",
+		"english": "English version",
+		"russian": "Версия на русском"
+	},
+	"home": {
+		"title": "ДИЗАЙН И РАЗРАБОТКА ИНТЕРНЕТ САЙТОВ",
+		"description": ""
+	},
+	"about": {
+		"title": "ДАВАЙ ЗНАКОМИТЬСЯ",
+		"description": "| краткая информация обо мне"
+	},
+	"portfolio": {
+		"title": "ПОРТФОЛИО",
+		"description": "| примеры моих работ"
+	},
+	"skills": {
+		"title": "МОИ НАВЫКИ",
+		"description": "| навыки и технологии, которые я использую в работе"
+	},
+	"wprocess": {
+		"title": "КАК СОТРУДНИЧАЕМ",
+		"description": "| процесс работы над вашим проэктом"
+	},
+	"blog": {
+		"title": "БЛОГ",
+		"description": "| мой личный блог"
+	}
+}

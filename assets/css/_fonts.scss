@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "OpinionProCondensed";
+  src: url("~assets/fonts/OpinionProCondensed-Thin.eot"); /* IE9 Compat Modes */
+  src: url("~assets/fonts/OpinionProCondensed-Thin.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("~assets/fonts/OpinionProCondensed-Thin.otf") format("opentype"), /* Open Type Font */
+    url("~assets/fonts/OpinionProCondensed-Thin.svg") format("svg"), /* Legacy iOS */
+    url("~assets/fonts/OpinionProCondensed-Thin.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("~assets/fonts/OpinionProCondensed-Thin.woff") format("woff"), /* Modern Browsers */
+    url("~assets/fonts/OpinionProCondensed-Thin.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpinionProCondensed";
+  src: url("~assets/fonts/OpinionProCondensed-Bold.eot"); /* IE9 Compat Modes */
+  src: url("~assets/fonts/OpinionProCondensed-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("~assets/fonts/OpinionProCondensed-Bold.otf") format("opentype"), /* Open Type Font */
+    url("~assets/fonts/OpinionProCondensed-Bold.svg") format("svg"), /* Legacy iOS */
+    url("~assets/fonts/OpinionProCondensed-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("~assets/fonts/OpinionProCondensed-Bold.woff") format("woff"), /* Modern Browsers */
+    url("~assets/fonts/OpinionProCondensed-Bold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpinionProExtraCondensed";
+  src: url("~assets/fonts/OpinionProExtraCondensed-Thin.eot"); /* IE9 Compat Modes */
+  src: url("~assets/fonts/OpinionProExtraCondensed-Thin.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("~assets/fonts/OpinionProExtraCondensed-Thin.otf") format("opentype"), /* Open Type Font */
+    url("~assets/fonts/OpinionProExtraCondensed-Thin.svg") format("svg"), /* Legacy iOS */
+    url("~assets/fonts/OpinionProExtraCondensed-Thin.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("~assets/fonts/OpinionProExtraCondensed-Thin.woff") format("woff"), /* Modern Browsers */
+    url("~assets/fonts/OpinionProExtraCondensed-Thin.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpinionProExtraCondensed";
+  src: url("~assets/fonts/OpinionProExtraCondensed-Regular.eot"); /* IE9 Compat Modes */
+  src: url("~assets/fonts/OpinionProExtraCondensed-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("~assets/fonts/OpinionProExtraCondensed-Regular.otf") format("opentype"), /* Open Type Font */
+    url("~assets/fonts/OpinionProExtraCondensed-Regular.svg") format("svg"), /* Legacy iOS */
+    url("~assets/fonts/OpinionProExtraCondensed-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("~assets/fonts/OpinionProExtraCondensed-Regular.woff") format("woff"), /* Modern Browsers */
+    url("~assets/fonts/OpinionProExtraCondensed-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'RobotoSlab';
+	src: url('~assets/fonts/RobotoSlab-Light.eot');
+	src: url('~assets/fonts/RobotoSlab-Light.eot?#iefix') format('embedded-opentype'),
+	url('~assets/fonts/RobotoSlab-Light.woff') format('woff'),
+	url('~assets/fonts/RobotoSlab-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	}

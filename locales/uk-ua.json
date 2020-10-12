@@ -1,0 +1,40 @@
+{
+	"read-more": "Читати далі",
+	"published-at": "Опубліковано:",
+	"blog-description": "Привіт! Мене звати Сергій. Ви переглядаете мій сайт-портфоліо",
+	"also-available-in": "Aussi disponible en",
+	"links": {
+		"home": "Чим займаюсь",
+		"about": "Давай знайомитися",
+		"skills": "Умію в...",
+		"portfolio": "Портфоліо",
+		"wprocess": "Як співпрацюємо",
+		"blog": "Блог",
+		"english": "English version",
+		"russian": "Версия на русском"
+	},
+	"home": {
+		"title": "ДИЗАЙН ТА РОЗРОБКА ІНТЕРНЕТ САЙТіВ",
+		"description": ""
+	},
+	"about": {
+		"title": "ДАВАЙ ЗНАЙОМИТИСЯ",
+		"description": "| коротко про мене"
+	},
+	"portfolio": {
+		"title": "ПОРТФОЛІО",
+		"description": "| приклади моїх робіт"
+	},
+	"skills": {
+		"title": "МОЇ НАВИЧКИ",
+		"description": "| навички та тегнології, котрі використовую в роботі"
+	},
+	"wprocess": {
+		"title": "ЯК СПІВПРАЦЮЄМО",
+		"description": "| процес работи над вашим проектом"
+	},
+	"blog": {
+		"title": "БЛОГ",
+		"description": "| мій особистий блог"
+	}
+}
