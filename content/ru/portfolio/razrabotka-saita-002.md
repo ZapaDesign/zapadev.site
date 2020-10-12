@@ -4,6 +4,10 @@ category: web
 description: "| masterclass.pl.ua"
 thumbnail: portfolio_item_002_thumbnail.jpg
 img: portfolio_item_002_img_001.jpg
+tags: 
+  - wordpress
+  - design site
+  - web development
 ---
 
 - Adobe Photoshop, Adobe Illustrator

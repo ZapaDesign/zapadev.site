@@ -6,7 +6,10 @@ thumbnail: portfolio_item_003_thumbnail.jpg
 img: portfolio_item_003_img_001.jpg
 img2: portfolio_item_003_img_002.jpg
 img3: portfolio_item_003_img_003.jpg
-
+tags: 
+  - wordpress
+  - design site
+  - web development
 ---
 
 - Adobe Photoshop, Adobe Illustrator

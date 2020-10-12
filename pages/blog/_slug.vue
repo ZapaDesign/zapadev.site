@@ -55,6 +55,7 @@ const head = function () {
   }
 }
 
+
 const computed = {
   getDate() {
     return format(new Date(this.post.createdAt), 'dd/MM')

@@ -4,6 +4,10 @@ category: web
 description: "| zapadesign.com"
 thumbnail: portfolio_item_004_thumbnail.jpg
 img: portfolio_item_004_img_001.jpg
+tags: 
+  - wordpress
+  - design site
+  - web development
 
 ---
 
