@@ -34,9 +34,6 @@
 <script>
 export default {
 	name: 'blog',
-	data: {
-		search:'',
-	},
 
 	async asyncData(context) {
     const { $content, app } = context
@@ -49,16 +46,7 @@ export default {
         path: post.path.replace(`/${defaultLocale}`, ''),
       })),
     }
-	},
-
-	computed: {
-		filteredPosts: function () {
-			var self = this
-			return this.posts.filter(function (post) {
-        return post.title.indexOf(self.search) >= 0
-    	});
-    }
-  }
+	}
 	
 }
 </script>
