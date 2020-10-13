@@ -1,13 +1,5 @@
 ---
-title: Розработка сайта
-category: web
-description: Tutorial paso a paso sobre cómo dejar de estar triste y ser increíble en su lugar.
-media: https://images.unsplash.com/photo-1592500103620-1ab8f2c666a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3000&q=80
-otherLanguages:
-  - locale: ru
-    path: /blog/razrabotka-saita-001
-  - locale: en
-    path: /en/blog/razrabotka-saita-001
+title: Шпаргалка по Markdown
 ---
 
 # Se asombroso

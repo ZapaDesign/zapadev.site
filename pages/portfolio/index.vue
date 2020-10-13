@@ -15,7 +15,7 @@
         :to="localePath(post.path)"
         :class="'portfolio_item_' + $index"
         class="portfolio_item"
-        :style="{ backgroundImage: 'url(portfolio/' + post.thumbnail + ')' }"
+        :style="{ backgroundImage: 'url(' + require(`~~/assets/portfolio/${post.thumbnail}`) + ')' }"
       >
         <div class="link">
           <span>{{ post.title }}</span>
@@ -25,7 +25,6 @@
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -40,14 +39,14 @@ export default {
         path: post.path.replace(`/${defaultLocale}`, ''),
       })),
     }
-  },
+  }
 }
 </script>
 
 <style lang="scss">
 .page.portfolio {
-  padding-left: 0;
   .grid_container {
+		margin-left: -3vw;
     overflow: hidden;
     flex: 1;
     display: grid;

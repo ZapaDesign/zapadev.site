@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class="post_thumbnail slideUp">
-          <img :src="post.thumbnail" alt="post.title" />
+          <img :src="require(`~~/assets/portfolio/${post.thumbnail}`)" alt="post.title" />
         </div>
         <div class="post_date slideUp">25.12.2025</div>
         <div class="post_text slideUp">
@@ -37,16 +37,8 @@
         </div>
       </div>
       <div class="post_img slideLeftImg">
-        <!-- <img src="~assets/portfolio/portfolio_item_001_img_002.jpg" alt="" /> -->
-        <img :src="post.img" alt="" />
-        <img :src="post.img2" alt="" />
-        <img :src="post.img3" alt="" />
-        <img :src="post.img4" alt="" />
-        <img :src="post.img5" alt="" />
-        <img :src="post.img6" alt="" />
-        <img :src="post.img7" alt="" />
-        <img :src="post.img8" alt="" />
-        <img :src="post.img9" alt="" />
+				<img :src="require(`~~/assets/portfolio/${post.img}`)" />
+				
       </div>
     </div>
   </div>
@@ -103,7 +95,7 @@ export default {
     return {
       post,
     }
-  },
+  }
 }
 </script>
 
@@ -129,6 +121,7 @@ export default {
     justify-content: space-between;
     padding: 1rem 1rem 1rem 0;
     color: $acf;
+		border-bottom: 1px solid #808080;
     a,
     a:active,
     a:visited {
@@ -171,10 +164,6 @@ export default {
     display: block;
     max-width: 100%;
   }
-}
-
-.post_navigation {
-  border-bottom: 1px solid #808080;
 }
 
 @media (min-width: 1200px) {

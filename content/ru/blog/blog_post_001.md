@@ -1,0 +1,6 @@
+---
+title: Шпаргалка по Git
+thumbnail: post_cheat_sheet_nuxtjs.png
+---
+
+Vice letterpress brooklyn jianbing, blue bottle sriracha sustainable. Literally chillwave squid, lomo vexillologist godard affogato whatever shabby chic vaporware kitsch polaroid. Farm-to-table lumbersexual 8-bit deep v, gochujang pok pok hella. Hashtag tumeric normcore synth freegan, poutine sustainable selfies post-ironic pork belly.

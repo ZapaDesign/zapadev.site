@@ -1,28 +1,33 @@
 <template>
-  <div class="container mx-auto pt-6">
-    <article v-if="post">
-      <header class="grid grid-cols-2 gap-4 mb-12 rounded shadow-lg p-4">
-        <img :src="post.media" alt="post.title" />
-        <div class="">
-          <h2 class="text-lg font-bold text-gray-800 mb-2">{{ post.title }}</h2>
-          <p class="text-sm text-gray-700 mb-2">
-            {{ $t('published-at') }} {{ getDate }}
-          </p>
-          <p class="text-sm text-gray-700">
-            {{ $t('also-available-in') }}
-            <nuxt-link
-              class="uppercase text-teal-600 hover:text-teal-800"
-              v-for="lang in otherLanguages"
-              :key="lang.locale"
-              :to="lang.path"
-            >
-              {{ lang.locale }}
-            </nuxt-link>
-          </p>
+  <div class="page blog">
+    <header>
+      <h1 class="slideLeft">
+        {{ post.title }}
+        <span>
+          {{ post.description }}
+        </span>
+      </h1>
+    </header>
+
+    <div class="content">
+      <div class="blog_navigation">
+        <div class="blog_form">
+					<input type="text" v-model="search" placeholder="Search title..">
         </div>
-      </header>
-      <nuxt-content class="text-gray-800" :document="post" />
-    </article>
+				<ul class="blog_items">
+					<li v-for="(post, $index) in posts" :key="`post-${$index}`">
+						<nuxt-link :to="localePath(post.path)">
+							<div class="link">
+								<span>{{ post.title }}</span>
+							</div>
+						</nuxt-link>
+					</li>
+				</ul>
+      </div>
+      <div class="blog_article slideLeftImg">
+				  <nuxt-content :document="post" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -66,16 +71,22 @@ const computed = {
 }
 
 export default {
-  name: 'post',
+  name: 'slug',
   head,
   computed,
 
   async asyncData(context) {
     const { $content, params, app, route, redirect } = context
-    const slug = params.slug
+		const slug = params.slug
+		const defaultLocale = app.i18n.locale
+    const posts = await $content(`${defaultLocale}/blog`).fetch()
     const post = await $content(`${app.i18n.locale}/blog`, slug).fetch()
 
     return {
+			      posts: posts.map((post) => ({
+        ...post,
+        path: post.path.replace(`/${defaultLocale}`, ''),
+      })),
       post,
     }
   },

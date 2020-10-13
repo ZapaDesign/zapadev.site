@@ -118,9 +118,9 @@ export default {
 		]
 	},
 
-	transition: {
-		name: 'AnimationState',
-		mode: 'out-in'
-	}
+	// transition: {
+	// 	name: 'AnimationState',
+	// 	mode: 'out-in'
+	// }
 
 }
