@@ -1,17 +1,26 @@
 ---
-title: My first article
+title: Website development for the wordpress-site of the Kvant Plus company
 category: web
-description: Step by step tutorial on how to stop being sad and being awesome instead.
-media: https://images.unsplash.com/photo-1592500103620-1ab8f2c666a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3000&q=80
+description: "| kvant-plus.com"
+thumbnail: portfolio_item_001_thumbnail.jpg
+adthumbnail: 0s
+img: portfolio_item_001_img_001.jpg
 otherLanguages:
   - locale: ru
-    path: /blog/razrabotka-saita-001
+    path: /portfolio/razrabotka-saita-001
   - locale: uk
-    path: /uk/blog/razrabotka-saita-001
+    path: /uk/portfolio/razrabotka-saita-001
+tags: 
+  - wordpress
+  - design site
+  - web development
 ---
 
-# Be Awesome
+- Adobe Photoshop, Adobe Illustrator
+- HTML5/CSS3
+- Wordpress
+- ACF, CPT UI, Polylang, ContctForm7
 
-Vice letterpress brooklyn jianbing, blue bottle sriracha sustainable. Literally chillwave squid, lomo vexillologist godard affogato whatever shabby chic vaporware kitsch polaroid. Farm-to-table lumbersexual 8-bit deep v, gochujang pok pok hella. Hashtag tumeric normcore synth freegan, poutine sustainable selfies post-ironic pork belly.
+Development of a multi-page catalog site for the "QUANT PLUS" company. Implemented adaptability, multilingualism, site search, interactive map, feedback form, custom field types, custom post types
 
-![](https://media.giphy.com/media/KzM1lAfJjCWNq/source.gif)
+[go to kvant-plus.com](http://kvant-plus.com)

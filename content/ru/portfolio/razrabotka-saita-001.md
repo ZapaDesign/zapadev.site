@@ -1,15 +1,15 @@
 ---
-title: Розработка сайта wordpress-сайта компании Квант Плюс
+title: Розробка сайту wordpress-сайту компанії Квант Плюс
 category: web
 description: "| kvant-plus.com"
 thumbnail: portfolio_item_001_thumbnail.jpg
 adthumbnail: 0s
 img: portfolio_item_001_img_001.jpg
 otherLanguages:
-  - locale: ru
-    path: /blog/razrabotka-saita-001
   - locale: en
-    path: /en/blog/razrabotka-saita-001
+    path: /en/portfolio/razrabotka-saita-001
+  - locale: uk
+    path: /uk/portfolio/razrabotka-saita-001
 tags: 
   - wordpress
   - design site

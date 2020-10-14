@@ -79,10 +79,18 @@ export default {
 			}
 		}
 	}
+
 	.blog_article {
 		 overflow: auto;
 		padding: 0 0.75vw;
 		flex: 1;
 	}
+
+	@media (min-width: 1200px) {
+  .page.blog {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
 
 </style>

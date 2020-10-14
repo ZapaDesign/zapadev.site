@@ -38,7 +38,6 @@
       </div>
       <div class="post_img slideLeftImg">
 				<img :src="require(`~~/assets/portfolio/${post.img}`)" />
-				
       </div>
     </div>
   </div>
@@ -100,6 +99,18 @@ export default {
 </script>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <style lang="scss">
 .post_info {
   overflow: auto;
@@ -137,9 +148,10 @@ export default {
   .post_text {
     padding-right: 1rem;
     ul {
-      padding-top: 2vh;
-      padding-bottom: 2vh;
-      color: $ftc;
+      padding-top: 1vh;
+			color: $ftc;
+			list-style: none;
+			padding-left: 0;
       li {
         padding-bottom: 1rem;
       }
@@ -173,31 +185,4 @@ export default {
   }
 }
 
-::-webkit-scrollbar-button {
-  background-repeat: no-repeat;
-  width: 6px;
-  height: 0px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: $sbbgc;
-  // box-shadow:0px 0px 3px #000 inset;
-}
-
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  background-color: $acf;
-  // box-shadow:0px 1px 1px #fff inset;
-}
-
-::-webkit-resizer {
-  background-repeat: no-repeat;
-  width: 4px;
-  height: 0px;
-}
-
-::-webkit-scrollbar {
-  width: 4px;
-}
 </style>

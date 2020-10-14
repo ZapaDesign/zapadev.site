@@ -24,7 +24,7 @@
 					</li>
 				</ul>
       </div>
-      <div class="blog_article slideLeftImg">
+      <div class="blog_article">
 				  <nuxt-content :document="post" />
       </div>
     </div>
@@ -94,6 +94,11 @@ export default {
 </script>
 
 <style lang="scss">
+.blog_article {
+	color: $stc;
+}
+
+
 .nuxt-content {
   h1,
   h2,

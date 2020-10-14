@@ -1,10 +1,123 @@
 ---
-title: Шпаргалка по Nuxt.js
+title: Шпаргалка по Git (коротко)
+description: '| список команд для работы с Git'
 thumbnail: post_cheat_sheet_nuxtjs.png
 ---
 
-# Se asombroso
+## Создание репозитория
 
-Vice letterpress brooklyn jianbing, blue bottle sriracha sustainable. Literally chillwave squid, lomo vexillologist godard affogato whatever shabby chic vaporware kitsch polaroid. Farm-to-table lumbersexual 8-bit deep v, gochujang pok pok hella. Hashtag tumeric normcore synth freegan, poutine sustainable selfies post-ironic pork belly.
+- **git init** создает репозиторий в каталоге
 
-![](https://media.giphy.com/media/KzM1lAfJjCWNq/source.gif)
+- **git clone** клонирует репозиторий
+
+---
+
+## Работа с ветками
+
+- **git branch** список веток
+
+  - _-v_ последнии коммиты для веток
+
+  - _--merged_ ветки слитые с текущей
+
+  - _--no-merged_ ветки не слитые с текущей
+
+- **git branch < name >** создать ветку name
+
+- **git branch -d < name >** удалить ветку name
+
+- **git checkout -b < name >** создать ветку и перейти на нее
+
+- **git chekout < name >** перейти на ветку name
+
+---
+
+## Запись изминений
+
+- **git commit** фиксация изминений
+
+  - _-m <комментарий>_ добавить комментарий
+
+  - _-a_ автоматически индексировать отслеживаемые файлы
+
+  - _-v_ помещает diff в комментарий
+
+- **git status** состояние файлов
+
+- **git add** отслеживать файлы
+
+- **git diff** просмотр неиндексированных изменений
+
+  - _--stage_ проиндексированых, попадоающих в коммит
+
+- **git rm** удаление файла из отслеживаемых и из каталога
+
+  - _-f_ принудительное удаление файла из индексируемых
+
+  - _--cached_ удалить файл только из индекса
+
+- **git mv <file_from> <file_to>** переименовать файл
+
+---
+
+## Отмена изменений
+
+- **git commit --amend** изминение последнего коммита
+
+- **git reset HEAD < file >** исклуючает файл из индекса
+
+- **git checkout -- < file >** отмена изминений в файле
+
+---
+
+## Слияние веток
+
+- **git merge < name >** сливает текущую ветку с веткой name
+
+- **git mergetool** для решение конфликтов слияния
+
+---
+
+## Работа с удалёнными репозиториями
+
+- **git remote** отображение удаленных репозиториев
+
+  - _show_ информация об отслеживаемых ветках
+
+  - _-v_ соответветствие URL имени в Git
+
+- **git fetch <имя сервера>** получение отсутствующих данных с сервера
+
+- **git pull** получение и слияние с текущей веткой
+
+- **git push** отправить изминения в репозиторий
+
+  - _--tags_ отправить изминения с метками
+
+---
+
+## Просмотр истории коммитов
+
+- **git log** история коммитов
+
+  - _-p_ diff коммитов
+
+  - _-< n >_ n последних записей
+
+  - _--stat_ короткая статистика коммитов
+
+  - _--graph_ ASII-граф
+
+---
+
+## Работа с метками
+
+- **git tag** просмотр меток
+
+- **git tag -a** создать метку
+
+  - _-a_ анотированая метка
+
+  - _-m_ меточное сообщение
+
+- **git show < tag >** показать данные метки tag

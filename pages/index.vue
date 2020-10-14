@@ -1,22 +1,15 @@
 <template>
-  <div class="container mx-auto py-12">
-    <div class="flex flex-col items-center">
-      <Logo />
-      <h1 class="title">
-        nuxt-i18n-blog
+  <div class="page">
+    <header>
+      <h1 class="slideLeft">
+        {{ $t('home.title') }}
+        <span>
+          {{ $t('home.description') }}
+        </span>
       </h1>
-      <p>{{ $t('blog-description') }}</p>
-      <div class="links">
-        <nuxt-link to="/blog" class="btn btn-teal mr-4">
-          Blog
-        </nuxt-link>
-        <a
-          href="https://github.com/alvarosaburido/nuxt-i18n-blog"
-          class="btn btn-indigo"
-        >
-          Github</a
-        >
-      </div>
+    </header>
+    <div>
+
     </div>
   </div>
 </template>
