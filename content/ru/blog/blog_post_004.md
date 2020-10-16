@@ -1,29 +1,26 @@
 ---
-title: Шпаргалка по Markdown (English)
+title: Шпаргалка по Markdown
 ---
 
-This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
+(перевод, [оригинал](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet))
 
-This cheatsheet is specifically *Markdown Here's* version of Github-flavored Markdown. This differs slightly in styling and syntax from what Github uses, so what you see below might vary a little from what you get in a *Markdown Here* email, but it should be pretty close.
+Поиграть с разметкой Markdown можно на [демо-странице](http://www.markdown-here.com/livedemo.html).
 
-You can play around with Markdown on our [live demo page](http://www.markdown-here.com/livedemo.html).
+##### Содержание  
+[Заголовки](#headers)  
+[Выделение](#emphasis)  
+[Списки](#lists)  
+[Ссылки](#links)  
+[Изображения](#images)  
+[Подсветка кода и синтаксиса](#code)  
+[Таблицы](#tables)  
+[Цитаты](#blockquotes)  
+[Встроенный HTML](#html)  
+[Горизонтальная линия](#hr)  
+[Новая строка](#lines)  
+[Видео Youtube](#videos)  
 
-##### Table of Contents  
-[Headers](#headers)
-[Emphasis](#emphasis)  
-[Lists](#lists)  
-[Links](#links)  
-[Images](#images)  
-[Code and Syntax Highlighting](#code)  
-[Tables](#tables)  
-[Blockquotes](#blockquotes)  
-[Inline HTML](#html)  
-[Horizontal Rule](#hr)  
-[Line Breaks](#lines)  
-[Youtube videos](#videos)  
-
-<a name="headers"/>
-## Headers
+<a name="headers"><h2>Заголовки</h2></a>
 
 ```no-highlight
 # H1
@@ -33,7 +30,7 @@ You can play around with Markdown on our [live demo page](http://www.markdown-he
 ##### H5
 ###### H6
 
-Alternatively, for H1 and H2, an underline-ish style:
+Кроме того, H1 и H2 можно обозначить подчеркиванием:
 
 Alt-H1
 ======
@@ -49,7 +46,7 @@ Alt-H2
 ##### H5
 ###### H6
 
-Alternatively, for H1 and H2, an underline-ish style:
+Кроме того, заголовки H1 и H2 можно обозначить подчеркиванием:
 
 Alt-H1
 ======
@@ -57,317 +54,331 @@ Alt-H1
 Alt-H2
 ------
 
-<a name="emphasis"/>
-## Emphasis
+<a name="emphasis"><h2>Выделение</h2></a>
 
 ```no-highlight
-Emphasis, aka italics, with *asterisks* or _underscores_.
+Курсив обозначается *звездочками* или _подчеркиванием_.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Полужирный шрифт - двойными **звездочками** или __подчеркиванием__.
 
-Combined emphasis with **asterisks and _underscores_**.
+Комбинированное выделение **звездочками и _подчеркиванием_**.
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+Для зачеркнутого текста используются две тильды . ~~Уберите это.~~
 ```
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+Курсив обозначается *звездочками* или _подчеркиванием_.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Полужирный шрифт - двойными **звездочками** или __подчеркиванием__.
 
-Combined emphasis with **asterisks and _underscores_**.
+Комбинированное выделение **звездочками и _подчеркиванием_**.
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+Для зачеркнутого текста используются две тильды . ~~Уберите это.~~
 
-<a name="lists"/>
-## Lists
+
+<a name="lists"><h2>Списки</h2></a>
+
+(В данном примере предшествующие и завершающие пробелы обозначены точками: ⋅)
 
 ```no-highlight
-1. First ordered list item
-2. Another item
-  * Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-  1. Ordered sub-list
-4. And another item.  
-   
-   Some text that should be aligned with the above item.
+1. Первый пункт нумерованного списка
+2. Второй пункт
+⋅⋅*Ненумерованный вложенный список.
+1. Сами числа не имеют значения, лишь бы это были цифры
+⋅⋅1. Нумерованный вложенный список
+4. И еще один пункт.
 
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
+⋅⋅⋅Внутри пунктов списка можно вставить абзацы с таким же отступом. Обратите внимание на пустую строку выше и на пробелы в начале (нужен по меньшей мере один, но здесь мы добавили три, чтобы также выровнять необработанный Markdown).
+
+⋅⋅⋅Чтобы вставить разрыв строки, но не начинать новый параграф, нужно добавить два пробела перед новой строкой.⋅⋅
+⋅⋅⋅Этот текст начинается с новой строки, но находится в том же абзаце.⋅⋅
+⋅⋅⋅(В некоторых обработчиках, например на Github, пробелы в начале новой строки не нужны.)
+
+* Ненумерованный список можно размечать звездочками
+- Или минусами
++ Или плюсами
 ```
 
-1. First ordered list item
-2. Another item
-  * Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-  1. Ordered sub-list
-4. And another item.  
-   
-   Some text that should be aligned with the above item.
+1. Первый пункт нумерованного списка
+2. Второй пункт
+  * Ненумерованный вложенный список.
+1. Сами числа не имеют значения, лишь бы это были цифры
+  1. Нумерованный вложенный список
+4. И еще один пункт.
 
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
+   Внутри пунктов списка можн�� вставить абзацы с таким же отступом. Обратите внимание на пустую строку выше и на пробелы в начале (нужен по меньшей мере один, но здесь мы добавили три, чтобы также выровнять необработанный Markdown).
 
-<a name="links"/>
-## Links
+   Чтобы вставить разрыв строки, но не начинать новый параграф, нужно добавить два пробела перед новой строкой.
+   Эта текст начинается с новой строки, но находится в том же абзаце.
+   (В некоторых обработчиках, например на Github, пробелы в начале новой строки не нужны.)
 
-There are two ways to create links.
+* Ненумерованный список можно размечать звездочками
+- Или минусами
++ Или плюсами
 
-```no-highlight
-[I'm an inline-style link](https://www.google.com)
+<a name="links"><h2>Ссылки</h2></a>
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+Ссылки можно оформить разными способами.
 
-[You can use numbers for reference-style link definitions][1]
+```markdown
+[Обычная ссылка в строке](https://www.google.com)
 
-Or leave it empty and use the [link text itself][]
+[Обычная ссылка с title](https://www.google.com "Сайт Google")
 
-Some text to show that the reference links can follow later.
+[Ссылка со сноской][Произвольный регистронезависимый текст]
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[Относительная ссылка на документ](../blob/master/LICENSE)
+
+[Для ссылок со сноской можно использовать цифры][1]
+
+Или можно просто вставить ссылку в квадратные скобки [текст ссылки]
+
+Произвольный текст, после которого можно привести ссылки.
+
+[произвольный регистронезависимый текст]: https://www.mozilla.org
 [1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
+[текст ссылки]: http://www.reddit.com
 ```
 
-[I'm an inline-style link](https://www.google.com)
+[Обычная ссылка в строке](https://www.google.com)
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+[Обычная ссылка с title](https://www.google.com "Сайт Google")
 
-[You can use numbers for reference-style link definitions][1]
+[Ссылка со сноской][Произвольный регистронезависимый текст] *
 
-Or leave it empty and use the [link text itself][]
+[Относительная ссылка на документ](../blob/master/LICENSE)
 
-Some text to show that the reference links can follow later.
+[Для ссылок со сноской можно использовать цифры][1]
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
+Или можно просто вставить ссылку в квадратные скобки [текст ссылки]
+
+Произвольный текст, после которого можно привести ссылки.
+
+[Произвольный регистронезависимый текст]: https://www.mozilla.org
 [1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
+[текст ссылки]: http://www.reddit.com
 
-<a name="images"/>
-## Images
+(*) Для символов не входящих в ASCII, например кириллицы, текст сноски все-таки регистрозависим (прим. перев.)
 
-```no-highlight
-Here's our logo (hover to see the title text):
+<a name="images"><h2>Изображения</h2></a>
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+```markdown
+Вот наш логотип (наведите указатель, чтобы увидеть текст заголовка):
 
-Reference-style: 
-![alt text][logo]
+Внутри строки:  
+![alt-текст](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Текст заголовка логотипа 1")
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+В сноске:  
+![alt-текст][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Текст заголовка логотипа 2"
 ```
 
-Here's our logo (hover to see the title text):
+Вот наш логотип (наведите указатель, чтобы увидеть текст заголовка):
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+Внутри строки:  
+![alt-текст](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Текст заголовка логотипа 1")
 
-Reference-style: 
-![alt text][logo]
+В сноске:  
+![alt-текст][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Текст заголовка логотипа 2"
 
-<a name="code"/>
-## Code and Syntax Highlighting
+<a name="code"><h2>Код и подсветка синтаксиса</h2></a>
 
-Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and *Markdown Here* -- support syntax highlighting. *Markdown Here* supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the [highlight.js demo page](http://softwaremaniacs.org/media/soft/highlight/test.html).
-
-```no-highlight
-Inline `code` has `back-ticks around` it.
-```
-
-Inline `code` has `back-ticks around` it.
-
-Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
+Блоки кода являются частью функций Markdown, но не подсветка синтаксиса. Однако многие обработчики, например Github или *Markdown Here*, поддерживают подсветку синтаксиса. Список поддерживаемых языков и способ их указания может различаться. *Markdown Here* поддерживает десятки языков (и не-языков, например синтаксис diff и заголовки HTTP); полный список и способ указания языков см. на странице [highlight.js demo-странице](http://softwaremaniacs.org/media/soft/highlight/test.html).
 
 ```no-highlight
- ```javascript
- var s = "JavaScript syntax highlighting";
- alert(s);
- ```
- 
- ```python
- s = "Python syntax highlighting"
- print s
- ```
- 
- ```
- No language indicated, so no syntax highlighting. 
- But let's throw in a <b>tag</b>.
- ```
+`Код` в строке обрамляется `обратными апострофами`.
 ```
 
-```javascript
-var s = "JavaScript syntax highlighting";
+`Код` в строке обрамляется `обратными апострофами`.
+
+Блоки кода выделяются либо тремя обратными апострофами <code>```</code> либо четырьмя пробелами в каждой строке. Рекомендуется использовать три апострофа -- они проще и только они поддерживают подсветку синтаксиса.
+
+<pre lang="no-highlight"><code>```javascript
+var s = "Подсветка JavaScript";
 alert(s);
 ```
-
+ 
 ```python
-s = "Python syntax highlighting"
+s = "Подсветка Python"
+print s
+```
+ 
+```
+Язык не указан, синтаксис не подсвечен.
+Но мы вставим в него &lt;b&gt;тег&lt;/b&gt;.
+```
+</code></pre>
+
+
+
+```javascript
+var s = "Подсветка JavaScript";
+alert(s);
+```
+ 
+```python
+s = "Подсветка Python"
 print s
 ```
 
 ```
-No language indicated, so no syntax highlighting in Markdown Here (varies on Github). 
-But let's throw in a <b>tag</b>.
+Язык не указан, синтаксис не подсвечен (некоторые обработчики все же подсвечивают).
+Но мы вставим в него <b>тег</b>.
 ```
 
-(Github Wiki pages don't seem to support syntax highlighting, so the above won't be colourful (the strings are not red, for example). Try it out in a *Markdown Here* email or a Github Markdown README or Github Issue -- you can preview a new Issue without submitting it.)
 
-Again, to see what languages are available for highlighting, and how to write those language names, see the [highlight.js demo page](http://softwaremaniacs.org/media/soft/highlight/test.html).
+<a name="tables"><h2>Таблицы</h2></a>
 
-<a name="tables"/>
-## Tables
+Таблицы не являются частью Markdown, но многие обработчики, например *Markdown Here* и Github, поддерживают их. Они позволяют легко добавить таблицы в электронное письмо -- в других случаях для этого нужно копировать их из другого приложения.
 
-Tables aren't part of the core Markdown spec, but they are part of GFM and *Markdown Here* supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
+```markdown
+Вертикальные линии обозначают столбцы.
 
-```no-highlight
-Colons can be used to align columns.
+| Таблицы       | Это                | Круто |
+| ------------- |:------------------:| -----:|
+| столбец 3     | выровнен вправо    | $1600 |
+| столбец 2     | выровнен по центру |   $12 |
+| зебра-строки  | прикольные         |    $1 |
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+Внешние вертикальные линии (|) не обязательны и нужны только, чтобы сам код Markdown выглядел красиво. Тот же код можно записать так:
 
-The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
-
-Markdown | Less | Pretty
+Markdown | не такой | красивый
 --- | --- | ---
-*Still* | `renders` | **nicely**
+*Но выводится* | `так же` | **клево**
 1 | 2 | 3
 ```
 
-Colons can be used to align columns.
+Вертикальные линии обозначают столбцы.
 
-| Tables        | Are           | Cool |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Таблицы       | Это                | Круто |
+| ------------- |:------------------:| -----:|
+| столбец 3     | выровнен вправо    | $1600 |
+| столбец 2     | выровнен по центру |   $12 |
+| зебра-строки  | прикольные         |    $1 |
 
-The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+Внешние вертикальные линии (|) не обязательны и нужны только, чтобы сам код Markdown выглядел красиво. Тот же код можно записать так:
 
-Markdown | Less | Pretty
+Markdown | не такой | красивый
 --- | --- | ---
-*Still* | `renders` | **nicely**
+*Но выводится* | `так же` | **клево**
 1 | 2 | 3
 
-<a name="blockquotes"/>
-## Blockquotes
+<a name="blockquotes"><h2>Цитаты</h2></a>
 
 ```no-highlight
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
+> С помощью цитат очень удобно в письме обозначать исходный текст.
+> Эта строка - часть той же цитаты.
 
-Quote break.
+Разрыв цитаты.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> Это очень длинная строка, но она будет правильно процитирована даже при размещении на нескольких строках. Продолжаем писать, чтобы эта строка не вмещалась на одной строке в любом окне. Кстати, в цитаты можно *вставлять* даже **Markdown**.
 ```
 
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
+> С помощью цитат очень удобно в письме обозначать исходный текст.
+> Эта строка - часть той же цитаты.
 
-Quote break.
+Разрыв цитаты.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> Это очень длинная строка, но она будет правильно процитирована даже при размещении на нескольких строках. Продолжаем писать, чтобы эта строка не вмещалась на одной строке в любом окне. Кстати, в цитаты можно также *размечать* с помощью **Markdown**.
 
-<a name="html"/>
-## Inline HTML
+<a name="html"><h2>Встроенный HTML</h2></a>
 
-You can also use raw HTML in your Markdown, and it'll mostly work pretty well. 
+Часто Markdown понимает чистый HTML.
 
 ```no-highlight
 <dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
+  <dt>Список определений</dt>
+  <dd>Это то, что люди иногда используют.</dd>
 
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+  <dt>Markdown внутри HTML</dt>
+  <dd>Работает *не очень** хорошо. Используйте HTML-<em>теги</em>.</dd>
 </dl>
 ```
 
 <dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
+  <dt>Список определений</dt>
+  <dd>Это то, что люди иногда используют.</dd>
 
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+  <dt>Markdown внутри HTML</dt>
+  <dd>Работает *не очень** хорошо. Используйте HTML-<em>теги</em>.</dd>
 </dl>
 
-<a name="hr"/>
-## Horizontal Rule
+<a name="hr"><h2>Горизонтальные линии</h2></a>
 
 ```
-Three or more...
+Три и более...
 
 ---
 
-Hyphens
+Дефисы
 
 ***
 
-Asterisks
+Звездочки
 
 ___
 
-Underscores
+Подчеркивания
 ```
 
-Three or more...
+Три и более...
 
 ---
 
-Hyphens
+Дефисы
 
 ***
 
-Asterisks
+Звездочки
 
 ___
 
-Underscores
+Подчеркивания
 
-<a name="lines"/>
-## Line Breaks
+<a name="lines"><h2>Новая строка</h2></a>
 
-My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend. 
+Для понимания работы разрыва строка автор главным образом рекомендует экспериментировать и пробовать -- нажмите &lt;Enter&gt; один раз (т.е. перейдите на новую строку), потом нажмите дважды (т.е. вставьте две новые строки) и посмотрите что приозошло. Вы сразу поймете что вам нужно. В расширении [Markdown Here](https://github.com/adam-p/markdown-here) для браузеров есть удобная функция "Markdown Toggle", которая поможет в этом.
 
-Here are some things to try out:
+*Примечание переводчика:*  
+*Для переноса на новую строку в конце предыдущей строки необходимо добавить* **два пробела**. *Без этого большинство парсеров Markdown не выполняют переход на новую строку.*
+
+Попробуйте ввести следующее:
 
 ```
-Here's a line for us to start with.
+Это начальная строка
 
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+Это строка отделена от предыдущей двумя новыми строками и станет *отдельным абзацем*.
 
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+Это тоже отдельный абзац, но...⋅⋅
+Эта строка отделена одной новой строкой, поэтому она находится в *том же абзаце*.
 ```
 
-Here's a line for us to start with.
+Это начальная строка
 
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+Эта строка отделена от предыдущей двумя новыми строками и станет *отдельным абзацем*.
 
-This line is also begins a separate paragraph, but...  
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+Это тоже отдельный абзац, но...`[здесь два пробела]`  
+Эта строка отделена одной новой строкой, поэтому она находится в *том же абзаце*.  
 
-(Technical note: *Markdown Here* uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
+(Примечание: В [Markdown Here](https://github.com/adam-p/markdown-here) разрывы строк ведут себя так же, как в [GFM](https://help.github.com/articles/github-flavored-markdown), поэтому не нужно вставлять по две новые строки.)
 
-<a name="videos"/>
-## Youtube videos
+<a name="videos"><h2>Видео Youtube</h2></a>
 
-They can't be added directly but you can add an image with a link to the video like this:
+Ролики нельзя вставить напрямую, но можно вставить изображение со ссылкой на видео, например:
 
-```no-highlight
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+```markdown
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ID_ВИДЕОРОЛИКА_НА_YOUTUBE" target="_blank"><img src="http://img.youtube.com/vi/ID_ВИДЕОРОЛИКА_НА_YOUTUBE/0.jpg" 
+alt="ALT-ТЕКСТ ИЗОБРАЖЕНИЯ" width="240" height="180" border="10" /></a>
 ```
 
-Or, in pure Markdown, but losing the image sizing and border:
+На чистом Markdown, но без размеров изображения и рамки:
 
-```no-highlight
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+```markdown
+[![ALT-ТЕКСТ ИЗОБРАЖЕНИЯ](http://img.youtube.com/vi/ID_ВИДЕОРОЛИКА_НА_YOUTUBE/0.jpg)](http://www.youtube.com/watch?v=ID_ВИДЕОРОЛИКА_НА_YOUTUBE)
 ```
+
+<a name="videos"><h2>To Do</h2></a>
+1. [x] First
+1. [ ] Second

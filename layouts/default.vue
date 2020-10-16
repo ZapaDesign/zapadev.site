@@ -14,7 +14,8 @@
   background-image: url(../assets/img-noise.png);
   min-height: 100vh;
 
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;

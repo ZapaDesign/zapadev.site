@@ -1,10 +1,10 @@
 <template>
   <nav id="nav" class="mainNavigation">
-    <nuxt-link to="/about" class="logo">
+    <nuxt-link :to="'/' + $i18n.locale + '/about'" class="logo">
       <img alt="ZapaDesign Logo" src="~/assets/logo.svg" />
     </nuxt-link>
 
-    <nuxt-link to="/">
+    <nuxt-link :to="'/' + $i18n.locale + '/'">
       <div>{{ $t('links.home') }}</div>
       <div>
         <svg>
@@ -13,7 +13,7 @@
       </div>
     </nuxt-link>
 
-    <nuxt-link to="/about">
+    <nuxt-link :to="'/' + $i18n.locale + '/about'">
       <div>{{ $t('links.about') }}</div>
       <div>
         <svg>
@@ -22,7 +22,7 @@
       </div>
     </nuxt-link>
 
-    <nuxt-link to="/skills">
+    <nuxt-link :to="'/' + $i18n.locale + '/skills'">
       <div>{{ $t('links.skills') }}</div>
       <div>
         <svg>
@@ -31,7 +31,7 @@
       </div>
     </nuxt-link>
 
-    <nuxt-link to="/portfolio">
+    <nuxt-link :to="'/' + $i18n.locale + '/portfolio'">
       <div>{{ $t('links.portfolio') }}</div>
       <div>
         <svg>
@@ -49,7 +49,7 @@
       </div>
     </nuxt-link> -->
 
-    <nuxt-link to="/blog">
+    <nuxt-link :to="'/' + $i18n.locale + '/blog/blog_post_001'">
       <div>{{ $t('links.blog') }}</div>
       <div>
         <svg>

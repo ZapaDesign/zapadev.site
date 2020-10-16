@@ -1,48 +1,66 @@
 .AnimationState-leave-active {
-	transition: opacity 0.5s;
-	opacity: 0;
+	transition: 0.5s;
 }
 
 // ==================================
+// slideLeft
+//-----------------------------------
 
 .slideLeft {
-	animation: slideLeftIn 1s forwards;
-	animation-timing-function: cubic-bezier(0.8, -0.49, 0.36, 1);
+	animation: slideLeftIn .5s ease-out forwards;
+}
+.AnimationState-leave-active .slideLeft  {
+	animation: slideLeftOut .5s ease-out forwards;
 }
 
 @keyframes slideLeftIn {
-	from {opacity: 0; transform: translateX(60px);}
-	to {opacity: 100;	transform: translateX(0);}
+	from {opacity: 0; transform: translateX(3vw);}
+	to {opacity: 1;	transform: translateX(0);}
+}
+@keyframes slideLeftOut {
+	from {opacity: 1;}
+	to {opacity: 0;}
 }
 
 // ==================================
+// slideUp
+//-----------------------------------
 
 .slideUp {
-	animation: slideUpIn 1s forwards;
+	opacity: 0;
+	animation: slideUpIn 0.5s ease-out 0.4s forwards;
+}
+.AnimationState-leave-active .slideUp {
+	animation: slideUpOut 0.5s ease-out forwards;
 }
 
 @keyframes slideUpIn {
-	from{opacity: 0; transform:translateY(50px)}
+	from{opacity: 0; transform:translateY(3vw)}
 	to {opacity: 1; transform:translateY(0)}
+}
+@keyframes slideUpOut {
+	from{opacity: 1; transform:translateY(0)}
+	to {opacity: 0; transform:translateY(5vw)}
 }
 
 // ==================================
 
-.slideLeftImg  {
-	animation: slideLeftImgIn .5s cubic-bezier(.42, 0, .58, 1) forwards;
+.slideLeftInOut  {
+	opacity: 0;
+	animation: slideLeftImgIn 0.8s ease-out .6s forwards;
 }
-.page-enter .slideLeftImg,
-.page-leave-active .slideLeftImg {
-	animation: slideLeftImgOut .5s cubic-bezier(.42, 0, .58, 1) forwards;
+
+.AnimationState-leave-active .slideLeftInOut {
+	animation: slideLeftImgOut .5s ease-out forwards;
 }
 
 @keyframes slideLeftImgIn {
-	from{opacity: 0; transform:translateX(20%)}
+	from{opacity: 0; transform:translateX(10vw)}
 	to {opacity: 1; transform:translateX(0)}
 }
 @keyframes slideLeftImgOut {
 	from{opacity: 1; transform:translateX(0)}
-	to {opacity: 0; transform:translateX(20%)}
+	to {opacity: 0; transform:translateX(3vw)}
 }
 
 

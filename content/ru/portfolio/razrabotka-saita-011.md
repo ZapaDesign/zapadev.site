@@ -3,7 +3,6 @@ title: Розработка моего сайта портфолио на nuxt.j
 category: web
 description: "| zapadesign.com"
 thumbnail: portfolio_item_011_thumbnail.jpg
-img: portfolio_item_011_img_001.jpg
 
 ---
 

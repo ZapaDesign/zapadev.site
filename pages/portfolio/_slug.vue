@@ -12,17 +12,17 @@
     <div class="content">
       <div class="post_info">
         <div class="post_navigation">
-          <nuxt-link to="/portfolio">
+          <nuxt-link :to="'/' + $i18n.locale + '/portfolio/'">
             ✕
           </nuxt-link>
           <div>
             <span>
-              <nuxt-link to="/portfolio/razrabotka-saita-002">
+              <nuxt-link :to="'/' + $i18n.locale + '/portfolio/razrabotka-saita-002'">
                 ⟵
               </nuxt-link>
             </span>
             <span>
-              <nuxt-link to="/portfolio/razrabotka-saita-001">
+              <nuxt-link :to="'/' + $i18n.locale + '/portfolio/razrabotka-saita-001'">
                 ⟶
               </nuxt-link>
             </span>
@@ -36,8 +36,14 @@
           <nuxt-content :document="post" />
         </div>
       </div>
-      <div class="post_img slideLeftImg">
-				<img :src="require(`~~/assets/portfolio/${post.img}`)" />
+      <div 
+				class="post_img slideLeftInOut">
+				<img v-if="post.img" :src="require(`~~/assets/portfolio/${post.img}`)" />
+				<img v-if="post.img1" :src="require(`~~/assets/portfolio/${post.img1}`)" />
+				<img v-if="post.img2" :src="require(`~~/assets/portfolio/${post.img2}`)" />
+				<img v-if="post.img3" :src="require(`~~/assets/portfolio/${post.img3}`)" />
+				<img v-if="post.img4" :src="require(`~~/assets/portfolio/${post.img4}`)" />
+				<img v-if="post.img5" :src="require(`~~/assets/portfolio/${post.img5}`)" />
       </div>
     </div>
   </div>
@@ -132,7 +138,6 @@ export default {
     justify-content: space-between;
     padding: 1rem 1rem 1rem 0;
     color: $acf;
-		border-bottom: 1px solid #808080;
     a,
     a:active,
     a:visited {

@@ -2,7 +2,9 @@
 title: Шпаргалка по Nuxt.js (English)
 ---
 
-:green_book: My cheat sheet for nuxt most basic stuff
+![](/blog/post_cheat_sheet_nuxtjs.png)
+
+My cheat sheet for nuxt most basic stuff
 
 Nuxt.js is a higher-level framework that builds on top of Vue. It simplifies the development of universal or single page Vue apps.
 Nuxt.js is not a server side framework. It runs on the servers. It renders the first page and after the first page is renderd, the Vue.js app takes over. 
@@ -282,7 +284,7 @@ requireComponent.keys().forEach(function (fileName) {
 })
 ```
 Load the plugin in the ```nuxt.config.js```:
-```js
+```javascript
  plugins: [
    {
      src: '~/plugins/globalComponentImport.js',

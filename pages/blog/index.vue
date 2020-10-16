@@ -12,12 +12,12 @@
     <div class="content">
       <div class="blog_navigation">
         <div class="blog_form">
-					<input type="text" v-model="search" placeholder="живой поиск" autofocus>
+					<input type="text" placeholder="живой поиск" autofocus>
         </div>
 				<ul class="blog_items">
 					<li v-for="(post, $index) in posts" :key="`post-${$index}`">
 					<nuxt-link :to="localePath(post.path)">
-						<div class="link">
+						<div class="link slideUp">
 							<span>{{ post.title }}</span>
 						</div>
      			</nuxt-link>
@@ -25,7 +25,7 @@
 				</ul>
       </div>
       <div class="blog_article slideLeftImg">
-				
+				<nuxt-content :document="post" />
       </div>
     </div>
   </div>
@@ -58,6 +58,7 @@ export default {
 		flex-basis: 20%;
 		min-width: 240px;
 		color: $stc;
+		border-bottom: 1px solid #808080;
 		.blog_form {
 			padding: 1rem 1rem 1rem 0;
 			color: $acf;
@@ -68,6 +69,8 @@ export default {
 				border:none;
 				color: $wc;
 				outline:none;
+				font-size: 1rem;
+				color: $stc;
 				&:focus {
 					border:none;
 				}

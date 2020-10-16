@@ -83,18 +83,19 @@ export default {
 					},
 				],
 				defaultLocale: 'ru',
-				noPrefixDefaultLocale: true,
+				strategy: 'prefix',
 				vueI18n: {
 					fallbackLocale: 'ru',
 					messages: {
 						ru: require('./locales/ru-ru.json'),
 						en: require('./locales/en-us.json'),
 						uk: require('./locales/uk-ua.json'),
-					},
-				},
+					}
+				}
 			}
 		]
 	],
+	
 	/*
 	** Axios module configuration
 	** See https://axios.nuxtjs.org/options
@@ -104,7 +105,14 @@ export default {
 	** Content module configuration
 	** See https://content.nuxtjs.org/configuration
 	*/
-	content: {},
+	content: {
+		markdown: {
+			prism: {
+				theme: 'prism-themes/themes/prism-dracula.css'
+			}
+		},
+		fullTextSearchFields: ['title', 'description']
+	},
 	/*
 	** Build configuration
 	** See https://nuxtjs.org/api/configuration-build/
@@ -118,9 +126,9 @@ export default {
 		]
 	},
 
-	// transition: {
-	// 	name: 'AnimationState',
-	// 	mode: 'out-in'
-	// }
+	transition: {
+		name: 'AnimationState',
+		mode: 'out-in'
+	}
 
 }

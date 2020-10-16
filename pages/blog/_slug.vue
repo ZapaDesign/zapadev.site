@@ -12,7 +12,7 @@
     <div class="content">
       <div class="blog_navigation">
         <div class="blog_form">
-					<input type="text" v-model="search" placeholder="Search title..">
+					<input type="search" autocomplete="off" placeholder="Search title.." />
         </div>
 				<ul class="blog_items">
 					<li v-for="(post, $index) in posts" :key="`post-${$index}`">
@@ -24,12 +24,27 @@
 					</li>
 				</ul>
       </div>
-      <div class="blog_article">
+      <div class="blog_article slideLeftInOut">
 				  <nuxt-content :document="post" />
       </div>
     </div>
   </div>
 </template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
 import { format } from 'date-fns'
@@ -73,8 +88,7 @@ const computed = {
 export default {
   name: 'slug',
   head,
-  computed,
-
+	computed,
   async asyncData(context) {
     const { $content, params, app, route, redirect } = context
 		const slug = params.slug
@@ -89,14 +103,92 @@ export default {
       })),
       post,
     }
-  },
+	},
+	
+	
 }
 </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <style lang="scss">
-.blog_article {
-	color: $stc;
+
+	.blog_navigation {
+		overflow: auto;
+		border-right: 1px solid #808080;
+		flex-basis: 20%;
+		min-width: 240px;
+		color: $stc;
+
+		.blog_form {
+			padding: 1rem 1rem 1rem 0;
+			color: $acf;
+			border-bottom: 1px solid #808080;
+			input {
+				background-color: transparent;
+				width: 100%;
+				border:none;
+				color: $wc;
+				outline:none;
+				font-size: 1rem;
+				color: $stc;
+				&:focus {
+					border:none;
+				}
+			}
+		}
+		.blog_items {
+			li {
+				padding: 1rem 1rem 1rem 0;
+			}
+		}
+	}
+
+	.blog_article {
+		overflow: auto;
+		padding: 0 0.75vw;
+		flex: 1;
+		color: $stc;
+		pre {
+			font-size: 1rem;
+		}
+		.title {
+			font-size: inherit;
+		}
+		&.slideLeftInOut {
+			animation-duration: 0.5s;
+			animation-delay: 0.3s;
+		}
+	}
+	.AnimationState-leave-active .blog_article.slideLeftInOut {
+			animation-delay: 0s;
+	}
+
+
+	@media (min-width: 1200px) {
+  .page.blog {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
+
 
 
 .nuxt-content {
