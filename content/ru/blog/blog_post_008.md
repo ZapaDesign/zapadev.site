@@ -13,6 +13,12 @@ title: Создание блога с помощью Nuxt Content
 
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><video controls="" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute;">Your browser does not support HTML5 video.<source src="https://res.cloudinary.com/nuxt/video/upload/v1588091670/demo-blog-content_shk6kw.ogv" type="video/ogg"></video></div>
 
+[Посмотреть демо](https://blog-with-nuxt-content.netlify.app/)
+
+[Исходный код](https://github.com/nuxt-company/demo-blog-nuxt-content)
+
+
+
 ## Начало работы
 
 ### Установка
@@ -544,7 +550,7 @@ touch components/PrevNext.vue
 Теперь мы можем получить предыдущие и следующие статьи, добавив их в `asyncData`. Мы создаем массив констант с именами `prev` и `next`, которые получим из папки `articles` с помощью функции `$content`. На этот раз нам нужны только заголовок и `slug(имя .md файла)`, для этого по цепочке привязываем метод `only()`, которому передаем `'title'` и `'slug'`.
 
 
-Мы можем использовать метод `sortBy()` для сортировки данных по дате `createdAt` в возрастающем порядке. Затем мы используем метод `surround()` и передаем `slug` из `params`, чтобы он мог получить правильный `slug` для предыдущей и следующей публикации.
+Мы можем использовать метод `sortBy()` для сортировки данных по дате `createdAt` в возрастающем порядке. Затем мы используем метод `surround()` и передаем `slug` из `params`, чтоб�� он мог получить правильный `slug` для предыдущей и следующей публикации.
 
 
 Затем мы возвращаем `prev` и `next`, вместе со статьей `article`.

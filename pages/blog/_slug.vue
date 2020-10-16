@@ -166,6 +166,13 @@ export default {
 		padding: 0 0.75vw;
 		flex: 1;
 		color: $stc;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		p {
+			font-size: 1.125rem;
+			line-height: 1.5;
+		}
 		pre {
 			font-size: 1rem;
 		}
