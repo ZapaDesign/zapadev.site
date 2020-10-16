@@ -61,9 +61,9 @@
 </template>
 
 <script>
-export default {
-  name: 'MainVavigation',
-}
+	export default {
+		name: 'MainVavigation',
+	}
 </script>
 
 <style lang="scss">

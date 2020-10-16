@@ -1,40 +1,43 @@
 <template>
-  <div class="page portfolio">
-    <header>
-      <h1 class="slideLeft">
-        {{ $t('portfolio.title') }}
-        <span>
-          {{ $t('portfolio.description') }}
-        </span>
-      </h1>
-    </header>
-    <PortfolioGrid />
-  </div>
+	<div class="grid_container">
+		<nuxt-link
+			v-for="(post, $index) in posts"
+			:key="`post-${$index}`"
+			:to="localePath(post.path)"
+			:class="'portfolio_item_' + $index"
+			class="portfolio_item"
+			:style="{ backgroundImage: 'url(' + require(`~~/assets/portfolio/${post.thumbnail}`) + ')' }"
+		>
+			<div class="link">
+				<span>{{ post.title }}</span>
+				<span>глянуть ⟶</span>
+			</div>
+		</nuxt-link>
+	</div>
 </template>
 
-<script>
-export default {
-  name: 'portfolio',
-  async asyncData(context) {
-    const { $content, app } = context
-		const defaultLocale = app.i18n.locale
-		const tags = await $content('tags').where('/portfolio_tags').limit(1).fetch()
-		const tag = tags.length > 0 ? tags[0] : {}
-    const posts = await $content(`${defaultLocale}/portfolio`).where({ tags: { $contains: tag.name } }).fetch()
-    return {
-      posts: posts.map((post) => ({
-        ...post,
-        path: post.path.replace(`/${defaultLocale}`, ''),
-      })),
-    }
-	}
 
-}
+<script>
+	export default {
+		name: 'PortfolioGrid',
+		async asyncData(context) {
+			const { $content, app } = context
+			const defaultLocale = app.i18n.locale
+			const posts = await $content(`content/${defaultLocale}/portfolio`).fetch()
+			return {
+				posts: posts.map((post) => ({
+					...post,
+					path: post.path.replace(`/${defaultLocale}`, ''),
+				})),
+			}
+		}
+	}
 </script>
 
+
+
 <style lang="scss">
-.page.portfolio {
-  .grid_container {
+.grid_container {
 		margin-left: -3vw;
     overflow: hidden;
     flex: 1;
@@ -106,9 +109,8 @@ export default {
     .portfolio_item {
       opacity: 0;
     }
-  }
-}
-
+	}
+	
 .portfolio_item_0 {
   animation: portfolioItemsUp 0.5s 0s forwards;
 }

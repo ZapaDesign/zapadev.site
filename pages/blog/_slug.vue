@@ -24,9 +24,9 @@
 					</li>
 				</ul>
       </div>
-      <div class="blog_article slideLeftInOut">
+      <article class="blog_article slideLeftInOut">
 				  <nuxt-content :document="post" />
-      </div>
+      </article>
     </div>
   </div>
 </template>
