@@ -203,6 +203,7 @@ export default {
   h2,
   h3,
   h4 {
+		padding-top: 1rem;
     position: relative;
     font-weight: 700;
 		margin-bottom: 2rem;
