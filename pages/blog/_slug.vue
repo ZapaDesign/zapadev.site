@@ -208,6 +208,7 @@ export default {
     font-weight: 700;
 		margin-bottom: 2rem;
 		color: $wc;
+		padding-top: 2rem;
   }
 
   h1 {
