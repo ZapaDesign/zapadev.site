@@ -205,7 +205,9 @@ export default {
   h4 {
     position: relative;
     font-weight: 700;
-    margin-bottom: 2rem;
+		margin-bottom: 2rem;
+		color: $wc;
+		padding-top: 2rem;
   }
 
   h1 {
