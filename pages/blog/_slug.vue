@@ -12,9 +12,9 @@
     <div class="content">
       <div class="blog_navigation">
         <div class="blog_form">
-					<input type="search" autocomplete="off" placeholder="Search title.." />
+					<input id="elastic" type="search" autocomplete="off" placeholder="Search title.." />
         </div>
-				<ul class="blog_items">
+				<ul class="blog_items elastic">
 					<li v-for="(post, $index) in posts" :key="`post-${$index}`">
 						<nuxt-link :to="localePath(post.path)">
 							<div class="link">
@@ -103,9 +103,7 @@ export default {
       })),
       post,
     }
-	},
-	
-	
+	}
 }
 </script>
 
@@ -129,6 +127,10 @@ export default {
 
 
 <style lang="scss">
+	.hide {
+		display: none;
+	}
+
 
 	.blog_navigation {
 		overflow: auto;
@@ -165,6 +167,7 @@ export default {
 		overflow: auto;
 		padding: 0 0.75vw;
 		flex: 1;
+		width: 100%;
 		color: $stc;
 		max-width: 800px;
 		margin-left: auto;
