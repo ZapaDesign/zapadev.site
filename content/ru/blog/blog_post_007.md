@@ -1,26 +1,96 @@
 ---
-title: Шпаргалка по MongoBD
+title: Связь родительских и дочерних компонентов Vue.js
+link: https://vegibit.com/vuejs-parent-child-communication/
 ---
 
-# Se asombroso
+Мы изучали, как компоненты и, в частности, отдельные файловые компоненты работают во VueJ. В этом руководстве мы расширим наши знания о компонентах во Vue, рассмотрев, как происходит взаимодействие между компонентами. Компоненты сами по себе великолепны, поскольку они создают многоразовые фрагменты кода, в которых мы можем использовать все функции, которые предоставляет VueJs. Теперь мы хотим построить связи между этими компонентами, чтобы действия в одном компоненте могли обновлять другой компонент в приложении. В этом руководстве мы сосредоточимся на общении родителей с ребенком и ребенка с родителями.
 
-Vice letterpress brooklyn jianbing, blue bottle sriracha sustainable. Literally chillwave squid, lomo vexillologist godard affogato whatever shabby chic vaporware kitsch polaroid. Farm-to-table lumbersexual 8-bit deep v, gochujang pok pok hella. Hashtag tumeric normcore synth freegan, poutine sustainable selfies post-ironic pork belly.
+Чтобы переместить данные из родительского компонента в дочерний компонент во Vue, мы используем так называемые реквизиты. ReactJS также использует аналогичное соглашение для обмена данными. Props - это сокращение от «properties» и относится к свойствам, установленным извне, например, из родительского компонента. Чтобы сообщить дочернему компоненту vue, что он будет получать данные извне собственного экземпляра, вам необходимо настроить свойство props в объекте Vue дочернего компонента. Это свойство содержит массив строк, каждая из которых представляет свойство, которое может быть установлено из родительского элемента. Обратите внимание, что реквизиты предназначены исключительно для односторонней связи от родителя к дочернему, и вы не хотите пытаться изменить значение свойства непосредственно в дочернем компоненте. В противном случае вы получите сообщение об ошибке типа «Избегайте изменения свойства напрямую, поскольку значение будет перезаписано при каждом повторном рендеринге родительского компонента. Вместо этого используйте данные или вычисленное свойство на основе значения свойства ".
 
-![](https://media.giphy.com/media/KzM1lAfJjCWNq/source.gif)
+## Родительский компонент использует привязку атрибута
 
-```javascript
-export default {
-  name: 'portfolio',
-  async asyncData(context) {
-    const { $content, app } = context
-    const defaultLocale = app.i18n.locale
-    const posts = await $content(`${defaultLocale}/portfolio`).fetch()
-    return {
-      posts: posts.map((post) => ({
-        ...post,
-        path: post.path.replace(`/${defaultLocale}`, ''),
-      })),
-    }
-  }
-}
+Чтобы передать данные из родительского компонента в дочерний компонент, теперь мы можем посетить родительский компонент и настроить привязку атрибута, которая использует то же имя, что и опора дочернего компонента. Обратите внимание, что мы находимся внутри родительского компонента, но мы визуализируем дочерний компонент, используя его собственный тег <child-card>. Именно в этом теге мы настраиваем связанный атрибут. Теперь, поскольку мы используем parentmessage в качестве имени атрибута, то в Child нам понадобятся props: ['parentmessage'] в качестве свойства. В нашем родительском элементе мы передаем данные с помощью `<child-card: parentmessage = "parentmessage"> </child-card>`.
+
 ```
+ParentCard.vue
+```
+
+```html
+<template>
+    <div>
+        <div class="card m-2" style="width: 40rem;">
+            <div class="card-body">
+                <h5 class="card-title" v-text="thecardtitle"></h5>
+                <button @click="sendMessage" class="btn btn-info">Send Child A Message</button>
+                <child-card :parentmessage="parentmessage"></child-card>
+            </div>
+        </div>
+    </div>
+</template>
+ 
+<script>
+    import ChildCard from './ChildCard.vue';
+ 
+    export default {
+        components: {ChildCard},
+ 
+        data() {
+            return {
+                thecardtitle: 'Parent Component!',
+                parentmessage: ''
+            }
+        },
+ 
+        methods: {
+            sendMessage() {
+                this.parentmessage = '<b>Message From Parent:</b> Do Your Homework'
+            }
+        }
+    }
+</script>
+ 
+<style>
+</style>
+```
+
+## Дочерний компонент использует объект props
+
+Итак, в этом фрагменте ниже у нас есть дочерний компонент, в массиве которого есть настройка prop и строковое значение parentmessage. Это означает, что сообщение parentmessage может быть установлено извне или из родительского компонента. Это именно то, что мы делаем в разделе выше. Строковое имя, указанное для свойства, в нашем случае parentmessage, должно совпадать с именем свойства, используемым в разделе шаблона этого компонента.
+
+```
+ChildCard.vue
+```
+
+```html
+<template>
+    <div>
+        <div class="card m-3" style="width: 25rem;">
+            <div class="card-body">
+                <h5 class="card-title" v-text="thecardtitle"></h5>
+                <p class="card-text" v-html="thecardbody"></p>
+                <div v-if="parentmessage" class="card-text alert alert-warning" v-html="parentmessage"></div>
+            </div>
+        </div>
+    </div>
+</template>
+ 
+<script>
+    export default {
+        props: ['parentmessage'],
+        data() {
+            return {
+                thecardtitle: 'Child Component!',
+                thecardbody: 'I\'m just a child.'
+            }
+        }
+    }
+</script>
+ 
+<style>
+</style>
+```
+
+## Демонстрация опоры для общения родителей с детьми
+
+Итак, давайте посмотрим на этот небольшой фрагмент кода в действии. Ниже мы видим отрисованный родительский компонент ParentCard.vue и вложенный дочерний компонент ChildCard.vue. В дочернем элементе мы используем v-if для условного отображения предупреждения с сообщением от родителя. Если сообщения нет, значит, мы не показываем предупреждение. Поэтому, когда страница отображается в первый раз, начальное значение parentmessage - это просто пустая строка. Мы можем увидеть это в методе data () родительского компонента. Поэтому сначала дочерний компонент не отображает никаких предупреждающих сообщений. Однако, если пользователь нажимает кнопку «Отправить дочернее сообщение» в родительском компоненте, запускается функция sendMessage (). Это устанавливает для переменной parentmessage значение «<b> Сообщение от родителя: </b> Do Your Homework». Поскольку эта переменная привязана к дочернему элементу с помощью: parentmessage = "parentmessage", а дочерний компонент принимает это значение через props: [«parentmessage»], то дочерний компонент обновляется предупреждающим сообщением «Сообщение от родителя: сделайте свое Домашнее задание". Довольно круто!
+

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<template>
+
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1971.85 741.09" style="enable-background:new 0 0 1971.85 741.09;" xml:space="preserve">
 <style type="text/css">
@@ -1025,3 +1025,11 @@
 	</g>
 </g>
 </svg>
+
+</template>
+
+<script>
+export default {
+	name: 'Logo'
+}
+</script>

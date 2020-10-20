@@ -1,14 +1,6 @@
 <template>
   <div class="page porfolio_item">
-    <header>
-      <h1 class="slideLeft">
-        {{ post.title }}
-        <span>
-          {{ post.description }}
-        </span>
-      </h1>
-    </header>
-
+		<PageHeader :title="post.title" :description="post.description" />
     <div class="content">
       <div class="post_info">
         <div class="post_navigation">
@@ -107,16 +99,6 @@ export default {
 
 
 
-
-
-
-
-
-
-
-
-
-
 <style lang="scss">
 .post_info {
   overflow: auto;
@@ -130,18 +112,6 @@ export default {
     padding-right: 0.75vw;
     img {
       max-width: 100%;
-    }
-  }
-  .post_navigation {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding: 1rem 1rem 1rem 0;
-    color: $acf;
-    a,
-    a:active,
-    a:visited {
-      color: $acf;
     }
   }
   .post_date {
@@ -172,6 +142,19 @@ export default {
       letter-spacing: 0.1rem;
     }
   }
+}
+.post_navigation {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	padding: 1rem;
+	color: $acf;
+	background-color: $linkc;
+	a,
+	a:active,
+	a:visited {
+		color: $acf;
+	}
 }
 .post_img {
   overflow: auto;

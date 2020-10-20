@@ -1,7 +1,7 @@
 <template>
   <nav id="nav" class="mainNavigation">
     <nuxt-link :to="'/' + $i18n.locale + '/about'" class="logo">
-      <img alt="ZapaDesign Logo" src="~/assets/logo.svg" />
+      <Logo />
     </nuxt-link>
 
     <nuxt-link :to="'/' + $i18n.locale + '/'">
@@ -155,7 +155,7 @@
 
 .logo {
   padding: 5% 0;
-  img {
+  svg {
     width: 100%;
     height: 100%;
   }

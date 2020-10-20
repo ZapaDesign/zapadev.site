@@ -1,31 +1,10 @@
 <template>
   <div class="page blog">
-    <header>
-      <h1 class="slideLeft">
-        {{ $t('blog.title') }}
-        <span>
-          {{ $t('blog.description') }}
-        </span>
-      </h1>
-    </header>
-
+		<PageHeader :title="$t('blog.title')"	:description="$t('blog.description')"/>
     <div class="content">
-      <div class="blog_navigation">
-        <div class="blog_form">
-					<input type="text" placeholder="живой поиск" autofocus>
-        </div>
-				<ul class="blog_items">
-					<li v-for="(post, $index) in posts" :key="`post-${$index}`">
-					<nuxt-link :to="localePath(post.path)">
-						<div class="link slideUp">
-							<span>{{ post.title }}</span>
-						</div>
-     			</nuxt-link>
-					</li>
-				</ul>
-      </div>
-      <div class="blog_article slideLeftImg">
-				<nuxt-content :document="post" />
+			<BlogNavigation :posts="posts" />
+    	<div class="blog_article slideLeftImg">
+				Выберете статью из списка либо начните вводить что-то в поле поиск 
       </div>
     </div>
   </div>
@@ -34,7 +13,6 @@
 <script>
 export default {
 	name: 'blog',
-
 	async asyncData(context) {
     const { $content, app } = context
     const defaultLocale = app.i18n.locale
@@ -46,19 +24,20 @@ export default {
         path: post.path.replace(`/${defaultLocale}`, ''),
       })),
     }
-	}
-	
+	}	
 }
 </script>
 
 <style lang="scss">
+	.hide {
+		display: none;
+	}
 	.blog_navigation {
 		overflow: auto;
 		border-right: 1px solid #808080;
 		flex-basis: 20%;
 		min-width: 240px;
 		color: $stc;
-		border-bottom: 1px solid #808080;
 		.blog_form {
 			padding: 1rem 1rem 1rem 0;
 			color: $acf;

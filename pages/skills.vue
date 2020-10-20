@@ -1,13 +1,6 @@
 <template>
   <div class="page skills">
-    <header>
-      <h1 class="slideLeft">
-        {{ $t('skills.title') }}
-        <span>
-          {{ $t('skills.description') }}
-        </span>
-      </h1>
-    </header>
+		<PageHeader :title="$t('blog.title')"	:description="$t('blog.description')"/>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magnam
       dolorum voluptatem iure aut, culpa alias magni! Quasi, accusamus ullam

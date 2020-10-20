@@ -1,13 +1,6 @@
 <template>
   <div class="page about">
-    <header>
-      <h1 class="slideLeft">
-        {{ $t('about.title') }}
-        <span>
-          {{ $t('about.description') }}
-        </span>
-      </h1>
-    </header>
+		<PageHeader :title="$t('blog.title')"	:description="$t('blog.description')"/>
     <div class="content">
       <div class="content__text">
         <p>Hello world!</p>

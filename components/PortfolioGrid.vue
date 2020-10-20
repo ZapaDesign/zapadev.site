@@ -20,15 +20,10 @@
 <script>
 	export default {
 		name: 'PortfolioGrid',
-		async asyncData(context) {
-			const { $content, app } = context
-			const defaultLocale = app.i18n.locale
-			const posts = await $content(`content/${defaultLocale}/portfolio`).fetch()
-			return {
-				posts: posts.map((post) => ({
-					...post,
-					path: post.path.replace(`/${defaultLocale}`, ''),
-				})),
+		props: {
+			posts: {
+				type: [Array],
+				required: true
 			}
 		}
 	}
