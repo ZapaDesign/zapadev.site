@@ -6,7 +6,7 @@
 
     <nuxt-link :to="'/' + $i18n.locale + '/'">
       <div>{{ $t('links.home') }}</div>
-      <div>
+      <div class="mainNavigation_icon">
         <svg>
           <use xlink:href="../assets/icons.svg#icon_services"></use>
         </svg>
@@ -15,7 +15,7 @@
 
     <nuxt-link :to="'/' + $i18n.locale + '/about'">
       <div>{{ $t('links.about') }}</div>
-      <div>
+      <div class="mainNavigation_icon">
         <svg>
           <use xlink:href="../assets/icons.svg#icon_about"></use>
         </svg>
@@ -24,7 +24,7 @@
 
     <nuxt-link :to="'/' + $i18n.locale + '/skills'">
       <div>{{ $t('links.skills') }}</div>
-      <div>
+      <div class="mainNavigation_icon">
         <svg>
           <use xlink:href="../assets/icons.svg#icon_skills"></use>
         </svg>
@@ -33,7 +33,7 @@
 
     <nuxt-link :to="'/' + $i18n.locale + '/portfolio'">
       <div>{{ $t('links.portfolio') }}</div>
-      <div>
+      <div class="mainNavigation_icon">
         <svg>
           <use xlink:href="../assets/icons.svg#icon_portfolio"></use>
         </svg>
@@ -42,16 +42,16 @@
     <!-- 
     <nuxt-link :to="'/' + $i18n.locale + '/wprocess'">
       <div>{{ $t('links.wprocess') }}</div>
-      <div>
+      <div class="mainNavigation_icon">
         <svg>
           <use xlink:href="../assets/icons.svg#icon_wprocess"></use>
         </svg>
       </div>
     </nuxt-link> -->
 
-    <nuxt-link :to="'/' + $i18n.locale + '/blog/blog_post_001'">
+    <nuxt-link :to="'/' + $i18n.locale + '/blog'">
       <div>{{ $t('links.blog') }}</div>
-      <div>
+      <div class="mainNavigation_icon">
         <svg>
           <use xlink:href="../assets/icons.svg#icon_blog"></use>
         </svg>
@@ -141,8 +141,7 @@
   a:first-child {
     margin: 0;
   }
-
-  svg {
+	.mainNavigation_icon  svg {
     position: relative;
     top: 25%;
     display: block;
@@ -155,9 +154,5 @@
 
 .logo {
   padding: 5% 0;
-  svg {
-    width: 100%;
-    height: 100%;
-  }
 }
 </style>

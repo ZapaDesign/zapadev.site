@@ -67,6 +67,7 @@ export default {
 		const defaultLocale = app.i18n.locale
 		const posts = await $content(`${defaultLocale}/blog`).fetch()
 		const post = await $content(`${app.i18n.locale}/blog`, slug).fetch()
+		console.log(posts)
 
 		return {
 			posts: posts.map((post) => ({
@@ -75,7 +76,8 @@ export default {
 			})),
 			post,
 		}
-	},
+console.log(post)
+	}
 }
 </script>
 
@@ -120,6 +122,8 @@ export default {
 }
 
 .article_content {
+						font-weight: 300;
+					font-family: $dmx;
 	overflow: auto;
 	padding: 0 0.75vw;
 	flex: 1;
@@ -141,6 +145,16 @@ export default {
 	&.slideLeftInOut {
 		animation-duration: 0.5s;
 		animation-delay: 0.3s;
+	}
+	p code {
+		// color: #1a202c;
+    // font-weight: 400;
+    // font-size: .875em;
+    background-color: #f7fafc;
+    padding: .25rem;
+    border-width: 1px;
+    border-color: #edf2f7;
+    border-radius: .25rem;
 	}
 }
 .AnimationState-leave-active .blog_article.slideLeftInOut {

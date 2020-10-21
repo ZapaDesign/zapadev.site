@@ -59,3 +59,33 @@
 	font-weight: 300;
 	font-style: normal;
 	}
+
+@font-face {
+    font-family: 'Decima Mono X';
+    src: url('~assets/fonts/DecimaMonoX.eot');
+    src: local('Decima Mono X'), local('DecimaMonoX'),
+        url('~assets/fonts/DecimaMonoX.eot?#iefix') format('embedded-opentype'),
+        url('~assets/fonts/DecimaMonoX.woff2') format('woff2'),
+        url('~assets/fonts/DecimaMonoX.woff') format('woff'),
+        url('~assets/fonts/DecimaMonoX.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'Decima Mono X';
+    src: url('~assets/fonts/DecimaMonoX-Light.eot');
+    src: local('Decima Mono X Light'), local('DecimaMonoX-Light'),
+        url('~assets/fonts/DecimaMonoX-Light.eot?#iefix') format('embedded-opentype'),
+        url('~assets/fonts/DecimaMonoX-Light.woff2') format('woff2'),
+        url('~assets/fonts/DecimaMonoX-Light.woff') format('woff'),
+        url('~assets/fonts/DecimaMonoX-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+

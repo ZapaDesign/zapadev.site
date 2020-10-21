@@ -99,6 +99,7 @@ export default {
 
 
 
+
 <style lang="scss">
 .post_info {
   overflow: auto;

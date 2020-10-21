@@ -1,6 +1,6 @@
 <template>
   <div class="page about">
-		<PageHeader :title="$t('blog.title')"	:description="$t('blog.description')"/>
+		<PageHeader :title="$t('about.title')"	:description="$t('about.description')"/>
     <div class="content">
       <div class="content__text">
         <p>Hello world!</p>

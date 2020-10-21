@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-		<PageHeader :title="$t('blog.title')"	:description="$t('blog.description')"/>
+		<PageHeader :title="$t('home.title')"	:description="$t('home.description')"/>
     <div>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea laudantium, enim repudiandae similique id animi dolores sunt. Recusandae iste veniam ipsa alias eaque nisi adipisci quibusdam odio, est ducimus aperiam dignissimos repudiandae. Tenetur eveniet saepe animi accusamus beatae dignissimos ratione ut fugiat facere unde, cum tempora, ipsam eaque quasi exercitationem dolor quo eum praesentium magnam quam pariatur. Labore est eum voluptatibus, quod recusandae nisi. Amet omnis iure placeat id nostrum sequi sunt, odit hic sit repellendus veritatis ipsum fuga consequuntur non ex veniam atque consectetur quasi at. Error expedita aut iste commodi magni delectus, ipsam eligendi cum doloribus natus id.
     </div>

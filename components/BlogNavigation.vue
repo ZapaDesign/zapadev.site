@@ -44,5 +44,37 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+	.hide {
+		display: none;
+	}
+	.blog_navigation {
+		overflow: auto;
+		border-right: 1px solid #808080;
+		flex-basis: 20%;
+		min-width: 240px;
+		color: $stc;
+		.blog_form {
+			padding: 1rem 1rem 1rem 0;
+			color: $acf;
+			border-bottom: 1px solid #808080;
+			input {
+				background-color: transparent;
+				width: 100%;
+				border:none;
+				color: $wc;
+				outline:none;
+				font-size: 1rem;
+				color: $stc;
+				&:focus {
+					border:none;
+				}
+			}
+		}
+		.blog_items {
+			li {
+				padding: 1rem 1rem 1rem 0;
+			}
+		}
+	}
 </style>
