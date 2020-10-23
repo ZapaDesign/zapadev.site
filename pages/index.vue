@@ -1,30 +1,41 @@
 <template>
-  <div class="page">
+  <div class="page home">
 		<PageHeader :title="$t('home.title')"	:description="$t('home.description')"/>
-    <div>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea laudantium, enim repudiandae similique id animi dolores sunt. Recusandae iste veniam ipsa alias eaque nisi adipisci quibusdam odio, est ducimus aperiam dignissimos repudiandae. Tenetur eveniet saepe animi accusamus beatae dignissimos ratione ut fugiat facere unde, cum tempora, ipsam eaque quasi exercitationem dolor quo eum praesentium magnam quam pariatur. Labore est eum voluptatibus, quod recusandae nisi. Amet omnis iure placeat id nostrum sequi sunt, odit hic sit repellendus veritatis ipsum fuga consequuntur non ex veniam atque consectetur quasi at. Error expedita aut iste commodi magni delectus, ipsam eligendi cum doloribus natus id.
+    <div class="content">
+      <div  v-if='cover_letter'>
+				<nuxt-content :document="cover_letter" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+	name: 'home',
+
+	async asyncData(context) {
+		const { $content, app } = context
+		const defaultLocale = app.i18n.locale
+		const cover_letter = await $content(`${defaultLocale}/home/cover_letter`,).fetch()
+	
+		return {
+			cover_letter,
+		}
+	}
+}
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
+<style lang="scss" scoped>
+
+.content {
+	justify-content: center;
+	align-items: flex-start;
+	::v-deep .nuxt-content {
+		max-width: 800px; 
+	}
 }
-*/
-/* .container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
+
+
 
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
@@ -47,4 +58,6 @@ export default {}
 .links {
   padding-top: 15px;
 }
+
+
 </style>

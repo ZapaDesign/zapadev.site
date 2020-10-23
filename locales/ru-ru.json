@@ -5,7 +5,7 @@
 	"also-available-in": "También disponible en",
 	"links": {
 		"home": "Сопроводительное письмо",
-		"about": "Давай знакомиться",
+		"aboutme": "Давай знакомиться",
 		"skills": "Умею в...",
 		"portfolio": "Портфолио",
 		"wprocess": "Как сотрудничаем",
@@ -17,7 +17,7 @@
 		"title": "Сопроводительное письмо",
 		"description": "| для работадателя"
 	},
-	"about": {
+	"aboutme": {
 		"title": "ДАВАЙ ЗНАКОМИТЬСЯ",
 		"description": "| краткая информация обо мне"
 	},

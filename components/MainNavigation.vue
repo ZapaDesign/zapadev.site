@@ -1,6 +1,6 @@
 <template>
   <nav id="nav" class="mainNavigation">
-    <nuxt-link :to="'/' + $i18n.locale + '/about'" class="logo">
+    <nuxt-link :to="'/' + $i18n.locale + '/aboutme'" class="logo">
       <Logo />
     </nuxt-link>
 
@@ -13,8 +13,8 @@
       </div>
     </nuxt-link>
 
-    <nuxt-link :to="'/' + $i18n.locale + '/about'">
-      <div>{{ $t('links.about') }}</div>
+    <nuxt-link :to="'/' + $i18n.locale + '/aboutme'">
+      <div>{{ $t('links.aboutme') }}</div>
       <div class="mainNavigation_icon">
         <svg>
           <use xlink:href="../assets/icons.svg#icon_about"></use>

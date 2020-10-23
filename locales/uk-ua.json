@@ -5,7 +5,7 @@
 	"also-available-in": "Aussi disponible en",
 	"links": {
 		"home": "Чим займаюсь",
-		"about": "Давай знайомитися",
+		"aboutme": "Давай знайомитися",
 		"skills": "Умію в...",
 		"portfolio": "Портфоліо",
 		"wprocess": "Як співпрацюємо",
@@ -17,7 +17,7 @@
 		"title": "ДИЗАЙН ТА РОЗРОБКА ІНТЕРНЕТ САЙТіВ",
 		"description": ""
 	},
-	"about": {
+	"aboutme": {
 		"title": "ДАВАЙ ЗНАЙОМИТИСЯ",
 		"description": "| коротко про мене"
 	},

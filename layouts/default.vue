@@ -9,9 +9,17 @@
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
 #app {
   display: flex;
-  background-image: url(../assets/img-noise.png);
+	background-image: url(../assets/img-noise.png);
+	// background-size: 10%;
+	background-color: $sbbgc;
   min-height: 100vh;
 
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -85,4 +93,208 @@ aside {
     }
   }
 }
+
+.page {
+	display: flex;
+	flex-direction: column;
+	min-height: inherit;
+	padding-left: 3vw;
+}
+
+
+header {
+	background-image: url(~assets/header_img.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 30px;
+	// margin-left: 3%;
+	overflow: hidden;
+	font-size: 0.75rem;
+	@media (min-width: 720px) {
+		& {
+			font-size: 0.875rem;;
+		}
+	}
+	@media (min-width: 1200px) {
+		& {
+			font-size: 1rem;;
+			padding: 50px;
+		}
+	}
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+	overflow: hidden;
+	padding-top: 2vw;
+	font-family: $dmx;
+	font-weight: 300;
+}
+
+@media (min-width: 720px) {
+  .content {
+    flex-direction: row;
+  }
+  .content__text {
+    flex: 8;
+  }
+  .content__img {
+    flex: 4;
+  }
+}
+
+h1 {
+	font-family: $opc;
+	font-weight: 700;
+	letter-spacing:0.1em;
+	display: inline-block;
+	position: relative;
+	padding: 10px 0;
+	// border-top: 1px solid #fff;
+	// border-bottom: 1px solid #fff;
+	&:after, 
+	&:before {
+		content: '';
+		display: block;
+		position: relative;
+		height: 1px;
+		width: auto;
+		max-width: 650px;
+		background-color: #808080;
+		left: 60px;
+	}
+	&:after {
+		top: 15px;
+	}
+	&:before {
+		bottom: 15px;
+	}
+	span {
+		font-family: $opxc;
+		font-weight: 100;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+a,
+a:active,
+a:visited {
+	color: $wc;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+pre,
+code {
+	white-space: break-spaces;
+}
+
+::-webkit-scrollbar-button {
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $sbbgc;
+  // box-shadow:0px 0px 3px #000 inset;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background-color: $acf;
+  // box-shadow:0px 1px 1px #fff inset;
+}
+
+::-webkit-resizer {
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+.nuxt-content {
+	h1,
+	h2,
+	h3,
+	h4 {
+		padding-top: 1rem;
+		position: relative;
+		font-weight: 700;
+		margin-bottom: 2rem;
+		color: $wc;
+		padding-top: 2rem;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
+
+	ul {
+		list-style: disc;
+	}
+
+	ul,
+	ol {
+		margin: 1rem 0;
+		padding-left: 40px;
+	}
+
+	ul,
+	ol > li:last-child {
+		margin-bottom: 10px;
+	}
+
+	table {
+		margin-bottom: 10px;
+		border-collapse: collapse;
+	}
+
+	th,
+	td {
+		padding: 0.5rem;
+	}
+
+	p {
+		margin-bottom: 1rem;
+
+		img {
+			display: block;
+		}
+
+		img + em {
+			display: block;
+			margin-top: 0.5rem;
+			font-size: 12px;
+		}
+	}
+}
+
+
+
+
 </style>

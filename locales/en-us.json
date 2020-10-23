@@ -5,7 +5,7 @@
 	"also-available-in": "Also available in",
 	"links": {
 		"home": "What am I doing",
-		"about": "Let's get acquainted",
+		"aboutme": "Let's get acquainted",
 		"skills": "Skills",
 		"portfolio": "Portfolio",
 		"wprocess": "How to cooperate",
@@ -18,7 +18,7 @@
 		"title": "DESIGN AND DEVELOPMENT OF INTERNET SITES",
 		"description": ""
 	},
-	"about": {
+	"aboutme": {
 		"title": "LET'S GET ACQUAINTED",
 		"description": "| brief information about me"
 	},

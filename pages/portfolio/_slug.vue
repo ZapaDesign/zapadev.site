@@ -106,7 +106,8 @@ export default {
   border-right: 1px solid #808080;
   flex-basis: 20%;
   min-width: 240px;
-  color: $stc;
+	color: $stc;
+	overflow: scroll;
 
   .post_thumbnail {
     padding-top: 0.75vw;
@@ -119,10 +120,13 @@ export default {
     text-align: right;
     font-size: 0.75em;
     padding-top: 1rem;
-    padding-right: 1rem;
+    padding-right: 0.75vw;
   }
   .post_text {
-    padding-right: 1rem;
+		padding-right: 0.75vw;
+		font-family: $dmx;
+		font-weight: 300;
+
     ul {
       padding-top: 1vh;
 			color: $ftc;
@@ -149,8 +153,12 @@ export default {
 	flex-direction: row-reverse;
 	justify-content: space-between;
 	padding: 1rem;
+	margin-right: 0.75vw;
 	color: $acf;
 	background-color: $linkc;
+	position: sticky;
+  top: 0;
+  z-index: 100;
 	a,
 	a:active,
 	a:visited {
