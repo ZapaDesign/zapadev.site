@@ -1,15 +1,28 @@
 <template>
-  <div class="page aboutme">
+  <div class="page page_aboutme">
 		<PageHeader :title="$t('aboutme.title')"	:description="$t('aboutme.description')"/>
     <div class="content">
-      <div class="aboume__info">
+      <div class="aboutme__info">
 				<AboutMeTabs :aboutMeItems="aboutMeItems"/>
+				<div class="aboume__info__footer">
+					<div class="social_profiles">
+						<SocialProfiles />
+					</div>
+					<div class="paper_cv_link">
+						<span>
+							Скачать CV в формате .pdf ⟶
+						</span>
+						<a href="#">
+							<svg><use xlink:href="../assets/icons.svg#icon_pdf"></use></svg>
+						</a>
+					</div>
+				</div>
       </div>
-      <div class="aboume__img">
-        <transition name="an1" appear>
-          <img src="~/assets/zapa.png" alt="" />
-        </transition>
-      </div>
+			<div class="aboume__img__container">
+				<div class="aboume__img__bg" >
+						<img class="slideLeftInOut" src="~/assets/zapa_d.png" alt="" />
+				</div>
+			</div>
     </div>
   </div>
 </template>
@@ -32,38 +45,116 @@ export default {
 </script>
 
 <style lang="scss">
+.page_aboutme {
+	.content {
+		overflow: visible;
+	}
+}
 
-.aboume__info {
-  flex: 5;
+.aboutme__info {
+	display: flex;
+	flex: 3;
+	flex-direction: column;
+	justify-content: space-between;
+	// max-width: 500px;
+}
+
+.tabs__nav {
+	text-align: right;
+	padding-bottom: 1rem;
+}
+
+.tabs__nav__item {
+	display: inline-block;
+	padding-left: 1rem;
+	font-family: $accFont;
+	font-weight: 400;
+	font-size: 0.85rem;
+	letter-spacing: 0.15rem;
+	a {
+		cursor: pointer;
+		color: $stc;
+	}
+	a.active {
+		color: $acf;
+		cursor: default;
+	}
+}
+
+.social_profiles {
+	position: relative;
+	display: inline-block;
+	background-color: $linkc;
+	margin-bottom: 3vw;
+	&:before {
+		content:'';
+		background-color: $linkc;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: -100%;
+	}
+}
+
+.paper_cv_link {
+		margin-bottom: 3vw;
+		color: $stc;
+		font-family: $accFont;
+		font-weight: 400;
+		font-size: 0.85rem;
+		letter-spacing: 0.15rem;
+		display: flex;
+		align-items: center;
+		svg {
+			fill: $stc;
+			width: 2rem;
+			height: 2rem;
+			padding-left: 1rem;
+			&:hover {
+				fill: $acf;
+			}
+		}
+}
+
+.aboume__img__container {
+  flex: 6;
+	position: relative;
 
 }
-.aboume__img {
-  flex: 6;
-  overflow: hidden;
-  img {
-    // position: absolute;
-    bottom: 0;
-    max-height: 100vh;
-    max-width: 100%;
+
+.aboume__img__bg {
+	background-repeat: no-repeat;
+	position: absolute;
+	top: -15%;
+	bottom: 0;
+	height: 115%;
+	width: 100%;
+	background-image: url(../assets/zapa_bg.png);
+	img {
+		object-fit: cover;
+		object-position: top left;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
   }
 }
 
 
 
 @media (min-width: 960px) {
-  .content__text {
+  .aboutme__info {
     flex: 6;
   }
-  .content__img {
+  .aboume__img__container {
     flex: 6;
   }
 }
 
 @media (min-width: 1200px) {
-  .content__text {
-    flex: 5;
+  .aboutme__info {
+    flex: 4;
   }
-  .content__img {
+  .aboume__img__container {
     flex: 6;
   }
 }

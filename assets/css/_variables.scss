@@ -24,11 +24,20 @@ $sbbgc: #222229;
 
 // FONTS
 
-$opc: "OpinionProCondensed";
-$opxc: "OpinionProExtraCondensed";
+$mainFont: 	"DecimaMonoX"; // Основной шрифт
+$addFont: 	"OpinionProCondensed"; // Дополнительный шрифт
+$accFont: 	"IBMPlexMono"; // Акцентный шрифт
 
-$robs: "RobotoSlab";
 
-$dmx: "Decima Mono X";
+
+
+$opc: "OpinionProCondensed"; //fw: 100, 700
+$opxc: "OpinionProExtraCondensed"; //fw: 100, 400
+
+$robs: "RobotoSlab"; //fw: 300
+
+$dmx: "DecimaMonoX"; //fw: 300, 400
+
+$plm:"IBMPlexMono"; //fw: 100, 300, 400
 
 // @media (min-width: 720px) and (max-width: 9600px)  {}

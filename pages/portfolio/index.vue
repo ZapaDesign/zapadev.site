@@ -8,6 +8,20 @@
         </span>
       </h1>
     </header>
+
+		<div class="portfolio__nav">
+			<ul>
+				<li><a href="#">[All]</a></li>
+				<li><a href="#">[Education/JS]</a></li>
+				<li><a href="#">[Design]</a></li>
+				<li><a href="#">[Webdesign]</a></li>
+				<li><a href="#">[Wordpress]</a></li>
+				<li><a href="#">[JS/Vue]</a></li>
+				<li><a href="#">[JS/React]</a></li>
+			</ul>
+		</div>
+
+
     <div class="grid_container">
       <nuxt-link
         v-for="(post, $index) in posts"
@@ -15,7 +29,10 @@
         :to="localePath(post.path)"
         :class="'portfolio_item_' + $index"
         class="portfolio_item"
-        :style="{ backgroundImage: 'url(' + require(`~~/assets/portfolio/${post.thumbnail}`) + ')' }"
+        :style="{	
+					backgroundImage: 'url(' + require(`~~/assets/portfolio/${post.thumbnail}`) + ')',
+					animationDelay: `${$index}00ms`
+				}"
       >
         <div class="link">
           <span>{{ post.title }}</span>
@@ -32,8 +49,11 @@ export default {
   async asyncData(context) {
     const { $content, app } = context
     const defaultLocale = app.i18n.locale
-    const posts = await $content(`${defaultLocale}/portfolio`).fetch()
-    return {
+		const posts = await $content(`${defaultLocale}/portfolio`)
+		.sortBy('slug', 'asc')
+		.fetch()
+		
+		return {
       posts: posts.map((post) => ({
         ...post,
         path: post.path.replace(`/${defaultLocale}`, ''),
@@ -80,7 +100,10 @@ export default {
         display: flex;
         span:first-child {
           flex: 1;
-          font-family: $robs;
+					font-family: $accFont;
+					font-size: 1rem;
+					font-weight: 3;
+					// letter-spacing: 0.1em;
         }
         span:last-child {
           color: $acf;
@@ -89,8 +112,8 @@ export default {
           margin: auto;
         }
       }
-    }
-
+		}
+		
     @media (hover) {
       .portfolio_item {
         filter: grayscale(100%);
@@ -115,46 +138,37 @@ export default {
       }
     }
     .portfolio_item {
-      opacity: 0;
+			opacity: 0;
+			animation: portfolioItemsUp 0.5s forwards;
     }
   }
 }
 
-.portfolio_item_0 {
-  animation: portfolioItemsUp 0.5s 0s forwards;
-}
-.portfolio_item_1 {
-  animation: portfolioItemsUp 0.5s 0.1s forwards;
-}
-.portfolio_item_2 {
-  animation: portfolioItemsUp 0.5s 0.2s forwards;
-}
-.portfolio_item_3 {
-  animation: portfolioItemsUp 0.5s 0.3s forwards;
-}
-.portfolio_item_4 {
-  animation: portfolioItemsUp 0.5s 0.4s forwards;
-}
-.portfolio_item_5 {
-  animation: portfolioItemsUp 0.5s 0.5s forwards;
-}
-.portfolio_item_6 {
-  animation: portfolioItemsUp 0.5s 0.6s forwards;
-}
-.portfolio_item_7 {
-  animation: portfolioItemsUp 0.5s 0.7s forwards;
-}
-.portfolio_item_8 {
-  animation: portfolioItemsUp 0.5s 0.8s forwards;
-}
-.portfolio_item_9 {
-  animation: portfolioItemsUp 0.5s 0.9s forwards;
-}
-.portfolio_item_10 {
-  animation: portfolioItemsUp 0.5s 1s forwards;
-}
-.portfolio_item_11 {
-  animation: portfolioItemsUp 0.5s 1.1s forwards;
+.portfolio__nav {
+	// padding-top: 1rem;
+	padding-bottom: 1rem;
+	ul {
+		max-width: 80%;
+		margin-right: 0;
+		margin-left: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		li{
+			padding-right: 1.5rem;
+			font-family: $accFont;
+			font-weight: 400;
+			font-size: 0.8rem;
+			letter-spacing: 0.15rem;
+			a {
+				color: $stc;
+			}
+		}
+		li:first-child a {
+			color: $acf;
+		}
+	}
 }
 
 @keyframes portfolioItemsUp {

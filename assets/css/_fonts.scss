@@ -61,22 +61,19 @@
 	}
 
 @font-face {
-    font-family: 'Decima Mono X';
+    font-family: 'DecimaMonoX';
     src: url('~assets/fonts/DecimaMonoX.eot');
     src: local('Decima Mono X'), local('DecimaMonoX'),
         url('~assets/fonts/DecimaMonoX.eot?#iefix') format('embedded-opentype'),
         url('~assets/fonts/DecimaMonoX.woff2') format('woff2'),
         url('~assets/fonts/DecimaMonoX.woff') format('woff'),
         url('~assets/fonts/DecimaMonoX.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 
-
-
-
 @font-face {
-    font-family: 'Decima Mono X';
+    font-family: 'DecimaMonoX';
     src: url('~assets/fonts/DecimaMonoX-Light.eot');
     src: local('Decima Mono X Light'), local('DecimaMonoX-Light'),
         url('~assets/fonts/DecimaMonoX-Light.eot?#iefix') format('embedded-opentype'),
@@ -87,5 +84,42 @@
     font-style: normal;
 }
 
+
+
+
+
+
+@font-face {
+	font-family: 'IBMPlexMono';
+	src: url('~assets/fonts/IBMPlexMono.eot');
+	src: local('IBM Plex Mono'), local('IBMPlexMono'),
+			url('~assets/fonts/IBMPlexMono.eot?#iefix') format('embedded-opentype'),
+			url('~assets/fonts/IBMPlexMono.woff') format('woff'),
+			url('~assets/fonts/IBMPlexMono.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'IBMPlexMono';
+	src: url('~assets/fonts/IBMPlexMono-Thin.eot');
+	src: local('IBM Plex Mono Thin'), local('IBMPlexMono-Thin'),
+			url('~assets/fonts/IBMPlexMono-Thin.eot?#iefix') format('embedded-opentype'),
+			url('~assets/fonts/IBMPlexMono-Thin.woff') format('woff'),
+			url('~assets/fonts/IBMPlexMono-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'IBMPlexMono ';
+	src: url('~assets/fonts/IBMPlexMono-Light.eot');
+	src: local('IBM Plex Mono Light'), local('IBMPlexMono-Light'),
+			url('~assets/fonts/IBMPlexMono-Light.eot?#iefix') format('embedded-opentype'),
+			url('~assets/fonts/IBMPlexMono-Light.woff') format('woff'),
+			url('~assets/fonts/IBMPlexMono-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
 
 

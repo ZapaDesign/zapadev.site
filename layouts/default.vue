@@ -17,7 +17,7 @@
 
 #app {
   display: flex;
-	background-image: url(../assets/img-noise.png);
+	background-image: url(../assets/BG_body.jpg);
 	// background-size: 10%;
 	background-color: $sbbgc;
   min-height: 100vh;
@@ -127,10 +127,10 @@ header {
   flex: 1;
   display: flex;
   flex-direction: column;
-	overflow: hidden;
 	padding-top: 2vw;
-	font-family: $dmx;
+	font-family: $mainFont;
 	font-weight: 300;
+	font-size: 1rem;
 }
 
 @media (min-width: 720px) {

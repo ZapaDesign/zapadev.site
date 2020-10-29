@@ -2,11 +2,7 @@
 title: Розработка моего сайта портфолио на nuxt.js
 category: web
 description: "| zapadesign.com"
-thumbnail: portfolio_item_004_thumbnail.jpg
-tags: 
-  - wordpress
-  - design site
-  - web development
+thumbnail: portfolio_item_015_thumbnail.jpg
 
 ---
 

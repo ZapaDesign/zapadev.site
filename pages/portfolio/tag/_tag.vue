@@ -14,18 +14,23 @@
 
 <script>
 export default {
-  name: 'portfolio',
+  name: 'wordpress',
   async asyncData(context) {
     const { $content, app } = context
 		const defaultLocale = app.i18n.locale
-		const tags = await $content('tags').where('/portfolio_tags').limit(1).fetch()
+		const tags = await $content('portfolio_tags')
+      .where({ slug: { $contains: params.tag } })
+      .limit(1)
+      .fetch()
 		const tag = tags.length > 0 ? tags[0] : {}
-    const posts = await $content(`${defaultLocale}/portfolio`).where({ tags: { $contains: tag.name } }).fetch()
+		const posts = await $content(`${defaultLocale}/portfolio`).where({ tags: { $contains: tag.name } }).fetch()
+
     return {
       posts: posts.map((post) => ({
         ...post,
         path: post.path.replace(`/${defaultLocale}`, ''),
-      })),
+			})),
+			tag
     }
 	}
 

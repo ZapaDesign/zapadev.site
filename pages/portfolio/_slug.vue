@@ -9,12 +9,12 @@
           </nuxt-link>
           <div>
             <span>
-              <nuxt-link :to="'/' + $i18n.locale + '/portfolio/razrabotka-saita-002'">
+              <nuxt-link v-if="prev" :to="'/' + $i18n.locale + '/portfolio/' + prev.slug">
                 ⟵
               </nuxt-link>
             </span>
             <span>
-              <nuxt-link :to="'/' + $i18n.locale + '/portfolio/razrabotka-saita-001'">
+              <nuxt-link v-if="next" :to="'/' + $i18n.locale + '/portfolio/' + next.slug">
                 ⟶
               </nuxt-link>
             </span>
@@ -25,6 +25,11 @@
         </div>
         <div class="post_date slideUp">25.12.2025</div>
         <div class="post_text slideUp">
+					{{ post.excerpt }}
+					<a v-if="post.link" :href="`http://${post.link}`">
+					перейти на {{ post.link }}
+					</a>
+					
           <nuxt-content :document="post" />
         </div>
       </div>
@@ -87,10 +92,18 @@ export default {
   async asyncData(context) {
     const { $content, params, app, route, redirect } = context
     const slug = params.slug
-    const post = await $content(`${app.i18n.locale}/portfolio`, slug).fetch()
+		const post = await $content(`${app.i18n.locale}/portfolio`, slug)
+			.fetch()
+		const [prev, next] = await $content(`${app.i18n.locale}/portfolio`)
+      .only(['title', 'slug'])
+      .sortBy('slug', 'asc')
+      .surround(params.slug)
+			.fetch()
 
     return {
-      post,
+			post,
+			prev,
+			next
     }
   }
 }
@@ -101,6 +114,14 @@ export default {
 
 
 <style lang="scss">
+
+@media (min-width: 1200px) {
+  .page.porfolio_item {
+    // height: 100vh;
+    // overflow: hidden;
+  }
+}
+
 .post_info {
   overflow: auto;
   border-right: 1px solid #808080;
@@ -156,8 +177,6 @@ export default {
 	margin-right: 0.75vw;
 	color: $acf;
 	background-color: $linkc;
-	position: sticky;
-  top: 0;
   z-index: 100;
 	a,
 	a:active,
@@ -175,11 +194,5 @@ export default {
   }
 }
 
-@media (min-width: 1200px) {
-  .page.porfolio_item {
-    height: 100vh;
-    overflow: hidden;
-  }
-}
 
 </style>

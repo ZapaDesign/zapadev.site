@@ -8,7 +8,6 @@
 		<div class="tabs__content__item" v-for="(aboutMeItem, $index) in aboutMeItems" :key="$index">
 			<nuxt-content v-if="activetab === 1+$index" :document="aboutMeItem " />
 		</div>
-
 	</div>
 </template>
 
@@ -30,26 +29,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-p {
-	// padding: 0 15%;
-	line-height: 1.5;
-	max-width: 500px;
-}
 
-.tabs__nav {
-	text-align: right;
-	padding-bottom: 1rem;
-}
 
-.tabs__nav__item {
-	display: inline-block;
-	padding-left: 1rem;
-	a {
-		cursor: pointer;
-	}
-	a.active {
-		color: $acf;
-		cursor: default;
+
+// .tabs__nav__item {
+// 	display: inline-block;
+// 	padding-left: 1rem;
+// 	font-family: $plm;
+// 	font-weight: 400;
+// 	font-size: 0.85rem;
+// 	letter-spacing: 0.15rem;
+
+// 	a {
+// 		cursor: pointer;
+// 		color: $stc;
+// 	}
+// 	a.active {
+// 		color: $acf;
+// 		cursor: default;
+// 	}
+
+// }
+
+.tabs__content__item {
+	::v-deep .nuxt-content {
+		p {
+			line-height: 1.5;
+		}
 	}
 }
 
