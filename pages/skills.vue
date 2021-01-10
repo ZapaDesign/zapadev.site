@@ -34,23 +34,33 @@ export default {
 	async asyncData(context) {
 		const { $content, app } = context
 		const defaultLocale = app.i18n.locale
-		const skillsWebdesign = await $content(`${defaultLocale}/skills/skills_webdesign`).fetch()
-		const skillsDesign = await $content(`${defaultLocale}/skills/skills_design`).fetch()
-		const skillsOther = await $content(`${defaultLocale}/skills/skills_other`).fetch()
+		const skillsWebdesign = await $content(
+			`${defaultLocale}/skills/skills_webdesign`
+		).fetch()
+		const skillsDesign = await $content(
+			`${defaultLocale}/skills/skills_design`
+		).fetch()
+		const skillsOther = await $content(
+			`${defaultLocale}/skills/skills_other`
+		).fetch()
 
 		return {
 			skillsWebdesign,
 			skillsDesign,
-			skillsOther
+			skillsOther,
 		}
-	}
+	},
 }
 </script>
 
 <style lang="scss">
 .skills {
+	.content {
+		flex-wrap: wrap;
+	}
 	section {
 		flex: 3;
+		min-width: 250px;
 		padding-right: 2vw;
 	}
 	section:last-child {
