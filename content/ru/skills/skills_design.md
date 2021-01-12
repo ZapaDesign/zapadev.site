@@ -9,7 +9,7 @@ id: 2
 
 - **Разработки интерфейсов:** [Adobe Photoshop, Adobe XD (Experience Design), Figma]
 
-- **Прототипирование:** [Mokup.me, Figma, Adobe XD, Axure]
+- **Прототипирование:** [Mokup.me, Figma, Adobe XD]
 
 - **Многостраничная верстка:** [Adobe InDesign]
 

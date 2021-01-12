@@ -1,7 +1,7 @@
 ---
-title: Розработка моего сайта портфолио на nuxt.js
+title: Дизайн
 category: web
-description: "| zapadesign.com"
+description: "| просто дизайн"
 thumbnail: portfolio_item_011_thumbnail.jpg
 
 ---
@@ -11,6 +11,3 @@ thumbnail: portfolio_item_011_thumbnail.jpg
 - Wordpress
 - ACF, CPT UI, Polylang, ContctForm7
 
-Разработка многостраничного сайта-каталога компании “КВАНТ ПЛЮС”. Реализованы адаптивность, многоязычность, поиск по сайту, интерактивная карта, форма обратнойсвязи, кастомные типы поля, кастомные типы записи
-
-<a href="http://zapadesign.com">перейти на zapadesign.com</a>
