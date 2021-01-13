@@ -14,7 +14,10 @@
 				</div>
 				<div class="paper_cv_link">
 					<span> Скачать CV ⟶ </span>
-					<a href="#">
+					<a
+						target="_blank"
+						href="https://drive.google.com/file/d/1U-4bcNkpMGW1V__JUFz7bfPfX1z7uCgI/view?usp=sharing"
+					>
 						<svg><use xlink:href="../assets/icons.svg#icon_pdf"></use></svg>
 					</a>
 				</div>

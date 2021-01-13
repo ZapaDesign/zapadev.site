@@ -7,12 +7,14 @@ id: 2
 
 - **Векторная графика:** [Adobe Illustrator, Adobe FireWorks, Figma]
 
-- **Разработки интерфейсов:** [Adobe Photoshop, Adobe XD (Experience Design), Figma]
+- **Разработки интерфейсов:** [Adobe Photoshop, Adobe XD, Figma]
 
 - **Прототипирование:** [Mokup.me, Figma, Adobe XD]
 
 - **Многостраничная верстка:** [Adobe InDesign]
 
-- **MotionDesign:** [Adobe After Effects, Adobe Animate, Adobe Character Animator, Vyond]
+- **MotionDesign:** [Adobe After Effects]
+
+- **Видеомонтаж** [Adobe Premiere Pro, Adobe Premiere Elements]
 
 - **3D:** [Pro100]
