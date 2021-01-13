@@ -64,7 +64,7 @@ export default {
 		padding-right: 2vw;
 	}
 	section:last-child {
-		flex: 2;
+		flex: 5;
 	}
 	h2 {
 		font-family: $dmx;
@@ -84,8 +84,8 @@ export default {
 				font-weight: 300;
 				font-family: $dmx;
 				strong {
-					font-weight: 400;
-					color: $acf;
+					font-weight: 700;
+					// color: $acf;
 				}
 			}
 		}

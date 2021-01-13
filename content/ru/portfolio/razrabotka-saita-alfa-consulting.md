@@ -1,9 +1,13 @@
 ---
-title: Розработка моего сайта портфолио на nuxt.js
+title: Розработка wordpress-сайта компании Alfa Consulting
 category: web
-description: "| zapadesign.com"
-thumbnail: portfolio_item_009_thumbnail.jpg
-
+description: "| alfa-consulting.lt"
+thumbnail: portfolio_item_004_thumbnail.jpg
+tags: 
+  - wordpress
+  - design site
+  - web development
+createdAt: "2016-08-16"
 ---
 
 - Adobe Photoshop, Adobe Illustrator
@@ -13,4 +17,4 @@ thumbnail: portfolio_item_009_thumbnail.jpg
 
 Разработка многостраничного сайта-каталога компании “КВАНТ ПЛЮС”. Реализованы адаптивность, многоязычность, поиск по сайту, интерактивная карта, форма обратнойсвязи, кастомные типы поля, кастомные типы записи
 
-<a href="http://zapadesign.com">перейти на zapadesign.com</a>
+[перейти на alfa-consulting.lt](http://alfa-consulting.lt)

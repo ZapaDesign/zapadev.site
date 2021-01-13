@@ -3,13 +3,13 @@ title: Web-дизайн
 id: 1
 ---
 
-- **Front-end:**
+- **FRONT-END:**
 	- HTML5 [base, Bootstrap]
 	- CSS3 [base, transition, animation, flex model, grid]
 	- JavaScript [jQuery, AJAX, Vue.js (Nuxt.js)] - изучаю в данный момент
 	- SASS, Gulp, Git, Sublime,Visual Studio Code, Emmet, Trello, GitHub</li>
 
-- **Back-end:** Wordpress 
+- **BACK-END:** Wordpress 
 
 - **CMS:** [Wordpress (Theme Development, ACF, CPT, Carbon Fields, CF7, Polyleng)]
 

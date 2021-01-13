@@ -1,13 +1,9 @@
 ---
-title: Розработка моего сайта портфолио на nuxt.js
+title: Розработка wordpress-сайта компании O&G
 category: web
-description: "| zapadesign.com"
-thumbnail: portfolio_item_004_thumbnail.jpg
-tags: 
-  - wordpress
-  - design site
-  - web development
-
+description: "| oandg.com"
+thumbnail: portfolio_item_005_thumbnail.jpg
+createdAt: "2017-10-16"
 ---
 
 - Adobe Photoshop, Adobe Illustrator
@@ -17,4 +13,4 @@ tags:
 
 Разработка многостраничного сайта-каталога компании “КВАНТ ПЛЮС”. Реализованы адаптивность, многоязычность, поиск по сайту, интерактивная карта, форма обратнойсвязи, кастомные типы поля, кастомные типы записи
 
-<a href="http://zapadesign.com">перейти на zapadesign.com</a>
+[перейти на oandg.com](http://oandg.com")

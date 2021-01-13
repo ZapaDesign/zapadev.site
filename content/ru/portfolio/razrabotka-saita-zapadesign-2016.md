@@ -1,9 +1,9 @@
 ---
-title: Розработка моего сайта портфолио на nuxt.js
+title: Розработка моего wordpress-сайта портфолио
 category: web
 description: "| zapadesign.com"
-thumbnail: portfolio_item_012_thumbnail.jpg
-
+thumbnail: portfolio_item_007_thumbnail.jpg
+createdAt: "2015-10-16"
 ---
 
 - Adobe Photoshop, Adobe Illustrator

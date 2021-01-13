@@ -13,7 +13,7 @@
 					<SocialProfiles />
 				</div>
 				<div class="paper_cv_link">
-					<span> Скачать CV в формате .pdf ⟶ </span>
+					<span> Скачать CV ⟶ </span>
 					<a href="#">
 						<svg><use xlink:href="../assets/icons.svg#icon_pdf"></use></svg>
 					</a>
