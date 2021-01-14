@@ -4,7 +4,7 @@
 	"blog-description": "Привіт! Мене звати Сергій. Ви переглядаете мій сайт-портфоліо",
 	"also-available-in": "Aussi disponible en",
 	"links": {
-		"home": "Чим займаюсь",
+		"home": "Супровідний лист",
 		"aboutme": "Давай знайомитися",
 		"skills": "Умію в...",
 		"portfolio": "Портфоліо",
@@ -14,12 +14,12 @@
 		"russian": "Версия на русском"
 	},
 	"home": {
-		"title": "ДИЗАЙН ТА РОЗРОБКА ІНТЕРНЕТ САЙТіВ",
-		"description": ""
+		"title": "Супровідний лист",
+		"description": "| для роботодавця"
 	},
 	"aboutme": {
 		"title": "ДАВАЙ ЗНАЙОМИТИСЯ",
-		"description": "| коротко про мене"
+		"description": "| CV | коротко про мене"
 	},
 	"portfolio": {
 		"title": "ПОРТФОЛІО",

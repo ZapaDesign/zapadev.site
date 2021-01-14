@@ -4,7 +4,7 @@
 	"blog-description": "Hello! My name is Sergey Zaparenko and it's site-portfolio site",
 	"also-available-in": "Also available in",
 	"links": {
-		"home": "What am I doing",
+		"home": "Covering letter",
 		"aboutme": "Let's get acquainted",
 		"skills": "Skills",
 		"portfolio": "Portfolio",
@@ -15,8 +15,8 @@
 		"ukrainian": "Версія на ураїінській"
 	},
 	"home": {
-		"title": "DESIGN AND DEVELOPMENT OF INTERNET SITES",
-		"description": ""
+		"title": "Covering letter",
+		"description": "| for the employer"
 	},
 	"aboutme": {
 		"title": "LET'S GET ACQUAINTED",
