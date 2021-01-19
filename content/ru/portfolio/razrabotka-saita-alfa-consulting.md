@@ -2,7 +2,8 @@
 title: Розработка wordpress-сайта компании Alfa Consulting
 category: web
 description: "| alfa-consulting.lt"
-thumbnail: portfolio_item_004_thumbnail.jpg
+thumbnail: portfolio_alfa-consulting_thumbnail.jpg
+img: portfolio_alfa-consulting_img_001.jpg
 tags: 
   - wordpress
   - design site
@@ -15,6 +16,6 @@ createdAt: "2016-08-16"
 - Wordpress
 - ACF, CPT UI, Polylang, ContctForm7
 
-Разработка многостраничного сайта-каталога компании “КВАНТ ПЛЮС”. Реализованы адаптивность, многоязычность, поиск по сайту, интерактивная карта, форма обратнойсвязи, кастомные типы поля, кастомные типы записи
+Разработка сайта-каталога компании “Alfa Consulting”. Реализованы адаптивность, многоязычность, интерактивная карта, форма обратнойсвязи
 
 [перейти на alfa-consulting.lt](http://alfa-consulting.lt)

@@ -9,7 +9,7 @@ id: 1
 	- JavaScript [jQuery, Vue.js (Nuxt.js)] - изучаю в данный момент
 	- SASS, Gulp, Git, Sublime,Visual Studio Code, Emmet, Trello, GitHub</li>
 
-- **BACK-END:** Wordpress 
+- **BACK-END:** Wordpress, Open Server, phpMyAdmin
 
 - **CMS:** [Wordpress (Theme Development, ACF, CPT, Carbon Fields, CF7, Polyleng)]
 

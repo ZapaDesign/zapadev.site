@@ -2,7 +2,10 @@
 title: Розработка моего wordpress-сайта портфолио
 category: web
 description: "| zapadesign.com"
-thumbnail: portfolio_item_007_thumbnail.jpg
+thumbnail: portfolio_zapadesign-2016_thumbnail.jpg
+img: portfolio_zapadesign-2016_img_001.jpg
+img2: portfolio_zapadesign-2016_img_002.jpg
+img3: portfolio_zapadesign-2016_img_003.jpg
 createdAt: "2015-10-16"
 ---
 

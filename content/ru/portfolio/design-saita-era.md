@@ -1,18 +1,12 @@
 ---
-title: Розработка wordpress-сайта языковой школы MasterCLASS
-category: web
-description: "| masterclass.pl.ua"
-thumbnail: portfolio_item_002_thumbnail.jpg
-img: portfolio_item_002_img_001.jpg
-createdAt: "2018-05-16"
+title: Дизайн сайта бизнес-центра ЭРА
+category: design
+description: "| учебная работа"
+thumbnail: portfolio_era_thumbnail.png
+img: portfolio_era_img_001.jpg
+createdAt: "2018-03-16"
 ---
 
 - Adobe Photoshop, Adobe Illustrator
-- Gulp, SCSS
-- HTML5/CSS3
-- Wordpress
-- Carbon Fields, CF7, Polyleng
 
 Разработка многостраничного сайта языковой школы “MasterCLASS”. Реализованы адаптивность, многоязычность, поиск по сайту, интерактивная карта, форма обратнойсвязи, кастомные типы поля, кастомные типы записи.
-
-[перейти на masterclass.pl.ua](http://masterclass.pl.ua)

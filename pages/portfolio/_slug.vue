@@ -13,6 +13,7 @@
 							>
 								⟵
 							</nuxt-link>
+							<div v-else>⟵</div>
 						</span>
 						<span>
 							<nuxt-link
@@ -21,6 +22,7 @@
 							>
 								⟶
 							</nuxt-link>
+							<div v-else>⟶</div>
 						</span>
 					</div>
 				</div>
@@ -192,12 +194,17 @@ export default {
 	}
 }
 .post_navigation {
+	span {
+		display: inline-block;
+		a {
+			color: $acf;
+		}
+	}
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
 	padding: 1rem;
 	margin-right: 0.75vw;
-	color: $acf;
 	background-color: $linkc;
 	z-index: 100;
 	a,
