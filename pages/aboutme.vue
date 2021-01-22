@@ -135,8 +135,6 @@ export default {
 		width: 100%;
 		left: -100%;
 	}
-	li {
-	}
 }
 
 .paper_cv_link {

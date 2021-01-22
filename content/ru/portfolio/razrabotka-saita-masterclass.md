@@ -5,6 +5,9 @@ description: "| masterclass.pl.ua"
 thumbnail: portfolio_item_002_thumbnail.jpg
 img: portfolio_item_002_img_001.jpg
 createdAt: "2018-05-16"
+tags: 
+  - wordpress
+  - webdesign
 ---
 
 - Adobe Photoshop, Adobe Illustrator

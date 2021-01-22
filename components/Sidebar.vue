@@ -18,7 +18,7 @@
 					</div>
 					<LanguageSwitcher />
 					<!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-					<MainNavigation />
+					<NavigationMain />
 				</div>
 				<div>
 					<ul class="contacts">

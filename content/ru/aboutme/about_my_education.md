@@ -12,8 +12,6 @@ id: 2
 
 Дополнительное образование
 
-- [2014] - Курсы "Основы фотографии"
-
 - [2016] - WordPress Theme Development with Bootstrap (Brad Hussey)
 
 - [2019] - Курсы "Таргетированная реклама Facebook/Instagram

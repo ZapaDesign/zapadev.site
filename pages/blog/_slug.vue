@@ -2,14 +2,24 @@
 	<div class="page blog_article">
 		<PageHeader :title="post.title" :description="post.description" />
 		<div class="content">
-			<BlogNavigation :posts="posts" />
+			<NavigationBlog :posts="posts" />
 			<article class="article_content slideLeftInOut">
 				<div class="post_navigation">
 					<nuxt-link :to="'/' + $i18n.locale + '/blog/'">✕</nuxt-link>
-					 <div>
-            <span><nuxt-link :to="'/' + $i18n.locale + '/portfolio/razrabotka-saita-002'">⟵</nuxt-link></span>
-            <span><nuxt-link :to="'/' + $i18n.locale + '/portfolio/razrabotka-saita-001'">⟶</nuxt-link></span>
-          </div>
+					<div>
+						<span
+							><nuxt-link
+								:to="'/' + $i18n.locale + '/portfolio/razrabotka-saita-002'"
+								>⟵</nuxt-link
+							></span
+						>
+						<span
+							><nuxt-link
+								:to="'/' + $i18n.locale + '/portfolio/razrabotka-saita-001'"
+								>⟶</nuxt-link
+							></span
+						>
+					</div>
 				</div>
 				<nuxt-content :document="post" />
 			</article>
@@ -75,7 +85,7 @@ export default {
 			})),
 			post,
 		}
-	}
+	},
 }
 </script>
 
@@ -146,13 +156,13 @@ export default {
 	}
 	p code {
 		// color: #1a202c;
-    // font-weight: 400;
-    // font-size: .875em;
-    background-color: #f7fafc;
-    padding: .25rem;
-    border-width: 1px;
-    border-color: #edf2f7;
-    border-radius: .25rem;
+		// font-weight: 400;
+		// font-size: .875em;
+		background-color: #f7fafc;
+		padding: 0.25rem;
+		border-width: 1px;
+		border-color: #edf2f7;
+		border-radius: 0.25rem;
 	}
 }
 .AnimationState-leave-active .blog_article.slideLeftInOut {
@@ -171,5 +181,4 @@ export default {
 		display: none;
 	}
 }
-
 </style>

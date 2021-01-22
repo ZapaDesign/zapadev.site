@@ -9,12 +9,16 @@ img: portfolio_item_003_img_001.jpg
 img2: portfolio_item_003_img_002.jpg
 img3: portfolio_item_003_img_003.jpg
 createdAt: "2020-10-16"
+tags:
+  - js_vue_nuxt
+  - webdesign
 ---
 
 - Adobe Photoshop, Adobe Illustrator
-- HTML5/CSS3
+- HTML5/CSS3, SCSS
 - Vue,js, Nuxt.js
+- Nuxt-i18n, Nuxt-Content
 
-Разработка многостраничного сайта-каталога компании “КВАНТ ПЛЮС”. Реализованы адаптивность, многоязычность, поиск по сайту, интерактивная карта, форма обратнойсвязи, кастомные типы поля, кастомные типы записи
+Разработка моего сайта-портфолио на Nuxt.js. Отрисован дизайн UI. Реализована адаптивность, многоязычность (Nuxt-i18n), управление контентом (Nuxt-content)
 
 [перейти на zapadesign.com](http://zapadesign.com)

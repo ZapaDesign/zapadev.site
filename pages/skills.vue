@@ -64,7 +64,7 @@ export default {
 		padding-right: 2vw;
 	}
 	section:last-child {
-		flex: 5;
+		flex: 4;
 	}
 	h2 {
 		font-family: $dmx;

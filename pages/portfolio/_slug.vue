@@ -140,10 +140,6 @@ export default {
 
 <style lang="scss">
 @media (min-width: 1200px) {
-	.page.porfolio_item {
-		// height: 100vh;
-		// overflow: hidden;
-	}
 }
 
 .post_info {

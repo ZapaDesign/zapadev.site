@@ -6,6 +6,9 @@ thumbnail: portfolio_item_001_thumbnail.jpg
 adthumbnail: 0s
 img: portfolio_item_001_img_001.jpg
 createdAt: "2018-10-16"
+tags: 
+  - wordpress
+  - webdesign
 otherLanguages:
   - locale: en
     path: /en/portfolio/razrabotka-saita-001

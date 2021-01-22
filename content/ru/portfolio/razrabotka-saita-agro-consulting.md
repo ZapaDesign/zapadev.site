@@ -6,6 +6,9 @@ thumbnail: portfolio_agro-consulting_thumbnail.jpg
 img: portfolio_agro-consulting_img_001.jpg
 img2: portfolio_agro-consulting_img_002.jpg
 createdAt: "2016-03-16"
+tags: 
+  - wordpress
+  - webdesign
 ---
 
 - Adobe Photoshop, Adobe Illustrator

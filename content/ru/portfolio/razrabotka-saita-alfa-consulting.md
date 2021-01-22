@@ -4,11 +4,10 @@ category: web
 description: "| alfa-consulting.lt"
 thumbnail: portfolio_alfa-consulting_thumbnail.jpg
 img: portfolio_alfa-consulting_img_001.jpg
+createdAt: "2016-08-16"
 tags: 
   - wordpress
-  - design site
-  - web development
-createdAt: "2016-08-16"
+  - webdesign
 ---
 
 - Adobe Photoshop, Adobe Illustrator

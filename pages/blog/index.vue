@@ -5,7 +5,7 @@
 			:description="$t('blog.description')"
 		/>
 		<div class="content">
-			<BlogNavigation :posts="posts" />
+			<NavigationBlog :posts="posts" />
 			<div class="blog_article slideLeftImg"></div>
 		</div>
 	</div>
