@@ -1,5 +1,5 @@
 <template>
-	<header>
+	<header id="upToHeader">
 		<h1 class="slideLeft">
 			{{ title }}
 			<span>
@@ -12,13 +12,12 @@
 <script>
 export default {
 	name: 'PageHeader',
-	props:{
+	props: {
 		title: [String],
-		description: [String]
-	}
+		description: [String],
+	},
 }
 </script>
 
 <style lang="scss">
-
 </style>

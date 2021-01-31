@@ -4,6 +4,7 @@
 		<div class="main">
 			<Nuxt />
 		</div>
+		<a href="#upToHeader" class="ScrollToUpBtn">▲</a>
 	</div>
 </template>
 
@@ -48,6 +49,7 @@ aside {
 }
 
 .main {
+	scroll-behavior: smooth;
 	flex: 12;
 	overflow: hidden;
 	min-height: 100vh;
@@ -295,5 +297,19 @@ code {
 			font-size: 12px;
 		}
 	}
+}
+
+.ScrollToUpBtn {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	height: 1.5rem;
+	width: 1.5rem;
+	font-size: 1.25rem;
+	text-align: center;
+	background-color: $bc;
+	opacity: 0.2;
+	padding: 1rem;
+	border-radius: 50%;
 }
 </style>
