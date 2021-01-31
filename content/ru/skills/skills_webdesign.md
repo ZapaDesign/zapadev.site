@@ -6,7 +6,7 @@ id: 1
 - **FRONT-END:**
 	- HTML5 [base, Bootstrap]
 	- CSS3 [base, transition, animation, flex model, grid]
-	- JavaScript [jQuery, Vue.js (Nuxt.js)]
+	- junior JavaScript [jQuery, Vue.js (Nuxt.js)]
 	- SASS, Gulp, Git, Sublime,Visual Studio Code, Emmet, Trello, GitHub</li>
 
 - **BACK-END:** Wordpress, Open Server, phpMyAdmin
