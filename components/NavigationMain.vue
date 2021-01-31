@@ -4,14 +4,14 @@
 			<Logo />
 		</nuxt-link>
 
-		<nuxt-link :to="'/' + $i18n.locale + '/'" exact>
+		<!-- <nuxt-link :to="'/' + $i18n.locale + '/'" exact>
 			<div>{{ $t('links.home') }}</div>
 			<div class="mainNavigation_icon">
 				<svg>
 					<use xlink:href="../assets/icons.svg#icon_services"></use>
 				</svg>
 			</div>
-		</nuxt-link>
+		</nuxt-link> -->
 
 		<nuxt-link :to="'/' + $i18n.locale + '/aboutme'">
 			<div>{{ $t('links.aboutme') }}</div>

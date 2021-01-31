@@ -1,11 +1,15 @@
 <template>
-  <div id="app">
-    <Sidebar />
-    <div class="main">
-      <Nuxt />
-    </div>
-  </div>
+	<div id="app">
+		<Sidebar />
+		<div class="main">
+			<Nuxt />
+		</div>
+	</div>
 </template>
+
+<script>
+export default {}
+</script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
@@ -16,82 +20,82 @@
 }
 
 #app {
-  display: flex;
+	display: flex;
 	background-image: url(../assets/BG_body.jpg);
 	// background-size: 10%;
 	background-color: $sbbgc;
-  min-height: 100vh;
+	min-height: 100vh;
 
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
 }
 
 aside {
-  width: 50px;
+	width: 50px;
 
-  @media (min-width: 720px) {
-    & {
-      flex: 1;
-      width: auto;
-    }
-  }
+	@media (min-width: 720px) {
+		& {
+			flex: 1;
+			width: auto;
+		}
+	}
 }
 
 .main {
-  flex: 12;
-  overflow: hidden;
-  min-height: 100vh;
-  overflow-y: auto;
+	flex: 12;
+	overflow: hidden;
+	min-height: 100vh;
+	overflow-y: auto;
 
-  // background: linear-gradient(-45deg,
-  // 													rgb(32, 15, 10),
-  // 													rgb(31, 7, 17),
-  // 													rgb(5, 23, 29),
-  // 													rgb(4, 24, 19));
-  // background-size: 400% 400%;
-  // -webkit-animation: Gradient 15s ease infinite;
-  // -moz-animation: Gradient 15s ease infinite;
-  // animation: Gradient 15s ease infinite;
+	// background: linear-gradient(-45deg,
+	// 													rgb(32, 15, 10),
+	// 													rgb(31, 7, 17),
+	// 													rgb(5, 23, 29),
+	// 													rgb(4, 24, 19));
+	// background-size: 400% 400%;
+	// -webkit-animation: Gradient 15s ease infinite;
+	// -moz-animation: Gradient 15s ease infinite;
+	// animation: Gradient 15s ease infinite;
 
-  // @-webkit-keyframes Gradient {
-  // 	0% {background-position: 0% 50%}
-  // 	50% {background-position: 100% 50%}
-  // 	100% {background-position: 0% 50%}
-  // }
+	// @-webkit-keyframes Gradient {
+	// 	0% {background-position: 0% 50%}
+	// 	50% {background-position: 100% 50%}
+	// 	100% {background-position: 0% 50%}
+	// }
 
-  // @-moz-keyframes Gradient {
-  // 	0% {background-position: 0% 50%}
-  // 	50% {background-position: 100% 50%}
-  // 	100% {background-position: 0% 50%}
-  // }
+	// @-moz-keyframes Gradient {
+	// 	0% {background-position: 0% 50%}
+	// 	50% {background-position: 100% 50%}
+	// 	100% {background-position: 0% 50%}
+	// }
 
-  // @keyframes Gradient {
-  // 	0% {background-position: 0% 50%}
-  // 	50% {background-position: 100% 50%}
-  // 	100% {background-position: 0% 50%}
-  // }
+	// @keyframes Gradient {
+	// 	0% {background-position: 0% 50%}
+	// 	50% {background-position: 100% 50%}
+	// 	100% {background-position: 0% 50%}
+	// }
 
-  @media (min-width: 720px) {
-    & {
-      flex: 3;
-    }
-  }
-  @media (min-width: 1200px) {
-    & {
-      flex: 4;
-    }
-  }
-  @media (min-width: 1440px) {
-    & {
-      flex: 5;
-    }
-  }
+	@media (min-width: 720px) {
+		& {
+			flex: 3;
+		}
+	}
+	@media (min-width: 1200px) {
+		& {
+			flex: 4;
+		}
+	}
+	@media (min-width: 1440px) {
+		& {
+			flex: 5;
+		}
+	}
 }
 
 .page {
@@ -100,7 +104,6 @@ aside {
 	min-height: inherit;
 	padding-left: 3vw;
 }
-
 
 header {
 	background-image: url(~assets/header_img.svg);
@@ -112,21 +115,21 @@ header {
 	font-size: 0.75rem;
 	@media (min-width: 720px) {
 		& {
-			font-size: 0.875rem;;
+			font-size: 0.875rem;
 		}
 	}
 	@media (min-width: 1200px) {
 		& {
-			font-size: 1rem;;
+			font-size: 1rem;
 			padding: 50px;
 		}
 	}
 }
 
 .content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
 	padding-top: 2vw;
 	font-family: $mainFont;
 	font-weight: 300;
@@ -134,27 +137,27 @@ header {
 }
 
 @media (min-width: 720px) {
-  .content {
-    flex-direction: row;
-  }
-  .content__text {
-    flex: 8;
-  }
-  .content__img {
-    flex: 4;
-  }
+	.content {
+		flex-direction: row;
+	}
+	.content__text {
+		flex: 8;
+	}
+	.content__img {
+		flex: 4;
+	}
 }
 
 h1 {
 	font-family: $opc;
 	font-weight: 700;
-	letter-spacing:0.1em;
+	letter-spacing: 0.1em;
 	display: inline-block;
 	position: relative;
 	padding: 10px 0;
 	// border-top: 1px solid #fff;
 	// border-bottom: 1px solid #fff;
-	&:after, 
+	&:after,
 	&:before {
 		content: '';
 		display: block;
@@ -198,31 +201,31 @@ code {
 }
 
 ::-webkit-scrollbar-button {
-  background-repeat: no-repeat;
-  width: 6px;
-  height: 0px;
+	background-repeat: no-repeat;
+	width: 6px;
+	height: 0px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: $sbbgc;
-  // box-shadow:0px 0px 3px #000 inset;
+	background-color: $sbbgc;
+	// box-shadow:0px 0px 3px #000 inset;
 }
 
 ::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  background-color: $acf;
-  // box-shadow:0px 1px 1px #fff inset;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	background-color: $acf;
+	// box-shadow:0px 1px 1px #fff inset;
 }
 
 ::-webkit-resizer {
-  background-repeat: no-repeat;
-  width: 4px;
-  height: 0px;
+	background-repeat: no-repeat;
+	width: 4px;
+	height: 0px;
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+	width: 4px;
 }
 
 .nuxt-content {
@@ -293,8 +296,4 @@ code {
 		}
 	}
 }
-
-
-
-
 </style>

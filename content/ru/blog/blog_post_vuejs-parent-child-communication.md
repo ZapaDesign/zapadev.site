@@ -1,5 +1,5 @@
 ---
-title: Связь родительских и дочерних компонентов Vue.js
+title: Vue | Связь родительских и дочерних компонентов
 link: https://vegibit.com/vuejs-parent-child-communication/
 ---
 

@@ -4,23 +4,6 @@
 		<div class="content">
 			<NavigationBlog :posts="posts" />
 			<article class="article_content slideLeftInOut">
-				<div class="post_navigation">
-					<nuxt-link :to="'/' + $i18n.locale + '/blog/'">✕</nuxt-link>
-					<div>
-						<span
-							><nuxt-link
-								:to="'/' + $i18n.locale + '/portfolio/razrabotka-saita-002'"
-								>⟵</nuxt-link
-							></span
-						>
-						<span
-							><nuxt-link
-								:to="'/' + $i18n.locale + '/portfolio/razrabotka-saita-001'"
-								>⟶</nuxt-link
-							></span
-						>
-					</div>
-				</div>
 				<nuxt-content :document="post" />
 			</article>
 		</div>
@@ -75,7 +58,9 @@ export default {
 		const { $content, params, app, route, redirect } = context
 		const slug = params.slug
 		const defaultLocale = app.i18n.locale
-		const posts = await $content(`${defaultLocale}/blog`).fetch()
+		const posts = await $content(`${defaultLocale}/blog`)
+			.sortBy('title', 'asc')
+			.fetch()
 		const post = await $content(`${defaultLocale}/blog`, slug).fetch()
 
 		return {
@@ -94,45 +79,48 @@ export default {
 
 
 <style lang="scss">
-.hide {
-	display: none;
+.back-to-top-fade-enter-active,
+.back-to-top-fade-leave-active {
+	transition: opacity 0.7s;
+}
+.back-to-top-fade-enter,
+.back-to-top-fade-leave-to {
+	opacity: 0;
 }
 
-.blog_navigation {
-	overflow: auto;
-	border-right: 1px solid #808080;
-	flex-basis: 20%;
-	min-width: 240px;
-	color: $stc;
+.vue-back-to-top {
+	cursor: pointer;
+	position: fixed;
+	z-index: 1000;
+}
 
-	.blog_form {
-		padding: 1rem 1rem 1rem 0;
-		color: $acf;
-		border-bottom: 1px solid #808080;
-		input {
-			background-color: transparent;
-			width: 100%;
-			border: none;
-			color: $wc;
-			outline: none;
-			font-size: 1rem;
-			color: $stc;
-			&:focus {
-				border: none;
-			}
-		}
-	}
-	.blog_items {
-		li {
-			padding: 1rem 1rem 1rem 0;
-		}
-	}
+.vue-back-to-top .default {
+	background-color: #f5c85c;
+	border-radius: 3px;
+	color: #ffffff;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	width: 160px;
+}
+
+.vue-back-to-top .default span {
+	color: #ffffff;
+}
+
+.vue-back-to-top--is-footer {
+	bottom: 50% !important;
+	position: absolute;
+	transform: translateY(50%);
+}
+
+.hide {
+	display: none;
 }
 
 .article_content {
 	font-weight: 300;
 	font-family: $dmx;
-	overflow: auto;
 	padding: 0 0.75vw;
 	flex: 1;
 	width: 100%;
@@ -154,26 +142,33 @@ export default {
 		animation-duration: 0.5s;
 		animation-delay: 0.3s;
 	}
-	p code {
+	p code,
+	li code {
 		// color: #1a202c;
 		// font-weight: 400;
 		// font-size: .875em;
-		background-color: #f7fafc;
+		// color: $wc;
+		background-color: #282a36;
 		padding: 0.25rem;
 		border-width: 1px;
-		border-color: #edf2f7;
+		border-color: $stc;
 		border-radius: 0.25rem;
+	}
+	blockquote {
+		border: 1px solid $stc;
+		padding: 1rem;
+		padding-bottom: 0;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		border-radius: 0.25rem;
+	}
+	hr {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
 	}
 }
 .AnimationState-leave-active .blog_article.slideLeftInOut {
 	animation-delay: 0s;
-}
-
-@media screen and (min-width: 1200px) {
-	.page.blog {
-		height: 100vh;
-		overflow: hidden;
-	}
 }
 
 @media (max-width: 960px) {

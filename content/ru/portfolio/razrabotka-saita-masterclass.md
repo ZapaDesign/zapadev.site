@@ -2,8 +2,8 @@
 title: Розработка wordpress-сайта языковой школы MasterCLASS
 category: web
 description: "| masterclass.pl.ua"
-thumbnail: portfolio_item_002_thumbnail.jpg
-img: portfolio_item_002_img_001.jpg
+thumbnail: portfolio_masterclass-site-2018_thumbnail.jpg
+img: portfolio_masterclass-site-2018_img_001.jpg
 createdAt: "2018-05-16"
 tags: 
   - wordpress

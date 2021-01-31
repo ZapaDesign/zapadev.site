@@ -45,6 +45,7 @@ export default {
 		grid-auto-rows: minmax(250px, auto);
 		padding-top: 1rem;
 		.portfolio_item {
+			// max-width: 600px;
 			overflow: hidden;
 			position: relative;
 			transition: 0.3s;

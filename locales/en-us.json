@@ -1,4 +1,6 @@
 {
+	"error-page": "An error occurred",
+	"error-page-404": "Page not found",
 	"read-more": "Read More",
 	"published-at": "Published at:",
 	"blog-description": "Hello! My name is Sergey Zaparenko and it's site-portfolio site",

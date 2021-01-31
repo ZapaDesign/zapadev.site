@@ -1,5 +1,5 @@
 ---
-title: Шпаргалка по Nuxt.js (English)
+title: Шпаргалка по Nuxt (English)
 ---
 
 ![](/blog/post_cheat_sheet_nuxtjs.png)

@@ -17,7 +17,9 @@ export default {
 	async asyncData(context) {
 		const { $content, app } = context
 		const defaultLocale = app.i18n.locale
-		const posts = await $content(`${defaultLocale}/blog`).fetch()
+		const posts = await $content(`${defaultLocale}/blog`)
+			.sortBy('title', 'asc')
+			.fetch()
 
 		return {
 			posts: posts.map((post) => ({
@@ -31,14 +33,14 @@ export default {
 
 <style lang="scss">
 .blog_article {
-	overflow: auto;
+	// overflow: auto;
 	flex: 1;
 }
 
 @media (min-width: 1200px) {
 	.page.blog {
-		height: 100vh;
-		overflow: hidden;
+		// height: 100vh;
+		// overflow: hidden;
 	}
 }
 </style>

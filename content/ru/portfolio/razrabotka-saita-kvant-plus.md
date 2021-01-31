@@ -2,9 +2,9 @@
 title: Разработка wordpress-сайта компании Квант Плюс
 category: web
 description: "| kvant-plus.com"
-thumbnail: portfolio_item_001_thumbnail.jpg
+thumbnail: portfolio_kvant-plus_thumbnail.jpg
 adthumbnail: 0s
-img: portfolio_item_001_img_001.jpg
+img: portfolio_kvant-plus_img_001.jpg
 createdAt: "2018-10-16"
 tags: 
   - wordpress

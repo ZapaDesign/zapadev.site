@@ -6,6 +6,7 @@
 				v-model="search"
 				autocomplete="off"
 				placeholder="Что хотите найти?"
+				autofocus
 			/>
 		</div>
 		<ul v-if="posts" class="blog_items">
@@ -34,6 +35,14 @@ export default {
 			search: '',
 		}
 	},
+	mounted() {
+		this.search = JSON.parse(sessionStorage.getItem('search')) || ''
+	},
+	watch: {
+		search(newValue, oldValue) {
+			sessionStorage.setItem('search', JSON.stringify(newValue))
+		},
+	},
 	computed: {
 		filteredPosts: function () {
 			return this.posts.filter((post) => {
@@ -49,7 +58,6 @@ export default {
 	display: none;
 }
 .blog_navigation {
-	overflow: auto;
 	border-right: 1px solid #808080;
 	flex-basis: 20%;
 	min-width: 240px;
