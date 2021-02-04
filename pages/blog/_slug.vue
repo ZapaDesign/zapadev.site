@@ -131,6 +131,37 @@ export default {
 	hr {
 		margin-top: 2rem;
 		margin-bottom: 1rem;
+		background-color: $linesColor;
+		height: 1px;
+		border: none;
+	}
+
+	table {
+		text-align: left;
+		border-collapse: collapse;
+		margin: 10px;
+		border: 1px solid $linesColor;
+	}
+	table th {
+		color: $acf;
+		font-weight: 300;
+		border-bottom: 1px solid $linesColor;
+		border-right: 1px solid $linesColor;
+		padding: 12px 17px;
+	}
+	table td {
+		border-bottom: 1px solid $linesColor;
+		border-right: 1px solid $linesColor;
+		padding: 7px 17px;
+	}
+	table tr:last-child td {
+		border-bottom: none;
+	}
+	table td:last-child {
+		border-right: none;
+	}
+	table tr:hover td {
+		text-decoration: underline;
 	}
 }
 .AnimationState-leave-active .blog_article.slideLeftInOut {
