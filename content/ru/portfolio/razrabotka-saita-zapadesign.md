@@ -1,7 +1,7 @@
 ---
 title: Розработка моего сайта портфолио на nuxt.js
 category: web
-description: "| zapadesign.com"
+description: "| zapadesign"
 thumbnail: portfolio_item_003_thumbnail.jpg
 excerpt: 
 link: 
@@ -21,4 +21,3 @@ tags:
 
 Разработка моего сайта-портфолио на Nuxt.js. Отрисован дизайн UI. Реализована адаптивность, многоязычность (Nuxt-i18n), управление контентом (Nuxt-content)
 
-[перейти на zapadesign.com](http://zapadesign.com)
