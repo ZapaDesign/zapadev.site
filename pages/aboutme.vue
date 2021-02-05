@@ -16,7 +16,7 @@
 					<span> Скачать CV ⟶ </span>
 					<a
 						target="_blank"
-						href="https://drive.google.com/file/d/1U-4bcNkpMGW1V__JUFz7bfPfX1z7uCgI/view?usp=sharing"
+						href="https://drive.google.com/file/d/1uhmjHE_djrIMs39lc4F-Uto5WOQPF7SW/view?usp=sharing"
 					>
 						<svg><use xlink:href="../assets/icons.svg#icon_pdf"></use></svg>
 					</a>

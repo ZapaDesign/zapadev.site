@@ -2,6 +2,7 @@
 title: Web-дизайн
 id: 1
 ---
+- **WEB-DESIGN:** Разработка HTML/CSS/JS и Wordpress сайтов (коммуникация с заказчиком, дизайн, верстка, Wordpress интеграция) 
 
 - **FRONT-END:**
 	- HTML5 [base, Bootstrap]
