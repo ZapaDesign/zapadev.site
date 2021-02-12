@@ -380,5 +380,10 @@ alt="ALT-ТЕКСТ ИЗОБРАЖЕНИЯ" width="240" height="180" border="10"
 ```
 
 <a name="videos"><h2>To Do</h2></a>
+```markdown
+1. [x] First
+1. [ ] Second
+```
+
 1. [x] First
 1. [ ] Second
