@@ -51,13 +51,6 @@ export default {
 </script>
 
 <style lang="scss">
-.page {
-	background-image: url(../assets/bg_img_grid.svg);
-	background-size: 100%;
-	background-position: 10vw center;
-	background-attachment: fixed;
-}
-
 .page_aboutme .content {
 	grid-gap: 5vw 2vw;
 	overflow: visible;

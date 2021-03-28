@@ -22,8 +22,8 @@ export default {}
 
 #app {
 	display: flex;
-	background-image: url(../assets/BG_body.jpg);
-	// background-size: 10%;
+	// background-image: url(../assets/BG_body.jpg);
+	// background-size: 50%;
 	background-color: $sbbgc;
 	min-height: 100vh;
 
@@ -148,6 +148,13 @@ header {
 	.content__img {
 		flex: 4;
 	}
+}
+
+.page {
+	// background-image: url(../assets/bg_img_grid.svg);
+	background-size: 100%;
+	background-position: 10vw center;
+	background-attachment: fixed;
 }
 
 h1 {
