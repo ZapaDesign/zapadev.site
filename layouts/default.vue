@@ -24,7 +24,7 @@ export default {}
 	display: flex;
 	// background-image: url(../assets/BG_body.jpg);
 	// background-size: 50%;
-	background-color: $sbbgc;
+	background-color: #1d1d25;
 	min-height: 100vh;
 
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -107,6 +107,13 @@ aside {
 	padding-left: 3vw;
 }
 
+.page {
+	// background-image: url(../assets/bg_img_grid.svg);
+	background-size: 100%;
+	background-position: 10vw center;
+	background-attachment: fixed;
+}
+
 header {
 	background-image: url(~assets/header_img.svg);
 	background-repeat: no-repeat;
@@ -148,13 +155,6 @@ header {
 	.content__img {
 		flex: 4;
 	}
-}
-
-.page {
-	// background-image: url(../assets/bg_img_grid.svg);
-	background-size: 100%;
-	background-position: 10vw center;
-	background-attachment: fixed;
 }
 
 h1 {
