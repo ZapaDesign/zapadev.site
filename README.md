@@ -1,4 +1,4 @@
-# zapadesign.site
+# zapadev.site
 Розработка моего сайта портфолио на nuxt.js
 
 ![](/static/zapadesign_home_preview.jpg)
