@@ -115,7 +115,7 @@ export default {
 	bottom: 0;
 	height: 100%;
 	width: 250px;
-	background-image: url(../assets/img-noise.png);
+	// background-image: url(../assets/img-noise.png);
 	// background-image: url(../assets/SB_pattern.png);
 	background-repeat: repeat-y;
 	background-position: 50% 0;
