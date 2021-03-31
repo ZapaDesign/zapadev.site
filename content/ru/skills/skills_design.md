@@ -3,18 +3,18 @@ title: Графический дизайн
 id: 2
 ---
 
-- **Растровая графика:** [Adobe Photoshop, Adobe Lightroom]
+- *Растровая графика:* [Adobe Photoshop, Adobe Lightroom]
 
-- **Векторная графика:** [Adobe Illustrator, Adobe FireWorks, Figma]
+- *Векторная графика:* [Adobe Illustrator, Adobe FireWorks, Figma]
 
-- **Разработки интерфейсов:** [Adobe Photoshop, Adobe XD, Figma]
+- *Разработки интерфейсов:* [Adobe Photoshop, Adobe XD, Figma]
 
-- **Прототипирование:** [Mokup.me, Figma, Adobe XD]
+- *Прототипирование:* [Mokup.me, Figma, Adobe XD]
 
-- **Многостраничная верстка:** [Adobe InDesign]
+- *Многостраничная верстка:* [Adobe InDesign]
 
-- **MotionDesign:** [Adobe After Effects]
+- *MotionDesign:* [Adobe After Effects]
 
-- **Видеомонтаж** [Adobe Premiere Pro, Adobe Premiere Elements]
+- *Видеомонтаж* [Adobe Premiere Pro, Adobe Premiere Elements]
 
-- **3D:** [Pro100]
+- *3D:* [Pro100]
