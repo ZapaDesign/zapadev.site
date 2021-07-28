@@ -4,15 +4,15 @@
 			v-for="(post, $index) in posts"
 			:key="`post-${$index}`"
 			:to="localePath(post.path)"
-			:class="'portfolio_item_' + $index"
-			class="portfolio_item"
+			:class="'portfolio-item portfolio__item_' + $index"
+			class="portfolio-item portfolio__item"
 			:style="{
 				backgroundImage:
 					'url(' + require(`~~/assets/portfolio/${post.thumbnail}`) + ')',
 				animationDelay: `${$index}00ms`,
 			}"
 		>
-			<div class="link">
+			<div class="portfolio-item__link">
 				<span>{{ post.title }}</span>
 				<span>глянуть ⟶</span>
 			</div>
@@ -35,84 +35,91 @@ export default {
 
 
 <style lang="scss">
+
+.portfolio {
+
+  &__item {
+    margin: 0.75rem;
+  }
+}
+
+.portfolio-item {
+  border-radius: 5px;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+  flex-direction: column-reverse;
+  opacity: 0;
+  animation: portfolioItemsUp 0.5s forwards;
+
+  @media (hover:hover) {
+    &:hover {
+      transform: scale(1.04);
+      transition-timing-function: ease-out;
+      &:after {
+        background-color: rgba(#0000, 0);
+      }
+      z-index: 200;
+      .portfolio-item__link {
+        bottom: 0;
+      }
+    }
+    .portfolio-item__link {
+      position: relative;
+      bottom: -30%;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 1s ease;
+  }
+
+  &__link {
+    position: relative;
+    bottom: 0;
+    background-color: $linkc;
+    padding: 0.75rem;
+    padding-left: 1rem;
+    display: flex;
+    span:first-child {
+      flex: 1;
+      font-family: $accFont;
+      font-size: 1rem;
+      font-weight: 3;
+    }
+    span:last-child {
+      color: $acf;
+      letter-spacing: 0.2rem;
+      font-family: $opxc;
+      margin: auto;
+    }
+  }
+}
+
+
 .page.portfolio {
 	.grid_container {
 		margin-left: -3vw;
 		overflow: hidden;
+    padding-top: 1rem;
 		flex: 1;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-		grid-auto-rows: minmax(250px, auto);
-		padding-top: 1rem;
-		.portfolio_item {
-			// max-width: 600px;
-			overflow: hidden;
-			position: relative;
-			transition: 0.3s;
-			display: flex;
-			flex-direction: column-reverse;
-			background-size: cover;
-			background-position: 50% 50%;
-			&:after {
-				content: '';
-				position: absolute;
-				left: 0;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				// background-color: rgba(#0000, .2);
-				transition: all 1s ease;
-			}
-			.link {
-				position: relative;
-				bottom: 0;
-				background-color: $linkc;
-				padding: 0.75rem;
-				padding-left: 1rem;
-				display: flex;
-				span:first-child {
-					flex: 1;
-					font-family: $accFont;
-					font-size: 1rem;
-					font-weight: 3;
-					// letter-spacing: 0.1em;
-				}
-				span:last-child {
-					color: $acf;
-					letter-spacing: 0.2rem;
-					font-family: $opxc;
-					margin: auto;
-				}
-			}
-		}
-
-		@media (hover) {
-			.portfolio_item {
-				filter: grayscale(100%);
-				.link {
-					position: relative;
-					bottom: -30%;
-					transition: all 0.5s ease;
-				}
-				&:hover {
-					transform: scale(1.04);
-					transition-timing-function: ease-out;
-					// box-shadow: 0 0 5px 5px rgba(0,0,0,0.55);
-					filter: none;
-					&:after {
-						background-color: rgba(#0000, 0);
-					}
-					z-index: 200;
-					.link {
-						bottom: 0;
-					}
-				}
-			}
-		}
-		.portfolio_item {
-			opacity: 0;
-			animation: portfolioItemsUp 0.5s forwards;
-		}
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+		grid-auto-rows: minmax(315px, auto);
+    @media (min-width: 1920px) {
+      grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+      grid-auto-rows: minmax(15vw, auto);
+    }
 	}
 }
 

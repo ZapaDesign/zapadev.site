@@ -122,7 +122,7 @@ export default {
 	margin-bottom: 3vw;
 	&:before {
 		content: '';
-		background-color: $linkc;
+	  background-color: $linkc;
 		position: absolute;
 		height: 100%;
 		width: 100%;

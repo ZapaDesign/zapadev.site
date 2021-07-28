@@ -1,10 +1,21 @@
 // COLORS
 
+:root {
+  --body-color: #1d1d25;
+  --aside-color: #222229;
+
+  --main-color: #06d293;
+  --accent-color: #f6447d;
+
+  --main-text-color: #fff;
+}
+
+
 $wc:	#fff;
 $bc:	 #000;
 
 
-$acf: #35FF31;
+$acf: var(--main-color);
 // 35FF31 - 1dbb1d
 
 $acs:#4a2254;

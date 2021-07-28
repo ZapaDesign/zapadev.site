@@ -22,11 +22,8 @@ export default {}
 
 #app {
 	display: flex;
-	// background-image: url(../assets/BG_body.jpg);
-	// background-size: 50%;
 	background-color: #1d1d25;
 	min-height: 100vh;
-
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
@@ -40,13 +37,12 @@ export default {}
 
 aside {
 	width: 50px;
-
-	@media (min-width: 720px) {
-		& {
-			flex: 1;
-			width: auto;
-		}
-	}
+	//@media (min-width: 720px) {
+	//	& {
+	//		flex: 1;
+	//		width: auto;
+	//	}
+	//}
 }
 
 .main {
@@ -109,18 +105,13 @@ aside {
 }
 
 .page {
-	// background-image: url(../assets/bg_img_grid.svg);
 	background-size: 100%;
 	background-position: 10vw center;
 	background-attachment: fixed;
 }
 
 header {
-	background-image: url(~assets/header_img.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	padding: 30px;
-	// margin-left: 3%;
+	padding: 30px 0;
 	overflow: hidden;
 	font-size: 0.75rem;
 	@media (min-width: 720px) {
@@ -131,7 +122,7 @@ header {
 	@media (min-width: 1200px) {
 		& {
 			font-size: 1rem;
-			padding: 50px;
+			padding: 50px 0;
 		}
 	}
 }
@@ -165,8 +156,7 @@ h1 {
 	display: inline-block;
 	position: relative;
 	padding: 10px 0;
-	// border-top: 1px solid #fff;
-	// border-bottom: 1px solid #fff;
+
 	&:after,
 	&:before {
 		content: '';
@@ -174,9 +164,8 @@ h1 {
 		position: relative;
 		height: 1px;
 		width: auto;
-		max-width: 650px;
-		background-color: #808080;
-		left: 60px;
+    background: rgb(16,23,42);
+    background: linear-gradient(90deg, rgba(16,23,42,0) 0%, var(--accent-color) 50%, rgba(9,9,121,0) 100%);
 	}
 	&:after {
 		top: 15px;
@@ -187,6 +176,7 @@ h1 {
 	span {
 		font-family: $opxc;
 		font-weight: 100;
+    color: var(--main-color);
 	}
 }
 

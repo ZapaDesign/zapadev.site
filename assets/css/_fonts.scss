@@ -1,3 +1,196 @@
+// == Vin Mono Pro ==
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro Bold'), local('VinMonoPro-Bold'),
+  url('~assets/fonts/VinMonoPro-Bold.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-Bold.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-Bold.svg#VinMonoPro-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro Light'), local('VinMonoPro-Light'),
+  url('~assets/fonts/VinMonoPro-Light.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-Light.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-Light.svg#VinMonoPro-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro Italic'), local('VinMonoPro-Italic'),
+  url('~assets/fonts/VinMonoPro-Italic.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-Italic.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-Italic.svg#VinMonoPro-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro ExtraLight Italic'), local('VinMonoPro-ExtraLightItalic'),
+  url('~assets/fonts/VinMonoPro-ExtraLightItalic.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-ExtraLightItalic.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-ExtraLightItalic.svg#VinMonoPro-ExtraLightItalic') format('svg');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro Bold Italic'), local('VinMonoPro-BoldItalic'),
+  url('~assets/fonts/VinMonoPro-BoldItalic.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-BoldItalic.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-BoldItalic.svg#VinMonoPro-BoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro Medium'), local('VinMonoPro-Medium'),
+  url('~assets/fonts/VinMonoPro-Medium.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-Medium.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-Medium.svg#VinMonoPro-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro Bold'), local('VinMonoPro-Bold'),
+  url('~assets/fonts/VinMonoPro-Bold.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-Bold.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-Bold.svg#VinMonoPro-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro ExtraLight'), local('VinMonoPro-ExtraLight'),
+  url('~assets/fonts/VinMonoPro-ExtraLight.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-ExtraLight.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-ExtraLight.svg#VinMonoPro-ExtraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro ExtraBold Italic'), local('VinMonoPro-ExtraBoldItalic'),
+  url('~assets/fonts/VinMonoPro-ExtraBoldItalic.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-ExtraBoldItalic.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-ExtraBoldItalic.svg#VinMonoPro-ExtraBoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro Light Italic'), local('VinMonoPro-LightItalic'),
+  url('~assets/fonts/VinMonoPro-LightItalic.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-LightItalic.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-LightItalic.svg#VinMonoPro-LightItalic') format('svg');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro ExtraBold'), local('VinMonoPro-ExtraBold'),
+  url('~assets/fonts/VinMonoPro-ExtraBold.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-ExtraBold.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-ExtraBold.svg#VinMonoPro-ExtraBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro Medium Italic'), local('VinMonoPro-MediumItalic'),
+  url('~assets/fonts/VinMonoPro-MediumItalic.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-MediumItalic.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-MediumItalic.svg#VinMonoPro-MediumItalic') format('svg');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro Semi';
+  src: local('Vin Mono Pro Semi Bold Italic'), local('VinMonoPro-SemiBoldItalic'),
+  url('~assets/fonts/VinMonoPro-SemiBoldItalic.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-SemiBoldItalic.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-SemiBoldItalic.svg#VinMonoPro-SemiBoldItalic') format('svg');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro Regular'), local('VinMonoPro-Regular'),
+  url('~assets/fonts/VinMonoPro-Regular.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-Regular.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-Regular.svg#VinMonoPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro Thin Italic'), local('VinMonoPro-ThinItalic'),
+  url('~assets/fonts/VinMonoPro-ThinItalic.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-ThinItalic.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-ThinItalic.svg#VinMonoPro-ThinItalic') format('svg');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro';
+  src: local('Vin Mono Pro Thin'), local('VinMonoPro-Thin'),
+  url('~assets/fonts/VinMonoPro-Thin.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-Thin.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-Thin.svg#VinMonoPro-Thin') format('svg');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vin Mono Pro Semi';
+  src: local('Vin Mono Pro Semi Bold'), local('VinMonoPro-SemiBold'),
+  url('~assets/fonts/VinMonoPro-SemiBold.woff2') format('woff2'),
+  url('~assets/fonts/VinMonoPro-SemiBold.woff') format('woff'),
+  url('~assets/fonts/VinMonoPro-SemiBold.svg#VinMonoPro-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+// == Opinion Pro Condensed ==
+
 @font-face {
   font-family: "OpinionProCondensed";
   src: url("~assets/fonts/OpinionProCondensed-Thin.eot"); /* IE9 Compat Modes */
@@ -23,6 +216,10 @@
   font-weight: 700;
   font-style: normal;
 }
+
+
+
+// == Opinion Pro ExtraCondensed ==
 
 @font-face {
   font-family: "OpinionProExtraCondensed";
@@ -50,6 +247,10 @@
   font-style: normal;
 }
 
+
+// == Opinion Roboto Slab ==
+
+
 @font-face {
 	font-family: 'RobotoSlab';
 	src: url('~assets/fonts/RobotoSlab-Light.eot');
@@ -59,6 +260,8 @@
 	font-weight: 300;
 	font-style: normal;
 	}
+
+// == Decima Mono X ==
 
 @font-face {
     font-family: 'DecimaMonoX';
@@ -87,7 +290,7 @@
 
 
 
-
+// == IBM Plex Mono ==
 
 @font-face {
 	font-family: 'IBMPlexMono';

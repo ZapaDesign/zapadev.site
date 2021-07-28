@@ -106,42 +106,39 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 .sidebar {
+  background-repeat: repeat-y;
+  background-position: 50% 0;
+  background-size: 20%;
+  background-color: $sbbgc;
+  bottom: 0;
+  box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
+  height: 100%;
 	justify-content: space-between;
 	overflow-y: auto;
 	position: fixed;
-	top: 0;
-	bottom: 0;
-	height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 	width: 250px;
-	// background-image: url(../assets/img-noise.png);
-	// background-image: url(../assets/SB_pattern.png);
-	background-repeat: repeat-y;
-	background-position: 50% 0;
-	background-size: 20%;
-	background-color: $sbbgc;
-	box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+  top: 0;
 	transform: translateX(-200px);
 	transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 	text-align: center;
-	box-sizing: border-box;
-	padding-top: 10px;
-	padding-bottom: 10px;
 	z-index: 100;
 	&.isOpen {
 		transform: translateX(0);
 		transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 	}
-	@media (min-width: 720px) {
-		& {
-			transform: translateX(0);
-			position: sticky;
-			height: 100vh;
-			top: 0;
-			width: auto;
-		}
-	}
+	//@media (min-width: 720px) {
+	//	& {
+	//		transform: translateX(0);
+	//		position: sticky;
+	//		height: 100vh;
+	//		top: 0;
+	//		width: auto;
+	//	}
+	//}
 }
 
 .sidebarToggle {
@@ -149,16 +146,12 @@ export default {
 	right: 13px;
 	width: 24px;
 	height: 24px;
-	@media (min-width: 720px) {
-		display: none;
-	}
 	.toggleText {
 		transform: rotate(-90deg);
 	}
 }
 
 .hamburger {
-	// display: inline-block;
 	cursor: pointer;
 	transition-property: opacity, filter;
 	transition-duration: 0.3s;
