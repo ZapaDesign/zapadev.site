@@ -41,7 +41,7 @@ export default {
 		overflow: hidden;
 		flex: 1;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 		grid-auto-rows: minmax(250px, auto);
 		padding-top: 1rem;
 		.portfolio_item {
