@@ -122,10 +122,13 @@ export default {
   padding-bottom: 10px;
 	width: 250px;
   top: 0;
-	transform: translateX(-200px);
+	transform: translateX(-250px);
 	transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 	text-align: center;
 	z-index: 100;
+  @media (min-width: 720px) {
+    transform: translateX(-200px);
+  }
 	&.isOpen {
 		transform: translateX(0);
 		transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);

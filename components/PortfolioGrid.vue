@@ -117,8 +117,8 @@ export default {
 		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 		grid-auto-rows: minmax(315px, auto);
     @media (min-width: 1920px) {
-      grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
-      grid-auto-rows: minmax(15vw, auto);
+      grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+      grid-auto-rows: minmax(17.5vw, auto);
     }
 	}
 }

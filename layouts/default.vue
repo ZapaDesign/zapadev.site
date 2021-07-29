@@ -2,6 +2,7 @@
 	<div id="app">
 		<Sidebar />
 		<div class="main">
+      <TopBar />
 			<Nuxt />
 		</div>
 		<a href="#upToHeader" class="ScrollToUpBtn">▲</a>
@@ -9,7 +10,10 @@
 </template>
 
 <script>
-export default {}
+import TopBar from "../components/TopBar";
+export default {
+  components: {TopBar}
+}
 </script>
 
 <style lang="scss">
@@ -51,13 +55,9 @@ em {
 }
 
 aside {
-	width: 50px;
-	//@media (min-width: 720px) {
-	//	& {
-	//		flex: 1;
-	//		width: auto;
-	//	}
-	//}
+	@media (min-width: 720px) {
+    width: 50px;
+  }
 }
 
 .main {
