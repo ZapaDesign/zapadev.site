@@ -12,6 +12,8 @@
 export default {}
 </script>
 
+
+
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 
@@ -19,6 +21,15 @@ export default {}
 	margin: 0;
 	padding: 0;
 }
+
+strong {
+  color: var(--accent-color);
+}
+
+em {
+  color: var(--main-color);
+}
+
 
 #app {
 	display: flex;

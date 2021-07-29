@@ -86,7 +86,6 @@ export default {
 
 .article_content {
 	font-weight: 300;
-	font-family: $dmx;
 	padding: 0 0.75vw;
 	flex: 1;
 	width: 100%;

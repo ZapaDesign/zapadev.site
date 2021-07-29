@@ -165,7 +165,6 @@ export default {
 	}
 	.post_text {
 		padding-right: 0.75vw;
-		font-family: $dmx;
 		font-weight: 300;
 
 		ul {

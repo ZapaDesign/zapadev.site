@@ -67,9 +67,7 @@ export default {
 		flex: 4;
 	}
 	h2 {
-		font-family: $dmx;
 		font-weight: 400;
-		// color: $ac3;
 		font-size: 1.5rem;
 		border-bottom: 1px solid $acf;
 	}
@@ -82,10 +80,8 @@ export default {
 				color: $ftc;
 				font-size: 1rem;
 				font-weight: 300;
-				font-family: $dmx;
 				strong {
 					font-weight: 700;
-					// color: $acf;
 				}
 			}
 		}
