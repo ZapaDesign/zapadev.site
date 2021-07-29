@@ -39,7 +39,7 @@
 				</svg>
 			</div>
 		</nuxt-link>
-		<!-- 
+		<!--
     <nuxt-link :to="'/' + $i18n.locale + '/wprocess'">
       <div>{{ $t('links.wprocess') }}</div>
       <div class="mainNavigation_icon">
@@ -153,7 +153,4 @@ export default {
 	}
 }
 
-.logo {
-	padding: 5% 0;
-}
 </style>

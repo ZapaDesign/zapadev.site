@@ -112,7 +112,10 @@ aside {
 	display: flex;
 	flex-direction: column;
 	min-height: inherit;
-	padding-left: 3vw;
+	padding: 0 15px;
+  @media (min-width: 1200px) {
+    padding-left: 3vw;
+  }
 }
 
 .page {
