@@ -12,10 +12,14 @@
 export default {}
 </script>
 
-
-
 <style lang="scss">
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+html, body {
+  background-color: var(--body-color);
+}
+
 
 * {
 	margin: 0;
@@ -33,7 +37,7 @@ em {
 
 #app {
 	display: flex;
-	background-color: #1d1d25;
+	background-color: var(--body-color);
 	min-height: 100vh;
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	font-size: 16px;
