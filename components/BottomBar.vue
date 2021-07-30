@@ -52,9 +52,9 @@
 
     &__item {
       svg {
-        width: 20px;
-        height: 20px;
-        fill: var(--main-text-color);
+        width: 16px;
+        height: 16px;
+        fill: var(--sub-text-color);
       }
     }
   }

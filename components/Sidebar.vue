@@ -12,12 +12,8 @@
 						<div class="hamburger-box">
 							<div class="hamburger-inner"></div>
 						</div>
-						<!-- <div class="toggleText">
-								{{openerText}}
-							</div> -->
 					</div>
 					<LanguageSwitcher />
-					<!-- <img alt="Vue logo" src="../assets/logo.png"> -->
 					<NavigationMain />
 				</div>
 				<div>
@@ -98,8 +94,8 @@ export default {
 			} else {
 				this.open()
 			}
-		},
-	},
+		}
+	}
 }
 </script>
 
@@ -133,15 +129,6 @@ export default {
 		transform: translateX(0);
 		transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 	}
-	//@media (min-width: 720px) {
-	//	& {
-	//		transform: translateX(0);
-	//		position: sticky;
-	//		height: 100vh;
-	//		top: 0;
-	//		width: auto;
-	//	}
-	//}
 }
 
 .sidebarToggle {
