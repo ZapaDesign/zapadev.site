@@ -4,6 +4,7 @@
 		<div class="main">
       <TopBar />
 			<Nuxt />
+      <BottomBar />
 		</div>
 		<a href="#upToHeader" class="ScrollToUpBtn">▲</a>
 	</div>
@@ -11,8 +12,9 @@
 
 <script>
 import TopBar from "../components/TopBar";
+import BottomBar from "../components/BottomBar";
 export default {
-  components: {TopBar}
+  components: {BottomBar, TopBar}
 }
 </script>
 
@@ -62,7 +64,7 @@ aside {
 
 .main {
 	scroll-behavior: smooth;
-	flex: 12;
+	flex: 1;
 	overflow: hidden;
 	min-height: 100vh;
 	overflow-y: auto;
@@ -95,28 +97,28 @@ aside {
 	// 	100% {background-position: 0% 50%}
 	// }
 
-	@media (min-width: 720px) {
-		& {
-			flex: 3;
-		}
-	}
-	@media (min-width: 1200px) {
-		& {
-			flex: 4;
-		}
-	}
-	@media (min-width: 1440px) {
-		& {
-			flex: 5;
-		}
-	}
+	//@media (min-width: 720px) {
+	//	& {
+	//		flex: 3;
+	//	}
+	//}
+	//@media (min-width: 1200px) {
+	//	& {
+	//		flex: 4;
+	//	}
+	//}
+	//@media (min-width: 1440px) {
+	//	& {
+	//		flex: 5;
+	//	}
+	//}
 }
 
 .page {
 	display: flex;
 	flex-direction: column;
 	min-height: inherit;
-	padding: 0 15px;
+	padding: 0 25px;
   @media (min-width: 1200px) {
     padding-left: 3vw;
   }
