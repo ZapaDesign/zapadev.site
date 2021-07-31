@@ -6,7 +6,7 @@
       <div
         @click="toggle"
         class="sidebarToggle hamburger hamburger--spin"
-        :class="{ isActive: isActive }"
+        :class="{ isActive: drawer }"
         type="button"
       >
         <div class="hamburger-box">
@@ -18,31 +18,15 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
 export default {
   name: 'TopBar',
-  data: () => ({
-    openerText: 'Open',
-    isOpen: false,
-    isActive: false,
-  }),
+
   methods: {
-    open() {
-      this.openerText = 'Close'
-      this.isOpen = true
-      this.isActive = true
-    },
-    close() {
-      this.openerText = 'Open'
-      this.isOpen = false
-      this.isActive = false
-    },
-    toggle() {
-      if (this.isOpen) {
-        this.close()
-      } else {
-        this.open()
-      }
-    }
+    ...mapMutations({ toggle:  "drawer/toggle" })
+  },
+  computed: {
+    ...mapGetters({ drawer:  "drawer/getDrawerState" })
   }
 }
 

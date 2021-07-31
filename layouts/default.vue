@@ -68,6 +68,10 @@ aside {
 	overflow: hidden;
 	min-height: 100vh;
 	overflow-y: auto;
+  padding: 50px 0;
+  @media (min-width: 720px) {
+    padding: 0;
+  }
 
 	// background: linear-gradient(-45deg,
 	// 													rgb(32, 15, 10),
