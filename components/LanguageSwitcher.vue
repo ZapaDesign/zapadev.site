@@ -24,9 +24,7 @@ export default {
 		font-size: 0.75rem;
 		display: inline-block;
 		cursor: pointer;
-		&:not(:first-child) {
-			margin-left: 45px;
-		}
+    margin: 0 15px;
 	}
 	a {
 		color: $wc;

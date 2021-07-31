@@ -43,7 +43,7 @@ export default {
     position: fixed;
     top: 0;
     width: calc(100% - 50px);
-    z-index: 2;
+    z-index: 100;
     @media (min-width: 720px) {
       display: none;
     }

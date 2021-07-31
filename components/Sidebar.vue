@@ -1,5 +1,5 @@
 <template>
-	<aside>
+	<aside :class="{isOpen: drawer}">
 		<transition>
 			<div class="sidebar" :class="{ isOpen: drawer }" >
 				<div>
@@ -83,6 +83,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+
+aside {
+  width: 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  @media (min-width: 720px) {
+    width: 50px;
+  }
+  &.isOpen {
+    width: 100%;
+    @media (min-width: 720px) {
+      width: 250px;
+    }
+  }
+}
+
+
 .sidebar {
   background-repeat: repeat-y;
   background-position: 50% 0;
@@ -98,13 +116,14 @@ export default {
 	position: fixed;
   padding-top: 10px;
   padding-bottom: 10px;
-	width: 250px;
+	width: 100vw;
   top: 0;
-	transform: translateX(-250px);
+	transform: translateX(-100vw);
 	transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 	text-align: center;
 	z-index: 100;
   @media (min-width: 720px) {
+    width: 250px;
     transform: translateX(-200px);
   }
 	&.isOpen {
@@ -140,18 +159,25 @@ export default {
 	border: 0;
 	margin: 0;
 	overflow: visible;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &.isActive {
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $sbic;
+    }
+  }
 }
-.hamburger:hover {
-	opacity: 0.7;
-}
-.hamburger.isActive:hover {
-	opacity: 0.7;
-}
-.hamburger.isActive .hamburger-inner,
-.hamburger.isActive .hamburger-inner::before,
-.hamburger.isActive .hamburger-inner::after {
-	background-color: $sbic;
-}
+
 
 .hamburger-box {
 	width: 24px;
@@ -236,7 +262,7 @@ export default {
 }
 
 .messenger {
-	margin: 10%;
+	margin: 10% 50px;
 	display: flex;
 	justify-content: space-around;
 	li {
@@ -244,8 +270,8 @@ export default {
 	}
 	svg {
 		display: block;
-		height: 24px;
-		width: 24px;
+		height: 18px;
+		width: 18px;
 		fill: $wc;
 		&:hover {
 			fill: $acf;

@@ -56,12 +56,6 @@ em {
 	height: 100vh;
 }
 
-aside {
-	@media (min-width: 720px) {
-    width: 50px;
-  }
-}
-
 .main {
 	scroll-behavior: smooth;
 	flex: 1;
@@ -69,8 +63,10 @@ aside {
 	min-height: 100vh;
 	overflow-y: auto;
   padding: 50px 0;
+  min-width: 100vw;
   @media (min-width: 720px) {
     padding: 0;
+    min-width: unset;
   }
 
 	// background: linear-gradient(-45deg,
