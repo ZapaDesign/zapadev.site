@@ -30,25 +30,28 @@ export default {
 <style lang="scss">
 
 .logo {
-  padding: 15% 0;
-  display: block!important;
-  text-align: center;
-  &:after,
-  &:before {
-    content: '';
-    display: block;
-    position: relative;
-    height: 1px;
-    width: auto;
-    background: rgb(16,23,42);
-    background: linear-gradient(90deg, rgba(16,23,42,0) 0%, var(--accent-color) 50%, rgba(9,9,121,0) 100%);
-  }
+    padding: 5vh 0 0vh;
+    display: block!important;
+    text-align: center;
+   @media (min-width: 1920px){
+        padding: vw(40) 0;
+    }
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: auto;
+        background: rgb(16,23,42);
+        background: linear-gradient(90deg, rgba(16,23,42,0) 0%, var(--accent-color) 50%, rgba(9,9,121,0) 100%);
+    }
 }
 
-  svg {
-    display: block;
-    width: 60%;
-    height: auto;
-    margin: 1rem auto 0.75rem;
-  }
+    svg {
+        display: block;
+        width: 60%;
+        height: auto;
+        margin: 1rem auto 0.75rem;
+    }
 </style>

@@ -9,8 +9,8 @@
 				<AboutMeTabs :aboutMeItems="aboutMeItems" />
 			</div>
 			<div class="aboume__footer">
-                <SocialProfiles />
-                <DownloadCv />
+                <AboutMeSocialProfiles />
+                <AboutMeDownloadCv />
 			</div>
 			<div class="aboume__img-container">
 				<div class="aboume__img-bg">

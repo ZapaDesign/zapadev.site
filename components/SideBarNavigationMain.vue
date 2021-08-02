@@ -1,10 +1,16 @@
 <template>
 	<nav id="nav" class="mainNavigation">
-		<nuxt-link :to="'/' + $i18n.locale + '/aboutme'" class="logo">
+		<nuxt-link
+            :to="'/' + $i18n.locale + '/aboutme'" class="logo"
+            v-on:click.native="toggle"
+        >
 			<Logo />
 		</nuxt-link>
 
-		<!-- <nuxt-link :to="'/' + $i18n.locale + '/'" exact>
+		<!-- <nuxt-link
+		:to="'/' + $i18n.locale + '/'" exact
+		v-on:click.native="toggle"
+		>
 			<div>{{ $t('links.home') }}</div>
 			<div class="mainNavigation_icon">
 				<svg>
@@ -13,7 +19,10 @@
 			</div>
 		</nuxt-link> -->
 
-		<nuxt-link :to="'/' + $i18n.locale + '/aboutme'">
+		<nuxt-link
+            :to="'/' + $i18n.locale + '/aboutme'"
+            v-on:click.native="toggle"
+        >
 			<div>{{ $t('links.aboutme') }}</div>
 			<div class="mainNavigation_icon">
 				<svg>
@@ -22,7 +31,10 @@
 			</div>
 		</nuxt-link>
 
-		<nuxt-link :to="'/' + $i18n.locale + '/skills'">
+		<nuxt-link
+            :to="'/' + $i18n.locale + '/skills'"
+            v-on:click.native="toggle"
+        >
 			<div>{{ $t('links.skills') }}</div>
 			<div class="mainNavigation_icon">
 				<svg>
@@ -31,7 +43,10 @@
 			</div>
 		</nuxt-link>
 
-		<nuxt-link :to="'/' + $i18n.locale + '/portfolio'">
+		<nuxt-link
+            :to="'/' + $i18n.locale + '/portfolio'"
+            v-on:click.native="toggle"
+        >
 			<div>{{ $t('links.portfolio') }}</div>
 			<div class="mainNavigation_icon">
 				<svg>
@@ -40,16 +55,22 @@
 			</div>
 		</nuxt-link>
 		<!--
-    <nuxt-link :to="'/' + $i18n.locale + '/wprocess'">
-      <div>{{ $t('links.wprocess') }}</div>
-      <div class="mainNavigation_icon">
-        <svg>
-          <use xlink:href="../assets/icons.svg#icon_wprocess"></use>
-        </svg>
-      </div>
-    </nuxt-link> -->
+        <nuxt-link
+            :to="'/' + $i18n.locale + '/
+            v-on:click.native="toggle"
+        >
+          <div>{{ $t('links.wprocess') }}</div>
+          <div class="mainNavigation_icon">
+            <svg>
+              <use xlink:href="../assets/icons.svg#icon_wprocess"></use>
+            </svg>
+          </div>
+        </nuxt-link> -->
 
-		<nuxt-link :to="'/' + $i18n.locale + '/blog'">
+		<nuxt-link
+            :to="'/' + $i18n.locale + '/blog'"
+            v-on:click.native="toggle"
+        >
 			<div>{{ $t('links.blog') }}</div>
 			<div class="mainNavigation_icon">
 				<svg>
@@ -61,8 +82,13 @@
 </template>
 
 <script>
+import {mapGetters, mapMutations} from "vuex";
+
 export default {
-	name: 'NavigationMain',
+	name: 'SideBarNavigationMain',
+    methods: {
+        ...mapMutations({ toggle:  "drawer/toggle" })
+    }
 }
 </script>
 
@@ -92,7 +118,7 @@ export default {
         }
 		div:first-child {
 			flex: 1;
-			padding: 3% 0 3% 10%;
+			padding: 1% 0 1% 10%;
 			background-image: linear-gradient(
 				to left,
 				transparent,
@@ -104,6 +130,9 @@ export default {
 			background-size: 200% 100%;
 			transition: all 1s ease-in;
 			position: relative;
+            @media (min-height: 440px){
+                padding: 3% 0 3% 10%;
+            }
 			&:after {
 				content: '';
 				height: 1px;

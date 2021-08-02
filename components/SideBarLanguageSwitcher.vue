@@ -11,7 +11,7 @@
 <script>
 
 export default {
-	name: 'LanguageSwitcher',
+	name: 'SideBarLanguageSwitcher',
 }
 
 </script>
@@ -20,15 +20,17 @@ export default {
 
 .lang {
 	a {
-		font-size: 0.75rem;
+		font-size: 12px;
 		display: inline-block;
 		cursor: pointer;
-    margin: 0 15px;
+        margin: 0 15px;
+        color: $wc;
+        text-decoration: none;
+        @media (min-width: 1920px){
+            font-size: vw(12);
+        }
 	}
-	a {
-		color: $wc;
-		text-decoration: none;
-	}
+
 	.nuxt-link-active {
 		border-bottom: 1px solid $acf
 	}

@@ -45,7 +45,7 @@
 
 <script>
 export default {
-	name: 'SocialProfiles',
+	name: 'AboutMeSocialProfiles',
 }
 </script>
 
