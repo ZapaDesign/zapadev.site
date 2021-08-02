@@ -45,7 +45,7 @@ em {
 	display: flex;
 	background-color: var(--body-color);
 	min-height: 100vh;
-	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	font-family: $mainFont, Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
@@ -54,6 +54,9 @@ em {
 	position: relative;
 	overflow: hidden;
 	height: 100vh;
+  @media (min-width: 1920px){
+    font-size: vw(16px);
+  }
 }
 
 .main {
@@ -115,6 +118,9 @@ em {
 }
 
 .page {
+  background-size: 100%;
+  background-position: 10vw center;
+  background-attachment: fixed;
 	display: flex;
 	flex-direction: column;
 	min-height: inherit;
@@ -122,12 +128,6 @@ em {
   @media (min-width: 1200px) {
     padding-left: 3vw;
   }
-}
-
-.page {
-	background-size: 100%;
-	background-position: 10vw center;
-	background-attachment: fixed;
 }
 
 header {
@@ -145,6 +145,10 @@ header {
 			padding: 50px 0;
 		}
 	}
+  @media (min-width: 1920px){
+    padding: vw(50) 0;
+    font-size: vw(16);
+  }
 }
 
 .content {
@@ -152,9 +156,6 @@ header {
 	display: flex;
 	flex-direction: column;
 	padding-top: 2vw;
-	font-family: $mainFont;
-	font-weight: 300;
-	font-size: 1rem;
 }
 
 @media (min-width: 720px) {

@@ -75,11 +75,21 @@ export default {
 		justify-content: space-between;
 		margin: 3% 0;
 		font-family: $opxc;
-		font-size: 1rem;
+		font-size: 16px;
 		font-weight: 400;
 		letter-spacing: 0.125em;
 		color: #ddd;
 		text-decoration: none;
+        @media (min-width: 720px) {
+            letter-spacing: 0.05em;
+         }
+        @media (min-width: 960px) {
+            font-size: 18px;
+            letter-spacing: 0.15em;
+        }
+        @media (min-width: 1920px){
+            font-size: vw(18);
+        }
 		div:first-child {
 			flex: 1;
 			padding: 3% 0 3% 10%;
@@ -109,10 +119,12 @@ export default {
 		}
 		div:last-child {
 			width: 50px;
+            @media (min-width: 1920px){
+                width: vw(50);
+            }
 		}
 
 		&.nuxt-link-active {
-			// color: #42b983;
 			background-position: 0 0;
 			svg {
 				fill: $acf;
@@ -126,18 +138,6 @@ export default {
 				}
 			}
 		}
-		@media (min-width: 720px) and (max-width: 960px) {
-			& {
-				letter-spacing: 0.05em;
-			}
-		}
-		@media (min-width: 960px) {
-			font-size: 1.125rem;
-			letter-spacing: 0.15em;
-		}
-		// &:hover {
-		//   // color: $acf;
-		// }
 	}
 	a:first-child {
 		margin: 0;
@@ -150,6 +150,10 @@ export default {
 		width: 16px;
 		height: 16px;
 		fill: $sbic;
+        @media (min-width: 1920px){
+            width: vw(16);
+            height: vw(16);
+        }
 	}
 }
 

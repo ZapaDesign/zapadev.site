@@ -8,22 +8,12 @@
 			<div class="aboutme__info">
 				<AboutMeTabs :aboutMeItems="aboutMeItems" />
 			</div>
-			<div class="aboume__info__footer">
-				<div class="social_profiles">
-					<SocialProfiles />
-				</div>
-				<div class="paper_cv_link">
-					<span> Скачать CV ⟶ </span>
-					<a
-						target="_blank"
-						href="https://drive.google.com/file/d/1uhmjHE_djrIMs39lc4F-Uto5WOQPF7SW/view?usp=sharing"
-					>
-						<svg><use xlink:href="../assets/icons.svg#icon_pdf"></use></svg>
-					</a>
-				</div>
+			<div class="aboume__footer">
+                <SocialProfiles />
+                <DownloadCv />
 			</div>
-			<div class="aboume__img__container">
-				<div class="aboume__img__bg">
+			<div class="aboume__img-container">
+				<div class="aboume__img-bg">
 					<!-- <img class="slideLeftInOut" src="~/assets/zapa_d.png" alt="" /> -->
 				</div>
 			</div>
@@ -32,8 +22,6 @@
 </template>
 
 <script>
-// import PageHeader from '@/components/PageHeader.vue'
-
 export default {
 	name: 'aboutme',
 	async asyncData(context) {
@@ -46,7 +34,7 @@ export default {
 		return {
 			aboutMeItems,
 		}
-	},
+	}
 }
 </script>
 
@@ -89,16 +77,23 @@ export default {
 
 .tabs__nav {
 	text-align: right;
-	padding-bottom: 1rem;
+	padding-bottom: 16px;
+  @media (min-width: 1920px){
+    padding-bottom: vw(16);
+  }
 }
 
 .tabs__nav__item {
 	display: inline-block;
-	padding-left: 1rem;
+	padding-left: 16px;
 	font-family: $accFont;
 	font-weight: 400;
-	font-size: 0.85rem;
+	font-size: 12px;
 	letter-spacing: 0.15rem;
+  @media (min-width: 1920px){
+    font-size: vw(12);
+    padding-left: vw(16);
+  }
 	a {
 		cursor: pointer;
 		color: $stc;
@@ -109,53 +104,19 @@ export default {
 	}
 }
 
-.aboume__info__footer {
+.aboume__footer {
 	grid-area: infoFooter;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 }
 
-.social_profiles {
-	position: relative;
-	display: inline-block;
-	margin-bottom: 3vw;
-	&:before {
-		content: '';
-	  background-color: $linkc;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		left: -100%;
-	}
-}
-
-.paper_cv_link {
-	margin-bottom: 3vw;
-	color: $stc;
-	font-family: $accFont;
-	font-weight: 400;
-	font-size: 0.85rem;
-	letter-spacing: 0.15rem;
-	display: flex;
-	align-items: center;
-	svg {
-		fill: $stc;
-		width: 2rem;
-		height: 2rem;
-		padding-left: 1rem;
-		&:hover {
-			fill: $acf;
-		}
-	}
-}
-
-.aboume__img__container {
+.aboume__img-container {
 	grid-area: infoImg;
 	position: relative;
 }
 
-.aboume__img__bg {
+.aboume__img-bg {
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 110%;

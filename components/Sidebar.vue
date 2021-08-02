@@ -71,13 +71,13 @@
 import { mapGetters, mapMutations } from 'vuex';
 
 export default {
-	name: 'Sidebar',
-  computed: {
-    ...mapGetters({ drawer:  "drawer/getDrawerState" })
-  },
-  methods: {
-    ...mapMutations({ toggle:  "drawer/toggle" })
-  }
+    name: 'Sidebar',
+    computed: {
+        ...mapGetters({ drawer:  "drawer/getDrawerState" })
+    },
+    methods: {
+        ...mapMutations({ toggle:  "drawer/toggle" })
+    }
 }
 </script>
 
@@ -85,56 +85,71 @@ export default {
 <style lang="scss">
 
 aside {
-  width: 0;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  @media (min-width: 720px) {
-    width: 50px;
-  }
-  &.isOpen {
-    width: 100%;
+    width: 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
     @media (min-width: 720px) {
-      width: 250px;
+    width: 50px;
     }
-  }
+    @media (min-width: 1920px){
+      width: vw(50);
+    }
+    &.isOpen {
+        width: 100%;
+        @media (min-width: 400px) {
+          width: 250px;
+        }
+        @media (min-width: 1920px){
+            width: vw(250);
+        }
+    }
 }
 
-
 .sidebar {
-  background-repeat: repeat-y;
-  background-position: 50% 0;
-  background-size: 20%;
-  background-color: $sbbgc;
-  bottom: 0;
-  box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-  height: 100%;
-	justify-content: space-between;
-	overflow-y: auto;
-	position: fixed;
-  padding-top: 10px;
-  padding-bottom: 10px;
-	width: 100vw;
-  top: 0;
-	transform: translateX(-100vw);
-	transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-	text-align: center;
-	z-index: 100;
-  @media (min-width: 720px) {
-    width: 250px;
-    transform: translateX(-200px);
-  }
+    background-repeat: repeat-y;
+    background-position: 50% 0;
+    background-size: 20%;
+    background-color: $sbbgc;
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    overflow-y: auto;
+    position: fixed;
+    padding: 12px 0;
+    width: 100vw;
+    top: 0;
+    transform: translateX(-100vw);
+    transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    text-align: center;
+    z-index: 100;
+    @media (min-width: 400px) {
+        width: 250px;
+        transform: translateX(-250px);
+    }
+    @media (min-width: 720px) {
+        width: 250px;
+        transform: translateX(-200px);
+    }
+    @media (min-width: 1920px){
+        width: vw(250);
+        transform: translateX(vw(-200));
+        padding: vw(12) 0;
+    }
+
 	&.isOpen {
 		transform: translateX(0);
 		transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 	}
-  .sidebarToggle {
-    @media (max-width: 720px) {
-      display: none;
+
+    .sidebarToggle {
+        @media (max-width: 720px) {
+            display: none;
+        }
     }
-  }
 }
 
 .sidebarToggle {
@@ -145,6 +160,11 @@ aside {
 	.toggleText {
 		transform: rotate(-90deg);
 	}
+    @media (min-width: 1920px){
+        right: vw(13);
+        width: vw(24);
+        height: vw(24);
+    }
 }
 
 .hamburger {
@@ -160,22 +180,21 @@ aside {
 	margin: 0;
 	overflow: visible;
 
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &.isActive {
-
     &:hover {
-      opacity: 0.7;
+        opacity: 0.7;
     }
 
-    .hamburger-inner,
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-      background-color: $sbic;
+    &.isActive {
+        &:hover {
+            opacity: 0.7;
+        }
+
+        .hamburger-inner,
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+            background-color: $sbic;
+        }
     }
-  }
 }
 
 
@@ -184,12 +203,19 @@ aside {
 	height: 24px;
 	display: inline-block;
 	position: relative;
+    @media (min-width: 1920px){
+        width: vw(24);
+        height: vw(24);
+    }
 }
 
 .hamburger-inner {
 	display: block;
 	top: 50%;
 	margin-top: -2px;
+    @media (min-width: 1920px){
+        margin-top: vw(-2);
+    }
 }
 .hamburger-inner,
 .hamburger-inner::before,
@@ -202,6 +228,10 @@ aside {
 	transition-property: transform;
 	transition-duration: 0.3s;
 	transition-timing-function: ease;
+    @media (min-width: 1920px){
+        width: vw(24);
+        height: vw(3);
+    }
 }
 .hamburger-inner::before,
 .hamburger-inner::after {
@@ -210,9 +240,15 @@ aside {
 }
 .hamburger-inner::before {
 	top: -8px;
+    @media (min-width: 1920px){
+        top: vw(-8);
+    }
 }
 .hamburger-inner::after {
 	bottom: -8px;
+    @media (min-width: 1920px){
+        bottom: vw(-8);
+    }
 }
 
 .hamburger--spin .hamburger-inner {
@@ -251,10 +287,13 @@ aside {
 	a {
 		color: $wc;
 		font-family: $opc;
-		font-size: 0.875rem;
+		font-size: 14px;
 		font-weight: 100;
 		letter-spacing: 0.1em;
 		text-decoration: none;
+        @media (min-width: 1920px){
+            font-size: vw(14);
+        }
 		&:hover {
 			color: $acf;
 		}
@@ -273,6 +312,10 @@ aside {
 		height: 18px;
 		width: 18px;
 		fill: $wc;
+        @media (min-width: 1920px){
+            height: vw(18);
+            width: vw(18);
+        }
 		&:hover {
 			fill: $acf;
 		}
@@ -280,6 +323,9 @@ aside {
 }
 
 .copyright {
-	font-size: 0.65rem;
+	font-size: 8px;
+    @media (min-width: 1920px){
+        font-size: vw(8);
+    }
 }
 </style>
