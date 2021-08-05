@@ -3,20 +3,19 @@ title: Розработка моего wordpress-сайта портфолио
 category: web
 description: "| zapadesign"
 thumbnail: portfolio_zapadesign-2016_thumbnail.jpg
-img: portfolio_zapadesign-2016_img_001.jpg
-img2: portfolio_zapadesign-2016_img_002.jpg
-img3: portfolio_zapadesign-2016_img_003.jpg
+excerpt: Разработка многостраничного сайта-каталога компании “КВАНТ ПЛЮС”. Реализованы адаптивность, многоязычность, поиск по сайту, интерактивная карта, форма обратнойсвязи, кастомные типы поля, кастомные типы записи
+list:
+- Adobe Photoshop, Adobe Illustrator
+- HTML5/CSS3
+- Wordpress
+- ACF, CPT UI, Polylang, ContctForm7
 createdAt: "2015-10-16"
 tags: 
   - wordpress
   - webdesign
 ---
+![](/portfolio/portfolio_zapadesign-2016_img_001.jpg)
 
-- Adobe Photoshop, Adobe Illustrator
-- HTML5/CSS3
-- Wordpress
-- ACF, CPT UI, Polylang, ContctForm7
+![](/portfolio/portfolio_zapadesign-2016_img_002.jpg)
 
-Разработка многостраничного сайта-каталога компании “КВАНТ ПЛЮС”. Реализованы адаптивность, многоязычность, поиск по сайту, интерактивная карта, форма обратнойсвязи, кастомные типы поля, кастомные типы записи
-
-<a href="https://dev-zapadesign.netlify.app/ru/aboutme/">перейти на dev-zapadesign.netlify.app/ru/aboutme</a>
+![](/portfolio/portfolio_zapadesign-2016_img_003.jpg)

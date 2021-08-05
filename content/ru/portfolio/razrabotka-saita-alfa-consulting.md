@@ -3,18 +3,17 @@ title: Розработка wordpress-сайта компании Alfa Consultin
 category: web
 description: "| alfa-consulting.lt"
 thumbnail: portfolio_alfa-consulting_thumbnail.jpg
-img: portfolio_alfa-consulting_img_001.jpg
+excerpt: Разработка сайта-каталога компании “Alfa Consulting”. Реализованы адаптивность, многоязычность, интерактивная карта, форма обратнойсвязи
+list:
+- Adobe Photoshop, Adobe Illustrator
+- HTML5/CSS3
+- Wordpress
+- ACF, CPT UI, Polylang, ContctForm7
+link: alfa-consulting.lt 
 createdAt: "2016-08-16"
 tags: 
   - wordpress
   - webdesign
 ---
 
-- Adobe Photoshop, Adobe Illustrator
-- HTML5/CSS3
-- Wordpress
-- ACF, CPT UI, Polylang, ContctForm7
-
-Разработка сайта-каталога компании “Alfa Consulting”. Реализованы адаптивность, многоязычность, интерактивная карта, форма обратнойсвязи
-
-[перейти на alfa-consulting.lt](http://alfa-consulting.lt)
+![](/portfolio/portfolio_alfa-consulting_img_001.jpg)

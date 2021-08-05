@@ -1,21 +1,28 @@
 ---
 title: Розработка wordpress-сайта языковой школы MasterCLASS
-category: web
-description: "| masterclass.pl.ua"
-thumbnail: portfolio_masterclass-site-2018_thumbnail.jpg
-img: portfolio_masterclass-site-2018_img_001.jpg
-createdAt: "2018-05-16"
-tags: 
-  - wordpress
-  - webdesign
----
 
+category: web
+
+description: "| masterclass.pl.ua"
+
+thumbnail: portfolio_masterclass-site-2018_thumbnail.jpg
+
+excerpt: Разработка многостраничного сайта языковой школы “MasterCLASS”. Реализованы адаптивность, многоязычность, поиск по сайту, интерактивная карта, форма обратнойсвязи, кастомные типы поля, кастомные типы записи.
+
+list:
 - Adobe Photoshop, Adobe Illustrator
 - Gulp, SCSS
 - HTML5/CSS3
 - Wordpress
-- Carbon Fields, CF7, Polyleng
+- Carbon Fields, CF7, Polyleng  
 
-Разработка многостраничного сайта языковой школы “MasterCLASS”. Реализованы адаптивность, многоязычность, поиск по сайту, интерактивная карта, форма обратнойсвязи, кастомные типы поля, кастомные типы записи.
+createdAt: "2018-05-16"
 
-[перейти на masterclass.pl.ua](http://masterclass.pl.ua)
+link: masterclass.pl.ua
+
+tags: 
+  - wordpress
+  - webdesign
+---
+  
+![](/portfolio/portfolio_masterclass-site-2018_img_001.jpg)

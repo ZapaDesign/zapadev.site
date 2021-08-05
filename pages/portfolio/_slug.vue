@@ -33,40 +33,12 @@
 					/>
 				</div>
 				<div class="post_date slideUp">{{ getDate }}</div>
-				<div class="post_text slideUp">
-					{{ post.excerpt }}
-					<a v-if="post.link" :href="`http://${post.link}`">
-						перейти на {{ post.link }}
-					</a>
-
-					<nuxt-content :document="post" />
-				</div>
+				<div class="post_list slideUp">{{ post.list }}</div>
+				<div class="post_excerpt slideUp">{{ post.excerpt }}</div>
+                <a v-if="post.link" :href="`http://${post.link}`">перейти на {{ post.link }}</a>
 			</div>
 			<div class="post_img slideLeftInOut">
-				<img
-					v-if="post.img"
-					:src="require(`~~/assets/portfolio/${post.img}`)"
-				/>
-				<img
-					v-if="post.img1"
-					:src="require(`~~/assets/portfolio/${post.img1}`)"
-				/>
-				<img
-					v-if="post.img2"
-					:src="require(`~~/assets/portfolio/${post.img2}`)"
-				/>
-				<img
-					v-if="post.img3"
-					:src="require(`~~/assets/portfolio/${post.img3}`)"
-				/>
-				<img
-					v-if="post.img4"
-					:src="require(`~~/assets/portfolio/${post.img4}`)"
-				/>
-				<img
-					v-if="post.img5"
-					:src="require(`~~/assets/portfolio/${post.img5}`)"
-				/>
+                <nuxt-content :document="post" />
 			</div>
 		</div>
 	</div>

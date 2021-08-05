@@ -2,21 +2,28 @@
 	<div id="app">
 		<Sidebar />
 		<div class="main">
-      <TopBar />
-			<Nuxt />
-      <BottomBar />
+            <TopBar />
+            <Nuxt />
 		</div>
 		<a href="#upToHeader" class="ScrollToUpBtn">▲</a>
 	</div>
 </template>
 
+
+
+
 <script>
+import Sidebar from "../components/Sidebar";
 import TopBar from "../components/TopBar";
 import BottomBar from "../components/BottomBar";
+
 export default {
-  components: {BottomBar, TopBar}
+  components: {Sidebar, BottomBar, TopBar}
 }
 </script>
+
+
+
 
 <style lang="scss">
 

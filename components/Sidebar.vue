@@ -18,14 +18,21 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
 
+import { mapGetters, mapMutations } from 'vuex';
+import SideBarToggleButton from "../components/SideBarToggleButton";
+import SideBarLanguageSwitcher from "../components/SideBarLanguageSwitcher";
+import SideBarNavigationMain from "../components/SideBarNavigationMain";
+import SideBarContacts from "../components/SideBarContacts";
+import SideBarMessenger from "../components/SideBarMessenger";
 export default {
+    components: { SideBarToggleButton, SideBarLanguageSwitcher, SideBarNavigationMain, SideBarContacts, SideBarMessenger },
     name: 'Sidebar',
     computed: {
         ...mapGetters({ drawer:  "drawer/getDrawerState" })
     }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
