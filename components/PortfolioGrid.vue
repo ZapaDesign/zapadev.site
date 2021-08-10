@@ -14,7 +14,6 @@
 		>
 			<div class="portfolio-item__link">
 				<span>{{ post.title }}</span>
-				<span>глянуть ⟶</span>
 			</div>
 		</nuxt-link>
 	</div>
@@ -22,6 +21,7 @@
 
 
 <script>
+
 export default {
 	name: 'PortfolioGrid',
 	props: {
@@ -36,91 +36,109 @@ export default {
 
 <style lang="scss">
 
-.portfolio {
+.page.portfolio {
+    .grid_container {
+        overflow: hidden;
+        padding-top: 1rem;
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: minmax(315px, auto);
+        margin-right: -15px;
+        margin-left: -15px;
 
-  &__item {
-    margin: 0.75rem;
-  }
+        @media (min-width: 720px) {
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        }
+
+        @media (min-width: 1200px) {
+            margin-left: calc(-3vw + 15px);
+            margin-right: 0;
+        }
+
+        @media (min-width: 1920px) {
+            grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+            grid-auto-rows: minmax(17.5vw, auto);
+        }
+    }
+}
+
+.portfolio {
+    &__item {
+        margin: 15px;
+        margin-bottom: 0;
+
+        @media (min-width: 1200px) {
+            margin-bottom: 15px;
+        }
+    }
 }
 
 .portfolio-item {
-  border-radius: 5px;
-  background-size: cover;
-  background-position: 50% 50%;
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  transition: 0.3s;
-  flex-direction: column-reverse;
-  opacity: 0;
-  animation: portfolioItemsUp 0.5s forwards;
-
-  @media (hover:hover) {
-    &:hover {
-      transform: scale(1.04);
-      transition-timing-function: ease-out;
-      &:after {
-        background-color: rgba(#0000, 0);
-      }
-      z-index: 200;
-      .portfolio-item__link {
-        bottom: 0;
-      }
-    }
-    .portfolio-item__link {
-      position: relative;
-      bottom: -30%;
-      transition: all 0.5s ease;
-    }
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    transition: all 1s ease;
-  }
-
-  &__link {
-    position: relative;
-    bottom: 0;
-    background-color: $linkc;
-    padding: 0.75rem;
-    padding-left: 1rem;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
     display: flex;
-    span:first-child {
-      flex: 1;
-      font-family: $accFont;
-      font-size: 1rem;
-      font-weight: 3;
-    }
-    span:last-child {
-      color: $acf;
-      letter-spacing: 0.2rem;
-      font-family: $opxc;
-      margin: auto;
-    }
-  }
-}
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+    flex-direction: column-reverse;
+    opacity: 0;
+    animation: portfolioItemsUp 0.5s forwards;
+
+    @media (hover:hover) {
+        &:hover {
+            transform: scale(1.04);
+            transition-timing-function: ease-out;
+            z-index: 200;
+
+            &:after {
+                background-color: rgba(#0000, 0);
+                transform: scale(1.1);
+            }
+
+            .portfolio-item__link {
+                bottom: 0;
+            }
+        }
 
 
-.page.portfolio {
-	.grid_container {
-		margin-left: -3vw;
-		overflow: hidden;
-    padding-top: 1rem;
-		flex: 1;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-		grid-auto-rows: minmax(315px, auto);
-    @media (min-width: 1920px) {
-      grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-      grid-auto-rows: minmax(17.5vw, auto);
+    .portfolio-item__link {
+        position: relative;
+        bottom: -30%;
+        transition: all 0.5s ease;
+        }
     }
-	}
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: inherit;
+        background-size: cover;
+        transform-origin: center;
+        transition: transform .5s ease-in-out;
+    }
+
+    &__link {
+        position: relative;
+        bottom: 0;
+        background-color: $linkc;
+        padding: 0.75rem;
+        padding-left: 1rem;
+        display: flex;
+        z-index: 1;
+
+        span:first-child {
+            flex: 1;
+            font-family: $accFont;
+            font-size: 1rem;
+            font-weight: 3;
+        }
+    }
 }
 
 @keyframes portfolioItemsUp {

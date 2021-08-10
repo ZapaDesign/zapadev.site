@@ -61,9 +61,9 @@ em {
 	position: relative;
 	overflow: hidden;
 	height: 100vh;
-  @media (min-width: 1920px){
+    @media (min-width: 1920px){
     font-size: vw(16px);
-  }
+    }
 }
 
 .main {
@@ -72,12 +72,13 @@ em {
 	overflow: hidden;
 	min-height: 100vh;
 	overflow-y: auto;
-  padding: 50px 0;
-  min-width: 100vw;
-  @media (min-width: 720px) {
-    padding: 0;
-    min-width: unset;
-  }
+    padding: 50px 0;
+    min-width: 100vw;
+
+    @media (min-width: 720px) {
+        padding: 0;
+        min-width: unset;
+    }
 
 	// background: linear-gradient(-45deg,
 	// 													rgb(32, 15, 10),
@@ -125,16 +126,22 @@ em {
 }
 
 .page {
-  background-size: 100%;
-  background-position: 10vw center;
-  background-attachment: fixed;
+    background-size: 100%;
+    background-position: 10vw center;
+    background-attachment: fixed;
 	display: flex;
 	flex-direction: column;
 	min-height: inherit;
-	padding: 0 25px;
-  @media (min-width: 1200px) {
-    padding-left: 3vw;
-  }
+	padding: 0 15px;
+
+    @media (min-width: 1200px) {
+        padding-right: 15px;
+        padding-left: 3vw;
+    }
+
+    @media (min-width: 1920px){
+        padding-right: vw(15);
+    }
 }
 
 header {
