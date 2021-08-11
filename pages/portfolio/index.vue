@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 export default {
 	name: 'portfolio',
 	async asyncData(context) {
@@ -25,7 +26,7 @@ export default {
 				path: post.path.replace(`/${defaultLocale}`, ''),
 			})),
 		}
-	},
+	}
 }
 </script>
 

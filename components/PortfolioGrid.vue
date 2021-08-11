@@ -71,6 +71,10 @@ export default {
         @media (min-width: 1200px) {
             margin-bottom: 15px;
         }
+
+        @media (min-width: 1920px){
+            margin: vw(15);
+        }
     }
 }
 

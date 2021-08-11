@@ -1,44 +1,14 @@
 <template>
 	<div class="portfolio__nav">
 		<ul>
-			<li>
-				<nuxt-link :to="'/' + $i18n.locale + '/portfolio'">[All]</nuxt-link>
-			</li>
-			<li>
-				<nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/edu_js'"
-					>[Education/JS]</nuxt-link
-				>
-			</li>
-			<li>
-				<nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/graphdesign'"
-					>[GraphDesign]</nuxt-link
-				>
-			</li>
-			<li>
-				<nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/webdesign'"
-					>[WebDesign]</nuxt-link
-				>
-			</li>
-			<li>
-				<nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/wordpress'"
-					>[Wordpress]</nuxt-link
-				>
-			</li>
-			<li>
-				<nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/js_vue_nuxt'"
-					>[JS/Vue/Nuxt]</nuxt-link
-				>
-			</li>
-			<li>
-				<nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/js_react'"
-					>[JS/React]</nuxt-link
-				>
-			</li>
-			<li>
-				<nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/target_fb_insta'"
-					>[Target Insta/FB]</nuxt-link
-				>
-			</li>
+			<li><nuxt-link :to="'/' + $i18n.locale + '/portfolio'">[All]</nuxt-link></li>
+			<li><nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/edu_js'">[Education/JS]</nuxt-link></li>
+			<li><nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/graphdesign'">[GraphDesign]</nuxt-link></li>
+			<li><nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/webdesign'">[WebDesign]</nuxt-link></li>
+			<li><nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/wordpress'">[Wordpress]</nuxt-link></li>
+			<li><nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/js_vue_nuxt'">[JS/Vue/Nuxt]</nuxt-link></li>
+			<li><nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/js_react'">[JS/React]</nuxt-link></li>
+			<li><nuxt-link :to="'/' + $i18n.locale + '/portfolio/tag/target_fb_insta'">[Target Insta/FB]</nuxt-link></li>
 		</ul>
 	</div>
 </template>

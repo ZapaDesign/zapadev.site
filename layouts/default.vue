@@ -148,28 +148,33 @@ header {
 	padding: 30px 0;
 	overflow: hidden;
 	font-size: 0.75rem;
+
 	@media (min-width: 720px) {
-		& {
-			font-size: 0.875rem;
-		}
+	    font-size: 0.875rem;
 	}
+
 	@media (min-width: 1200px) {
-		& {
-			font-size: 1rem;
-			padding: 50px 0;
-		}
+        font-size: 1rem;
+        padding: 50px 0;
 	}
-  @media (min-width: 1920px){
-    padding: vw(50) 0;
-    font-size: vw(16);
-  }
+
+    @media (min-width: 1920px) {
+        padding: vw(50) 0 vw(40);
+        font-size: vw(16);
+    }
 }
 
 .content {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	padding-top: 2vw;
+	padding-top: 30px;
+    @media (min-width: 1200px){
+        padding-top: 20px;
+    }
+    @media (min-width: 1920px){
+        padding-top: vw(20);
+    }
 }
 
 @media (min-width: 720px) {
