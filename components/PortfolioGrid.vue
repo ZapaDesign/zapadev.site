@@ -79,7 +79,7 @@ export default {
 }
 
 .portfolio-item {
-    border-radius: 5px;
+    border-radius: 10px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -89,6 +89,9 @@ export default {
     flex-direction: column-reverse;
     opacity: 0;
     animation: portfolioItemsUp 0.5s forwards;
+    @media (min-width: 1920px){
+        border-radius: vw(10);
+    }
 
     @media (hover:hover) {
         &:hover {

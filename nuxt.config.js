@@ -61,6 +61,7 @@ export default {
 		'@nuxtjs/axios',
 		// Doc: https://github.com/nuxt/content
 		'@nuxt/content',
+        '@nuxtjs/color-mode',
 		'@nuxtjs/style-resources',
 		[
 			'nuxt-i18n',
@@ -95,7 +96,7 @@ export default {
 			}
 		]
 	],
-	
+
 	/*
 	** Axios module configuration
 	** See https://axios.nuxtjs.org/options

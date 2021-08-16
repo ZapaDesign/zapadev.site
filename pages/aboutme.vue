@@ -86,9 +86,7 @@ export default {
 .tabs__nav__item {
 	display: inline-block;
 	padding-left: 16px;
-	font-family: $accFont;
-	font-weight: 400;
-	font-size: 12px;
+	font: var(--acc-font);
 	letter-spacing: 0.15rem;
   @media (min-width: 1920px){
     font-size: vw(12);
@@ -96,7 +94,7 @@ export default {
   }
 	a {
 		cursor: pointer;
-		color: $stc;
+		color: var(--sub-text-color);
 	}
 	a.active {
 		color: $acf;

@@ -77,9 +77,8 @@ export default {
 			padding-bottom: 1rem;
 			list-style: none;
 			li {
-				color: $ftc;
-				font-size: 1rem;
-				font-weight: 300;
+				color: var(--main-text-color);
+				font: var(--main-font);
 				strong {
 					font-weight: 700;
 				}

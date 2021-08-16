@@ -1,7 +1,7 @@
 <template>
 	<div class="page portfolio">
 		<PageHeader :title="tag.title" :description="tag.description" />
-		<NavigationPortfolio />
+		<PortfolioCategory />
 
 		<PortfolioGrid :posts="posts" />
 	</div>

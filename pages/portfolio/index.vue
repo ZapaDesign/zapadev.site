@@ -4,7 +4,7 @@
 			:title="$t('portfolio.title')"
 			:description="$t('portfolio.description')"
 		/>
-		<NavigationPortfolio />
+		<PortfolioCategory />
 		<PortfolioGrid :posts="posts" />
 	</div>
 </template>

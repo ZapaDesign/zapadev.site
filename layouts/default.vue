@@ -52,12 +52,12 @@ em {
 	display: flex;
 	background-color: var(--body-color);
 	min-height: 100vh;
-	font-family: $mainFont, Helvetica, Arial, sans-serif;
+	font: var(--main-font);
 	font-size: 16px;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: #fff;
+	color: var(--main-text-color);
 	position: relative;
 	overflow: hidden;
 	height: 100vh;
@@ -216,7 +216,7 @@ h1 {
 	span {
 		font-family: $opxc;
 		font-weight: 100;
-    color: var(--main-color);
+        color: var(--main-color);
 	}
 }
 

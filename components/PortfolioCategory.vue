@@ -15,13 +15,13 @@
 
 <script>
 export default {
-	name: 'NavigationPortfolio',
+	name: 'PortfolioCategory',
 }
 </script>
 
 <style lang="scss">
+
 .portfolio__nav {
-	// padding-top: 1rem;
 	padding-bottom: 1rem;
 	ul {
 		max-width: 80%;
@@ -31,19 +31,25 @@ export default {
 		flex-direction: row;
 		justify-content: flex-end;
 		flex-wrap: wrap;
+
 		li {
-			padding-right: 1.5rem;
-			font-family: $accFont;
-			font-weight: 400;
-			font-size: 0.8rem;
-			letter-spacing: 0.15rem;
+			padding-right: 24px;
+			font: var(--acc-font);
+            letter-spacing: 0.15em;
+            @media (min-width: 1920px){
+                padding-right: vw(24);
+                font-size: vw(12);
+            }
+
 			a {
-				color: $stc;
+				color: var(--sub-text-color);
+
+                &.nuxt-link-exact-active {
+                    color: $acf;
+                }
 			}
 		}
-		li a.nuxt-link-exact-active {
-			color: $acf;
-		}
-	}
+    }
 }
+
 </style>

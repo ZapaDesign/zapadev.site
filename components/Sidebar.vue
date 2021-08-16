@@ -5,6 +5,7 @@
 				<div>
 					<SideBarToggleButton />
 					<SideBarLanguageSwitcher />
+                    <ColorModePicker />
 					<SideBarNavigationMain />
 				</div>
 				<div>
@@ -25,8 +26,9 @@ import SideBarLanguageSwitcher from "../components/SideBarLanguageSwitcher";
 import SideBarNavigationMain from "../components/SideBarNavigationMain";
 import SideBarContacts from "../components/SideBarContacts";
 import SideBarMessenger from "../components/SideBarMessenger";
+import ColorModePicker from "../components/ColorModePicker";
 export default {
-    components: { SideBarToggleButton, SideBarLanguageSwitcher, SideBarNavigationMain, SideBarContacts, SideBarMessenger },
+    components: {ColorModePicker, SideBarToggleButton, SideBarLanguageSwitcher, SideBarNavigationMain, SideBarContacts, SideBarMessenger },
     name: 'Sidebar',
     computed: {
         ...mapGetters({ drawer:  "drawer/getDrawerState" })
@@ -65,7 +67,7 @@ aside {
     background-repeat: repeat-y;
     background-position: 50% 0;
     background-size: 20%;
-    background-color: $sbbgc;
+    background-color: var(--aside-color);
     bottom: 0;
     box-sizing: border-box;
     display: flex;

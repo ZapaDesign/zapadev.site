@@ -1,10 +1,10 @@
 <template>
 	<div class="page porfolio_item">
 		<PageHeader :title="post.title" :description="post.description" />
-        <NavigationPortfolio />
+        <PortfolioCategory />
 		<div class="content">
-			<div class="post__info">
-				<div class="post__navigation">
+			<div class="portfolio__info">
+				<div class="portfolio__navigation">
 					<nuxt-link :to="'/' + $i18n.locale + '/portfolio/'"> ✕ </nuxt-link>
 					<div>
 						<span>
@@ -27,18 +27,18 @@
 						</span>
 					</div>
 				</div>
-				<div class="post__thumbnail slideUp">
+				<div class="portfolio__thumbnail slideUp">
 					<img
 						:src="require(`~~/assets/portfolio/${post.thumbnail}`)"
 						alt="post.title"
 					/>
 				</div>
-				<div class="post__date slideUp">{{ getDate }}</div>
-				<div class="post__list slideUp">{{ post.list }}</div>
-				<div class="post__excerpt slideUp">{{ post.excerpt }}</div>
+				<div class="portfolio__date slideUp">{{ getDate }}</div>
+				<div class="portfolio__list slideUp">{{ post.list }}</div>
+				<div class="portfolio__excerpt slideUp">{{ post.excerpt }}</div>
                 <a v-if="post.link" :href="`http://${post.link}`">перейти на {{ post.link }}</a>
 			</div>
-			<div class="post__img slideLeftInOut">
+			<div class="portfolio__img slideLeftInOut">
                 <nuxt-content :document="post" />
 			</div>
 		</div>
@@ -47,6 +47,7 @@
 
 <script>
 import { format } from 'date-fns'
+import PortfolioCategory from "../../components/PortfolioCategory";
 
 const head = function () {
 	return {
@@ -69,8 +70,8 @@ const head = function () {
 				hid: 'og:image',
 				property: 'og:image',
 				content: this.post.media,
-			},
-		],
+			}
+		]
 	}
 }
 
@@ -85,7 +86,8 @@ const computed = {
 
 export default {
 	name: 'post',
-	head,
+    components: {PortfolioCategory},
+    head,
 	computed,
 
 	async asyncData(context) {
@@ -113,7 +115,7 @@ export default {
 
 <style lang="scss">
 
-.post {
+.portfolio {
 
     &__navigation {
         display: flex;
@@ -149,7 +151,11 @@ export default {
         padding-right: 0.75vw;
 
         img {
+            border-radius: 5px;
             max-width: 100%;
+            @media (min-width: 1920px){
+                border-radius: vw(5);
+            }
         }
     }
 
