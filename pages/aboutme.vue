@@ -97,7 +97,7 @@ export default {
 		color: var(--sub-text-color);
 	}
 	a.active {
-		color: $acf;
+		color: var(--main-color);
 		cursor: default;
 	}
 }

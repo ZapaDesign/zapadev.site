@@ -129,13 +129,13 @@ export default {
         a,
         a:active,
         a:visited {
-            color: $acf;
+            color: var(--main-color);
         }
 
         span {
             display: inline-block;
             a {
-                color: $acf;
+                color: var(--main-color);
             }
         }
     }
@@ -143,7 +143,7 @@ export default {
     &__info {
         flex-basis: 20%;
         min-width: 240px;
-        color: $stc;
+        color: var(--sub-text-color);
     }
 
     &__thumbnail {
@@ -172,7 +172,7 @@ export default {
 
         ul {
             padding-top: 1vh;
-            color: $ftc;
+            color: var(--main-text-color);
             list-style: none;
             padding-left: 0;
 
@@ -189,7 +189,7 @@ export default {
         a {
             // text-decoration: underline;
             font-size: 0.875rem;
-            color: $acf;
+            color: var(--main-color);
             letter-spacing: 0.1rem;
         }
     }

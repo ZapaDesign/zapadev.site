@@ -91,7 +91,7 @@ export default {
         padding: 0 0.75vw;
         flex: 1;
         width: 100%;
-        color: $stc;
+        color: var(--main-text-color);
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
@@ -119,16 +119,16 @@ export default {
             // color: #1a202c;
             // font-weight: 400;
             // font-size: .875em;
-            // color: $wc;
+            // color: var(--white);
             background-color: #282a36;
             padding: 0.25rem;
             border-width: 1px;
-            border-color: $stc;
+            border-color: var(--sub-text-color);
             border-radius: 0.25rem;
         }
 
         blockquote {
-            border: 1px solid $stc;
+            border: 1px solid var(--sub-text-color);
             padding: 1rem;
             padding-bottom: 0;
             margin-top: 1rem;
@@ -152,7 +152,7 @@ export default {
         }
 
         table th {
-            color: $acf;
+            color: var(--main-color);
             font-weight: 300;
             border-bottom: 1px solid $linesColor;
             border-right: 1px solid $linesColor;

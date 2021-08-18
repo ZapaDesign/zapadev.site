@@ -133,7 +133,7 @@ export default {
     &__link {
         position: relative;
         bottom: 0;
-        background-color: $linkc;
+        background-color: var(--sub-text-color);
         padding: 0.75rem;
         padding-left: 1rem;
         display: flex;

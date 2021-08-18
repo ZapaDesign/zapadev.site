@@ -57,7 +57,7 @@ export default {
     margin-bottom: 3vw;
     &:before {
         content: '';
-        background-color: $linkc;
+        background-color: var(--sub-text-color);
         position: absolute;
         height: 100%;
         width: 100%;
@@ -70,7 +70,7 @@ li {
 	margin: 0;
 	padding-left: 0;
 	display: table-cell;
-	background-color: $linkc;
+	background-color: var(--sub-text-color);
   @media (min-width: 1920px){
       padding: vw(16);
   }
@@ -84,7 +84,7 @@ li:first-child {
 }
 
 svg {
-	fill: $wc;
+	fill: var(--white);
 	width: 28px;
 	height: 28px;
   @media (min-width: 1920px){
@@ -92,7 +92,7 @@ svg {
     height: vw(28);
   }
 	&:hover {
-		fill: $acf;
+		fill: var(--main-color);
 	}
 }
 </style>

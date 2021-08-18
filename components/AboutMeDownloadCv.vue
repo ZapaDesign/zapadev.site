@@ -26,7 +26,7 @@ export default {
 
 .paper_cv_link {
     margin-bottom: 3vw;
-    color: $stc;
+    color: var(--sub-text-color);
     font-family: $accFont;
     font-weight: 400;
     font-size: 12px;
@@ -38,7 +38,7 @@ export default {
     }
 
     svg {
-        fill: $stc;
+        fill: var(--sub-text-color);
         width: 32px;
         height: 32px;
         padding-left: 16px;
@@ -48,7 +48,7 @@ export default {
             padding-left: vw(16);
         }
         &:hover {
-             fill: $acf;
+             fill: var(--main-color);
         }
     }
 }

@@ -88,7 +88,7 @@ export default {
 		font-size: 16px;
 		font-weight: 400;
 		letter-spacing: 0.125em;
-		color: #ddd;
+		color: var(--aside-text-color);
 		text-decoration: none;
 
         @media (min-width: 720px) {
@@ -103,6 +103,12 @@ export default {
 
         @media (min-width: 1920px){
             font-size: vw(18);
+        }
+
+        &.nuxt-link-active,
+        &:active,
+        &:visited {
+            color: var(--aside-text-color);
         }
 
         &--mobile {
@@ -133,9 +139,9 @@ export default {
 			&:after {
 				content: '';
 				height: 1px;
-				width: 0px;
+				width: 0;
 				display: block;
-				background-color: $acf;
+				background-color: var(--main-color);
 				transition: all 1s ease-in;
 				transform: rotate(180deg);
 				position: absolute;
@@ -154,7 +160,7 @@ export default {
 		&.nuxt-link-active {
 			background-position: 0 0;
 			svg {
-				fill: $acf;
+				fill: var(--main-color);
 			}
 			div:first-child {
 				background-position: 0 0;
@@ -179,7 +185,7 @@ export default {
             margin: 0 auto;
             width: 16px;
             height: 16px;
-            fill: $sbic;
+            fill: var(--sub-text-color);
             @media (min-width: 1920px) {
                 width: vw(16);
                 height: vw(16);

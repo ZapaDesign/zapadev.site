@@ -29,22 +29,62 @@
 
     @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 
-    html, body {
-      background-color: var(--body-color);
+    :root {
+        // COLORS
+        --withe:#FFF;
+        --black: #000;
+        --gray: #626262;
+        --yellow: #E5D45C;
+        --red: #f6447d;
+        --green: #01c086;
+
+        --body-color: #fff;
+        --aside-color: #192b39;
+        --hamburger-color: #aaa;
+
+        --main-color: var(--green);
+        --accent-color: var(--red);
+
+        --main-text-color: #262626;
+        --sub-text-color: #626262;
+        --aside-text-color: #fff;
+
+        // TYPOGRAPHY
+
+        --VinMonoPro: 'Vin Mono Pro';
+        --OpinionProCondensed: 'OpinionProCondensed';
+        --OpinionProExtraCondensed: 'OpinionProExtraCondensed';
+
+        --main-font: 500 1rem/1.5 var(--VinMonoPro);
+        --acc-font: 600 0.75rem/1.5 var(--VinMonoPro);
+        --add-font: 500 1rem/1.5 var(--OpinionProCondensed);
+        --pheader-font: 400 2rem/1.5 var(--OpinionProExtraCondensed);
     }
 
+
+    .dark-mode {
+        // COLORS
+        --body-color: #1d1d25;
+        --aside-color: #222229;
+
+        --main-color: #06d293;
+        --accent-color: #f6447d;
+
+        --main-text-color: #fff;
+        --sub-text-color: #9d9d9d;
+        --aside-text-color: #fff;
+
+        // TYPOGRAPHY
+
+        --main-font: 300 1rem/1.5 var(--VinMonoPro);
+        --acc-font: 400 0.75rem/1.5 var(--VinMonoPro);
+        --add-font: 300 1rem/1.5 var(--OpinionProCondensed);
+        --pheader-font: 100 2rem/1.5 var(--OpinionProExtraCondensed);
+    }
 
     * {
         margin: 0;
         padding: 0;
-    }
-
-    strong {
-      color: var(--accent-color);
-    }
-
-    em {
-      color: var(--main-color);
     }
 
     #app {
@@ -78,50 +118,6 @@
         padding: 0;
         min-width: unset;
     }
-
-	// background: linear-gradient(-45deg,
-	// 													rgb(32, 15, 10),
-	// 													rgb(31, 7, 17),
-	// 													rgb(5, 23, 29),
-	// 													rgb(4, 24, 19));
-	// background-size: 400% 400%;
-	// -webkit-animation: Gradient 15s ease infinite;
-	// -moz-animation: Gradient 15s ease infinite;
-	// animation: Gradient 15s ease infinite;
-
-	// @-webkit-keyframes Gradient {
-	// 	0% {background-position: 0% 50%}
-	// 	50% {background-position: 100% 50%}
-	// 	100% {background-position: 0% 50%}
-	// }
-
-	// @-moz-keyframes Gradient {
-	// 	0% {background-position: 0% 50%}
-	// 	50% {background-position: 100% 50%}
-	// 	100% {background-position: 0% 50%}
-	// }
-
-	// @keyframes Gradient {
-	// 	0% {background-position: 0% 50%}
-	// 	50% {background-position: 100% 50%}
-	// 	100% {background-position: 0% 50%}
-	// }
-
-	//@media (min-width: 720px) {
-	//	& {
-	//		flex: 3;
-	//	}
-	//}
-	//@media (min-width: 1200px) {
-	//	& {
-	//		flex: 4;
-	//	}
-	//}
-	//@media (min-width: 1440px) {
-	//	& {
-	//		flex: 5;
-	//	}
-	//}
 }
 
 .page {
@@ -226,7 +222,7 @@ ul {
 a,
 a:active,
 a:visited {
-	color: $wc;
+    color: var(--main-text-color);
 	text-decoration: none;
 }
 
@@ -239,6 +235,14 @@ code {
 	white-space: break-spaces;
 }
 
+strong {
+    color: var(--accent-color);
+}
+
+em {
+    color: var(--main-color);
+}
+
 ::-webkit-scrollbar-button {
 	background-repeat: no-repeat;
 	width: 6px;
@@ -246,14 +250,13 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-	background-color: $sbbgc;
-	// box-shadow:0px 0px 3px #000 inset;
+	background-color: var(--aside-color);
 }
 
 ::-webkit-scrollbar-thumb {
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
-	background-color: $acf;
+	background-color: var(--main-color);
 	// box-shadow:0px 1px 1px #fff inset;
 }
 
@@ -272,11 +275,10 @@ code {
 	h2,
 	h3,
 	h4 {
-		padding-top: 1rem;
 		position: relative;
 		font-weight: 700;
 		margin-bottom: 2rem;
-		color: $wc;
+        color: var(--main-text-color);
 		padding-top: 2rem;
 	}
 
@@ -344,7 +346,7 @@ code {
 	width: 1.5rem;
 	font-size: 1.25rem;
 	text-align: center;
-	background-color: $bc;
+	background-color: var(--black);
 	opacity: 0.2;
 	padding: 1rem;
 	border-radius: 50%;

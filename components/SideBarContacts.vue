@@ -20,7 +20,7 @@ export default {
         padding-bottom: 1vh;
     }
     a {
-        color: $wc;
+        color: var(--white);
         font-family: $opc;
         font-size: 14px;
         font-weight: 100;
@@ -30,7 +30,7 @@ export default {
             font-size: vw(14);
         }
         &:hover {
-            color: $acf;
+            color: var(--main-color);
         }
     }
 }

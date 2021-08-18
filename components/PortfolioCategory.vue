@@ -45,7 +45,7 @@ export default {
 				color: var(--sub-text-color);
 
                 &.nuxt-link-exact-active {
-                    color: $acf;
+                    color: var(--main-color);
                 }
 			}
 		}

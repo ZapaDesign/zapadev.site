@@ -14,9 +14,9 @@
 <script>
 export default {
 	name: 'AboutMeTabs',
-	data() { 
+	data() {
 		return {
-			activetab: 1 
+			activetab: 1
 		}
 	},
 	props: {
@@ -42,7 +42,7 @@ export default {
 
 // 	a {
 // 		cursor: pointer;
-// 		color: $stc;
+// 		color: var(--sub-text-color);
 // 	}
 // 	a.active {
 // 		color: $acf;

@@ -24,7 +24,7 @@ export default {
 		display: inline-block;
 		cursor: pointer;
         margin: 0 15px;
-        color: $wc;
+        color: var(--white);
         text-decoration: none;
         @media (min-width: 1920px){
             font-size: vw(12);
@@ -32,7 +32,7 @@ export default {
 	}
 
 	.nuxt-link-active {
-		border-bottom: 1px solid $acf
+		border-bottom: 1px solid var(--main-color);
 	}
 }
 

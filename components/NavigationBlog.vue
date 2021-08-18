@@ -61,19 +61,18 @@ export default {
 	border-right: 1px solid #808080;
 	flex-basis: 20%;
 	min-width: 240px;
-	color: $stc;
+	color: var(--sub-text-color);
 	.blog_form {
 		padding: 1rem 1rem 1rem 0;
-		color: $acf;
+		color: var(--main-color);
 		border-bottom: 1px solid #808080;
 		input {
 			background-color: transparent;
 			width: 100%;
 			border: none;
-			color: $wc;
 			outline: none;
 			font-size: 1rem;
-			color: $stc;
+			color: var(--sub-text-color);
 			&:focus {
 				border: none;
 			}

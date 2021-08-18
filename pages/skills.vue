@@ -69,7 +69,7 @@ export default {
 	h2 {
 		font-weight: 400;
 		font-size: 1.5rem;
-		border-bottom: 1px solid $acf;
+		border-bottom: 1px solid var(--main-color);
 	}
 	.nuxt-content {
 		& > ul {
@@ -91,7 +91,7 @@ export default {
 		hr {
 			height: 1px;
 			border: none;
-			background-color: $stc;
+			background-color: var(--sub-text-color);
 		}
 	}
 }

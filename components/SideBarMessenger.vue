@@ -60,13 +60,13 @@ export default {
         display: block;
         height: 18px;
         width: 18px;
-        fill: $wc;
+        fill: var(--white);
         @media (min-width: 1920px){
             height: vw(18);
             width: vw(18);
         }
         &:hover {
-            fill: $acf;
+            fill: var(--main-color);
         }
     }
 }

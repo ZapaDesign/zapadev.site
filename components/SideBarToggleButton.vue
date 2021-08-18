@@ -68,7 +68,7 @@ export default {
         .hamburger-inner,
         .hamburger-inner::before,
         .hamburger-inner::after {
-            background-color: $sbic;
+            background-color: var(--hamburger-color);
         }
     }
 }
@@ -98,7 +98,7 @@ export default {
 .hamburger-inner::after {
     width: 24px;
     height: 3px;
-    background-color: $sbic;
+    background-color: var(--hamburger-color);
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
