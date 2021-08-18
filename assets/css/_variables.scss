@@ -1,6 +1,16 @@
 $opc: "OpinionProCondensed"; //fw: 100, 700
 $opxc: "OpinionProExtraCondensed"; //fw: 100, 400
 
+
+$withe:	#FFF;
+$black: #000;
+$gray: #626262;
+$yellow: #E5D45C;
+$red: #f6447d;
+$green: #01c086;
+
+
+
 :root {
     // COLORS
     --body-color: #fff;
@@ -11,6 +21,7 @@ $opxc: "OpinionProExtraCondensed"; //fw: 100, 400
 
     --main-text-color: #262626;
     --sub-text-color: #626262;
+    --aside-text-color: #fff;
 
     // TYPOGRAPHY
 
@@ -31,6 +42,7 @@ $opxc: "OpinionProExtraCondensed"; //fw: 100, 400
 
     --main-text-color: #fff;
     --sub-text-color: #9d9d9d;
+    --aside-text-color: #fff;
 
     // TYPOGRAPHY
 

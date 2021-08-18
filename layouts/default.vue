@@ -10,16 +10,16 @@
 </template>
 
 
-
-
 <script>
-import Sidebar from "../components/Sidebar";
-import TopBar from "../components/TopBar";
-import BottomBar from "../components/BottomBar";
 
-export default {
-  components: {Sidebar, BottomBar, TopBar}
-}
+    import Sidebar from "../components/Sidebar";
+    import TopBar from "../components/TopBar";
+    import BottomBar from "../components/BottomBar";
+
+    export default {
+        components: {Sidebar, BottomBar, TopBar},
+    }
+
 </script>
 
 
@@ -27,44 +27,43 @@ export default {
 
 <style lang="scss">
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 
-html, body {
-  background-color: var(--body-color);
-}
-
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-strong {
-  color: var(--accent-color);
-}
-
-em {
-  color: var(--main-color);
-}
-
-
-#app {
-	display: flex;
-	background-color: var(--body-color);
-	min-height: 100vh;
-	font: var(--main-font);
-	font-size: 16px;
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: var(--main-text-color);
-	position: relative;
-	overflow: hidden;
-	height: 100vh;
-    @media (min-width: 1920px){
-    font-size: vw(16px);
+    html, body {
+      background-color: var(--body-color);
     }
-}
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    strong {
+      color: var(--accent-color);
+    }
+
+    em {
+      color: var(--main-color);
+    }
+
+    #app {
+        display: flex;
+        background-color: var(--body-color);
+        min-height: 100vh;
+        font: var(--main-font);
+        font-size: 16px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: var(--main-text-color);
+        position: relative;
+        overflow: hidden;
+        //height: 100vh;
+        @media (min-width: 1920px){
+        font-size: vw(16px);
+        }
+    }
 
 .main {
 	scroll-behavior: smooth;

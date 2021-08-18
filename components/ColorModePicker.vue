@@ -1,7 +1,8 @@
 <template>
-    <div>
-        <ul>
+    <div class="color-mode">
+        <ul class="color-mode__list">
             <li
+                class="color-mode__item"
                 v-for="color of colors"
                 :key="color"
                 @click="$colorMode.preference = color"
@@ -24,3 +25,16 @@ export default {
 }
 
 </script>
+
+<style lang="scss">
+
+.color-mode {
+    color: var(--aside-text-color);
+    &__item {
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+}
+
+</style>
