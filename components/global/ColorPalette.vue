@@ -1,8 +1,8 @@
 <template>
-    <div class="colors-pallet">
-        <ul class="colors-pallet__list">
+    <div class="color-palette">
+        <ul class="color-palette__list">
             <li
-                class="colors-pallet__item"
+                class="color-palette__item"
                 v-for="item in items"
                 :key="item.title"
                 :style="{ 'background-color' : item.color }"
@@ -19,7 +19,7 @@
 <script>
 
     export default {
-        name: 'ColorsPallet',
+        name: 'ColorPalette',
         data() {
             return {
                 items: [
@@ -71,7 +71,7 @@
 
 <style lang="scss">
 
-    .colors-pallet {
+    .color-palette {
 
         &__list {
             list-style: none!important;

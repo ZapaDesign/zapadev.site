@@ -1,7 +1,7 @@
 ---
-title: Brand Colors Pallet
+title: Brand Color Palette
 ---
 
-## Brand Colors Pallet
+## Brand Color Palette
 
-<colors-pallet></colors-pallet>
+<color-palette></color-palette>
