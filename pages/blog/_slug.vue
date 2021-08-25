@@ -87,12 +87,10 @@ export default {
 
 .article {
     &__content {
-        font-weight: 300;
         padding: 0 0.75vw;
         flex: 1;
         width: 100%;
         color: var(--main-text-color);
-        max-width: 800px;
         margin-left: auto;
         margin-right: auto;
 

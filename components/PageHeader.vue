@@ -1,6 +1,6 @@
 <template>
-	<header id="upToHeader">
-		<h1 class="slideLeft">
+	<header class="main-header" id="upToHeader">
+		<h1 class="main-header__title slideLeft">
 			{{ title }}
 			<span>
 				{{ description }}
