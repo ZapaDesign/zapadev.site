@@ -18,6 +18,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, ege
 ###### H6: H6 Title
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, eget convallis eros.
 
+### Сomposite Heading
+
+## H2: H2 Title - **Bold Part** - *Italic Part* - ***Bold Italic Part*** - ~~Crossed Out Part~~
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, eget convallis eros.
+
 ## Text
 
 ### Strong - Bold
