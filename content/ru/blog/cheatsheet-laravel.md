@@ -1,5 +1,5 @@
 ---
-title: Cheat Sheet Laravel
+title: Шпаргалка по Laravel
 ---
 
 ## CheatSheet Laravel
