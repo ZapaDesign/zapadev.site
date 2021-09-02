@@ -1,5 +1,6 @@
 ---
 title: Design System
+description: "| Стандартные элементы контента страницы"
 ---
 
 ## Heading
@@ -50,6 +51,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, ege
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, eget convallis eros. Cras viverra metus dui, a sollicitudin metus malesuada vel. Donec mollis, purus at ornare elementum, mi risus ultrices est, a efficitur nulla mauris non eros. Nam sed augue lacus. Maecenas commodo vitae magna vel dignissim. Nunc maximus ut erat in eleifend. Praesent ullamcorper a erat quis bibendum. Sed ultricies justo nec consectetur tincidunt.
 
 </div>
+
+## Link
+
+[Link](http://#)
+
+[Link with long text (very long text)](http://#)
+
+## Button
+
 
 ## List
 
