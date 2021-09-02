@@ -638,4 +638,157 @@ JavaScript применяется, чтобы взять эти данные JSO
 ```
 Как и в первом примере, здесь применяется функция, которая вызывается при загрузке страницы. Тем не менее, функция во втором примере использует два цикла for — один вложен в другой  для извлечения вложенных данных.
 
+## Использование JSON для HTTP-запроса
+JSON чаще всего используется в асинхронных HTTP-запросах. Это где приложение получает данные от другого приложения через HTTP-запрос по сети.
+
+### Базовый пример
+В этом примере мы будем использовать файл artist.txt, который содержит следующие данные.
+```json
+{
+  "artists" : [
+    { 
+      "artistname" : "Leonard Cohen",
+      "born" : "1934"
+    },
+    { 
+      "artistname" : "Joe Satriani",
+      "born" : "1956" 
+    },
+    { 
+      "artistname" : "Snoop Dogg",
+      "born" : "1971"
+    }
+  ]
+}
+```
+Ниже показан пример веб-страницы, которая извлекает данные JSON через HTTP, а затем использует JavaScript, чтобы обернуть данные в теги HTML и вывести их в документе. Я добавил много комментариев для пояснения того, что делает каждая часть кода.
+```html
+<!doctype html>
+<title>Пример</title>
+<script>
+// Сохраняем XMLHttpRequest и адрес JSON-файла в переменных
+var xhr = new XMLHttpRequest();
+var url = "/example/artist.txt";
+  
+// Вызываем при изменении атрибута readyState
+xhr.onreadystatechange = function() {
+  // Проверяем, выполнен ли запрос на получение
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    // Разбираем строку JSON
+    var jsonData = JSON.parse(xhr.responseText); 
+    // Вызываем showArtists() и передаём разобранный JSON
+    showArtists(jsonData);
+  }
+};
+
+// Выполняем HTTP-вызов, используя переменную url
+xhr.open("GET", url, true);
+xhr.send();
+
+// Функция, которая форматирует строку с тегами HTML, а затем выводит результат
+function showArtists(data) {
+  var output = "<ul>"; // Открываем список
+  var i;
+
+  // Перебираем исполнителей и добавляем их как пункты списка
+  for (var i in data.artists) {
+    output += "<li>" + data.artists[i].artistname + " (Родился: " + data.artists[i].born + ")</li>"; 
+  }
+  
+  output += "</ul>"; // Закрываем список
+  // Выводим данные в элементе artistlist
+  document.getElementById("artistList").innerHTML = output;
+}
+</script>
+  
+<!-- Показываем результаты здесь -->
+<div id="artistList"></div>
+```
+XMLHttpRequest — это API, который предлагает скриптовые функции клиента для передачи данных между клиентом и сервером. Он позволяет получать данные из внешнего адреса без обновления страницы. Например, пользователь может нажать кнопку, которая приводит к обновлению небольшой части страницы, а не всей страницы целиком.
+
+XMLHttpRequest интенсивно применяется в AJAX. Несмотря на свое название, он может использоваться для извлечения данных любого типа, а не только XML.
+
+XMLHttpRequest включает в себя ряд методов и атрибутов. В приведённом выше примере мы используем `open()` для инициализации запроса и `send()` для его отправки.
+
+## Использование JSON для HTTP через jQuery
+Помимо применения JavaScript для извлечения файла JSON через HTTP, вы также можете сделать это с помощью библиотеки JavaScript, такой как jQuery.
+
+Вот пример того, как можно использовать jQuery для извлечения JSON-файла через HTTP, а затем его вывода на веб-странице. Здесь мы опять воспользуемся файлом artist.txt, который содержит следующие данные.
+```json
+{
+  "artists" : [
+    { 
+      "artistname" : "Leonard Cohen",
+      "born" : "1934"
+    },
+    { 
+      "artistname" : "Joe Satriani",
+      "born" : "1956" 
+    },
+    { 
+      "artistname" : "Snoop Dogg",
+      "born" : "1971"
+    }
+  ]
+}
+```
+А вот код jQuery, который загрузит JSON-файл, отформатирует его содержимое с помощью тегов HTML, а затем отобразит результат.
+```html
+<!doctype html>
+<title>Пример</title>
+<!-- Загружаем jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- Загружаем JSON-файл и выводим его -->
+<script>
+$(function() {
+  // Пользователь щёлкнул по кнопке getData
+  $("#getData").click(function() {
+
+    // Сохраняем элемент artistList и адрес JSON-файла в переменных
+    var artistList = $("#artistList");
+    var url = "/example/artist.txt";
+
+    // Получаем JSON-файл
+    $.getJSON(url, function(data) {
+
+      // Вставляем исполнителей в переменную
+      var artists = data.artists.map(function(item) {
+        return item.artistname + " (" + item.born + ")";
+      });
+
+      // Удаляем все дочерние узлы (включая текстовые)
+      artistList.empty();
+
+      // Форматируем исполнителей через теги HTML
+      if (artists.length) {
+        var content = "<li>" + artists.join("</li><li>") + "</li>";
+        var list = $("<ul>").html(content);
+        artistList.append(list);
+      }
+    });
+  });
+});
+</script>
+  
+<!-- Показываем результаты здесь -->
+<button id="getData">Показать исполнителей</button>
+<div id="artistList"></div>
+```
+### Метод $.ajax()
+В jQuery также есть метод `$.ajax()`, который можно использовать вместо метода `$.getJSON()`. Метод `$.ajax()` применяется для выполнения асинхронного HTTP-запроса (AJAX). Разница в том, что `$.ajax()` предназначен не только для запросов JSON, он может использоваться и для запросов других типов, таких как XML, скрипты, HTML и даже запросы в виде простого текста.
+
+Это работает так.
+```js
+$.ajax({
+  url: "/json/tutorial/artists.json",
+  dataType: "json",
+  success: function (data) {
+
+    // Обрабатывайте данные JSON здесь
+
+  }
+});
+```
+Метод `$.ajax()` содержит множество параметров для настройки HTTP-запроса. Всё это объясняется в [документации по jQuery API](https://api.jquery.com/jquery.ajax/).
 
