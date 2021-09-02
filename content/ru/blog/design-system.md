@@ -87,6 +87,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, ege
   <dd>- white cold drink</dd>
 </dl>
 
+
+## Table
+
+| Таблицы       | Это                | Круто |
+| ------------- |:------------------:| -----:|
+| столбец 3     | выровнен вправо    | $1600 |
+| столбец 2     | выровнен по центру |   $12 |
+| зебра-строки  | прикольные         |    $1 |
+
 ## Image 
 
 ![](/blog/post_cheat_sheet_nuxtjs.png)
