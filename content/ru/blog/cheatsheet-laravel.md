@@ -1,6 +1,6 @@
 ---
 title: Шпаргалка по Laravel
-description: "| One of the best Laravel Snippets and Cheat Sheets - 2021 Edition"
+description: "| Набор снипетов и шпаргалка Laravel - издание 2021 года"
 ---
 
 ## CheatSheet Laravel
