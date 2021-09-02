@@ -63,13 +63,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, ege
 
 ## List
 
+### Unordered HTML List
+
 - One
 - Two
 - Three
 
+### Ordered HTML List
+
 1. One
 2. Two
 3. Three
+
+### HTML Description Lists
+
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
 
 ## Image 
 
