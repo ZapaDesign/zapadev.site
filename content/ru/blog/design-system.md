@@ -30,6 +30,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, ege
 
 Lorem ipsum dolor sit amet, *consectetur adipiscing* elit. In id finibus quam, eget convallis eros. Cras viverra metus dui, a sollicitudin metus malesuada vel. Donec mollis, purus at ornare elementum, mi risus ultrices est, *a efficitur nulla mauris non eros*. Nam sed augue lacus. Maecenas commodo vitae magna vel dignissim. Nunc maximus ut erat in eleifend. Praesent ullamcorper a erat *quis* bibendum. Sed ultricies *justo nec consectetur tincidunt*.
 
+
+### Strong - Bold - Italic
+***Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, eget convallis eros.***
+
+Lorem ipsum dolor sit amet, **_consectetur adipiscing_ elit**. In id finibus quam, eget convallis eros. Cras viverra metus dui, a sollicitudin metus malesuada vel. **Donec *mollis*, purus at ornare** elementum, mi risus ultrices est, a efficitur nulla mauris non eros. Nam sed augue lacus. Maecenas **commodo *vitae magna vel* dignissim**. Nunc maximus ut erat in eleifend. Praesent ullamcorper a erat quis bibendum. Sed ultricies justo nec **consectetur** tincidunt.
+
+### Crossed Out
+~~Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, eget convallis eros.~~
+
+Lorem ipsum dolor sit amet, ~~consectetur adipiscing elit~~. In id finibus quam, eget convallis eros. Cras viverra metus dui, a ~~sollicitudin~~ metus malesuada vel. Donec mollis, purus at ornare elementum, mi risus ultrices est, a efficitur nulla mauris non eros. Nam sed augue lacus. Maecenas commodo vitae magna vel dignissim. Nunc maximus ut erat in eleifend. ~~Praesent ullamcorper a erat quis~~ bibendum. Sed ultricies justo nec consectetur tincidunt.
+
 ### Paragraph
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, eget convallis eros. Cras viverra metus dui, a sollicitudin metus malesuada vel. Sed ultricies justo nec consectetur tincidunt.
