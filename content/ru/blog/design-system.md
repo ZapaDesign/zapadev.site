@@ -49,14 +49,14 @@ Fusce eget metus in nisi mollis commodo. Quisque nec ligula eu eros ultricies fa
 
 Praesent diam neque, ornare in tempor vel, fringilla eget justo. Vestibulum rutrum sit amet ante non aliquet. Suspendisse accumsan mi ut justo tempus, eu fermentum augue sodales. Duis egestas vitae nunc sed faucibus. 
 
-### Two Columns of text (`class="two-columns"`)
+### Two Columns of text - HTML (`class="two-columns"`)
 <div class="two-columns">
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, eget convallis eros. Cras viverra metus dui, a sollicitudin metus malesuada vel. Donec mollis, purus at ornare elementum, mi risus ultrices est, a efficitur nulla mauris non eros. Nam sed augue lacus. Maecenas commodo vitae magna vel dignissim. Nunc maximus ut erat in eleifend. Praesent ullamcorper a erat quis bibendum. Sed ultricies justo nec consectetur tincidunt.
 
 </div>
 
-###  Three Columns of text (`class="three-columns"`)
+###  Three Columns of text - HTML (`class="three-columns"`)
 <div class="three-columns">
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, eget convallis eros. Cras viverra metus dui, a sollicitudin metus malesuada vel. Donec mollis, purus at ornare elementum, mi risus ultrices est, a efficitur nulla mauris non eros. Nam sed augue lacus. Maecenas commodo vitae magna vel dignissim. Nunc maximus ut erat in eleifend. Praesent ullamcorper a erat quis bibendum. Sed ultricies justo nec consectetur tincidunt.
@@ -69,7 +69,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, ege
 
 [Link with long text (very long text)](http://#)
 
-## Button
+## Button - HTML
 
 <button>Button</button>
 
@@ -118,7 +118,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, ege
 ![](/blog/post_cheat_sheet_nuxtjs.png)
 </div>
 
-### Two Columns
+### Two Columns - HTML
 
 <div class="two-columns">
 
@@ -127,7 +127,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, ege
 ![](/blog/post_cheat_sheet_nuxtjs.png)
 </div>
 
-### Three Columns
+### Three Columns - HTML
 
 <div class="three-columns">
 
