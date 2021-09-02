@@ -23,4 +23,7 @@ otherLanguages:
 path: /uk/portfolio/razrabotka-saita-001
 ---
 
+<div class="full">
+
 ![](/portfolio/portfolio_kvant-plus_img_001.jpg)
+</div>

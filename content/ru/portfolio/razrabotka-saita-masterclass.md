@@ -25,4 +25,7 @@ tags:
   - webdesign
 ---
   
+<div class="full">
+
 ![](/portfolio/portfolio_masterclass-site-2018_img_001.jpg)
+</div>

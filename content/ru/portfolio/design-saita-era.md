@@ -11,4 +11,8 @@ tags:
 	- graphdesign
 ---
 
+<div class="full">
+
 ![](/portfolio/portfolio_era_img_001.jpg)
+
+</div>
