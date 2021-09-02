@@ -54,12 +54,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id finibus quam, ege
 
 ## Link
 
-[Link](http://#)
+[Link](http://#){: class=callout }
 
 [Link with long text (very long text)](http://#)
 
 ## Button
-
+[Link](http://#){: class=button }
 
 ## List
 
