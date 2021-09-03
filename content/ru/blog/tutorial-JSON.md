@@ -2,6 +2,10 @@
 title: Руководство по JSON
 description: "|  JSON  - JavaScript Object Notation (Нотация объектов JavaScript)"
 ---
+## Links
+
+[Введение в JSON](https://www.json.org/json-ru.html)
+---
 
 Оригинал: [quackit.com/json/tutorial](http://quackit.com/json/tutorial)
 
