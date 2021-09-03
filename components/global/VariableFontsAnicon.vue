@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="scss">
-    @import url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-regular.css');
+    @import 'https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-regular.css';
     
     .icon {
         font-family: "Anicons Regular", sans-serif;
