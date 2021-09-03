@@ -6,7 +6,9 @@
 </template>
 
 <script>
-
+export default {
+    name: 'VariableFontsAnicon'
+}
 </script>
 
 <style lang="scss">
