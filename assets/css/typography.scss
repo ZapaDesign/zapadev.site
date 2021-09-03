@@ -65,8 +65,8 @@ em {
 
 
 .nuxt-content {
-    h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, hr, table, pre,
-    .two-columns, .three-columns {
+    > h1, > h2, > h3, > h4, > h5, > h6, > p, > ul, > ol, > dl, > blockquote, > hr, > table, > pre, > div,
+    > .two-columns, > .three-columns {
         max-width: 920px;
         margin: 0 auto;
         box-sizing: border-box;
@@ -76,7 +76,9 @@ em {
     }
 
     .full {
-        h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, hr, table, pre,
+        max-width: unset;
+
+        h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, hr, table, pre, div,
         .two-columns, .three-columns {
             max-width: unset;
         }
@@ -119,11 +121,28 @@ em {
         font-weight: 700;
         margin-bottom: 16px;
         margin-top: 48px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             margin-bottom: vw(16);
             margin-top: vw(48);
         }
     }
+
+    h5, h6 {
+        margin-bottom: 12px;
+        @media (min-width: 1920px) {
+            margin-bottom: vw(12);
+        }
+    }
+
+    > h1,
+    > h2,
+    > h3,
+    > h4 {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
 
     h1 {
         color: var(--accent-color);
@@ -198,16 +217,16 @@ em {
     li {
         margin-bottom: 16px;
         @media (min-width: 1920px){
-            margin-bottom: (16);
+            margin-bottom: vw(16);
         }
     }
 
     table {
-        margin-bottom: 10px;
+        margin-bottom: 16px;
         border-collapse: collapse;
         border: 1px solid $linesColor;
         @media (min-width: 1920px){
-            margin-bottom: vw(10);
+            margin-bottom: vw(16);
             border: vw(1) solid $linesColor;
         }
 
