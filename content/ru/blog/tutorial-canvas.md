@@ -1,5 +1,5 @@
 ---
-title: Canvas
+title: Руководство по Canvas
 description: "| Глубокое погружение"
 ---
 
