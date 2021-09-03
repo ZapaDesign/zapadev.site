@@ -20,4 +20,10 @@ export default {
         transition: font-variation-settings 0.4s ease;
         cursor: pointer;
     }
+    
+    .icon:hover {
+        font-variation-settings: "TIME" 100;
+        color: darkgreen;
+    }
+    
 </style>
