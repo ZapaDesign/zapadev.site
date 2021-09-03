@@ -7,6 +7,8 @@ description: "|  JSON  - JavaScript Object Notation (Нотация объект
 
 [Введение в JSON](https://www.json.org/json-ru.html)
 
+[Руководство по JSON - webref.ru](https://webref.ru/dev/json-tutorial)
+
 ---
 
 Оригинал: [quackit.com/json/tutorial](http://quackit.com/json/tutorial)
