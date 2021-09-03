@@ -5,4 +5,4 @@ description: "| Anicons is the world’s first animated color icon font"
 
 ## Semple
 
-<VariableFontsAnicons />
+<variable-fonts-anicon></variable-fonts-anicon>
