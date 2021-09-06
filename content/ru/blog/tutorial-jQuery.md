@@ -4,8 +4,8 @@ description: "| jQuery это быстрая, небольшая и богата
 ---
 
 ## Links
-[Официальная документация по API jQuery (English)](https://jquery.com/)
-[Русская документация по API jQuery](https://jquery-docs.ru/)
-[You might not need jQuery](http://youmightnotneedjquery.com/)
+- [Официальная документация по API jQuery (English)](https://jquery.com/)
+- [Русская документация по API jQuery](https://jquery-docs.ru/)
+- [You might not need jQuery](http://youmightnotneedjquery.com/)
 
 ----
