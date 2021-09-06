@@ -37,6 +37,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #app {
     display: flex;
     background-color: var(--body-color);
