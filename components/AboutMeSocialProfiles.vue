@@ -54,7 +54,6 @@ export default {
 .social_profiles {
     position: relative;
     display: inline-block;
-    margin-bottom: 3vw;
     &:before {
         content: '';
         background-color: var(--sub-text-color);
@@ -71,9 +70,10 @@ li {
 	padding-left: 0;
 	display: table-cell;
 	background-color: var(--sub-text-color);
-  @media (min-width: 1920px){
-      padding: vw(16);
-  }
+    @media (min-width: 1920px){
+        padding: vw(16);
+    }
+
 	a {
 		display: flex;
 	}
@@ -87,10 +87,11 @@ svg {
 	fill: var(--white);
 	width: 28px;
 	height: 28px;
-  @media (min-width: 1920px){
-    width: vw(28);
-    height: vw(28);
-  }
+    @media (min-width: 1920px){
+        width: vw(28);
+        height: vw(28);
+    }
+
 	&:hover {
 		fill: var(--main-color);
 	}

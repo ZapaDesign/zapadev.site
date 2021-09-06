@@ -25,7 +25,6 @@ export default {
 <style lang="scss">
 
 .paper_cv_link {
-    margin-bottom: 3vw;
     color: var(--sub-text-color);
     font-family: $accFont;
     font-weight: 400;
