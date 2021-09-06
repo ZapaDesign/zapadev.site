@@ -9,7 +9,11 @@
         margin-right: auto;
         display: flex;
         flex-direction: row-reverse;
-        align-items: flex-start
+        align-items: flex-start;
+        
+        .title {
+            font-size: inherit;
+        }
 
         &.slideLeftInOut {
             animation-duration: 0.5s;
