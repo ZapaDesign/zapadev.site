@@ -76,6 +76,21 @@ $.ajax( '/data/people.json', {
 
 Смотрите документацию по $.ajax() для получения полного списка параметров конфигурации.
 
+**Update**
+
+```js
+$.ajax({
+    url: url,
+    data: { 
+        start: start, 
+        end: end }
+}).done(function(data, textStatus, jqXHR) {
+    $('#myElement').append(data);
+}).fail(function() {
+    // report error    
+});
+```
+
 ## {settings}
 Тип: *PlainObject*
 
