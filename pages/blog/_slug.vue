@@ -92,6 +92,8 @@ export default {
 
 <style lang="scss">
 
+@import '~/assets/css/article.scss';
+
 .hide {
 	display: none;
 }
