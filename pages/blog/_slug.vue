@@ -4,7 +4,7 @@
 		<div class="content">
 			<NavigationBlog :posts="posts" />
 			<article class="article__content slideLeftInOut">
-                <div class="article__nav">
+                <div v-if="post.toc != false" class="article__nav">
                     <ul>
                         <li
                             v-for="link of post.toc"

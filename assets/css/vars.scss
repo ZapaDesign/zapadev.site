@@ -1,22 +1,26 @@
 :root {
-    // COLORS
-    --withe:#FFF;
+    --withe: #FFF;
     --black: #000;
     --gray: #626262;
     --yellow: #ffef6c;
     --red: #f6447d;
     --green: #01c086;
+    --dark-blue: #192b39;
+    --black-blue-gray: #1d1d25;
+    --dark-blue-gray: #222229;
 
-    --body-color: #fff;
-    --aside-color: #192b39;
+    // COLORS
+
+    --body-color: var(--withe);
+    --aside-color: var(--dark-blue);
     --hamburger-color: #aaa;
 
     --main-color: var(--green);
     --accent-color: var(--red);
 
     --main-text-color: #262626;
-    --sub-text-color: #626262;
-    --aside-text-color: #fff;
+    --sub-text-color: var(--gray);
+    --aside-text-color: var(--withe);
 
     // TYPOGRAPHY
 
@@ -33,15 +37,15 @@
 
 .dark-mode {
     // COLORS
-    --body-color: #1d1d25;
-    --aside-color: #222229;
+    --body-color: var(--black-blue-gray);
+    --aside-color: var(--dark-blue-gray);
 
-    --main-color: #06d293;
-    --accent-color: #f6447d;
+    --main-color: var(--green);
+    --accent-color: var(--red);
 
-    --main-text-color: #fff;
+    --main-text-color: var(--withe);
     --sub-text-color: #9d9d9d;
-    --aside-text-color: #fff;
+    --aside-text-color: var(--withe);
     --head-text-color: var(--yellow);
 
     // TYPOGRAPHY

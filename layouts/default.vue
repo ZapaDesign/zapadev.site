@@ -172,29 +172,29 @@ html {
 
 ::-webkit-scrollbar-button {
 	background-repeat: no-repeat;
-	width: 6px;
-	height: 0px;
+	width: 0;
+	height: 0;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: var(--aside-color);
+	background-color: var(--black-blue-gray);
 }
 
 ::-webkit-scrollbar-thumb {
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
-	background-color: var(--main-color);
+	background-color: var(--dark-blue-gray);
 	// box-shadow:0px 1px 1px #fff inset;
 }
 
 ::-webkit-resizer {
 	background-repeat: no-repeat;
-	width: 4px;
-	height: 0px;
+	width: 1px;
+	height: 0;
 }
 
 ::-webkit-scrollbar {
-	width: 4px;
+	width: 8px;
 }
 
 .ScrollToUpBtn {

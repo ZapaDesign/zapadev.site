@@ -54,37 +54,61 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .hide {
 	display: none;
 }
+
+
+
 .blog_navigation {
-	border-right: 1px solid #808080;
-	flex-basis: 20%;
+	flex-basis: 15%;
 	min-width: 240px;
 	color: var(--sub-text-color);
     position: sticky;
     top: 0;
     max-height: 100vh;
     overflow: scroll;
+
+    @media (min-width: 1920px){
+        min-width: vw(240);
+    }
+
 	.blog_form {
-		padding: 1rem 1rem 1rem 0;
+		padding: 16px 16px 16px 0;
 		color: var(--main-color);
 		border-bottom: 1px solid #808080;
+
+        @media (min-width: 1920px){
+            padding: vw(16) vw(16) vw(16) 0;
+        }
+
 		input {
 			background-color: transparent;
 			width: 100%;
 			border: none;
 			outline: none;
-			font-size: 1rem;
+			font-size: 16px;
 			color: var(--sub-text-color);
+
+            @media (min-width: 1920px){
+                font-size: vw(16);
+            }
+
 			&:focus {
 				border: none;
 			}
 		}
 	}
+
 	.blog_items {
+
 		li {
-			padding: 1rem 1rem 1rem 0;
+			padding: 16px 16px 16px 0;
+
+            @media (min-width: 1920px){
+                padding: vw(16) vw(16) vw(16) 0;
+            }
 		}
 	}
 }
