@@ -83,7 +83,8 @@ $.ajax({
     url: url,
     data: { 
         start: start, 
-        end: end }
+        end: end
+    }
 }).done(function(data, textStatus, jqXHR) {
     $('#myElement').append(data);
 }).fail(function() {
