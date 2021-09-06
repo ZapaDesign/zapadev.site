@@ -62,6 +62,10 @@ export default {
 	flex-basis: 20%;
 	min-width: 240px;
 	color: var(--sub-text-color);
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow: scroll;
 	.blog_form {
 		padding: 1rem 1rem 1rem 0;
 		color: var(--main-color);
