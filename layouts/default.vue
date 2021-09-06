@@ -58,7 +58,7 @@
 .main {
 	scroll-behavior: smooth;
 	flex: 1;
-	overflow: hidden;
+	// overflow: hidden;
 	min-height: 100vh;
 	// overflow-y: auto;
     padding: 50px 0;
