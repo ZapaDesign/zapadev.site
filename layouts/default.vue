@@ -144,6 +144,7 @@
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+    align-items: flex-start;
 	padding-top: 30px;
     @media (min-width: 720px) {
         flex-direction: row;
