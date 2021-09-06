@@ -121,7 +121,7 @@ $.ajax({
 **Начиная с jQuery 1.8**, использование `async: false` с jqXHR (`$.Deferred`) **не рекомендуется**.
 Вы должны использовать обработчики `success / error / complete` вместо соотвествующих методов объекта jqXHR, таких как `jqXHR.done()`.
 
-### **beforeSend**
+### beforeSend
 Тип: *Function( jqXHR jqXHR, PlainObject settings )*
 
 Обработчик вызываемый перед совершения запроса, в котором Вы можете модицифировать объект jqXHR (В версиях jQuery 1.4.x и ниже, XMLHTTPRequest) перед тем как Ajax запрос будет отправлен. 
