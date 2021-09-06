@@ -4,7 +4,7 @@
 		<div class="content">
 			<NavigationBlog :posts="posts" />
 			<article class="article__content slideLeftInOut">
-                <div class="nuxt-content__nav">
+                <div class="article__nav">
                     <ul>
                         <li
                             v-for="link of post.toc"
