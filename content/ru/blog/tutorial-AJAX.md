@@ -9,7 +9,7 @@ description: "| AJAX (асинхронный JavaScript и XML)"
 - [webref.ru - Основы jQuery: AJAX](https://webref.ru/dev/jqfundamentals/ajax)
 - [jquery-docs.ru - jQuery.ajax](https://jquery-docs.ru/jQuery.ajax/)
 - [basicweb.ru - jQuery функция $.ajax()](https://basicweb.ru/jquery/jquery_method_ajax.php)
-- [Ajax](https://riptutorial.com/jquery/topic/316/ajax)
+- [Semples Ajax](https://riptutorial.com/jquery/topic/316/ajax)
 
 ---
 
