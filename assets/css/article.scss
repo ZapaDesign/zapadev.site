@@ -1,6 +1,7 @@
 .article {
     display: flex;
     flex-direction: row-reverse;
+    aline-item: flex-start;
     
     &__content {
         padding: 0 0.75vw;
