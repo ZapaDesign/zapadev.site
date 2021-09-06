@@ -11,10 +11,6 @@
         flex-direction: row-reverse;
         align-items: flex-start
 
-        .title {
-            font-size: inherit;
-        }
-
         &.slideLeftInOut {
             animation-duration: 0.5s;
             animation-delay: 0.3s;
