@@ -4,15 +4,17 @@
 		<div class="content">
 			<NavigationBlog :posts="posts" />
 			<article class="article__content slideLeftInOut">
-                <ul>
-                    <li
-                        v-for="link of post.toc"
-                        :key="link.id"
-                        :class="{ 'toc2': link.depth === 2, 'toc3': link.depth === 3 }"
-                    >
-                        <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-                    </li>
-                </ul>
+                <div class="nuxt-content__nav">
+                    <ul>
+                        <li
+                            v-for="link of post.toc"
+                            :key="link.id"
+                            :class="{ 'toc2': link.depth === 2, 'toc3': link.depth === 3 }"
+                        >
+                            <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
+                        </li>
+                    </ul>
+                </div>
 				<nuxt-content :document="post" />
 			</article>
 		</div>
