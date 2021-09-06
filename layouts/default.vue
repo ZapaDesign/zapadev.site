@@ -48,8 +48,8 @@
     -moz-osx-font-smoothing: grayscale;
     color: var(--main-text-color);
     position: relative;
-    overflow: hidden;
-    //height: 100vh;
+    // overflow: hidden;
+    // height: 100vh;
     @media (min-width: 1920px){
     font-size: vw(16px);
     }
@@ -60,7 +60,7 @@
 	flex: 1;
 	overflow: hidden;
 	min-height: 100vh;
-	overflow-y: auto;
+	// overflow-y: auto;
     padding: 50px 0;
     min-width: 100vw;
 
