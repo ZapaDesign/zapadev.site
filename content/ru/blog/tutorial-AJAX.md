@@ -1,5 +1,5 @@
 ---
-title: Руководство по AJAX
+title: Руководство по AJAX - jQuery
 description: "| AJAX (асинхронный JavaScript и XML)"
 ---
 
