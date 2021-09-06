@@ -10,6 +10,7 @@ description: "| AJAX (асинхронный JavaScript и XML)"
 - [jquery-docs.ru - jQuery.ajax](https://jquery-docs.ru/jQuery.ajax/)
 - [basicweb.ru - jQuery функция $.ajax()](https://basicweb.ru/jquery/jquery_method_ajax.php)
 - [Semples Ajax](https://riptutorial.com/jquery/topic/316/ajax)
+- [ajax_cheat_sheet](https://gist.github.com/joelrojo/c54765a748cd87a395a2b865359d6add#file-ajax_cheat_sheet-md)
 
 ---
 
