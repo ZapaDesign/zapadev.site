@@ -98,33 +98,8 @@ export default {
 	display: none;
 }
 
-.article {
-    &__content {
-        padding: 0 0.75vw;
-        flex: 1;
-        width: 100%;
-        color: var(--main-text-color);
-        margin-left: auto;
-        margin-right: auto;
-
-        .title {
-            font-size: inherit;
-        }
-
-        &.slideLeftInOut {
-            animation-duration: 0.5s;
-            animation-delay: 0.3s;
-        }
-    }
-}
-
 .AnimationState-leave-active .blog_article.slideLeftInOut {
 	animation-delay: 0s;
 }
 
-@media (max-width: 960px) {
-	.blog_article .blog_navigation {
-		display: none;
-	}
-}
 </style>
