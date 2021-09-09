@@ -11,6 +11,7 @@ description: "| AJAX (асинхронный JavaScript и XML)"
 - [basicweb.ru - jQuery функция $.ajax()](https://basicweb.ru/jquery/jquery_method_ajax.php)
 - [Semples Ajax](https://riptutorial.com/jquery/topic/316/ajax)
 - [ajax_cheat_sheet](https://gist.github.com/joelrojo/c54765a748cd87a395a2b865359d6add#file-ajax_cheat_sheet-md)
+- **[jQuery для начинающих - AJAX](https://antonshevchuk.gitbooks.io/jquery-for-beginners/content/60_ajax/)**
 
 ---
 
