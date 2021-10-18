@@ -19,6 +19,8 @@ tags:
     - webdesign
 ---
 
+
+
 | №  | Title | Featured                                                                       | Description                                                                                                                |
 |----|-------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | 10 | NDA   | **Woocommerce**<br> **ACF Pro (Flexible Content)**<br> AdobeXD to Custom Theme | ACF Pro, CPT UI, GravituForm, Woocommerce Hooks, Foundation, Responsive Design, Pixel Perfect, Slick Slider                |
@@ -26,6 +28,7 @@ tags:
 | 08 | NDA   | **ACF Pro (Flexible Content)**<br> Figma to Custom Theme                       | CPT UI, GravituForm, Foundation, Responsive Design, Pixel Perfect, Foundation Accordion, Foundation Tabs, Slick Slider     |
 | 07 | NDA   | **ACF Pro (Flexible Content)**<br> PSD to Custom Theme                         | Foundation, Responsive Design, Pixel Perfect, Slick Slider                                                                 |
 | 06 | NDA   | **ACF Pro (Flexible Content)**<br> AdobeXD to Custom Theme                     | CPT UI, Foundation, Responsive Design, Pixel Perfect, Foundation Accordion, Foundation Tabs, Slick Slider, jQuery          |
+
 
 
 ## 05 | NDA
