@@ -19,21 +19,13 @@ tags:
     - webdesign
 ---
 
-## 08 | NDA
-- Wordpress, **ACF Pro (Flexible Content)**
-- CPT UI
-- Figma to Custom Theme, Foundation, Responsive Design, Pixel Perfect
-- Foundation Accordion, Foundation Tabs, Slick Slider
-
-## 07 | NDA
-- Wordpress, **ACF Pro (Flexible Content)**
-- PSD to Custom Theme, Foundation, Responsive Design, Pixel Perfect
-
-## 06 | NDA
-- Wordpress, **ACF Pro (Flexible Content)**
-- CPT UI
-- AdobeXD to Custom Theme, Foundation, Responsive Design, Pixel Perfect
-- Foundation Accordion, Foundation Tabs, Slick Slider
+| №  | Title | Featured                                                                       | Description                                                                                                                |
+|----|-------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| 10 | NDA   | **Woocommerce**<br> **ACF Pro (Flexible Content)**<br> AdobeXD to Custom Theme | ACF Pro, CPT UI, GravituForm, Woocommerce Hooks, Foundation, Responsive Design, Pixel Perfect, Slick Slider                |
+| 09 | NDA   | **Elementor**<br> AdobeXD to Custom Theme                                      | ACF Pro, CPT UI, GravituForm, Elementor Custom Widget, Elementor Custom Skin, Foundation, Responsive Design, Pixel Perfect |
+| 08 | NDA   | **ACF Pro (Flexible Content)**<br> Figma to Custom Theme                       | CPT UI, GravituForm, Foundation, Responsive Design, Pixel Perfect, Foundation Accordion, Foundation Tabs, Slick Slider     |
+| 07 | NDA   | **ACF Pro (Flexible Content)**<br> PSD to Custom Theme                         | Foundation, Responsive Design, Pixel Perfect, Slick Slider                                                                 |
+| 06 | NDA   | **ACF Pro (Flexible Content)**<br> AdobeXD to Custom Theme                     | CPT UI, Foundation, Responsive Design, Pixel Perfect, Foundation Accordion, Foundation Tabs, Slick Slider, jQuery          |
 
 ## 05 | NDA
 - Wordpress, **ACF Pro (Flexible Content)**
