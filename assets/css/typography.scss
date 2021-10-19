@@ -14,17 +14,18 @@ a:visited {
         text-decoration-thickness: vw(1);
     }
 }
-<strong>
+
+strong {
     a,
     a:active,
     a:visited {
         color: var(--accent-color);
     }
-    
+
     a:hover {
         color: var(--main-color);
     }
-</strong>
+}
 
 button {
     padding: 12px 25px;
