@@ -287,3 +287,109 @@ $.ajax({
   $(this).addClass('done')
 })
 ```
+### Метод jQuery.get()
+```js
+/* global flow */
+$.get(flow.ajax_url, {
+  action: 'load_more',
+  offset: $('.item').length,
+}).done(function (response) {
+  $('#container').append(response)
+})
+```
+
+### Метод jQuery.post()
+```js
+/* global flow */
+$.post(flow.ajax_url, {
+  action: 'load_more',
+  offset: $('.item').length,
+}).done(function (response) {
+  $('#container').append(response)
+})
+```
+`action` - для WP главный параметр - указывает какая функция будет обрабатывать запрос
+```js
+/* global flow */
+$.get(flow.ajax_url, {
+  action: 'create_article',
+  name: $parent.find('.td_title').text(),
+  date: $parent.find('.td_date').text(),
+  image: $parent.find('.td_image').text(),
+  content: $parent.find('.td_content').html(),
+  is_column: $parent.find('.td_is_column').text(),
+  column: $parent.find('.td_column').text(),
+  is_featured: $parent.find('.td_is_featured').text(),
+}).done(function (response) {
+  console.log(response)
+  $parent.removeClass('is-loading')
+  $parent.addClass(response.status ? 'is-success' : 'is-error')
+  createArticle(++index)
+})
+```
+
+### Функция-обработчик (function.php)
+```php
+add_action('wp_ajax_[action]', 'my_action_callback');
+add_action('wp_ajax_nopriv_[action]', 'my_action_callback');
+````
+`wp_ajax_nopriv_(action)` можно не указывать, если не нужно, чтобы AJAX запрос обрабатывался для неавторизованных пользователей.
+
+`my_action_callback` - функция для обработки запроса
+
+```php
+function my_action_callback()
+{
+    $news = new WP_Query([
+        'post_type' => 'post'
+    ]);
+    if ($news->have_posts()) {
+        while ($news->have_posts()) {
+            $news->the_post();
+            show_template('loop-post');
+        }
+    }
+    wp_die();
+}
+```
+Альтернативный вариант
+```php
+function my_action_callback()
+{
+    $news = new WP_Query([
+        'post_type' => 'post',
+        'offset' => $_POST['offset'] ?? 0
+    ]);
+    
+    if ($news->have_posts()) {
+        $html = '';
+        while ($news->have_posts()) {
+            $news->the_post();
+            $html .= return_template('loop-post');
+        }
+    }
+
+    wp_send_json([
+        'html' => $html,
+        'post_count' => $news->found_posts
+    ]);
+    wp_die();
+}
+```
+```php
+$('.load-more-btn').on('click', function () {
+  /* global flow */
+  $.post(flow.ajax_url, {
+    action: 'load_more',
+    offset: $('.item').length,
+  }).done(function (response) {
+    if (response.html) {
+      $('#container').append(response.html)
+    }
+    if ($('.item').length >= response.post_count) {
+      $('.load-more-btn').hide()
+    }
+  })
+})
+```
+
