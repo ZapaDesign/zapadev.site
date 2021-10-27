@@ -393,7 +393,7 @@ $('.load-more-btn').on('click', function () {
 })
 ```
 ### AJAX подгрузка постов
-#### **FUNCTION.PHP**
+#### *function.php*
 ```php
 <?php
  
@@ -442,7 +442,7 @@ function load_more_posts_callback() {
     wp_send_json( $response );
 }
 ```
-#### global.js
+#### *global.js*
 ```js
 /**
  * Load more posts within category
@@ -482,7 +482,7 @@ $( document ).on( 'click', '.js-load-posts', function( e ) {
   } );
 } );
 ```
-#### template.php
+#### *template.php*
 ```php
 <?php 
 $newsArgs = array(
@@ -508,3 +508,136 @@ $news = new WP_Query( $newsArgs ); ?>
 <?php endif;
 wp_reset_query(); ?>
 ```
+
+### Подгрузка контента через Fancybox AJAX
+
+#### *functions.php*
+```php
+wp_localize_script( 'global', 'ajax', array( 'url' => admin_url( 'admin-ajax.php' ), 'nonce' => wp_create_nonce( 'project_nonce' ) ) );
+```
+#### **template.php**
+```php
+<a href="#" class="selector" data-news_id="320">Read More </a>;
+```
+#### *global.js*
+```js
+$( 'a.selector' ).each( function () {
+ $( this ).fancybox( {
+  ///...
+   type: 'ajax',
+   href: ajax.url,
+   ajax: {
+     dataType: 'html',
+     type: "POST",
+     data: {
+       news_id: $( this ).data( 'news_id' ),
+       action: 'get_post_content',
+       nonce: ajax.nonce
+     }
+   }
+ } );
+} );
+```
+#### *Fancybox V3. Single Popup*
+```js
+$( 'a.selector' ).on( 'click', function( e ) {
+ var $toggle = $( this ), newsID = $toggle.data( 'news_id' );
+ e.preventDefault();
+ $.fancybox.open( {
+   src: ajax.url,
+   type: 'ajax',
+   opts: {
+     ajax: {
+       settings: {
+         dataType: 'html',
+         type: 'POST',
+         data: {
+           news_id: newsID,
+           action: 'get_post_content',
+           nonce: ajax.nonce
+         },
+       }
+     },
+   }
+ } );
+} );
+```
+#### *Fancybox V3. gallery*
+```js
+$( 'a.selector' ).on( 'click', function( e ) {
+var $toggle = $( this ), newsID = $toggle.data( 'news_id' ), activeSlide = 0;
+ e.preventDefault();
+ var ajaxSettings = {
+   src: ajax.url,
+   type: 'ajax',
+   opts: {
+     ajax: {
+       settings: {
+         dataType: 'html',
+         type: 'POST',
+         data: {
+           news_id: false,
+           action: 'get_post_content',
+           nonce: ajax.nonce
+         },
+       }
+     },
+   }
+ };
+ var fancyOpts = [];
+ $( 'a.selector' ).each( function( i, e ) {
+   fancyOpts.push( $.extend( true, {}, ajaxSettings ) );
+   fancyOpts[i].opts.ajax.settings.data.news_id = $( this ).data( 'news_id' );
+  if ( newsID === $( this ).data( 'news_id' ) ) {
+   activeSlide = i;
+  }
+ 
+ } );
+ $.fancybox.open( fancyOpts, {
+  onInit: function( instance ) {
+    instance.jumpTo( activeSlide, 0 );
+  }
+ } );
+} );
+```
+#### *Fancybox v.4*
+```js
+$( "a.button" ).on( "click", function( e ) {
+    var $toggle = $( this ), newsID = $toggle.data( "news_id" );
+    e.preventDefault();
+      if ( newsID ) {
+        let data = {
+          action: "get_post_content",
+          news_id: newsID
+        }
+        let getParams = $.param(data);
+        let src = ajax.url + "?" + getParams;
+        Fancybox.show(
+          [{
+            src: src,
+            type: "ajax",
+          }]
+        )
+    }
+} );
+```
+#### *function.php*
+```php
+add_action( 'wp_ajax_get_post_content', 'get_post_content_callback' );
+add_action( 'wp_ajax_nopriv_get_post_content', 'get_post_content_callback' );
+ 
+function get_post_content_callback() {
+   // check_ajax_referer('project_nonce' ,'nonce'); // Cause error on WPEngine
+ 
+    $selected_news = get_post( $_POST['news_id'] );
+    ob_start(); ?>
+    <div class="news-item">
+    <!-- BEGIN of post content -->
+    </div>
+    <?php $html = ob_get_clean();
+    echo $html;
+    wp_die();
+}
+```
+
+
