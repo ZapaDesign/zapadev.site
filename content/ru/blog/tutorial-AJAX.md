@@ -393,7 +393,7 @@ $('.load-more-btn').on('click', function () {
 })
 ```
 ### AJAX подгрузка постов
-#### *function.php*
+**function.php**
 ```php
 <?php
  
@@ -442,7 +442,7 @@ function load_more_posts_callback() {
     wp_send_json( $response );
 }
 ```
-#### *global.js*
+**global.js**
 ```js
 /**
  * Load more posts within category
@@ -482,7 +482,7 @@ $( document ).on( 'click', '.js-load-posts', function( e ) {
   } );
 } );
 ```
-#### *template.php*
+**template.php**
 ```php
 <?php 
 $newsArgs = array(
@@ -511,15 +511,15 @@ wp_reset_query(); ?>
 
 ### Подгрузка контента через Fancybox AJAX
 
-#### *functions.php*
+**functions.php**
 ```php
 wp_localize_script( 'global', 'ajax', array( 'url' => admin_url( 'admin-ajax.php' ), 'nonce' => wp_create_nonce( 'project_nonce' ) ) );
 ```
-#### **template.php**
+**template.php**
 ```php
 <a href="#" class="selector" data-news_id="320">Read More </a>;
 ```
-#### *global.js*
+**global.js**
 ```js
 $( 'a.selector' ).each( function () {
  $( this ).fancybox( {
@@ -538,7 +538,7 @@ $( 'a.selector' ).each( function () {
  } );
 } );
 ```
-#### *Fancybox V3. Single Popup*
+**Fancybox V3. Single Popup**
 ```js
 $( 'a.selector' ).on( 'click', function( e ) {
  var $toggle = $( this ), newsID = $toggle.data( 'news_id' );
@@ -562,7 +562,7 @@ $( 'a.selector' ).on( 'click', function( e ) {
  } );
 } );
 ```
-#### *Fancybox V3. gallery*
+**Fancybox V3. gallery**
 ```js
 $( 'a.selector' ).on( 'click', function( e ) {
 var $toggle = $( this ), newsID = $toggle.data( 'news_id' ), activeSlide = 0;
@@ -600,7 +600,7 @@ var $toggle = $( this ), newsID = $toggle.data( 'news_id' ), activeSlide = 0;
  } );
 } );
 ```
-#### *Fancybox v.4*
+**Fancybox v.4**
 ```js
 $( "a.button" ).on( "click", function( e ) {
     var $toggle = $( this ), newsID = $toggle.data( "news_id" );
@@ -621,7 +621,7 @@ $( "a.button" ).on( "click", function( e ) {
     }
 } );
 ```
-#### *function.php*
+**function.php**
 ```php
 add_action( 'wp_ajax_get_post_content', 'get_post_content_callback' );
 add_action( 'wp_ajax_nopriv_get_post_content', 'get_post_content_callback' );
