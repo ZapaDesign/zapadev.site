@@ -395,8 +395,6 @@ $('.load-more-btn').on('click', function () {
 ### AJAX подгрузка постов
 #### **FUNCTION.PHP**
 ```php
-// FUNCTION.PHP
-
 <?php
  
 /* Add to foundation_scripts_and_styles() function after global.js */
@@ -446,8 +444,6 @@ function load_more_posts_callback() {
 ```
 #### global.js
 ```js
-// global.js
-
 /**
  * Load more posts within category
  */
