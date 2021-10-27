@@ -247,3 +247,43 @@ $.ajax({
 Например, если Вы хотите использовать текст ответа как XML, используйте значение "text xml" для параметра dataType.
 Вы также можете сделать JSONP запрос, если он получен в виде текста и интерпретируется jQuery как XML: `"jsonp text xml"`. 
 Точно так же, сокращенная строка, такая как `"jsonp xml"` сначала попытается преобразовать из JSONP в XML и если это невозможно, то преобразует из JSONP в текст и затем из текст в xml.
+
+
+## Мануал
+
+### Wordpress + AJAX
+```php
+function foundation_scripts_and_styles()
+{
+    wp_enqueue_script(
+        'global',
+        get_template_directory_uri() . '/js/global.js',
+        null,
+        null,
+        true
+    ); /* This should go first */
+
+    wp_localize_script('global', 'flow', [
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'is_user_logged_in' => is_user_logged_in()
+    ]);
+}
+add_action('wp_enqueue_scripts', 'foundation_scripts_and_styles');
+```
+Теперь в файле global.js доступна переменная flow с нашими данными
+
+### Метод jQuery.ajax()
+```js
+/* global flow */
+$.ajax({
+  url: flow.ajax_url,
+  type: 'GET',
+  beforeSend: function () {},
+  data: {
+    action: 'action_name',
+  },
+  dataType: 'json',
+}).done(function () {
+  $(this).addClass('done')
+})
+```
