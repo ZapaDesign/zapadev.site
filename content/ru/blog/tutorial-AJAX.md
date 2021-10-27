@@ -392,4 +392,123 @@ $('.load-more-btn').on('click', function () {
   })
 })
 ```
+### AJAX подгрузка постов
+#### **FUNCTION.PHP**
+```php
+// FUNCTION.PHP
 
+<?php
+ 
+/* Add to foundation_scripts_and_styles() function after global.js */
+ 
+wp_localize_script( 'global', 'ajax', array( 'url' => admin_url( 'admin-ajax.php' ), 'nonce' => wp_create_nonce( 'project_nonce' ) ) );
+ 
+/** Add Before "HIDE/SHOW WORDPRESS PLUGINS MENU ITEM"
+ * Load more posts on category page
+ */
+ 
+add_action( 'wp_ajax_load_more_posts', 'load_more_posts_callback' );
+add_action( 'wp_ajax_nopriv_load_more_posts', 'load_more_posts_callback' );
+ 
+function load_more_posts_callback() {
+ 
+    $newsArgs = array(
+        "post_type"      => "post",
+        "orderby"        => "date",
+        "order"          => "DESC",
+        // Get for one more post then needed to check if there anything to load in future
+        "posts_per_page" => get_option( 'posts_per_page' ) + 1,
+        'offset'         => $_POST['offset'],
+        'post_status'    => 'publish',
+    );
+     
+    $news      = new WP_Query( $newsArgs );
+    $last_page = true;
+    $response  = array();
+    if ( $news->have_posts() ):
+        while ( $news->have_posts() ): $news->the_post();
+            /**
+             * $current_post is counted from zero.
+             * If current post is extra post then we have at least one more page to load
+             */
+            if ( $news->current_post == get_option( 'posts_per_page' ) ) {
+        $last_page = false;
+        continue;
+    }
+            $response['html'] .= <div class='cell medium-6 blog-item'>" . return_template( 'loop-post' ) . '</div>';
+         
+        endwhile;
+    endif;
+    wp_reset_query();
+    $response['last_page'] = $last_page;
+    wp_send_json( $response );
+}
+```
+#### global.js
+```js
+// global.js
+
+/**
+ * Load more posts within category
+ */
+ 
+var morePostsRequest;
+$( document ).on( 'click', '.js-load-posts', function( e ) {
+  e.preventDefault();
+  if ( morePostsRequest ) {
+    morePostsRequest.abort();
+  }
+  var $this = $( this ), $buttonWrapper = $this.closest( '.posts-list__more' );
+  var data = {
+    'action': 'load_more_posts',
+    'nonce': ajax.nonce,
+    'offset': $this.closest('.posts-list').find( '.preview' ).length,
+  };
+   
+  morePostsRequest = $.ajax( {
+    url: ajax.url,
+    type: 'POST',
+    data: data,
+    beforeSend: function() {
+      $this.addClass( 'loading' );
+    },
+    success: function( resp ) {
+      $buttonWrapper.before( resp.html );
+      $this.removeClass( 'loading' );
+      // If we loaded last page then hide `Load more` button
+      if ( resp.last_page ) {
+        $buttonWrapper.hide();
+      }
+    },
+    error: function( err ) {
+      console.log( err.textStatus );
+    }
+  } );
+} );
+```
+#### template.php
+```php
+<?php 
+$newsArgs = array(
+    "post_type"      => "post",
+  "orderby"        => "date",
+  "order"          => "DESC",
+  "posts_per_page" => get_option( 'posts_per_page' ),
+);
+$news = new WP_Query( $newsArgs ); ?>
+<?php if ( $news->have_posts() ): ?>
+<div class="grid-x grid-margin-x posts-list">
+  <?php while ( $news->have_posts() ): $news->the_post(); ?>
+    <div class="cell medium-6">
+      <?php show_template( 'loop-post' ); // artical inside loop-post.php should has class to make a count ?>
+    </div>
+  <?php endwhile; ?>
+  <?php if ( $news->max_num_pages > 1 ): ?>
+    <div class="posts-list__more cell">
+      <button class="button expanded js-load-posts"><?php _e( 'Load more', 'wits' ); ?></button>
+    </div>
+  <?php endif; ?>
+</div>
+<?php endif;
+wp_reset_query(); ?>
+```
