@@ -56,7 +56,7 @@ export default {
     display: inline-block;
     &:before {
         content: '';
-        background-color: var(--sub-text-color);
+        background-color: #313131FF;
         position: absolute;
         height: 100%;
         width: 100%;
@@ -69,7 +69,7 @@ li {
 	margin: 0;
 	padding-left: 0;
 	display: table-cell;
-	background-color: var(--sub-text-color);
+	background-color: #313131FF;
     @media (min-width: 1920px){
         padding: vw(16);
     }

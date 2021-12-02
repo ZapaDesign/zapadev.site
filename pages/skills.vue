@@ -62,14 +62,24 @@ export default {
 		flex: 3;
 		min-width: 250px;
 		padding-right: 2vw;
+        @media (min-width: 1920px){
+            min-width: vw(250);
+        }
 	}
 	section:last-child {
 		flex: 4;
 	}
+    section:first-child {
+        //flex: 4;
+    }
 	h2 {
 		font-weight: 400;
 		font-size: 1.5rem;
 		border-bottom: 1px solid var(--main-color);
+        margin-bottom: 30px;
+        @media (min-width: 1920px){
+            margin-bottom: vw(30);
+        }
 	}
 	.nuxt-content {
 		& > ul {
