@@ -22,8 +22,8 @@ tags:
 
 | №  | Title | Featured                                                                               | Description                                                                                                                |
 |----|-------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| 13 | NDA   | **ACF Pro (Flexible Content)**, AdobeXD to Custom Theme                          | ACF Pro, CPT UI, GravityForm, Foundation, Responsive Design, Pixel Perfect, Slick Slider
-| 12 | NDA   | **WP Bakery**, **The Events Calendar PRO**, **GiveWP**, PSD to Custom Theme      | ACF Pro, CPT UI, GravityForm, *Custom Ajax Filter Posts/CPT + Load More*, *Gravity Form to CPT*, Foundation, Responsive Design, Pixel Perfect
+| 13 | NDA   | **ACF Pro (Flexible Content)**, AdobeXD to Custom Theme                          | ACF Pro, CPT UI, GravityForm, Foundation, Responsive Design, Pixel Perfect, Slick Slider, Max Mega Menu
+| 12 | NDA   | **WP Bakery**, **The Events Calendar PRO**, **GiveWP**, PSD to Custom Theme      | ACF Pro, CPT UI, GravityForm, *Custom Ajax Filter Posts/CPT + Load More*, *Gravity Form to CPT*, Foundation, Responsive Design, Pixel Perfect, Max Mega Menu
 | 11 | NDA   | **ACF Pro (Flexible Content)**, AdobeXD to Custom Theme                          | ACF Pro, Foundation, Responsive Design, Pixel Perfect                                                            |
 | 10 | NDA   | **Woocommerce**, **ACF Pro (Flexible Content)**, AdobeXD to Custom Theme         | ACF Pro, CPT UI, GravityForm, *Woocommerce Hooks*, Foundation, Responsive Design, Pixel Perfect, Slick Slider                |
 | 09 | NDA   | **Elementor**, AdobeXD to Custom Theme                                           | ACF Pro, CPT UI, GravityForm, *Elementor Custom Widget*, Elementor Custom Skin, Foundation, Responsive Design, Pixel Perfect |

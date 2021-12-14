@@ -59,7 +59,7 @@ export default {
 		flex-wrap: wrap;
 	}
 	section {
-		flex: 3;
+		flex: 2;
 		min-width: 250px;
 		padding-right: 2vw;
         @media (min-width: 1920px){
@@ -67,10 +67,10 @@ export default {
         }
 	}
 	section:last-child {
-		flex: 4;
+		flex: 3;
 	}
     section:first-child {
-        //flex: 4;
+        flex: 5;
     }
 	h2 {
 		font-weight: 400;
