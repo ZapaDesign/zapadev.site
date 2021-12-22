@@ -279,6 +279,7 @@ em {
     }
 
     p {
+        line-height: 2;
         margin-bottom: 16px;
         @media (min-width: 1920px){
             margin-bottom: vw(16);
