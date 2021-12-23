@@ -6,6 +6,8 @@ title: Шпаргалка по Markdown
 
 Поиграть с разметкой Markdown можно на [демо-странице](http://www.markdown-here.com/livedemo.html).
 
+[R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+
 ### Содержание  
 [Заголовки](#headers)  
 [Выделение](#emphasis)  
