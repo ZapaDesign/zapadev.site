@@ -27,8 +27,8 @@ description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клави
 **`Ctrl + Alt + L`** Reformat code / Отформатировать код  
 `Ctrl + Alt + I` Auto-indent line(s)  
 `Ctrl + D` Duplicate current line or selected block / Дублировать строку под курсором  
-`Ctrl + Y` Delete line at caret  
-`Ctrl + Shift + J` Smart line join (HTML and JavaScript only)  
+`Ctrl + Y` Delete line at caret / Удалить строку под курсором  
+`Ctrl + Shift + J` Smart line join (HTML and JavaScript only) / Объединить выделенные строки в одну (multiline to single line). Это упрощает форматирование массивов и HTML тегов.  
 `Ctrl + Enter` Smart line split (HTML and JavaScript only)  
 `Shift + Enter` Start new line  
 `Ctrl + Shift + U` Toggle case for word at caret or selected block  
