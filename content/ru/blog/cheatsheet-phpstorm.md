@@ -95,7 +95,7 @@ description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клави
 `Ctrl + Alt + Shift + T` Refactor This (shows all available refactorings)  
 
 ### VCS/Local History
-`Alt + BackQuote (\`)` 'VCS' quick popup  
+``Alt + BackQuote (`)`` 'VCS' quick popup  
 `Ctrl + K` Commit project to VCS  
 `Ctrl + T` Update project from VCS  
 `Alt + Shift + C` View recent changes  
@@ -129,8 +129,6 @@ description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клави
 `Ctrl + Shift + I`     - Показать реализацию метода/функции, применяемые стили HTML класса, etc.. (Quick Definition) 
 
 ### Форматирование
-`Ctrl + Shift + D`, `Ctrl + Y` - Удалить строку под курсором.  
-`Ctrl + Shift + J` - Объединить выделенные строки в одну (multiline to single line). Это упрощает форматирование массивов и HTML тегов.  
 `Ctrl + Shift + ↑↓`          - Меняет строки местами, перемещает текущую строку вверх/вниз.  
 `Ctrl + Alt+ J`             - Обернуть HTML тегом выделенный текст или текущую строку.  
 `Ctrl + Shift + J`           - может не работать, если итоговая строка будет длиннее допустимых 80-160 символов.Настроить допустимую ширину экрана/колонок, Settings » Editor » Code Style, Hard wrap at: 120.
