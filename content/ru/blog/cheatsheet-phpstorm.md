@@ -6,8 +6,9 @@ description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клави
 
 ## HotKey
 
-[Default KeyMap Reference Card](https://resources.jetbrains.com/storage/products/phpstorm/docs/PhpStorm_ReferenceCard.pdf)
-
+### Links
+- [PhpStorm keyboard shortcuts - Off](https://www.jetbrains.com/help/phpstorm/mastering-keyboard-shortcuts.html)  
+- [Default KeyMap Reference Card - Off PDF](https://resources.jetbrains.com/storage/products/phpstorm/docs/PhpStorm_ReferenceCard.pdf)
 
 ### Editing / 
 `Ctrl + Space` Basic code completion  
