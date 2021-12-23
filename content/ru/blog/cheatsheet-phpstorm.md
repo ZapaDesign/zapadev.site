@@ -10,10 +10,10 @@ description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клави
 - [PhpStorm keyboard shortcuts - Off](https://www.jetbrains.com/help/phpstorm/mastering-keyboard-shortcuts.html)  
 - [Default KeyMap Reference Card - Off PDF](https://resources.jetbrains.com/storage/products/phpstorm/docs/PhpStorm_ReferenceCard.pdf)
 
-### Editing / 
+### Editing / Редактирование
 `Ctrl + Space` Basic code completion  
 `Alt + Enter` Show intention actions and quick-fixes  
-`Ctrl + P` Parameter info (within method call arguments)  
+`Ctrl + P` Parameter info (within method call arguments) / Показать подсказку по параметрам метода или функции. (Parameter Info)  
 `Ctrl + Q` Quick documentation lookup  
 `Ctrl + mouse over code` Brief Info  
 `Alt + Insert` Generate code... (Getters, Setters, Constructors)  
@@ -24,9 +24,9 @@ description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клави
 `Ctrl + Shift + /` Comment/uncomment with block comment  
 `Ctrl + W` Select successively increasing code blocks  
 `Ctrl + Shift + W` Decrease current selection to previous state  
-**`Ctrl + Alt + L`** Reformat code  
+**`Ctrl + Alt + L`** Reformat code / Отформатировать код  
 `Ctrl + Alt + I` Auto-indent line(s)  
-`Ctrl + D` Duplicate current line or selected block  
+`Ctrl + D` Duplicate current line or selected block / Дублировать строку под курсором  
 `Ctrl + Y` Delete line at caret  
 `Ctrl + Shift + J` Smart line join (HTML and JavaScript only)  
 `Ctrl + Enter` Smart line split (HTML and JavaScript only)  
@@ -125,15 +125,12 @@ description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клави
 
 
 ### Подсказки
-`Ctrl + P`           - Показать подсказку по параметрам метода или функции. (Parameter Info)  
 `Ctrl + Shift + Enter` - Дополнение языковых конструкций (if, switch, for, foreach)  
 `Ctrl + Shift + I`     - Показать реализацию метода/функции, применяемые стили HTML класса, etc.. (Quick Definition) 
 
 ### Форматирование
-`Ctrl + D`                 - Дублировать строку под курсором.  
 `Ctrl + Shift + D`, `Ctrl + Y` - Удалить строку под курсором.  
 `Ctrl + Shift + J` - Объединить выделенные строки в одну (multiline to single line). Это упрощает форматирование массивов и HTML тегов.  
-**`Ctrl + Alt + L` - Отформатировать код**  
 `Ctrl + Shift + ↑↓`          - Меняет строки местами, перемещает текущую строку вверх/вниз.  
 `Ctrl + Alt+ J`             - Обернуть HTML тегом выделенный текст или текущую строку.  
 `Ctrl + Shift + J`           - может не работать, если итоговая строка будет длиннее допустимых 80-160 символов.Настроить допустимую ширину экрана/колонок, Settings » Editor » Code Style, Hard wrap at: 120.
