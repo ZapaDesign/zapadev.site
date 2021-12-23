@@ -39,7 +39,7 @@ description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клави
 `Ctrl + F4` Close active editor tab  
 `Ctrl+Shift+V` Paste from history  
 
-### Debugging
+### Debugging / Дебаг
 `F8` Step over  
 `F7` Step into  
 `Shift + F8` Step out  
@@ -54,8 +54,8 @@ description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клави
 `Ctrl + Shift + F10` Run context configuration from editor  
 `Ctrl + Shift + X` Run command line  
 
-### Search/Replace
-`Ctrl + F/R` Find/Replace  
+### Search/Replace / Поиск/замена
+**`Ctrl + F/R`** Find/Replace / Поиск/замена  
 `F3/Shift + F3` Find next/previous  
 `Ctrl + Shift + F/R` Find/Replace in path  
 
@@ -86,7 +86,7 @@ description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клави
 `F4 / Ctrl + Enter` Edit source / View source  
 
 
-### Refactoring
+### Refactoring / Рефакторинг
 `F5/F6` Copy/Move  
 `Alt + Delete` Safe Delete  
 `Shift + F6` Rename  
@@ -100,7 +100,7 @@ description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клави
 `Ctrl + T` Update project from VCS  
 `Alt + Shift + C` View recent changes  
 
-### General
+### General / Глобальные
 `Double Shift` Search everywhere
 `Ctrl + Shift + A` Find Action  
 `Alt + #[0-9]` Open corresponding tool window  
