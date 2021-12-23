@@ -3,9 +3,14 @@ title: Шпрагалка по WP_Query
 description: '| WP - Wordpress - WP_Query'
 ---
 
+#Links
+- [developer.wordpress.org - Methods](https://developer.wordpress.org/reference/classes/wp_query)
+- [Методы класса WP_Query](https://www.internet-technologies.ru/articles/izuchaem-wp-query-svoystva-i-metody.html)
+
 ## Медоды экземпляра класса WP_Query
 
-[developer.wordpress.org - Methods](https://developer.wordpress.org/reference/classes/wp_query/#methods)
+- [developer.wordpress.org - Methods](https://developer.wordpress.org/reference/classes/wp_query/#methods)
+- [Методы класса WP_Query](https://www.internet-technologies.ru/articles/izuchaem-wp-query-svoystva-i-metody.html#header-10062-14)
 
 - `__call()` — Make private/protected methods readable for backward compatibility.
 - `__construct()` — Constructor.
