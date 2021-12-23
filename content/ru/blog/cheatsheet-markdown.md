@@ -2,11 +2,16 @@
 title: Шпаргалка по Markdown
 ---
 
-(перевод, [оригинал](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet))
+## Links
+- [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+- [Basic Syntax](https://www-markdownguide-org.translate.goog/basic-syntax/?_x_tr_sl=auto&_x_tr_tl=ru&_x_tr_hl=ru&_x_tr_pto=op)
+- [Markdown text for GitHub from HTML](https://wilsonmar.github.io/markdown-text-for-github-from-html/)
 
+
+## Cheatsheet
+
+(перевод, [оригинал](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet))  
 Поиграть с разметкой Markdown можно на [демо-странице](http://www.markdown-here.com/livedemo.html).
-
-[R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 
 ### Содержание  
 [Заголовки](#headers)  
