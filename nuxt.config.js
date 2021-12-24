@@ -130,6 +130,11 @@ export default {
 	transition: {
 		name: 'AnimationState',
 		mode: 'out-in'
-	}
+	},
+
+    loading: {
+        color: 'blue',
+        height: '5px'
+    }
 
 }
