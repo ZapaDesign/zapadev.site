@@ -7,7 +7,7 @@
                 :key="color"
                 @click="$colorMode.preference = color"
             >
-                {{color}}
+                {{ color }}
             </li>
         </ul>
     </div>
@@ -30,6 +30,7 @@ export default {
 
 .color-mode {
     color: var(--aside-text-color);
+
     &__item {
         display: inline-block;
         margin: 0 5px;

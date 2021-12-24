@@ -9,7 +9,7 @@ a:visited {
     text-underline-offset: 5px;
     text-decoration-thickness: 1px;
     text-decoration: none;
-    @media (min-width: 1920px){
+    @media (min-width: 1920px) {
         text-underline-offset: vw(4);
         text-decoration-thickness: vw(1);
     }
@@ -39,7 +39,7 @@ button {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     letter-spacing: 0.025em;
-    @media (min-width: 1920px){
+    @media (min-width: 1920px) {
         padding: vw(12) vw(25);
         font-size: vw(14);
         border-width: vw(1);
@@ -75,7 +75,6 @@ em {
 }
 
 
-
 .nuxt-content {
     word-break: break-word;
 
@@ -84,7 +83,7 @@ em {
         max-width: 920px;
         margin: 0 auto;
         box-sizing: border-box;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             max-width: vw(920);
         }
     }
@@ -124,7 +123,7 @@ em {
         text-decoration: underline;
         text-underline-offset: 8px;
         text-decoration-thickness: 1px;
-        text-decoration-color: var(--sub-text-color);  //
+        text-decoration-color: var(--sub-text-color); //
     }
 
     h1,
@@ -161,7 +160,7 @@ em {
     h1 {
         color: var(--accent-color);
         font-size: 32px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             font-size: vw(32);
         }
     }
@@ -169,35 +168,35 @@ em {
     h2 {
         color: var(--accent-color);
         font-size: 28px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             font-size: vw(28);
         }
     }
 
     h3 {
         font-size: 24px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             font-size: vw(24);
         }
     }
 
     h4 {
         font-size: 22px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             font-size: vw(22);
         }
     }
 
     h5 {
         font-size: 20px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             font-size: vw(20);
         }
     }
 
     h6 {
         font-size: 18px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             font-size: vw(18);
         }
     }
@@ -224,14 +223,14 @@ em {
     ul,
     ol > li:last-child {
         margin-bottom: 10px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             margin-bottom: vw(10);
         }
     }
 
     li {
         margin-bottom: 16px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             margin-bottom: vw(16);
         }
 
@@ -244,7 +243,7 @@ em {
         margin-bottom: 16px;
         border-collapse: collapse;
         border: 1px solid $linesColor;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             margin-bottom: vw(16);
             border: vw(1) solid $linesColor;
         }
@@ -252,7 +251,7 @@ em {
         th,
         td {
             padding: 8px;
-            @media (min-width: 1920px){
+            @media (min-width: 1920px) {
                 padding: vw(8);
             }
         }
@@ -279,6 +278,7 @@ em {
             &:last-child td {
                 border-bottom: none;
             }
+
             &:hover td {
                 text-decoration: none;
             }
@@ -288,14 +288,14 @@ em {
     p {
         line-height: 2;
         margin-bottom: 16px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             margin-bottom: vw(16);
         }
 
         img {
             display: block;
             border-radius: 10px;
-            @media (min-width: 1920px){
+            @media (min-width: 1920px) {
                 border-radius: vw(10);
             }
         }
@@ -304,7 +304,7 @@ em {
             display: block;
             margin-top: 8px;
             font-size: 12px;
-            @media (min-width: 1920px){
+            @media (min-width: 1920px) {
                 margin-top: vw(8);
                 font-size: vw(12);
             }
@@ -313,7 +313,7 @@ em {
 
     pre {
         margin-bottom: 16px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             margin-bottom: vw(16);
         }
     }
@@ -326,7 +326,7 @@ em {
         border-width: 1px;
         border-color: var(--sub-text-color);
         border-radius: 5px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             padding: vw(5);
             border-width: vw(1);
             border-radius: vw(5);
@@ -339,7 +339,7 @@ em {
         margin-top: 16px;
         margin-bottom: 16px;
         border-radius: 5px;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             border: vw(1) solid var(--sub-text-color);
             padding: vw(16);
             margin-top: vw(16);
@@ -360,7 +360,7 @@ em {
         background-color: $linesColor;
         height: 1px;
         border: none;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             height: (1);
             margin-top: (32);
             margin-bottom: (16);
@@ -372,10 +372,10 @@ em {
         column-count: 1;
         column-gap: 40px;
         //column-rule: 1px solid var(--sub-text-color);
-        @media (min-width: 720px){
+        @media (min-width: 720px) {
             column-count: 2;
         }
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             column-gap: vw(40);
         }
     }
@@ -384,7 +384,7 @@ em {
         column-count: 1;
         column-gap: 30px;
         //column-rule: 1px solid var(--sub-text-color);
-        @media (min-width: 720px){
+        @media (min-width: 720px) {
             column-count: 3;
             column-gap: vw(30);
         }

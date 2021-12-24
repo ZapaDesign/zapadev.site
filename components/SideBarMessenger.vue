@@ -50,21 +50,24 @@ export default {
     margin: 1vh 50px;
     display: flex;
     justify-content: space-around;
-    @media (min-width: 1920px){
+    @media (min-width: 1920px) {
         margin: 1vh vw(50);
     }
+
     li {
         display: inline-block;
     }
+
     svg {
         display: block;
         height: 18px;
         width: 18px;
         fill: var(--white);
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             height: vw(18);
             width: vw(18);
         }
+
         &:hover {
             fill: var(--main-color);
         }

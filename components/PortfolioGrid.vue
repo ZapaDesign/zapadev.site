@@ -1,35 +1,35 @@
 <template>
-	<div class="grid_container">
-		<nuxt-link
-			v-for="(post, $index) in posts"
-			:key="`post-${$index}`"
-			:to="localePath(post.path)"
-			:class="'portfolio-item portfolio__item_' + $index"
-			class="portfolio-item portfolio__item"
-			:style="{
+    <div class="grid_container">
+        <nuxt-link
+            v-for="(post, $index) in posts"
+            :key="`post-${$index}`"
+            :to="localePath(post.path)"
+            :class="'portfolio-item portfolio__item_' + $index"
+            class="portfolio-item portfolio__item"
+            :style="{
 				backgroundImage:
 					'url(' + require(`~~/assets/portfolio/${post.thumbnail}`) + ')',
 				animationDelay: `${$index}00ms`,
 			}"
-		>
-			<div class="portfolio-item__link">
-				<span>{{ post.title }}</span>
-			</div>
-		</nuxt-link>
-	</div>
+        >
+            <div class="portfolio-item__link">
+                <span>{{ post.title }}</span>
+            </div>
+        </nuxt-link>
+    </div>
 </template>
 
 
 <script>
 
 export default {
-	name: 'PortfolioGrid',
-	props: {
-		posts: {
-			type: [Array],
-			required: true,
-		},
-	},
+    name: 'PortfolioGrid',
+    props: {
+        posts: {
+            type: [Array],
+            required: true,
+        },
+    },
 }
 </script>
 
@@ -72,7 +72,7 @@ export default {
             margin-bottom: 15px;
         }
 
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             margin: vw(15);
         }
     }
@@ -89,11 +89,11 @@ export default {
     flex-direction: column-reverse;
     opacity: 0;
     animation: portfolioItemsUp 0.5s forwards;
-    @media (min-width: 1920px){
+    @media (min-width: 1920px) {
         border-radius: vw(10);
     }
 
-    @media (hover:hover) {
+    @media (hover: hover) {
         &:hover {
             transform: scale(1.04);
             transition-timing-function: ease-out;
@@ -110,10 +110,10 @@ export default {
         }
 
 
-    .portfolio-item__link {
-        position: relative;
-        bottom: -30%;
-        transition: all 0.5s ease;
+        .portfolio-item__link {
+            position: relative;
+            bottom: -30%;
+            transition: all 0.5s ease;
         }
     }
 
@@ -149,14 +149,14 @@ export default {
 }
 
 @keyframes portfolioItemsUp {
-	from {
-		opacity: 0;
-		transform: translateY(3vw);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+    from {
+        opacity: 0;
+        transform: translateY(3vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 

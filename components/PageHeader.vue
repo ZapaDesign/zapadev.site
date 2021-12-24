@@ -1,21 +1,21 @@
 <template>
-	<header class="main-header" id="upToHeader">
-		<h1 class="main-header__title slideLeft">
-			{{ title }}
-			<span>
+    <header class="main-header" id="upToHeader">
+        <h1 class="main-header__title slideLeft">
+            {{ title }}
+            <span>
 				{{ description }}
 			</span>
-		</h1>
-	</header>
+        </h1>
+    </header>
 </template>
 
 <script>
 export default {
-	name: 'PageHeader',
-	props: {
-		title: [String],
-		description: [String],
-	},
+    name: 'PageHeader',
+    props: {
+        title: [String],
+        description: [String],
+    },
 }
 </script>
 

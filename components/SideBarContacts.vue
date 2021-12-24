@@ -19,6 +19,7 @@ export default {
     li:not(:last-child) {
         padding-bottom: 1vh;
     }
+
     a {
         color: var(--white);
         font-family: $opc;
@@ -26,9 +27,10 @@ export default {
         font-weight: 100;
         letter-spacing: 0.1em;
         text-decoration: none;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             font-size: vw(14);
         }
+
         &:hover {
             color: var(--main-color);
         }

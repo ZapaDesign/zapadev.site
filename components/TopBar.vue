@@ -1,11 +1,11 @@
 <template>
 
     <div class="top-bar">
-<!--        :class="{ 'is-hidden': !showHeader }"-->
+        <!--        :class="{ 'is-hidden': !showHeader }"-->
 
         <ul>
             <span>LOGO</span>
-            <ColorModePicker />
+            <ColorModePicker/>
 
             <div
                 @click="toggle"
@@ -18,13 +18,13 @@
                 </div>
             </div>
         </ul>
-  </div>
+    </div>
 
 </template>
 
 <script>
 
-import { mapGetters, mapMutations } from 'vuex';
+import {mapGetters, mapMutations} from 'vuex';
 
 export default {
 
@@ -37,11 +37,10 @@ export default {
     }),
 
     methods: {
-        ...mapMutations({ toggle:  "drawer/toggle" }),
+        ...mapMutations({toggle: "drawer/toggle"}),
 
 
-
-                // Toggle if navigation is shown or hidden
+        // Toggle if navigation is shown or hidden
         // onScroll() {
         //     if (window.pageYOffset < 0) {
         //         return
@@ -66,41 +65,41 @@ export default {
 
 <style lang="scss" scope>
 
-    .top-bar {
-        align-items: center;
-        background-color: var(--aside-color);
+.top-bar {
+    align-items: center;
+    background-color: var(--aside-color);
+    display: flex;
+    height: 50px;
+    left: 0;
+    padding: 0 25px;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 50px);
+    z-index: 100;
+    @media (min-width: 720px) {
+        display: none;
+    }
+
+
+    transform: translateY(0);
+    transition: transform 300ms linear;
+
+
+    &.is-hidden {
+        transform: translateY(-100%);
+    }
+
+    ul {
         display: flex;
-        height: 50px;
-        left: 0;
-        padding: 0 25px;
-        position: fixed;
-        top: 0;
-        width: calc(100% - 50px);
-        z-index: 100;
-        @media (min-width: 720px) {
-            display: none;
-        }
-
-
-        transform: translateY(0);
-        transition: transform 300ms linear;
-
-
-        &.is-hidden {
-            transform: translateY(-100%);
-        }
-
-        ul {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
+        justify-content: space-between;
+        width: 100%;
     }
+}
 
-    .hamburger {
-        position: static;
-        @media (min-width: 720px){
-            position: absolute;
-        }
+.hamburger {
+    position: static;
+    @media (min-width: 720px) {
+        position: absolute;
     }
+}
 </style>

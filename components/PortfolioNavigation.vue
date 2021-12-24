@@ -1,6 +1,6 @@
 <template>
     <div class="portfolio__navigation">
-        <nuxt-link :to="'/' + $i18n.locale + '/portfolio/'"> ✕ </nuxt-link>
+        <nuxt-link :to="'/' + $i18n.locale + '/portfolio/'"> ✕</nuxt-link>
         <div>
             <span>
                 <nuxt-link
@@ -25,9 +25,9 @@
 </template>
 
 <script>
-    export default {
-        name: "PortfolioNavigation"
-    }
+export default {
+    name: "PortfolioNavigation"
+}
 </script>
 
 <style lang="scss">

@@ -1,42 +1,42 @@
 <template>
-  <div class="bottom-bar">
-    <nuxt-link :to="'/' + $i18n.locale + '/aboutme'">
-      <div class="bottom-bar__item">
-        <svg>
-          <use xlink:href="../assets/icons.svg#icon_about"></use>
-        </svg>
-      </div>
-    </nuxt-link>
+    <div class="bottom-bar">
+        <nuxt-link :to="'/' + $i18n.locale + '/aboutme'">
+            <div class="bottom-bar__item">
+                <svg>
+                    <use xlink:href="../assets/icons.svg#icon_about"></use>
+                </svg>
+            </div>
+        </nuxt-link>
 
-    <nuxt-link :to="'/' + $i18n.locale + '/skills'">
-      <div class="bottom-bar__item">
-        <svg>
-          <use xlink:href="../assets/icons.svg#icon_skills"></use>
-        </svg>
-      </div>
-    </nuxt-link>
+        <nuxt-link :to="'/' + $i18n.locale + '/skills'">
+            <div class="bottom-bar__item">
+                <svg>
+                    <use xlink:href="../assets/icons.svg#icon_skills"></use>
+                </svg>
+            </div>
+        </nuxt-link>
 
-    <nuxt-link :to="'/' + $i18n.locale + '/portfolio'">
-      <div class="bottom-bar__item">
-        <svg>
-          <use xlink:href="../assets/icons.svg#icon_portfolio"></use>
-        </svg>
-      </div>
-    </nuxt-link>
+        <nuxt-link :to="'/' + $i18n.locale + '/portfolio'">
+            <div class="bottom-bar__item">
+                <svg>
+                    <use xlink:href="../assets/icons.svg#icon_portfolio"></use>
+                </svg>
+            </div>
+        </nuxt-link>
 
-    <nuxt-link :to="'/' + $i18n.locale + '/blog'">
-      <div class="bottom-bar__item">
-        <svg>
-          <use xlink:href="../assets/icons.svg#icon_blog"></use>
-        </svg>
-      </div>
-    </nuxt-link>
+        <nuxt-link :to="'/' + $i18n.locale + '/blog'">
+            <div class="bottom-bar__item">
+                <svg>
+                    <use xlink:href="../assets/icons.svg#icon_blog"></use>
+                </svg>
+            </div>
+        </nuxt-link>
 
-  </div>
+    </div>
 </template>
 
 <style lang="scss">
-  .bottom-bar {
+.bottom-bar {
     background-color: var(--aside-color);
     display: flex;
     position: fixed;
@@ -47,15 +47,15 @@
     padding: 0 25px;
     height: 50px;
     @media (min-width: 720px) {
-      display: none;
+        display: none;
     }
 
     &__item {
-      svg {
-        width: 16px;
-        height: 16px;
-        fill: var(--sub-text-color);
-      }
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--sub-text-color);
+        }
     }
-  }
+}
 </style>

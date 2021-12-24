@@ -1,17 +1,17 @@
 <template>
 
-	<div class="lang">
+    <div class="lang">
         <nuxt-link :to="switchLocalePath('ru')">rus</nuxt-link>
         <nuxt-link :to="switchLocalePath('en')">eng</nuxt-link>
         <nuxt-link :to="switchLocalePath('uk')">ukr</nuxt-link>
-	</div>
+    </div>
 
 </template>
 
 <script>
 
 export default {
-	name: 'SideBarLanguageSwitcher',
+    name: 'SideBarLanguageSwitcher',
 }
 
 </script>
@@ -19,21 +19,21 @@ export default {
 <style lang="scss">
 
 .lang {
-	a {
-		font-size: 12px;
-		display: inline-block;
-		cursor: pointer;
+    a {
+        font-size: 12px;
+        display: inline-block;
+        cursor: pointer;
         margin: 0 15px;
         color: var(--white);
         text-decoration: none;
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             font-size: vw(12);
         }
-	}
+    }
 
-	.nuxt-link-active {
-		border-bottom: 1px solid var(--main-color);
-	}
+    .nuxt-link-active {
+        border-bottom: 1px solid var(--main-color);
+    }
 }
 
 </style>

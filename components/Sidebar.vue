@@ -1,37 +1,45 @@
 <template>
-	<aside :class="{isOpen: drawer}">
-		<transition>
-			<div class="sidebar" :class="{ isOpen: drawer }" >
-				<div>
-					<SideBarToggleButton />
-					<SideBarLanguageSwitcher />
-                    <ColorModePicker />
-					<SideBarNavigationMain />
-				</div>
-				<div>
-                    <SideBarContacts />
-	                <SideBarMessenger />
-					<div class="copyright">Created by ZapaDesign © 2013-2019</div>
-				</div>
-			</div>
-		</transition>
-	</aside>
+    <aside :class="{isOpen: drawer}">
+        <transition>
+            <div class="sidebar" :class="{ isOpen: drawer }">
+                <div>
+                    <SideBarToggleButton/>
+                    <SideBarLanguageSwitcher/>
+                    <ColorModePicker/>
+                    <SideBarNavigationMain/>
+                </div>
+                <div>
+                    <SideBarContacts/>
+                    <SideBarMessenger/>
+                    <div class="copyright">Created by ZapaDesign © 2013-2019</div>
+                </div>
+            </div>
+        </transition>
+    </aside>
 </template>
 
 <script>
 
-import { mapGetters, mapMutations } from 'vuex';
+import {mapGetters, mapMutations} from 'vuex';
 import SideBarToggleButton from "../components/SideBarToggleButton";
 import SideBarLanguageSwitcher from "../components/SideBarLanguageSwitcher";
 import SideBarNavigationMain from "../components/SideBarNavigationMain";
 import SideBarContacts from "../components/SideBarContacts";
 import SideBarMessenger from "../components/SideBarMessenger";
 import ColorModePicker from "../components/ColorModePicker";
+
 export default {
-    components: {ColorModePicker, SideBarToggleButton, SideBarLanguageSwitcher, SideBarNavigationMain, SideBarContacts, SideBarMessenger },
+    components: {
+        ColorModePicker,
+        SideBarToggleButton,
+        SideBarLanguageSwitcher,
+        SideBarNavigationMain,
+        SideBarContacts,
+        SideBarMessenger
+    },
     name: 'Sidebar',
     computed: {
-        ...mapGetters({ drawer:  "drawer/getDrawerState" })
+        ...mapGetters({drawer: "drawer/getDrawerState"})
     }
 }
 
@@ -48,7 +56,7 @@ aside {
     @media (min-width: 720px) {
         width: 50px;
     }
-    @media (min-width: 1920px){
+    @media (min-width: 1920px) {
         width: vw(50);
     }
 
@@ -57,7 +65,7 @@ aside {
         @media (min-width: 400px) {
             width: 250px;
         }
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             width: vw(250);
         }
     }
@@ -91,16 +99,16 @@ aside {
         width: 250px;
         transform: translateX(-200px);
     }
-    @media (min-width: 1920px){
+    @media (min-width: 1920px) {
         width: vw(250);
         transform: translateX(vw(-200));
         padding: vw(12) 0;
     }
 
-	&.isOpen {
-		transform: translateX(0);
-		transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-	}
+    &.isOpen {
+        transform: translateX(0);
+        transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
 
     .sidebarToggle {
         @media (max-width: 720px) {
@@ -110,8 +118,8 @@ aside {
 }
 
 .copyright {
-	font-size: 8px;
-    @media (min-width: 1920px){
+    font-size: 8px;
+    @media (min-width: 1920px) {
         font-size: vw(8);
     }
 }
