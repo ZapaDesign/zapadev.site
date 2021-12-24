@@ -133,8 +133,7 @@ export default {
 	},
 
     loading: {
-        color: 'blue',
-        height: '5px'
+        color: '#01c086',
+        height: '4px'
     }
-
 }
