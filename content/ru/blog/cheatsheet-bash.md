@@ -1,6 +1,7 @@
 ---
 title: Шпаргалка по bash
 thumbnail: post_cheat_sheet_nuxtjs.png
+createdAt: 2021-09-02
 ---
 
 Шпаргалка основных команд Git Bash, терминала OSX, терминала linux.  

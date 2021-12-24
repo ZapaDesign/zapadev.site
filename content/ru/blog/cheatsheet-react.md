@@ -1,7 +1,7 @@
 ---
 title: Шпаргалка по React
 description: "| Ссылки"
-
+createdAt: 2021-09-02
 ---
 
 [Web version](https://devhints.io/react)

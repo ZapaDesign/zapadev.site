@@ -1,5 +1,6 @@
 ---
 title: Шпаргалка по Nuxt
+createdAt: 2021-09-02
 ---
 
 ![](/blog/post_cheat_sheet_nuxtjs.png)

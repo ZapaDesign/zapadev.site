@@ -1,6 +1,7 @@
 ---
 title: "Шпаргалка по WooCommerce"
 description: "| Хуки"
+createdAt: 2021-09-07
 ---
 
 ## Single Product
