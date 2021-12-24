@@ -344,7 +344,8 @@ em {
             border-radius: vw(5);
         }
 
-        p:last-child {
+        p:last-child
+        li:last-child {
             margin-bottom: 0;
         }
     }
