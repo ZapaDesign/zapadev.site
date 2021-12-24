@@ -1,6 +1,7 @@
 ---
 title: Руководство по AJAX - jQuery
 description: "| AJAX (асинхронный JavaScript и XML)"
+createdAt: 2021-09-06
 ---
 
 ## LINKS
