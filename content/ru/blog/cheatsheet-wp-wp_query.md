@@ -3,7 +3,7 @@ title: Шпрагалка по WP_Query
 description: '| WP - Wordpress - WP_Query'
 ---
 
-# Links
+## Links
 - [developer.wordpress.org - Methods](https://developer.wordpress.org/reference/classes/wp_query)  
 - [Класса WP_Query](https://www.internet-technologies.ru/articles/izuchaem-wp-query-svoystva-i-metody.html)  
 
