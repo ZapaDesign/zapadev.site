@@ -1,6 +1,7 @@
 ---
 title: Руководство по PhpStorm
 description: "| PhpStorm Keyboard Shortcuts (HotKeys), горячие клавиши PhpStorm"
+createdAt: '2021-12-22'
 ---
 
 

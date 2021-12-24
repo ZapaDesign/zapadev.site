@@ -1,6 +1,7 @@
 ---
 title: Wordpress -  WP_Query
 description: '|  Шпаргалка по WP_Query'
+createdAt: 2021-12-23
 ---
 
 ## Links

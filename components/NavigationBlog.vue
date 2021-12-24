@@ -48,6 +48,7 @@ export default {
 			return this.posts.filter((post) => {
 				return post.title.toLowerCase().match(this.search.toLowerCase())
 			})
+            .sort((a,b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
 		},
 	},
 }

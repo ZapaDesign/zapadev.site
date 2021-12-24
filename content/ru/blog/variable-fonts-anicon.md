@@ -1,6 +1,7 @@
 ---
 title: Variable Fonts - Anicons
 description: "| Anicons is the world’s first animated color icon font"
+createdAt: 2021-09-03
 ---
 
 ## Links

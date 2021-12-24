@@ -1,6 +1,7 @@
 ---
 title: Руководство по JSON
 description: "|  JSON  - JavaScript Object Notation (Нотация объектов JavaScript)"
+createdAt: 2021-09-02
 ---
 
 ## Links

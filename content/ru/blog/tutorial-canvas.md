@@ -1,6 +1,7 @@
 ---
 title: Руководство по Canvas
 description: "| Глубокое погружение"
+createdAt: 2021-09-03
 ---
 
 ## Links

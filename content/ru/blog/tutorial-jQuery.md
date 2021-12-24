@@ -1,6 +1,7 @@
 ---
 title: Руководство по jQuery
 description: "| jQuery это быстрая, небольшая и богатая возможностями JavaScript библиотека"
+createdAt: 2021-09-06
 ---
 
 ## Links
