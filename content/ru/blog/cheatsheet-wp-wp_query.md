@@ -9,8 +9,9 @@ description: '| WP - Wordpress - WP_Query'
 
 ## Медоды экземпляра класса WP_Query
 
-- [developer.wordpress.org - Methods](https://developer.wordpress.org/reference/classes/wp_query/#methods)  
-- [Методы класса WP_Query](https://www.internet-technologies.ru/articles/izuchaem-wp-query-svoystva-i-metody.html#header-10062-14)  
+> - [developer.wordpress.org - Methods](https://developer.wordpress.org/reference/classes/wp_query/#methods)  
+> - [Методы класса WP_Query](https://www.internet-technologies.ru/articles/izuchaem-wp-query-svoystva-i-metody.html#header-10062-14)
+
 
 - `__call()` — Make private/protected methods readable for backward compatibility.  
 - `__construct()` — Constructor.  
