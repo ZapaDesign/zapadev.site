@@ -1,5 +1,5 @@
 ---
-title: Процесс генерации страницы Wordpress
+title: WP | Процесс генерации страницы Wordpress
 description: "| 29 шагов"
 createdAt: 2021-08-21
 ---

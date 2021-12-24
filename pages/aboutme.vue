@@ -1,41 +1,41 @@
 <template>
-	<div class="page about-me">
-		<PageHeader
-			:title="$t('aboutme.title')"
-			:description="$t('aboutme.description')"
-		/>
-		<div class="content">
-			<div class="about-me__info">
-				<AboutMeTabs :aboutMeItems="aboutMeItems" />
-			</div>
-			<div class="about-me__footer">
-                <AboutMeSocialProfiles />
-                <AboutMeDownloadCv />
-			</div>
-			<div class="about-me__img-container">
-<!--				<div class="aboume__img-bg">-->
-<!--				<div class="about-me__img">-->
-					<img class="slideLeftInOut" src="~/assets/zapa_d.png" alt="" />
-<!--				</div>-->
-			</div>
-		</div>
-	</div>
+    <div class="page about-me">
+        <PageHeader
+            :title="$t('aboutme.title')"
+            :description="$t('aboutme.description')"
+        />
+        <div class="content">
+            <div class="about-me__info">
+                <AboutMeTabs :aboutMeItems="aboutMeItems"/>
+            </div>
+            <div class="about-me__footer">
+                <AboutMeSocialProfiles/>
+                <AboutMeDownloadCv/>
+            </div>
+            <div class="about-me__img-container">
+                <!--				<div class="aboume__img-bg">-->
+                <!--				<div class="about-me__img">-->
+                <img class="slideLeftInOut" src="~/assets/zapa_d.png" alt=""/>
+                <!--				</div>-->
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
-	name: 'aboutme',
-	async asyncData(context) {
-		const { $content, app } = context
-		const defaultLocale = app.i18n.locale
-		const aboutMeItems = await $content(`${defaultLocale}/aboutme`)
-			.sortBy('id')
-			.fetch()
+    name: 'aboutme',
+    async asyncData(context) {
+        const {$content, app} = context
+        const defaultLocale = app.i18n.locale
+        const aboutMeItems = await $content(`${defaultLocale}/aboutme`)
+            .sortBy('id')
+            .fetch()
 
-		return {
-			aboutMeItems,
-		}
-	}
+        return {
+            aboutMeItems,
+        }
+    }
 }
 </script>
 
@@ -93,6 +93,7 @@ export default {
             align-self: stretch;
             overflow: hidden;
             position: relative;
+
             img {
                 position: absolute;
                 width: 100%;
@@ -111,6 +112,7 @@ export default {
             background-image: url(../assets/zapa_d.png), url(../assets/zapa_bg.png);
             background-position: left top;
             background-size: cover;
+
             img {
                 object-fit: cover;
                 object-position: left bottom;
@@ -122,34 +124,33 @@ export default {
 }
 
 .tabs__nav {
-	text-align: right;
-	padding-bottom: 16px;
-  @media (min-width: 1920px){
-    padding-bottom: vw(16);
-  }
+    text-align: right;
+    padding-bottom: 16px;
+    @media (min-width: 1920px) {
+        padding-bottom: vw(16);
+    }
 }
 
 .tabs__nav__item {
-	display: inline-block;
-	padding-left: 16px;
-	font: var(--acc-font);
-	letter-spacing: 0.15rem;
-    @media (min-width: 1920px){
+    display: inline-block;
+    padding-left: 16px;
+    font: var(--acc-font);
+    letter-spacing: 0.15rem;
+    @media (min-width: 1920px) {
         font-size: vw(12);
         padding-left: vw(16);
     }
-	a {
-		cursor: pointer;
-		color: var(--sub-text-color);
-	}
-	a.active {
-		color: var(--main-color);
-		cursor: default;
-	}
+
+    a {
+        cursor: pointer;
+        color: var(--sub-text-color);
+    }
+
+    a.active {
+        color: var(--main-color);
+        cursor: default;
+    }
 }
-
-
-
 
 
 // @media (min-width: 960px) {

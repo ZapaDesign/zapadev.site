@@ -1,116 +1,113 @@
 <template>
-	<div class="page porfolio_item">
-		<PageHeader :title="post.title" :description="post.description" />
-        <PortfolioCategory />
-		<div class="content">
-			<div class="portfolio__info">
-				<div class="portfolio__navigation">
-					<nuxt-link :to="'/' + $i18n.locale + '/portfolio/'"> ✕ </nuxt-link>
-					<div>
+    <div class="page porfolio_item">
+        <PageHeader :title="post.title" :description="post.description"/>
+        <PortfolioCategory/>
+        <div class="content">
+            <div class="portfolio__info">
+                <div class="portfolio__navigation">
+                    <nuxt-link :to="'/' + $i18n.locale + '/portfolio/'"> ✕</nuxt-link>
+                    <div>
 						<span>
 							<nuxt-link
-								v-if="prev"
-								:to="'/' + $i18n.locale + '/portfolio/' + prev.slug"
-							>
+                                v-if="prev"
+                                :to="'/' + $i18n.locale + '/portfolio/' + prev.slug"
+                            >
 								⟵
 							</nuxt-link>
 							<div v-else>⟵</div>
 						</span>
-						<span>
+                        <span>
 							<nuxt-link
-								v-if="next"
-								:to="'/' + $i18n.locale + '/portfolio/' + next.slug"
-							>
+                                v-if="next"
+                                :to="'/' + $i18n.locale + '/portfolio/' + next.slug"
+                            >
 								⟶
 							</nuxt-link>
 							<div v-else>⟶</div>
 						</span>
-					</div>
-				</div>
-				<div class="portfolio__thumbnail slideUp">
-					<img
-						:src="require(`~~/assets/portfolio/${post.thumbnail}`)"
-						alt="post.title"
-					/>
-				</div>
-				<div class="portfolio__date slideUp">{{ getDate }}</div>
-				<div class="portfolio__list slideUp">{{ post.list }}</div>
-				<div class="portfolio__excerpt slideUp">{{ post.excerpt }}</div>
+                    </div>
+                </div>
+                <div class="portfolio__thumbnail slideUp">
+                    <img
+                        :src="require(`~~/assets/portfolio/${post.thumbnail}`)"
+                        alt="post.title"
+                    />
+                </div>
+                <div class="portfolio__date slideUp">{{ getDate }}</div>
+                <div class="portfolio__list slideUp">{{ post.list }}</div>
+                <div class="portfolio__excerpt slideUp">{{ post.excerpt }}</div>
                 <a v-if="post.link" :href="`http://${post.link}`">перейти на {{ post.link }}</a>
-			</div>
-			<div class="portfolio__img slideLeftInOut">
-                <nuxt-content :document="post" />
-			</div>
-		</div>
-	</div>
+            </div>
+            <div class="portfolio__img slideLeftInOut">
+                <nuxt-content :document="post"/>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
-import { format } from 'date-fns'
+import {format} from 'date-fns'
 import PortfolioCategory from "../../components/PortfolioCategory";
 
 const head = function () {
-	return {
-		title: this.post.title,
-		htmlAttrs: {
-			lang: this.$i18n.locale,
-		},
-		meta: [
-			{
-				hid: 'og:description',
-				property: 'og:description',
-				content: this.post.description,
-			},
-			{
-				property: 'og:title',
-				hid: 'og:title',
-				content: this.post.title,
-			},
-			{
-				hid: 'og:image',
-				property: 'og:image',
-				content: this.post.media,
-			}
-		]
-	}
+    return {
+        title: this.post.title,
+        htmlAttrs: {
+            lang: this.$i18n.locale,
+        },
+        meta: [
+            {
+                hid: 'og:description',
+                property: 'og:description',
+                content: this.post.description,
+            },
+            {
+                property: 'og:title',
+                hid: 'og:title',
+                content: this.post.title,
+            },
+            {
+                hid: 'og:image',
+                property: 'og:image',
+                content: this.post.media,
+            }
+        ]
+    }
 }
 
 const computed = {
-	getDate() {
-		return format(new Date(this.post.createdAt), 'yyyy.MM.dd')
-	},
-	otherLanguages() {
-		return this.post.otherLanguages || []
-	},
+    getDate() {
+        return format(new Date(this.post.createdAt), 'yyyy.MM.dd')
+    },
+    otherLanguages() {
+        return this.post.otherLanguages || []
+    },
 }
 
 export default {
-	name: 'post',
+    name: 'post',
     components: {PortfolioCategory},
     head,
-	computed,
+    computed,
 
-	async asyncData(context) {
-		const { $content, params, app, route, redirect } = context
-		const slug = params.slug
-		const post = await $content(`${app.i18n.locale}/portfolio`, slug).fetch()
-		const [prev, next] = await $content(`${app.i18n.locale}/portfolio`)
-			.only(['title', 'slug'])
-			.sortBy('createdAt', 'desc')
-			.surround(params.slug)
-			.fetch()
+    async asyncData(context) {
+        const {$content, params, app, route, redirect} = context
+        const slug = params.slug
+        const post = await $content(`${app.i18n.locale}/portfolio`, slug).fetch()
+        const [prev, next] = await $content(`${app.i18n.locale}/portfolio`)
+            .only(['title', 'slug'])
+            .sortBy('createdAt', 'desc')
+            .surround(params.slug)
+            .fetch()
 
-		return {
-			post,
-			prev,
-			next,
-		}
-	},
+        return {
+            post,
+            prev,
+            next,
+        }
+    },
 }
 </script>
-
-
-
 
 
 <style lang="scss">
@@ -134,6 +131,7 @@ export default {
 
         span {
             display: inline-block;
+
             a {
                 color: var(--main-color);
             }
@@ -153,7 +151,7 @@ export default {
         img {
             border-radius: 5px;
             max-width: 100%;
-            @media (min-width: 1920px){
+            @media (min-width: 1920px) {
                 border-radius: vw(5);
             }
         }
@@ -198,6 +196,7 @@ export default {
         overflow: auto;
         padding: 0 0.75vw;
         flex: 1;
+
         img {
             display: block;
             max-width: 100%;

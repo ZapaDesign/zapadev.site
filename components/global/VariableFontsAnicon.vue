@@ -117,36 +117,36 @@ export default {
 </script>
 
 <style lang="scss">
-    @import url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-regular.css');
-    @import url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-color.css');
+@import url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-regular.css');
+@import url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-color.css');
 
-    .anicon-icons {
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none!important;
-        font-family: "Anicons Regular", sans-serif;
-        font-variation-settings: "TIME" 1;
+.anicon-icons {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none !important;
+    font-family: "Anicons Regular", sans-serif;
+    font-variation-settings: "TIME" 1;
 
-        &--color {
-            font-family: "Anicons Color", sans-serif;
-        }
+    &--color {
+        font-family: "Anicons Color", sans-serif;
     }
+}
 
-    .anicon-icon {
-        transition: font-variation-settings 0.4s ease;
-        cursor: pointer;
-        font-size: 60px;
-        height: 100px;
-        width: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        //color: var(--main-color);
-    }
+.anicon-icon {
+    transition: font-variation-settings 0.4s ease;
+    cursor: pointer;
+    font-size: 60px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //color: var(--main-color);
+}
 
-    .anicon-icon:hover {
-        font-variation-settings: "TIME" 100;
-        color: var(--accent-color);
-    }
+.anicon-icon:hover {
+    font-variation-settings: "TIME" 100;
+    color: var(--accent-color);
+}
 
 </style>

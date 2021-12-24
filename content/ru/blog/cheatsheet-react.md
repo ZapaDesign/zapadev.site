@@ -1,6 +1,6 @@
 ---
-title: Шпаргалка по React
-description: "| Ссылки"
+title: JS | React
+description: "| Шпаргалка по React [Ссылки]"
 createdAt: 2021-09-02
 ---
 

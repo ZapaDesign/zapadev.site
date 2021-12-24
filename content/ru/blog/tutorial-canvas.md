@@ -1,6 +1,6 @@
 ---
-title: Руководство по Canvas
-description: "| Глубокое погружение"
+title: JS | Canvas
+description: "| Руководство по Canvas - Глубокое погружение"
 createdAt: 2021-09-03
 ---
 

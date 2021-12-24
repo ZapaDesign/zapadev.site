@@ -1,6 +1,6 @@
 ---
-title: "Шпаргалка по WooCommerce"
-description: "| Хуки"
+title: "WP | WooCommerce"
+description: "| Шпаргалка по WooCommerce [Хуки, ...]"
 createdAt: 2021-09-07
 ---
 

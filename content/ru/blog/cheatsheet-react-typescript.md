@@ -1,5 +1,5 @@
 ---
-title: Шпаргалка по React + TypeScript
+title: JS | React + TypeScript
 description: "| Шпаргалки для опытных разработчиков React, начинающих работать с TypeScript"
 createdAt: 2021-09-02
 ---
