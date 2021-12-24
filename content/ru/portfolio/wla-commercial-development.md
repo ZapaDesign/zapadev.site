@@ -8,7 +8,6 @@ excerpt: Работа на должности Wordpress разработчика
 
 list:
 
-
 createdAt: "2021-08-11"
 
 tags:
