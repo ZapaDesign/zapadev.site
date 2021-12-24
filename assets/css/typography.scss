@@ -231,6 +231,10 @@ em {
         @media (min-width: 1920px){
             margin-bottom: vw(16);
         }
+
+        p {
+            display: inline;
+        }
     }
 
     table {
