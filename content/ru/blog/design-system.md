@@ -1,5 +1,5 @@
 ---
-title: Design System
+title: zapaDEV site | Design System
 description: "| Стандартные элементы контента страницы"
 createdAt: 2021-08-26
 ---

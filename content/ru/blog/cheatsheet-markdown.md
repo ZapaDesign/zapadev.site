@@ -1,5 +1,6 @@
 ---
-title: Шпаргалка по Markdown 
+title: Markdown
+description: '| Шпаргалка по Markdown'
 createdAt: 2021-09-02
 ---
 

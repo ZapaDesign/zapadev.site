@@ -1,5 +1,6 @@
 ---
-title: Шпаргалка по Git (Примеры)
+title: Git (Примеры)
+description: '| Шпаргалка по Git (Примеры)'
 createdAt: 2021-09-02
 ---
 
