@@ -1,16 +1,15 @@
 ---
-title: Wordpress -  WP_Query
-description: '|  Шпаргалка по WP_Query'
-createdAt: 2021-12-23
+title: Wordpress - WP_Query description: '| Шпаргалка по WP_Query' createdAt: 2021-12-23
 ---
 
 ## Links
-- [developer.wordpress.org - Methods](https://developer.wordpress.org/reference/classes/wp_query)  
-- [Класса WP_Query](https://www.internet-technologies.ru/articles/izuchaem-wp-query-svoystva-i-metody.html)  
+
+- [developer.wordpress.org - Methods](https://developer.wordpress.org/reference/classes/wp_query)
+- [Класса WP_Query](https://www.internet-technologies.ru/articles/izuchaem-wp-query-svoystva-i-metody.html)
 
 ## Медоды экземпляра класса WP_Query
 
-> - [developer.wordpress.org - Methods](https://developer.wordpress.org/reference/classes/wp_query/#methods)  
+> - [developer.wordpress.org - Methods](https://developer.wordpress.org/reference/classes/wp_query/#methods)
 > - [Методы класса WP_Query](https://www.internet-technologies.ru/articles/izuchaem-wp-query-svoystva-i-metody.html#header-10062-14)
 
 
@@ -27,7 +26,7 @@ createdAt: 2021-12-23
 `get_search_stopwords()` — Retrieve stopwords used when parsing search terms.  
 `have_comments()` — Whether there are more comments available.  
 `have_posts()` — Determines whether there are more posts available in the loop.  
-`init()` — Initiates object properties and sets default values. 
+`init()` — Initiates object properties and sets default values.
 `init_query_flags()` — Resets query flags to false.  
 `is_404()` — Is the query a 404 (returns no results)  
 `is_archive()` — Is the query for an existing archive page  
@@ -53,7 +52,8 @@ createdAt: 2021-12-23
 `is_robots()` — Is the query for the robots.txt file  
 `is_search()` — Is the query for a search  
 `is_single()` — Is the query for an existing single post  
-`is_singular()` — Is the query for an existing single post of any post type (post, attachment, page, custom post types)  
+`is_singular()` — Is the query for an existing single post of any post type (post, attachment, page, custom post
+types)  
 `is_tag()` — Is the query for an existing tag archive page  
 `is_tax()` — Is the query for an existing custom taxonomy archive page  
 `is_time()` — Is the query for a specific time  
@@ -72,12 +72,14 @@ createdAt: 2021-12-23
 `parse_search_terms()` — Check if the terms are suitable for searching.  
 `parse_tax_query()` — Parses various taxonomy related query vars.  
 `query()` — Sets up the WordPress query by parsing query string.  
-`reset_postdata()` — After looping through a nested query, this function restores the $post global to the current post in this query.  
+`reset_postdata()` — After looping through a nested query, this function restores the $post global to the current post
+in this query.  
 `rewind_comments()` — Rewind the comments, resets the comment index and comment to first.  
 `rewind_posts()` — Rewind the posts and reset post index.  
 `set()` — Sets the value of a query variable.  
 `set_404()` — Sets the 404 property and saves whether query is feed.  
-`set_found_posts()` — Set up the amount of found posts and the number of pages (if limit clause was used) for the current query.  
+`set_found_posts()` — Set up the amount of found posts and the number of pages (if limit clause was used) for the
+current query.  
 `setup_postdata()` — Set up global post data.  
 `the_comment()` — Sets up the current comment.  
 `the_post()` — Sets up the current post.  
