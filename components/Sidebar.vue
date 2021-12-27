@@ -40,7 +40,15 @@ export default {
     name: 'Sidebar',
     computed: {
         ...mapGetters({drawer: "drawer/getDrawerState"})
-    }
+    },
+
+    head() {
+        return {
+            bodyAttrs: {
+                class: this.drawer ? 'is-lock' : 'is-unlock'
+            }
+        }
+    },
 }
 
 </script>

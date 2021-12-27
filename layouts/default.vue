@@ -41,6 +41,14 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    &.is-lock {
+        @media (max-width: 720px){
+            overflow: hidden;
+        }
+    }
+}
+
 #app {
     display: flex;
     background-color: var(--body-color);

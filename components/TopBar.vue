@@ -35,7 +35,7 @@ export default {
         lastScrollPosition: 0,
         scrollValue: 0
     }),
-    mounted () {
+    mounted() {
         this.lastScrollPosition = window.pageYOffset
         window.addEventListener('scroll', this.onScroll)
         const viewportMeta = document.createElement('meta')
@@ -44,13 +44,13 @@ export default {
         document.head.appendChild(viewportMeta)
     },
 
-    beforeDestroy () {
+    beforeDestroy() {
         window.removeEventListener('scroll', this.onScroll)
     },
 
     methods: {
         ...mapMutations({toggle: "drawer/toggle"}),
-        onScroll () {
+        onScroll() {
             if (window.pageYOffset < 0) {
                 return
             }
