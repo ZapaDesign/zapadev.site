@@ -7,7 +7,7 @@
                 :key="color"
                 @click="$colorMode.preference = color"
             >
-                {{ color }}
+                {{ color == 'light' ? 'd' : 'n' }}
             </li>
         </ul>
     </div>
@@ -29,6 +29,7 @@ export default {
 <style lang="scss">
 
 .color-mode {
+    display: inline-block;
     color: var(--aside-text-color);
 
     &__item {

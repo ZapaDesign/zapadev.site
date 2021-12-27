@@ -4,8 +4,8 @@
             <div class="sidebar" :class="{ isOpen: drawer }">
                 <div>
                     <SideBarToggleButton/>
-                    <SideBarLanguageSwitcher/>
                     <ColorModePicker/>
+                    <SideBarLanguageSwitcher/>
                     <SideBarNavigationMain/>
                 </div>
                 <div>
@@ -97,7 +97,6 @@ aside {
     top: 0;
     transform: translateX(-100vw);
     transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-    text-align: center;
     z-index: 100;
     @media (min-width: 400px) {
         width: 250px;
@@ -116,6 +115,30 @@ aside {
     &.isOpen {
         transform: translateX(0);
         transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        padding: 12px;
+        @media (min-width: 1920px){
+            padding: vw(12);
+        }
+
+        .messenger {
+            &--mobile {
+                display: none;
+            }
+        }
+    }
+
+    &:not(.isOpen) {
+        text-align: end;
+        .messenger,
+        .copyright {
+            display: none;
+        }
+
+        .messenger {
+            &--mobile {
+                display: block;
+            }
+        }
     }
 
     .sidebarToggle {
@@ -127,15 +150,16 @@ aside {
     .color-mode {
         display: none;
         @media (min-width: 720px){
-            display: block;
+            display: inline-block;
         }
     }
 }
 
 .copyright {
-    font-size: 8px;
+    font-size: 10px;
+    text-align: center;
     @media (min-width: 1920px) {
-        font-size: vw(8);
+        font-size: vw(10);
     }
 }
 </style>

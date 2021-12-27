@@ -27,13 +27,13 @@
     // TYPOGRAPHY
 
     --VinMonoPro: 'Vin Mono Pro';
-    --OpinionProCondensed: 'OpinionProCondensed';
-    --OpinionProExtraCondensed: 'OpinionProExtraCondensed';
+    --OpProCond: 'OpinionProCondensed';
+    --OpProExCo: 'OpinionProExtraCondensed';
 
     --main-font: 500 1rem/1.5 var(--VinMonoPro);
     --acc-font: 600 0.75rem/1.5 var(--VinMonoPro);
-    --add-font: 500 1rem/1.5 var(--OpinionProCondensed);
-    --pheader-font: 400 2rem/1.5 var(--OpinionProExtraCondensed);
+    --add-font: 500 1rem/1.5 var(--OpProCond);
+    --pheader-font: 400 2rem/1.5 var(--OpProExCo);
 }
 
 
@@ -54,13 +54,13 @@
 
     --main-font: 300 16px/1.5 var(--VinMonoPro);
     --acc-font: 400 0.75rem/1.5 var(--VinMonoPro);
-    --add-font: 300 16px/1.5 var(--OpinionProCondensed);
-    --pheader-font: 100 32px/1.5 var(--OpinionProExtraCondensed);
+    --add-font: 300 16px/1.5 var(--OpProCond);
+    --pheader-font: 100 32px/1.5 var(--OpProExCo);
 
     @media (min-width: 1920px){
         --main-font: 300 0.833vw/1.5 var(--VinMonoPro);
         --acc-font: 400 0.625vw/1.5 var(--VinMonoPro);
-        --add-font: 300 0.833vw/1.5 var(--OpinionProCondensed);
-        --pheader-font: 100 1.667vw/1.5 var(--OpinionProExtraCondensed);
+        --add-font: 300 0.833vw/1.5 var(--OpProCond);
+        --pheader-font: 100 1.667vw/1.5 var(--OpProExCo);
     }
 }

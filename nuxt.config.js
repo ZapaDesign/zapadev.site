@@ -77,11 +77,11 @@ export default {
 						iso: 'en-US',
 						name: 'English',
 					},
-					{
-						code: 'uk',
-						iso: 'uk-UA',
-						name: 'Ukrainian',
-					},
+					// {
+					// 	code: 'uk',
+					// 	iso: 'uk-UA',
+					// 	name: 'Ukrainian',
+					// },
 				],
 				defaultLocale: 'ru',
 				strategy: 'prefix',
@@ -90,7 +90,7 @@ export default {
 					messages: {
 						ru: require('./locales/ru-ru.json'),
 						en: require('./locales/en-us.json'),
-						uk: require('./locales/uk-ua.json'),
+						// uk: require('./locales/uk-ua.json'),
 					}
 				}
 			}

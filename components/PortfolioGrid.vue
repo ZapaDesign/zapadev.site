@@ -43,7 +43,7 @@ export default {
         flex: 1;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-        grid-auto-rows: minmax(315px, auto);
+        grid-auto-rows: 315px;
         margin-right: -15px;
         margin-left: -15px;
 
@@ -58,7 +58,7 @@ export default {
 
         @media (min-width: 1920px) {
             grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-            grid-auto-rows: minmax(17.5vw, auto);
+            grid-auto-rows: vw(315);
         }
     }
 }

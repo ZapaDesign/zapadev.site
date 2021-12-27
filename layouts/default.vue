@@ -42,6 +42,8 @@ html {
 }
 
 body {
+    background-color: var(--body-color);
+    transition: all 0.2s ease-in-out;
     &.is-lock {
         @media (max-width: 720px){
             overflow: hidden;
@@ -51,7 +53,6 @@ body {
 
 #app {
     display: flex;
-    background-color: var(--body-color);
     min-height: 100vh;
     font: var(--main-font);
     font-size: 16px;

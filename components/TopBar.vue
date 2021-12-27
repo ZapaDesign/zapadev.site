@@ -79,7 +79,7 @@ export default {
     width: calc(100% - 50px);
     z-index: 100;
     transform: translate3d(0, 0, 0);
-    transition: 0.1s all ease-out;
+    transition: 0.3s all ease-out;
     @media (min-width: 720px) {
         display: none;
     }

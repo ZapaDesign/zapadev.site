@@ -3,7 +3,7 @@
     <div class="lang">
         <nuxt-link :to="switchLocalePath('ru')">rus</nuxt-link>
         <nuxt-link :to="switchLocalePath('en')">eng</nuxt-link>
-        <nuxt-link :to="switchLocalePath('uk')">ukr</nuxt-link>
+<!--        <nuxt-link :to="switchLocalePath('uk')">ukr</nuxt-link>-->
     </div>
 
 </template>
@@ -19,6 +19,7 @@ export default {
 <style lang="scss">
 
 .lang {
+    display: inline-block;
     a {
         font-size: 12px;
         display: inline-block;
