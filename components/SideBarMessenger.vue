@@ -2,7 +2,7 @@
     <div>
         <ul class="messenger">
             <li>
-                <a href="#">
+                <a href="#" @click="openChatModal">
                     <svg>
                         <use xlink:href="../assets/icons.svg#icon-emailpopap"></use>
                     </svg>
@@ -40,7 +40,7 @@
 
 
         <div class="messenger messenger--mobile">
-            <a href="#">
+            <a href="#" @click="openChatModal">
                 <svg>
                     <use xlink:href="../assets/icons.svg#icon-emailpopap"></use>
                 </svg>
@@ -50,8 +50,14 @@
 </template>
 
 <script>
+import {mapGetters, mapMutations} from "vuex";
+
 export default {
     name: 'SideBarMessenger',
+
+    methods: {
+        ...mapMutations({openChatModal: "chatModal/toggle"})
+    }
 }
 </script>
 

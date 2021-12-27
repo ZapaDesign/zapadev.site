@@ -6,6 +6,7 @@
             <Nuxt />
 		</div>
 		<a href="#upToHeader" class="ScrollToUpBtn">▲</a>
+        <ChatModal v-show="showChatModal" />
 	</div>
 </template>
 
@@ -15,9 +16,24 @@
     import Sidebar from "../components/Sidebar";
     import TopBar from "../components/TopBar";
     import BottomBar from "../components/BottomBar";
+    import ChatModal from "../components/ChatModal";
+    import {mapGetters} from "vuex";
 
     export default {
-        components: {Sidebar, BottomBar, TopBar},
+        components: {ChatModal, Sidebar, BottomBar, TopBar},
+
+        computed: {
+            ...mapGetters({showChatModal: "chatModal/getChatModalState"})
+        },
+
+        head() {
+            return {
+                bodyAttrs: {
+                    class: this.chatModal ? 'is-lock' : 'is-unlock'
+                }
+            }
+        },
+
     }
 
 </script>

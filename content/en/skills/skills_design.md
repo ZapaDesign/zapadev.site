@@ -1,17 +1,20 @@
 ---
-title: Графический дизайн
+title: Graphic Design
+id: 2
 ---
 
-- Растровая графика [Adobe Photoshop, Adobe Lightroom]
+- ** Raster graphics: ** Adobe Photoshop, Adobe Lightroom
 
-- Векторная графика [Adobe Illustrator, Adobe FireWorks, Figma]
+- ** Vector graphics: ** Adobe Illustrator
 
-- Разработки интерфейсов [Adobe Photoshop, Adobe XD, Figma]
+- **UI/UX Design:** Adobe Photoshop, Adobe XD, Figma
 
-- Прототипирование [Mokup.me, Figma, Adobe XD]
+- *Prototyping:* Mokup.me, Figma, Adobe XD
 
-- Многостраничная верстка [Adobe InDesign]
+- *Multi-page layout:* Adobe InDesign
 
-- MotionDesign [Adobe After Effects]
+- *MotionDesign:* Adobe After Effects
 
-- 3D [Pro100]
+- *Video editing* Adobe Premiere Pro, Adobe Premiere Elements
+
+- *3D:* Pro100
