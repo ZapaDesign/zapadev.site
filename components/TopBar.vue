@@ -1,7 +1,7 @@
 <template>
 
-    <div class="top-bar">
-        <!--        :class="{ 'is-hidden': !showHeader }"-->
+    <div class="top-bar"
+         :class="{ 'top-bar--hidden': !showTopBar }">
 
         <ul>
             <span>LOGO</span>
@@ -31,34 +31,36 @@ export default {
     name: 'TopBar',
     data: () => ({
         drawer: '',
-        showHeader: true,
-        limitPosition: 500,
-        lastPosition: 0
+        showTopBar: true,
+        lastScrollPosition: 0,
+        scrollValue: 0
     }),
+    mounted () {
+        this.lastScrollPosition = window.pageYOffset
+        window.addEventListener('scroll', this.onScroll)
+        const viewportMeta = document.createElement('meta')
+        viewportMeta.name = 'viewport'
+        viewportMeta.content = 'width=device-width, initial-scale=1'
+        document.head.appendChild(viewportMeta)
+    },
+
+    beforeDestroy () {
+        window.removeEventListener('scroll', this.onScroll)
+    },
 
     methods: {
         ...mapMutations({toggle: "drawer/toggle"}),
-
-
-        // Toggle if navigation is shown or hidden
-        // onScroll() {
-        //     if (window.pageYOffset < 0) {
-        //         return
-        //     }
-        //     if (Math.abs(window.pageYOffset - this.lastScrollPosition) < this.scrollOffset) {
-        //         return
-        //     }
-        //     this.showHeader = window.pageYOffset < this.lastScrollPosition
-        //     this.lastScrollPosition = window.pageYOffset
-        // }
-    },
-
-    // beforeMount () {
-    //     window.addEventListener('scroll', this.handleScroll);
-    // },
-    // beforeDestroy() {
-    //     window.removeEventListener('scroll', this.handleScroll);
-    // }
+        onScroll () {
+            if (window.pageYOffset < 0) {
+                return
+            }
+            if (Math.abs(window.pageYOffset - this.lastScrollPosition) < 60) {
+                return
+            }
+            this.showTopBar = window.pageYOffset < this.lastScrollPosition
+            this.lastScrollPosition = window.pageYOffset
+        }
+    }
 }
 
 </script>
@@ -76,18 +78,17 @@ export default {
     top: 0;
     width: calc(100% - 50px);
     z-index: 100;
+    transform: translate3d(0, 0, 0);
+    transition: 0.1s all ease-out;
     @media (min-width: 720px) {
         display: none;
     }
 
-
-    transform: translateY(0);
-    transition: transform 300ms linear;
-
-
-    &.is-hidden {
-        transform: translateY(-100%);
+    &--hidden {
+        box-shadow: none;
+        transform: translate3d(0, -100%, 0);
     }
+
 
     ul {
         display: flex;
