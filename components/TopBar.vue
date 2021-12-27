@@ -30,9 +30,9 @@ export default {
 
     name: 'TopBar',
     data: () => ({
+        drawer: '',
         showHeader: true,
         limitPosition: 500,
-
         lastPosition: 0
     }),
 

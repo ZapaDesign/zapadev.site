@@ -134,6 +134,10 @@ export default {
 
     loading: {
         color: '#01c086',
-        height: '4px'
+        height: '3px'
+    },
+
+    colorMode: {
+        preference: 'dark',
     }
 }

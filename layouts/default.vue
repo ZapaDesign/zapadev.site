@@ -170,31 +170,35 @@ html {
 
 }
 
-::-webkit-scrollbar-button {
-	background-repeat: no-repeat;
-	width: 0;
-	height: 0;
-}
-
-::-webkit-scrollbar-track {
-	background-color: var(--black-blue-gray);
-}
-
-::-webkit-scrollbar-thumb {
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
-	background-color: var(--dark-blue-gray);
-	// box-shadow:0px 1px 1px #fff inset;
-}
-
-::-webkit-resizer {
-	background-repeat: no-repeat;
-	width: 1px;
-	height: 0;
-}
-
 ::-webkit-scrollbar {
-	width: 8px;
+    width: 4px;
+
+    &-button {
+        background-repeat: no-repeat;
+        width: 0;
+        height: 0;
+    }
+
+    &-track {
+        background-color: var(--black-blue-gray);
+    }
+
+    &-thumb {
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        background-color: var(--dark-blue-gray);
+        // box-shadow:0px 1px 1px #fff inset;
+    }
+
+    &-resizer {
+        background-repeat: no-repeat;
+        width: 1px;
+        height: 0;
+    }
+
+    &-corner {
+        color: transparent;
+    }
 }
 
 .ScrollToUpBtn {

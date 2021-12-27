@@ -109,6 +109,7 @@ export default {
         height: 80px;
         font-weight: 700;
         position: relative;
+        cursor: pointer;
     }
 
     &__copy-message {

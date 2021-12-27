@@ -2,7 +2,7 @@
 
     .blog_navigation {
         display: none;
-        @media (min-width: 720px){
+        @media (min-width: 720px) {
             display: block;
         }
     }
@@ -17,7 +17,7 @@
         display: flex;
         flex-direction: column;
 
-        @media (min-width: 1200px){
+        @media (min-width: 1200px) {
             flex-direction: row-reverse;
             align-items: flex-start;
         }
@@ -37,16 +37,16 @@
         padding: 20px;
         border-radius: 20px 0 0 20px;
 
-        @media (min-width: 1200px){
+        @media (min-width: 1200px) {
             padding: 80px;
             position: sticky;
             top: 40px;
-            overflow: scroll;
+            overflow: auto;
             max-height: calc(100vh - 160px);
             width: 200px;
         }
 
-        @media (min-width: 1920px){
+        @media (min-width: 1920px) {
             width: vw(200);
             padding: vw(40);
             border-radius: vw(20) 0 0 vw(20);
@@ -54,7 +54,7 @@
 
         li {
             margin-bottom: 10px;
-            @media (min-width: 1920px){
+            @media (min-width: 1920px) {
                 margin-bottom: vw(10);
             }
         }
@@ -68,7 +68,7 @@
         .toc3 {
             margin-left: 16px;
             font-size: 14px;
-            @media (min-width: 1920px){
+            @media (min-width: 1920px) {
                 margin-left: vw(16);
                 font-size: vw(14);
             }
@@ -77,9 +77,9 @@
 }
 
 @media (max-width: 960px) {
-	.blog_article .blog_navigation {
-		display: none;
-	}
+    .blog_article .blog_navigation {
+        display: none;
+    }
 }
 
 .nuxt-content-container {

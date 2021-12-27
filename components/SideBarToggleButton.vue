@@ -19,6 +19,9 @@ import {mapMutations} from "vuex";
 
 export default {
     name: 'SideBarToggleButton',
+    data: () => ({
+        drawer: ''
+    }),
     methods: {
         ...mapMutations({toggle: "drawer/toggle"})
     }

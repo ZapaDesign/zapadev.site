@@ -115,6 +115,13 @@ aside {
             display: none;
         }
     }
+
+    .color-mode {
+        display: none;
+        @media (min-width: 720px){
+            display: block;
+        }
+    }
 }
 
 .copyright {
