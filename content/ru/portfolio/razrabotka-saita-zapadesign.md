@@ -15,7 +15,6 @@ tags:
   - js_vue_nuxt
   - webdesign
 ---
-<div class="full">
 
 ![](/portfolio/portfolio_item_003_img_001.jpg)
 
@@ -25,4 +24,3 @@ tags:
 
 ![](/portfolio/portfolio_item_003_img_003.jpg)
 
-</div>

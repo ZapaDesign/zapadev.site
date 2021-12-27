@@ -34,7 +34,11 @@
                     />
                 </div>
                 <div class="portfolio__date slideUp">{{ getDate }}</div>
-                <div class="portfolio__list slideUp">{{ post.list }}</div>
+                <div class="portfolio__list slideUp">
+                    <li v-for="item in post.list">
+                        {{ item }}
+                    </li>
+                </div>
                 <div class="portfolio__excerpt slideUp">{{ post.excerpt }}</div>
                 <a v-if="post.link" :href="`http://${post.link}`">перейти на {{ post.link }}</a>
             </div>

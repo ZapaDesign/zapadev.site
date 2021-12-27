@@ -115,9 +115,9 @@ aside {
     &.isOpen {
         transform: translateX(0);
         transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-        padding: 12px;
+        padding: 12px 0;
         @media (min-width: 1920px){
-            padding: vw(12);
+            padding: vw(12) 0;
         }
 
         .messenger {
