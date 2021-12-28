@@ -73,8 +73,9 @@ export default {
     display: none;
 }
 
-
 .blog-nav {
+
+
 
     &__form {
         color: var(--main-color);
@@ -109,6 +110,15 @@ export default {
             @media (min-width: 1920px) {
                 padding-bottom: vw(10);
             }
+        }
+    }
+}
+
+.blog.article {
+    .blog-nav {
+        display: none;
+        @media (min-width: 720px) {
+            display: block;
         }
     }
 }

@@ -32,22 +32,17 @@
     }
 
     &__nav {
-        //padding: 20px;
         @media (min-width: 1200px) {
-            //padding: 80px;
-
 
         }
 
         @media (min-width: 1920px) {
             width: vw(200);
-            //padding: vw(40);
             border-radius: vw(20) 0 0 vw(20);
         }
     }
 
     &-nav {
-
         border-radius: 20px 0 0 20px;
 
         @media (min-width: 1920px) {
@@ -93,7 +88,13 @@
 
 .nuxt-content-container {
     flex: 1;
-    padding: 0 60px;
+    padding: 0 20px;
+    @media (min-width: 720px){
+        padding: 0 60px;
+    }
+    @media (min-width: 1920px){
+        padding: 0 vw(60);
+    }
 }
 
 .nuxt-content {
