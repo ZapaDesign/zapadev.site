@@ -4,8 +4,12 @@
         <div class="content">
             <NavigationBlog :posts="posts"/>
             <article class="article__content slideLeftInOut">
-                <div v-if="post.toc != false" class="article__nav">
-                    <ul>
+                <div
+                    v-if="post.toc != false"
+                    class="article__nav article-nav content-sidebar content-sidebar--end"
+                    :class="{ isHide: sidebarState }">
+                    <div class="content-sidebar__title">Post Navigation</div>
+                    <ul class="article-nav__list">
                         <li
                             v-for="link of post.toc"
                             :key="link.id"
@@ -14,6 +18,11 @@
                             <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
                         </li>
                     </ul>
+                    <button
+                        @click="sidebarToggle"
+                        class="content-sidebar__btn">
+                        >
+                    </button>
                 </div>
                 <nuxt-content :document="post"/>
             </article>
@@ -81,10 +90,18 @@ export default {
             post,
         }
     },
+    data() {
+        return {
+            sidebarState: false,
+        }
+    },
     methods: {
         scrollToTop() {
             window.scrollTo({top: 0})
         },
+        sidebarToggle: function () {
+            this.sidebarState = !this.sidebarState;
+        }
     },
 }
 </script>

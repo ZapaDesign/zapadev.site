@@ -211,6 +211,69 @@ body {
         padding-top: vw(20);
     }
 
+    &-sidebar {
+        background-color: var(--dark-blue-gray);
+        color: var(--sub-text-color);
+        border-radius: 0 20px 0 0 ;
+        position: sticky;
+        top: 40px;
+        height: 100vh;
+        overflow: auto;
+        flex-basis: 15%;
+        transition: flex-basis 0.5s ease-in-out;
+
+        &__wrap {
+            min-width: 240px;
+            @media (min-width: 1920px) {
+                min-width: vw(240);
+            }
+        }
+
+        &--start {
+            direction:rtl;
+
+            & > * {
+                direction:ltr;
+            }
+        }
+
+        &.isHide {
+            flex-basis: 50px;
+            .content-sidebar__wrap {
+                transform: translateX(-80%);
+            }
+        }
+
+        &__title {
+            position: sticky;
+            top: 0;
+            background-color: var(--black);
+            padding: 15px 20px;
+        }
+
+        &__btn {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            background-color: var(--black);
+            color: var(--withe);
+            border-radius: 50%;
+            border: 0;
+            width: 20px;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        &--end {
+            .content-sidebar__btn {
+                right: unset;
+                left: 0;
+            }
+        }
+    }
 }
 
 ::-webkit-scrollbar {

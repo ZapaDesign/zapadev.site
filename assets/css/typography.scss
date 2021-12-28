@@ -78,25 +78,6 @@ em {
 .nuxt-content {
     word-break: break-word;
 
-    > h1, > h2, > h3, > h4, > h5, > h6, > p, > ul, > ol, > dl, > blockquote, > hr, > table, > pre, > div,
-    > .two-columns, > .three-columns {
-        max-width: 920px;
-        margin: 0 auto;
-        box-sizing: border-box;
-        @media (min-width: 1920px) {
-            max-width: vw(920);
-        }
-    }
-
-    .full {
-        max-width: unset;
-
-        h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, hr, table, pre, div,
-        .two-columns, .three-columns {
-            max-width: unset;
-        }
-    }
-
     h1, h2, h3, h4, h5, h6 {
         color: var(--head-text-color);
         border-bottom: 1px solid var(--sub-text-color);
@@ -235,7 +216,7 @@ em {
 
     ul,
     ol {
-        list-style-position: inside;
+        line-height: 2;
     }
 
     ul,
@@ -329,13 +310,20 @@ em {
         }
     }
 
+    p, ul, blockquote {
+        column-width: 800px;
+    }
+
+    ul {
+        column-width: 600px;
+    }
+
     pre {
         margin-bottom: 16px;
         @media (min-width: 1920px) {
             margin-bottom: vw(16);
         }
     }
-
 
     p code,
     li code {

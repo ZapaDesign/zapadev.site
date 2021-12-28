@@ -1,23 +1,31 @@
 <template>
-    <div class="blog-nav">
-        <div class="blog-nav__form">
-            <input
-                type="search"
-                v-model="search"
-                autocomplete="off"
-                placeholder="Что хотите найти?"
-                autofocus
-            />
+    <div class="blog-nav content-sidebar content-sidebar--start"
+         :class="{ isHide: sidebarState }">
+        <div class="content-sidebar__wrap">
+            <div class="blog-nav__form content-sidebar__title">
+                <input
+                    type="search"
+                    v-model="search"
+                    autocomplete="off"
+                    placeholder="Что хотите найти?"
+                    autofocus
+                />
+            </div>
+            <ul v-if="posts" class="blog-nav__items">
+                <li v-for="(post, $index) in filteredPosts" :key="`post-${$index}`">
+                    <nuxt-link :to="localePath(post.path)">
+                        <div class="link">
+                            <span>{{ post.title }}</span>
+                        </div>
+                    </nuxt-link>
+                </li>
+            </ul>
         </div>
-        <ul v-if="posts" class="blog-nav__items">
-            <li v-for="(post, $index) in filteredPosts" :key="`post-${$index}`">
-                <nuxt-link :to="localePath(post.path)">
-                    <div class="link">
-                        <span>{{ post.title }}</span>
-                    </div>
-                </nuxt-link>
-            </li>
-        </ul>
+        <button
+            @click="sidebarToggle"
+            class="content-sidebar__btn">
+            >
+        </button>
     </div>
 </template>
 
@@ -33,6 +41,7 @@ export default {
     data() {
         return {
             search: '',
+            sidebarState: false,
         }
     },
     mounted() {
@@ -50,6 +59,11 @@ export default {
             }).sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
         },
     },
+    methods: {
+        sidebarToggle: function () {
+            this.sidebarState = !this.sidebarState;
+        }
+    }
 }
 </script>
 
@@ -61,39 +75,20 @@ export default {
 
 
 .blog-nav {
-    flex-basis: 15%;
-    min-width: 240px;
-    background-color: var(--dark-blue-gray);
-    color: var(--sub-text-color);
-    position: sticky;
-    top: 0;
-    max-height: 100vh;
-    overflow: scroll;
-    border-radius: 0 20px 0 0 ;
-    direction:rtl;
-
-    @media (min-width: 1920px) {
-        min-width: vw(240);
-    }
 
     &__form {
-        padding: 16px 16px 16px 0;
-        background-color: var(--black);
         color: var(--main-color);
-        //border-bottom: 1px solid #808080;
-        direction:ltr;
-
-        @media (min-width: 1920px) {
-            padding: vw(16) vw(16) vw(16) 0;
-        }
 
         input {
             background-color: transparent;
             width: 100%;
             border: none;
+            border-radius: 0;
             outline: none;
             font-size: 16px;
+            padding: 0;
             color: var(--sub-text-color);
+            border-bottom: 1px solid #808080;
 
             @media (min-width: 1920px) {
                 font-size: vw(16);
@@ -106,7 +101,6 @@ export default {
     }
 
     &__items {
-        direction:ltr;
         padding: 20px;
 
         li {

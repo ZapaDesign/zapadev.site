@@ -1,5 +1,4 @@
 .article {
-
     .blog_navigation {
         display: none;
         @media (min-width: 720px) {
@@ -33,44 +32,54 @@
     }
 
     &__nav {
-        background-color: var(--dark-blue-gray);
-        padding: 20px;
-        border-radius: 20px 0 0 20px;
-
+        //padding: 20px;
         @media (min-width: 1200px) {
-            padding: 80px;
-            position: sticky;
-            top: 40px;
-            overflow: auto;
-            max-height: calc(100vh - 160px);
-            width: 200px;
+            //padding: 80px;
+
+
         }
 
         @media (min-width: 1920px) {
             width: vw(200);
-            padding: vw(40);
+            //padding: vw(40);
+            border-radius: vw(20) 0 0 vw(20);
+        }
+    }
+
+    &-nav {
+
+        border-radius: 20px 0 0 20px;
+
+        @media (min-width: 1920px) {
+            width: vw(200);
+            //padding: vw(40);
             border-radius: vw(20) 0 0 vw(20);
         }
 
-        li {
-            margin-bottom: 10px;
-            @media (min-width: 1920px) {
-                margin-bottom: vw(10);
-            }
-        }
 
-        .toc2 {
-            a {
-                color: var(--yellow);
-            }
-        }
 
-        .toc3 {
-            margin-left: 16px;
-            font-size: 14px;
-            @media (min-width: 1920px) {
-                margin-left: vw(16);
-                font-size: vw(14);
+        &__list {
+            padding: 20px;
+            li {
+                margin-bottom: 10px;
+                @media (min-width: 1920px) {
+                    margin-bottom: vw(10);
+                }
+            }
+
+            .toc2 {
+                a {
+                    color: var(--yellow);
+                }
+            }
+
+            .toc3 {
+                margin-left: 16px;
+                font-size: 14px;
+                @media (min-width: 1920px) {
+                    margin-left: vw(16);
+                    font-size: vw(14);
+                }
             }
         }
     }
@@ -84,6 +93,7 @@
 
 .nuxt-content-container {
     flex: 1;
+    padding: 0 60px;
 }
 
 .nuxt-content {
