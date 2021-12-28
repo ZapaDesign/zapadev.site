@@ -116,6 +116,24 @@ body {
     @media (min-width: 1920px){
         padding-right: vw(15);
     }
+
+    &.blog {
+        .content {
+            margin: 0 -15px;
+            padding-left: 0;
+            padding-right: 0;
+
+            @media (min-width: 1200px) {
+                margin-right: -15px;
+                margin-left: -3vw;
+            }
+
+            @media (min-width: 1920px){
+                margin-right: vw(-15);
+            }
+        }
+    }
+
 }
 
 .main-header {

@@ -1,6 +1,6 @@
 <template>
-    <div class="blog_navigation">
-        <div class="blog_form">
+    <div class="blog-nav">
+        <div class="blog-nav__form">
             <input
                 type="search"
                 v-model="search"
@@ -9,7 +9,7 @@
                 autofocus
             />
         </div>
-        <ul v-if="posts" class="blog_items">
+        <ul v-if="posts" class="blog-nav__items">
             <li v-for="(post, $index) in filteredPosts" :key="`post-${$index}`">
                 <nuxt-link :to="localePath(post.path)">
                     <div class="link">
@@ -60,23 +60,28 @@ export default {
 }
 
 
-.blog_navigation {
+.blog-nav {
     flex-basis: 15%;
     min-width: 240px;
+    background-color: var(--dark-blue-gray);
     color: var(--sub-text-color);
     position: sticky;
     top: 0;
     max-height: 100vh;
     overflow: scroll;
+    border-radius: 0 20px 0 0 ;
+    direction:rtl;
 
     @media (min-width: 1920px) {
         min-width: vw(240);
     }
 
-    .blog_form {
+    &__form {
         padding: 16px 16px 16px 0;
+        background-color: var(--black);
         color: var(--main-color);
-        border-bottom: 1px solid #808080;
+        //border-bottom: 1px solid #808080;
+        direction:ltr;
 
         @media (min-width: 1920px) {
             padding: vw(16) vw(16) vw(16) 0;
@@ -100,13 +105,15 @@ export default {
         }
     }
 
-    .blog_items {
+    &__items {
+        direction:ltr;
+        padding: 20px;
 
         li {
-            padding: 16px 16px 16px 0;
+            padding-bottom: 10px;
 
             @media (min-width: 1920px) {
-                padding: vw(16) vw(16) vw(16) 0;
+                padding-bottom: vw(10);
             }
         }
     }

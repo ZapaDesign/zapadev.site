@@ -1,5 +1,5 @@
 <template>
-    <div class="page blog__article article">
+    <div class="page blog article article--blog">
         <PageHeader :title="post.title" :description="post.description"/>
         <div class="content">
             <NavigationBlog :posts="posts"/>
