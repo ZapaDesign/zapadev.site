@@ -24,7 +24,7 @@
         <button
             @click="sidebarToggle"
             class="content-sidebar__btn">
-            >
+            <
         </button>
     </div>
 </template>
