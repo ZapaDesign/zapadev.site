@@ -8,20 +8,28 @@
                     v-if="post.toc != false"
                     class="article__nav article-nav content-sidebar content-sidebar--end"
                     :class="{ isHide: sidebarState }">
-                    <div class="content-sidebar__title">Post Navigation</div>
-                    <ul class="article-nav__list">
-                        <li
-                            v-for="link of post.toc"
-                            :key="link.id"
-                            :class="{ 'toc2': link.depth === 2, 'toc3': link.depth === 3 }"
-                        >
-                            <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-                        </li>
-                    </ul>
+                    <div class="content-sidebar__wrap">
+                        <div class="content-sidebar__title">
+                            <font-awesome-icon
+                                @click="sidebarToggle"
+                                class="blog-nav__form-icon"
+                                :icon="['fas', 'bars']"/>
+                            <span>Post Navigation</span>
+                        </div>
+                        <ul class="article-nav__list content-sidebar__body">
+                            <li
+                                v-for="link of post.toc"
+                                :key="link.id"
+                                :class="{ 'toc2': link.depth === 2, 'toc3': link.depth === 3 }"
+                            >
+                                <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
+                            </li>
+                        </ul>
+                    </div>
                     <button
                         @click="sidebarToggle"
                         class="content-sidebar__btn">
-                        <font-awesome-icon :icon="['fas', 'chevron-left']"/>
+                        <font-awesome-icon :icon="['fas', 'chevron-right']"/>
                     </button>
                 </div>
                 <nuxt-content :document="post"/>

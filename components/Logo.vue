@@ -74,13 +74,13 @@ export default {
         background: rgb(16, 23, 42);
         background: linear-gradient(90deg, rgba(16, 23, 42, 0) 0%, var(--accent-color) 50%, rgba(9, 9, 121, 0) 100%);
     }
-}
 
-svg {
-    display: block;
-    width: 60%;
-    height: auto;
-    margin: 1rem auto 0.75rem;
+    svg {
+        display: block;
+        width: 60%;
+        height: auto;
+        margin: 1rem auto 0.75rem;
+    }
 }
 
 </style>

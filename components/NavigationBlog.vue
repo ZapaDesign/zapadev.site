@@ -10,8 +10,12 @@
                     placeholder="Что хотите найти?"
                     autofocus
                 />
+                <font-awesome-icon
+                    @click="sidebarToggle"
+                    class="blog-nav__form-icon"
+                    :icon="['fas', 'search']"/>
             </div>
-            <ul v-if="posts" class="blog-nav__items">
+            <ul v-if="posts" class="blog-nav__items content-sidebar__body">
                 <li v-for="(post, $index) in filteredPosts" :key="`post-${$index}`">
                     <nuxt-link :to="localePath(post.path)">
                         <div class="link">
@@ -24,7 +28,7 @@
         <button
             @click="sidebarToggle"
             class="content-sidebar__btn">
-            <font-awesome-icon :icon="['fas', 'chevron-right']"/>
+            <font-awesome-icon :icon="['fas', 'chevron-left']"/>
         </button>
     </div>
 </template>
@@ -75,14 +79,13 @@ export default {
 
 .blog-nav {
 
-
-
     &__form {
-        color: var(--main-color);
+        //color: var(--main-color);
+        display: flex;
 
         input {
             background-color: transparent;
-            width: 100%;
+            flex: 1;
             border: none;
             border-radius: 0;
             outline: none;
@@ -90,6 +93,7 @@ export default {
             padding: 0;
             color: var(--sub-text-color);
             border-bottom: 1px solid #808080;
+            margin-right: 20px;
 
             @media (min-width: 1920px) {
                 font-size: vw(16);
@@ -99,16 +103,17 @@ export default {
                 border: none;
             }
         }
+        &-icon {
+            cursor: pointer;
+        }
     }
 
     &__items {
-        padding: 20px;
-
         li {
-            padding-bottom: 10px;
+            padding-bottom: 15px;
 
             @media (min-width: 1920px) {
-                padding-bottom: vw(10);
+                padding-bottom: vw(15);
             }
         }
     }
@@ -118,7 +123,7 @@ export default {
     .blog-nav {
         display: none;
         @media (min-width: 720px) {
-            display: block;
+            display: flex;
         }
         &__items {
             overflow: auto;

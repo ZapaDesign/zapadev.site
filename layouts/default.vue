@@ -5,7 +5,9 @@
             <TopBar />
             <Nuxt />
 		</div>
-		<a href="#upToHeader" class="ScrollToUpBtn">▲</a>
+		<a href="#upToHeader" class="ScrollToUpBtn">
+            <font-awesome-icon :icon="['fas', 'chevron-up']"/>
+        </a>
         <ChatModal v-show="showChatModal" />
 	</div>
 </template>
@@ -218,18 +220,43 @@ body {
         top: 40px;
         height: calc(100vh - 40px);
         overflow: hidden;
-        flex-basis: 15%;
+        flex-basis: 300px;
         transition: flex-basis 0.5s ease-in-out;
+        display: flex;
+        justify-content: flex-end;
         @media (min-width: 1200px) {
             position: sticky
         }
 
         &__wrap {
             overflow: auto;
-            min-width: 240px;
+            width: 300px;
             height: calc(100vh - 40px);
+            transition: transform .5s ease-in-out;
             @media (min-width: 1920px) {
-                min-width: vw(240);
+                min-width: vw(300);
+            }
+        }
+
+        &.isHide {
+            flex-basis: 50px;
+
+            .content-sidebar {
+
+                &__wrap {
+                    overflow: hidden;
+                }
+
+                &__btn {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &__body {
+                    opacity: 0;
+                }
+
             }
         }
 
@@ -243,10 +270,21 @@ body {
             }
         }
 
-        &.isHide {
-            flex-basis: 50px;
-            .content-sidebar__wrap {
-                overflow: hidden;
+        &--end {
+            justify-content: flex-start;
+            .content-sidebar {
+
+                &__title {
+                    span {
+                        margin-left: 20px;
+                    }
+                }
+
+                &__btn {
+                    right: unset;
+                    left: 0;
+                    border-radius: 0 21px 21px 0;
+                }
             }
         }
 
@@ -255,6 +293,13 @@ body {
             top: 0;
             background-color: var(--black);
             padding: 15px 20px;
+
+        }
+
+        &__body {
+            opacity: 1;
+            transition: opacity .5s ease-in-out;
+            padding: 35px;
         }
 
         &__btn {
@@ -263,14 +308,14 @@ body {
             top: 50%;
             background-color: var(--black);
             color: var(--withe);
-            border-radius: 50%;
+            border-radius: 21px 0 0 21px;
             border: 0;
             align-items: center;
             justify-content: center;
             font-size: 16px;
             display: none;
             padding: 0;
-            width: 42px;
+            width: 32px;
             height: 42px;
             @media (min-width: 1920px){
                 display: flex;
@@ -278,13 +323,7 @@ body {
 
             svg {
                 margin: 0;
-            }
-        }
-
-        &--end {
-            .content-sidebar__btn {
-                right: unset;
-                left: 0;
+                transition: transform .5s ease-in-out;
             }
         }
     }
@@ -323,15 +362,18 @@ body {
 
 .ScrollToUpBtn {
 	position: fixed;
-	bottom: 1rem;
-	right: 1rem;
-	height: 1.5rem;
-	width: 1.5rem;
-	font-size: 1.25rem;
+	bottom: 0;
+	right: 50%;
+	height: 20px;
+	width: 34px;
+	font-size: 20px;
 	text-align: center;
 	background-color: var(--black);
-	opacity: 0.2;
-	padding: 1rem;
-	border-radius: 50%;
+	border-radius: 20px 20px 0 0;
+    padding: 5px;
+
+    svg {
+        margin: 0;
+    }
 }
 </style>

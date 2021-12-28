@@ -53,7 +53,6 @@
 
 
         &__list {
-            padding: 20px;
             li {
                 margin-bottom: 10px;
                 @media (min-width: 1920px) {
@@ -87,16 +86,22 @@
 
 .nuxt-content-container {
     flex: 1;
-    padding: 0 20px;
-    @media (min-width: 720px){
-        padding: 0 60px;
-    }
-    @media (min-width: 1920px){
-        padding: 0 vw(60);
-    }
 }
 
 .nuxt-content {
     flex: 1;
+}
+
+.blog.article {
+    .nuxt-content-container {
+
+        padding: 0 20px;
+        @media (min-width: 720px){
+            padding: 0 60px;
+        }
+        @media (min-width: 1920px){
+            padding: 0 vw(60);
+        }
+    }
 }
 
