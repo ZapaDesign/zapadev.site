@@ -21,7 +21,7 @@
                     <button
                         @click="sidebarToggle"
                         class="content-sidebar__btn">
-                        >
+                        <font-awesome-icon :icon="['fas', 'chevron-left']"/>
                     </button>
                 </div>
                 <nuxt-content :document="post"/>

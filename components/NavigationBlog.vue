@@ -24,7 +24,7 @@
         <button
             @click="sidebarToggle"
             class="content-sidebar__btn">
-            <
+            <font-awesome-icon :icon="['fas', 'chevron-right']"/>
         </button>
     </div>
 </template>
@@ -119,6 +119,9 @@ export default {
         display: none;
         @media (min-width: 720px) {
             display: block;
+        }
+        &__items {
+            overflow: auto;
         }
     }
 }

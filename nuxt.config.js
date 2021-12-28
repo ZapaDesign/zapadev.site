@@ -94,7 +94,17 @@ export default {
 					}
 				}
 			}
-		]
+		],
+        [
+            'nuxt-fontawesome', {
+                imports: [
+                    {
+                        set: '@fortawesome/free-solid-svg-icons',
+                        icons: ['fas']
+                    },
+                ]
+            }
+        ]
 	],
 
 	/*

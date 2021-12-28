@@ -4,6 +4,8 @@ description: "| Шпаргалка по React [Ссылки]"
 createdAt: 2021-09-02
 ---
 
+### Links
+
 [Web version](https://devhints.io/react)
 
 [React Cheat Sheet v16](https://reactcheatsheet.com/)
