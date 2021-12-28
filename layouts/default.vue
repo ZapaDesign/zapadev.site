@@ -313,11 +313,11 @@ body {
             align-items: center;
             justify-content: center;
             font-size: 16px;
-            display: none;
+            display: flex;
             padding: 0;
             width: 32px;
             height: 42px;
-            @media (min-width: 1920px){
+            @media (min-width: 1200px){
                 display: flex;
             }
 

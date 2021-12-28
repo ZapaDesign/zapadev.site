@@ -1,8 +1,14 @@
 ---
-title: Шпаргалка по Nuxt createdAt: 2021-09-02
+title: JS | Vue | Nuxt
+description: "| Шпаргалка по Nuxt.js"
+createdAt: 2021-09-02
 ---
 
+<div class="full">
+
 ![](/blog/post_cheat_sheet_nuxtjs.png)
+
+</div>
 
 My cheat sheet for nuxt most basic stuff
 
