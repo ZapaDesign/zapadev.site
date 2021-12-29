@@ -1,46 +1,44 @@
 <template>
-	<div id="app">
-		<Sidebar />
-		<div class="main">
-            <TopBar />
-            <Nuxt />
-		</div>
-		<a href="#upToHeader" class="ScrollToUpBtn">
+    <div id="app">
+        <Sidebar/>
+        <div class="main">
+            <TopBar/>
+            <Nuxt/>
+        </div>
+        <a href="#upToHeader" class="ScrollToUpBtn">
             <font-awesome-icon :icon="['fas', 'chevron-up']"/>
         </a>
-        <ChatModal v-show="showChatModal" />
-	</div>
+        <ChatModal v-show="showChatModal"/>
+    </div>
 </template>
 
 
 <script>
 
-    import Sidebar from "../components/Sidebar";
-    import TopBar from "../components/TopBar";
-    import BottomBar from "../components/BottomBar";
-    import ChatModal from "../components/ChatModal";
-    import {mapGetters} from "vuex";
+import Sidebar from "../components/Sidebar";
+import TopBar from "../components/TopBar";
+import BottomBar from "../components/BottomBar";
+import ChatModal from "../components/ChatModal";
+import {mapGetters} from "vuex";
 
-    export default {
-        components: {ChatModal, Sidebar, BottomBar, TopBar},
+export default {
+    components: {ChatModal, Sidebar, BottomBar, TopBar},
 
-        computed: {
-            ...mapGetters({showChatModal: "chatModal/getChatModalState"})
-        },
+    computed: {
+        ...mapGetters({showChatModal: "chatModal/getChatModalState"})
+    },
 
-        head() {
-            return {
-                bodyAttrs: {
-                    class: this.chatModal ? 'is-lock' : 'is-unlock'
-                }
+    head() {
+        return {
+            bodyAttrs: {
+                class: this.chatModal ? 'is-lock' : 'is-unlock'
             }
-        },
+        }
+    },
 
-    }
+}
 
 </script>
-
-
 
 
 <style lang="scss">
@@ -62,8 +60,9 @@ html {
 body {
     background-color: var(--body-color);
     transition: all 0.2s ease-in-out;
+
     &.is-lock {
-        @media (max-width: 720px){
+        @media (max-width: 720px) {
             overflow: hidden;
         }
     }
@@ -81,17 +80,17 @@ body {
     position: relative;
     // overflow: hidden;
     // height: 100vh;
-    @media (min-width: 1920px){
-    font-size: vw(16px);
+    @media (min-width: 1920px) {
+        font-size: vw(16px);
     }
 }
 
 .main {
-	scroll-behavior: smooth;
-	flex: 1;
-	// overflow: hidden;
-	min-height: 100vh;
-	// overflow-y: auto;
+    scroll-behavior: smooth;
+    flex: 1;
+    // overflow: hidden;
+    min-height: 100vh;
+    // overflow-y: auto;
     padding: 50px 0;
     min-width: 100vw;
 
@@ -105,17 +104,17 @@ body {
     background-size: 100%;
     background-position: 10vw center;
     background-attachment: fixed;
-	display: flex;
-	flex-direction: column;
-	min-height: inherit;
-	padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+    padding: 0 15px;
 
     @media (min-width: 1200px) {
         padding-right: 15px;
         padding-left: 3vw;
     }
 
-    @media (min-width: 1920px){
+    @media (min-width: 1920px) {
         padding-right: vw(15);
     }
 
@@ -130,7 +129,7 @@ body {
                 margin-left: -3vw;
             }
 
-            @media (min-width: 1920px){
+            @media (min-width: 1920px) {
                 margin-right: vw(-15);
             }
         }
@@ -139,18 +138,18 @@ body {
 }
 
 .main-header {
-	padding: 30px 0;
-	overflow: hidden;
-	font-size: 0.75rem;
+    padding: 30px 0;
+    overflow: hidden;
+    font-size: 0.75rem;
 
-	@media (min-width: 720px) {
-	    font-size: 0.875rem;
-	}
+    @media (min-width: 720px) {
+        font-size: 0.875rem;
+    }
 
-	@media (min-width: 1200px) {
+    @media (min-width: 1200px) {
         font-size: 1rem;
         padding: 50px 0;
-	}
+    }
 
     @media (min-width: 1920px) {
         padding: vw(50) 0 vw(40);
@@ -172,15 +171,18 @@ body {
             position: relative;
             height: 1px;
             width: auto;
-            background: rgb(16,23,42);
-            background: linear-gradient(90deg, rgba(16,23,42,0) 0%, var(--accent-color) 50%, rgba(9,9,121,0) 100%);
+            background: rgb(16, 23, 42);
+            background: linear-gradient(90deg, rgba(16, 23, 42, 0) 0%, var(--accent-color) 50%, rgba(9, 9, 121, 0) 100%);
         }
+
         &:after {
             top: 15px;
         }
+
         &:before {
             bottom: 15px;
         }
+
         span {
             font-family: $opxc;
             font-weight: 100;
@@ -190,11 +192,11 @@ body {
 }
 
 .content {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
-	padding-top: 30px;
+    padding-top: 30px;
     @media (min-width: 720px) {
         flex-direction: row;
         &__text {
@@ -205,18 +207,18 @@ body {
         }
     }
 
-    @media (min-width: 1200px){
+    @media (min-width: 1200px) {
         padding-top: 20px;
     }
 
-    @media (min-width: 1920px){
+    @media (min-width: 1920px) {
         padding-top: vw(20);
     }
 
     &-sidebar {
         background-color: var(--dark-blue-gray);
         color: var(--sub-text-color);
-        border-radius: 0 20px 0 0 ;
+        border-radius: 0 20px 0 0;
         top: 40px;
         height: calc(100vh - 40px);
         overflow: hidden;
@@ -256,7 +258,6 @@ body {
                 &__body {
                     opacity: 0;
                 }
-
             }
         }
 
@@ -272,6 +273,7 @@ body {
 
         &--end {
             justify-content: flex-start;
+
             .content-sidebar {
 
                 &__title {
@@ -294,6 +296,9 @@ body {
             background-color: var(--black);
             padding: 15px 20px;
 
+            svg {
+                cursor: pointer;
+            }
         }
 
         &__body {
@@ -317,7 +322,7 @@ body {
             padding: 0;
             width: 32px;
             height: 42px;
-            @media (min-width: 1200px){
+            @media (min-width: 1200px) {
                 display: flex;
             }
 
@@ -361,15 +366,15 @@ body {
 }
 
 .ScrollToUpBtn {
-	position: fixed;
-	bottom: 0;
-	right: 50%;
-	height: 20px;
-	width: 34px;
-	font-size: 20px;
-	text-align: center;
-	background-color: var(--black);
-	border-radius: 20px 20px 0 0;
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    height: 20px;
+    width: 34px;
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--black);
+    border-radius: 20px 20px 0 0;
     padding: 5px;
 
     svg {

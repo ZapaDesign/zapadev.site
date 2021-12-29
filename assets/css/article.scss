@@ -44,12 +44,15 @@
 
     &-nav {
         border-radius: 20px 0 0 20px;
-
         @media (min-width: 1920px) {
             width: vw(200);
             border-radius: vw(20) 0 0 vw(20);
         }
 
+        .nuxt-link-active {
+            color: var(--head-text-color);
+            font-weight: 500;
+        }
 
 
         &__list {

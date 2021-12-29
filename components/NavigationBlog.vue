@@ -116,6 +116,13 @@ export default {
                 padding-bottom: vw(15);
             }
         }
+
+        .nuxt-link {
+            &-active {
+                color: var(--head-text-color);
+                font-weight: 600;
+            }
+        }
     }
 }
 
