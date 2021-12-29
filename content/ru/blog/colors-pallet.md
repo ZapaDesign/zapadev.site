@@ -15,6 +15,6 @@ createdAt: 2021-09-02
 
 
 ## Palette
-Клик для копиррования цвета в буфер обмена
+*Click to copy a color to the clipboard*
 
 <color-palette></color-palette>
