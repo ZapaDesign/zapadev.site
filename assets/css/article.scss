@@ -93,9 +93,9 @@
 }
 
 .blog.article {
-    .nuxt-content-container {
+    .nuxt-content {
 
-        padding: 0 20px;
+        padding: 0 25px;
         @media (min-width: 720px){
             padding: 0 60px;
         }
