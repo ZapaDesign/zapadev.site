@@ -7,7 +7,6 @@ createdAt: 2021-09-02
 <div class="full">
 
 ![](/blog/post_cheat_sheet_nuxtjs.png)
-
 </div>
 
 My cheat sheet for nuxt most basic stuff
