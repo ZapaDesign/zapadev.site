@@ -4,6 +4,12 @@ description: "| Шпаргалка по Docker"
 createdAt: 2021-12-24
 ---
 
+<div class="full">
+
+![](/blog/blog-img-docker.svg)
+</div>
+
+
 ### Links
 
 - [Docker Cheat Sheep - PDF](https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf)

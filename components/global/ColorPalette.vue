@@ -1,9 +1,23 @@
 <template>
     <div class="color-palette">
+
+        <form class="color-palette__filter" action="">
+            <label for="filter">Filter:</label>
+            <input
+                type="text"
+                v-model="colorPaletteFilter"
+                autocomplete="off"
+                placeholder="Start typing brand name"
+                autofocus>
+            <button
+                @click.prevent="clearFilter">
+                Clear filter
+            </button>
+        </form>
         <ul class="color-palette__list">
             <li
                 class="color-palette__item"
-                v-for="item in items"
+                v-for="item in filteredItem"
                 :key="item.title"
                 :style="{ 'background-color' : item.color }"
                 :data-color="item.color"
@@ -61,7 +75,8 @@ export default {
                 {title: 'FourSquare', color: '#F94877'},
                 {title: 'TikTok', color: '#EE1D51'},
                 {title: 'Behance', color: '#131418'},
-            ]
+            ],
+            colorPaletteFilter: ''
         }
     },
     methods: {
@@ -78,13 +93,21 @@ export default {
                 setTimeout(function () {
                     message.classList.remove('color-palette__copy-message--is-show');
                 }, 1500);
-
             }
-
             document.addEventListener('copy', handler, true);
             document.execCommand('copy');
+        },
+        clearFilter() {
+            this.colorPaletteFilter = ''
         }
-    }
+    },
+    computed: {
+        filteredItem: function () {
+            return this.items.filter((item) => {
+                return item.title.toLowerCase().match(this.colorPaletteFilter.toLowerCase())
+            })
+        },
+    },
 }
 
 </script>
@@ -93,20 +116,46 @@ export default {
 
 .color-palette {
 
+    &__filter {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        @media (min-width: 720px){
+            flex-direction: row;
+            align-items: center;
+        }
+
+        label {
+            font-weight: 700;
+            color: var(--head-text-color);
+        }
+
+        input {
+            flex: 1;
+            margin: 10px 0;
+            @media (min-width: 720px){
+                margin: 0 10px;
+            }
+        }
+    }
+
     &__list {
         list-style: none !important;
         padding-left: 0 !important;
         display: flex;
         flex-wrap: wrap;
+        margin-left: -8px;
+        margin-right: -8px;
     }
 
     &__item {
         padding: 10px;
-        margin: 5px;
+        margin: 0 8px;
         border-radius: 5px;
         flex: 1;
-        flex-basis: 200px;
-        height: 80px;
+        flex-basis: 250px;
+        height: 120px;
         font-weight: 700;
         position: relative;
         cursor: pointer;
@@ -120,9 +169,9 @@ export default {
         opacity: 0;
         display: none;
         font-size: 12px;
-        padding: 5px 10px;
+        padding: 5px 15px;
         background-color: var(--main-text-color);
-        color: var( --body-color);
+        color: var(--body-color);
         border-radius: 5px;
 
         &--is-show {

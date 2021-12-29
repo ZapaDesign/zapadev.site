@@ -1,13 +1,13 @@
 <template>
     <div class="blog-nav content-sidebar content-sidebar--start"
-         :class="{ isHide: sidebarState }">
+         :class="{ isHide: startSidebarState }">
         <div class="content-sidebar__wrap">
             <div class="blog-nav__form content-sidebar__title">
                 <input
                     type="search"
                     v-model="search"
                     autocomplete="off"
-                    placeholder="Что хотите найти?"
+                    placeholder="What do you want to find?"
                     autofocus
                 />
                 <font-awesome-icon
@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import {mapGetters, mapMutations} from "vuex";
+
 export default {
     name: 'NavigationBlog',
     props: {
@@ -45,7 +47,7 @@ export default {
     data() {
         return {
             search: '',
-            sidebarState: false,
+            startSidebarState: false,
         }
     },
     mounted() {
@@ -62,10 +64,13 @@ export default {
                 return post.title.toLowerCase().match(this.search.toLowerCase())
             }).sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
         },
+
+        // ...mapGetters({startSidebarState: "startSidebarState/getStartSidebarState"})
     },
     methods: {
+        // ...mapMutations({sidebarToggle: "startSidebarState/toggle"}),
         sidebarToggle: function () {
-            this.sidebarState = !this.sidebarState;
+            this.startSidebarState = !this.startSidebarState;
         }
     }
 }

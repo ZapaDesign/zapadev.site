@@ -74,6 +74,16 @@ em {
     color: var(--main-color);
 }
 
+textarea,
+input {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
 
 .nuxt-content {
     word-break: break-word;

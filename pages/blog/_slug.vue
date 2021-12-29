@@ -7,7 +7,7 @@
                 <div
                     v-if="post.toc != false"
                     class="article__nav article-nav content-sidebar content-sidebar--end"
-                    :class="{ isHide: sidebarState }">
+                    :class="{ isHide: endSidebarState }">
                     <div class="content-sidebar__wrap">
                         <div class="content-sidebar__title">
                             <font-awesome-icon
@@ -41,6 +41,7 @@
 
 <script>
 import {format} from 'date-fns'
+import {mapGetters, mapMutations} from "vuex";
 
 const head = function () {
     return {
@@ -80,7 +81,6 @@ const computed = {
 export default {
     name: 'slug',
     head,
-    computed,
     async asyncData(context) {
         const {$content, params, app, route, redirect} = context
         const slug = params.slug
@@ -104,13 +104,11 @@ export default {
         }
     },
     methods: {
-        scrollToTop() {
-            window.scrollTo({top: 0})
-        },
-        sidebarToggle: function () {
-            this.sidebarState = !this.sidebarState;
-        }
+        ...mapMutations({sidebarToggle: "endSidebarState/toggle"}),
     },
+    computed: {
+        ...mapGetters({endSidebarState: "endSidebarState/getEndSidebarState"})
+    }
 }
 </script>
 
