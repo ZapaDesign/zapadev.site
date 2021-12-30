@@ -3,8 +3,10 @@ export default {
 	/*
 	** Nuxt rendering mode
 	** See https://nuxtjs.org/api/configuration-mode
+	** - spa - No server-side rendering (only client-side navigation)
+	** - universal - Isomorphic application (server-side rendering + client-side navigation)
 	*/
-	mode: 'universal',
+	mode: 'spa',
 	/*
 	** Nuxt target
 	** See https://nuxtjs.org/api/configuration-target

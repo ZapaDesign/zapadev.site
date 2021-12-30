@@ -37,7 +37,7 @@
 <script>
 
 export default {
-    name: 'ColorPalette',
+    name: 'ZapadevColorPalette',
     data() {
         return {
             items: [
