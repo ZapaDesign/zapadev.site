@@ -14,7 +14,11 @@ createdAt: 2021-09-02
 ----
 
 
-## Palette
+## Component
 *Click to copy a color to the clipboard*
-
-<zapadev-color-palette></zapadev-color-palette>
+> 
+> 
+> 
+> 
+> 
+> <zapadev-color-palette></zapadev-color-palette>

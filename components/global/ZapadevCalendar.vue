@@ -1,10 +1,5 @@
 <template>
     <div class="calendar__wrap">
-
-        <h3>Link</h3>
-
-        <a href="https://iportal.com.ua/calendar-na-vue-js/">Календарь на Vue.js</a>
-
         <div class="zdgrid">
             <div class="zdcell lg-6">
                 <table class="table">
