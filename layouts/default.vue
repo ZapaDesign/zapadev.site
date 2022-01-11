@@ -45,8 +45,9 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 
-@import '~/assets/css/vars.scss';
-@import '~/assets/css/typography.scss';
+@import 'assets/css/vars.scss';
+@import 'assets/css/typography.scss';
+@import 'assets/css/zdgrid.scss';
 
 * {
     margin: 0;
