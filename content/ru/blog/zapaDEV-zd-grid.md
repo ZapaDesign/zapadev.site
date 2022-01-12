@@ -6,4 +6,72 @@ createdAt: 2022-01-12
 
 ## Description
 
+```scss
+$global-width: 1920px;
+$grid-margin-gutters: 30px;
+$grid-columns: 12;
+
+$breakpoints: (
+    md: 721px,
+    lg: 1201px,
+    xlg: 1501px,
+    xxlg: 19201px,
+);
+
+
+
+.zdcontainer {
+    max-width: $global-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.zdgrid {
+    display: flex;
+    flex-wrap: wrap;
+
+    .zdcell {
+        flex-basis: 100%;
+
+        @each $breakpoint, $value in $breakpoints {
+            @media (min-width: $value) {
+                @for $i from 1 through $grid-columns {
+                    &.md-#{$i} {
+                        flex-basis: (100 / ($grid-columns / $i) ) * 1%;
+                    }
+                }
+            }
+        }
+    }
+
+    &--x {
+        margin-left: calc(#{$grid-margin-gutters} / -2);
+        margin-right: calc(#{$grid-margin-gutters} / -2);
+        .zdcell {
+            margin-left: calc(#{$grid-margin-gutters} / 2);
+            margin-right: calc(#{$grid-margin-gutters} / 2);
+
+
+            @each $breakpoint, $value in $breakpoints {
+                @media (min-width: $value) {
+                    @for $i from 1 through $grid-columns {
+                        &.#{$breakpoint}-#{$i} {
+                            flex-basis: calc(((100 / (#{$grid-columns} / #{$i})) * 1%) - #{$grid-margin-gutters});
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &--y {
+
+    }
+
+    &--x-y {
+
+    }
+}
+```
+
 ## Compoment

@@ -1,11 +1,6 @@
-
 $global-width: 1920px;
 $grid-margin-gutters: 30px;
 $grid-columns: 12;
-
-$grid-md: 720px;
-$grid-lg: 1200px;
-$grid-xlg: 1500px;
 
 $breakpoints: (
     md: 721px,
@@ -57,22 +52,6 @@ $breakpoints: (
                     }
                 }
             }
-
-            //@media (min-width: $grid-md) {
-            //    @for $i from 1 through $grid-columns {
-            //        &.md-#{$i} {
-            //            flex-basis: calc(((100 / (#{$grid-columns} / #{$i})) * 1%) - #{$grid-margin-gutters});
-            //        }
-            //    }
-            //}
-            //
-            //@media (min-width: $grid-lg) {
-            //    @for $i from 1 through $grid-columns {
-            //        &.lg-#{$i} {
-            //            flex-basis: calc(((100 / (#{$grid-columns} / #{$i})) * 1%) - #{$grid-margin-gutters});
-            //        }
-            //    }
-            //}
         }
     }
 
