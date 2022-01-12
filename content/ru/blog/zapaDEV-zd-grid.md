@@ -6,9 +6,14 @@ createdAt: 2022-01-12
 
 ## Description
 
+## Compoment
+> <zapadev-zd-grid></zapadev-zd-grid>
+
+## Code
+
 ```scss
 $global-width: 1920px;
-$grid-gutters: 30px;
+$grid-gutters: 20px;
 $grid-columns: 12;
 
 $breakpoints: (
@@ -23,7 +28,6 @@ $breakpoints: (
 .zdcontainer {
     max-width: $global-width;
     margin-left: auto;
-    margin-right: auto;
 }
 
 .zdgrid {
@@ -32,11 +36,12 @@ $breakpoints: (
 
     .zdcell {
         flex-basis: 100%;
+        box-sizing: border-box;
 
         @each $breakpoint, $value in $breakpoints {
             @media (min-width: $value) {
                 @for $i from 1 through $grid-columns {
-                    &.md-#{$i} {
+                    &.#{$breakpoint}-#{$i} {
                         flex-basis: (100 / ($grid-columns / $i) ) * 1%;
                     }
                 }
@@ -51,7 +56,6 @@ $breakpoints: (
             margin-left: calc(#{$grid-gutters} / 2);
             margin-right: calc(#{$grid-gutters} / 2);
 
-
             @each $breakpoint, $value in $breakpoints {
                 @media (min-width: $value) {
                     @for $i from 1 through $grid-columns {
@@ -65,15 +69,41 @@ $breakpoints: (
     }
 
     &--y {
+        margin-top: calc(#{$grid-gutters} / -2);
+        margin-bottom: calc(#{$grid-gutters} / -2);
+        .zdcell {
+            margin-top: calc(#{$grid-gutters} / 2);
+            margin-bottom: calc(#{$grid-gutters} / 2);
 
+
+            @each $breakpoint, $value in $breakpoints {
+                @media (min-width: $value) {
+                    @for $i from 1 through $grid-columns {
+                        &.#{$breakpoint}-#{$i} {
+                            flex-basis: calc(((100 / (#{$grid-columns} / #{$i})) * 1%) - #{$grid-gutters});
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &--x-y {
+        margin: calc(#{$grid-gutters} / -2);
+        .zdcell {
+            margin: calc(#{$grid-gutters} / 2);
 
+            @each $breakpoint, $value in $breakpoints {
+                @media (min-width: $value) {
+                    @for $i from 1 through $grid-columns {
+                        &.#{$breakpoint}-#{$i} {
+                            flex-basis: calc(((100 / (#{$grid-columns} / #{$i})) * 1%) - #{$grid-gutters});
+                        }
+                    }
+                }
+            }
+        }
     }
 }
-
-
 ```
 
-## Compoment
