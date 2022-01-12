@@ -1,25 +1,78 @@
+
 $global-width: 1920px;
 $grid-margin-gutters: 30px;
+$grid-columns: 12;
 
-$md: 720px;
-$lg: 1200px;
-$xlg: 1500px;
+$grid-md: 720px;
+$grid-lg: 1200px;
+$grid-xlg: 1500px;
+
+$breakpoints: (
+    md: 721px,
+    lg: 1201px,
+    xlg: 1501px,
+    xxlg: 19201px,
+);
+
+
+
+.zdcontainer {
+    max-width: $global-width;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .zdgrid {
     display: flex;
     flex-wrap: wrap;
 
-    &--x {
-        margin-left: -$grid-margin-gutters / 2;
-        margin-right: -$grid-margin-gutters / 2;
-        .zdcell {
-            margin-left: $grid-margin-gutters / 2;
-            margin-right: $grid-margin-gutters / 2;
-            @media (min-width: $lg) {
-                &.lg-6 {
-                    width: calc(50% - 30px);
+    .zdcell {
+        flex-basis: 100%;
+
+        @each $breakpoint, $value in $breakpoints {
+            @media (min-width: $value) {
+                @for $i from 1 through $grid-columns {
+                    &.md-#{$i} {
+                        flex-basis: (100 / ($grid-columns / $i) ) * 1%;
+                    }
                 }
             }
+        }
+    }
+
+    &--x {
+        margin-left: calc(#{$grid-margin-gutters} / -2);
+        margin-right: calc(#{$grid-margin-gutters} / -2);
+        .zdcell {
+            margin-left: calc(#{$grid-margin-gutters} / 2);
+            margin-right: calc(#{$grid-margin-gutters} / 2);
+
+
+            @each $breakpoint, $value in $breakpoints {
+                @media (min-width: $value) {
+                    @for $i from 1 through $grid-columns {
+                        &.#{$breakpoint}-#{$i} {
+                            flex-basis: calc(((100 / (#{$grid-columns} / #{$i})) * 1%) - #{$grid-margin-gutters});
+                        }
+                    }
+                }
+            }
+
+            //@media (min-width: $grid-md) {
+            //    @for $i from 1 through $grid-columns {
+            //        &.md-#{$i} {
+            //            flex-basis: calc(((100 / (#{$grid-columns} / #{$i})) * 1%) - #{$grid-margin-gutters});
+            //        }
+            //    }
+            //}
+            //
+            //@media (min-width: $grid-lg) {
+            //    @for $i from 1 through $grid-columns {
+            //        &.lg-#{$i} {
+            //            flex-basis: calc(((100 / (#{$grid-columns} / #{$i})) * 1%) - #{$grid-margin-gutters});
+            //        }
+            //    }
+            //}
         }
     }
 
@@ -29,16 +82,6 @@ $xlg: 1500px;
 
     &--x-y {
 
-    }
-}
-
-.zdcell {
-    width: 100%;
-
-    @media (min-width: $lg) {
-        &.lg-6 {
-            width: 50%;
-        }
     }
 }
 

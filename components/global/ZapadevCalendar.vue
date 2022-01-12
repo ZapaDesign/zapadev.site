@@ -1,6 +1,6 @@
 <template>
     <div class="calendar__wrap">
-        <div class="zdgrid">
+        <div class="zdgrid zdgrid--x">
             <div class="zdcell lg-6">
                 <table class="table">
                     <thead>
