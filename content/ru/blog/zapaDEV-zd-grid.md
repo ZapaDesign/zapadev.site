@@ -8,7 +8,7 @@ createdAt: 2022-01-12
 
 ```scss
 $global-width: 1920px;
-$grid-margin-gutters: 30px;
+$grid-gutters: 30px;
 $grid-columns: 12;
 
 $breakpoints: (
@@ -45,18 +45,18 @@ $breakpoints: (
     }
 
     &--x {
-        margin-left: calc(#{$grid-margin-gutters} / -2);
-        margin-right: calc(#{$grid-margin-gutters} / -2);
+        margin-left: calc(#{$grid-gutters} / -2);
+        margin-right: calc(#{$grid-gutters} / -2);
         .zdcell {
-            margin-left: calc(#{$grid-margin-gutters} / 2);
-            margin-right: calc(#{$grid-margin-gutters} / 2);
+            margin-left: calc(#{$grid-gutters} / 2);
+            margin-right: calc(#{$grid-gutters} / 2);
 
 
             @each $breakpoint, $value in $breakpoints {
                 @media (min-width: $value) {
                     @for $i from 1 through $grid-columns {
                         &.#{$breakpoint}-#{$i} {
-                            flex-basis: calc(((100 / (#{$grid-columns} / #{$i})) * 1%) - #{$grid-margin-gutters});
+                            flex-basis: calc(((100 / (#{$grid-columns} / #{$i})) * 1%) - #{$grid-gutters});
                         }
                     }
                 }
@@ -72,6 +72,8 @@ $breakpoints: (
 
     }
 }
+
+
 ```
 
 ## Compoment
