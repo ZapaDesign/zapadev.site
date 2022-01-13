@@ -21,7 +21,7 @@
                     <tr v-for="week in calendar()">
                         <td v-for="(day, index) in week">
                             <div
-                                @click="toggleDayStatus"
+                                @click="toggleDayStatus()"
                                 class="cal__day"
                                 :class="{'selected' : day.markedDay}"
                             >
@@ -88,6 +88,7 @@ export default {
             let a = 0;
             days[week] = [];
             let dlast = new Date(this.year, this.month + 1, 0).getDate();
+
             for (let i = 1; i <= dlast; i++) {
                 if (new Date(this.year, this.month, i).getDay() != this.dFirstMonth) {
                     a = {index: i, markedDay: false};
@@ -99,11 +100,13 @@ export default {
                     days[week].push(a);
                 }
             }
+
             if (days[0].length > 0) {
                 for (let i = days[0].length; i < 7; i++) {
                     days[0].unshift('');
                 }
             }
+
             this.dayChange;
             return days;
         },
@@ -128,9 +131,9 @@ export default {
         toggleDayStatus: function () {
 
             this.day.markedDay = true;
-            return this.day.markedDay;
+
             // this.markedDays++;
-            // console.log(this.day.markedDay);
+            console.log(this.day.markedDay);
         }
 
     }

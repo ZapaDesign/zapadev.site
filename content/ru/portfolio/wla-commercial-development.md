@@ -21,9 +21,10 @@ tags:
 
 | №  | Title | Featured                                                                               | Description                                                                                                                |
 |----|-------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| 14 | NDA   | *Team Dev*, **ACF Pro (Flexible Content)**, AdobeXD to Custom Theme                          | ACF Pro, GravityForm, Foundation, Responsive Design, Pixel Perfect
 | 13 | NDA   | **ACF Pro (Flexible Content)**, AdobeXD to Custom Theme                          | ACF Pro, CPT UI, GravityForm, Foundation, Responsive Design, Pixel Perfect, Slick Slider, Max Mega Menu
 | 12 | NDA   | **WP Bakery**, **The Events Calendar PRO**, **GiveWP**, PSD to Custom Theme      | ACF Pro, CPT UI, GravityForm, *Custom Ajax Filter Posts/CPT + Load More*, *Gravity Form to CPT*, Foundation, Responsive Design, Pixel Perfect, Max Mega Menu
-| 11 | NDA   | **ACF Pro (Flexible Content)**, AdobeXD to Custom Theme                          | ACF Pro, Foundation, Responsive Design, Pixel Perfect                                                            |
+| 11 | NDA   | *Team Dev*, **ACF Pro (Flexible Content)**, AdobeXD to Custom Theme                          | ACF Pro, Foundation, Responsive Design, Pixel Perfect                                                            |
 | 10 | NDA   | **Woocommerce**, **ACF Pro (Flexible Content)**, AdobeXD to Custom Theme         | ACF Pro, CPT UI, GravityForm, *Woocommerce Hooks*, Foundation, Responsive Design, Pixel Perfect, Slick Slider                |
 | 09 | NDA   | **Elementor**, AdobeXD to Custom Theme                                           | ACF Pro, CPT UI, GravityForm, *Elementor Custom Widget*, Elementor Custom Skin, Foundation, Responsive Design, Pixel Perfect |
 | 08 | NDA   | **ACF Pro (Flexible Content)**, Figma to Custom Theme                            | CPT UI, GravityForm, Foundation, Responsive Design, Pixel Perfect, *Foundation Accordion*, *Foundation Tabs*, Slick Slider     |
@@ -40,15 +41,17 @@ tags:
 
 *Учебные проекты*
 
-| №  | Title | Featured                                                         | Description |
-|----|-------|------------------------------------------------------------------|-------------|
-| 00 | NDA   | **Divi Builder**                                                     |             |
-| 00 | NDA   | **Genesis**, ACF Pro, AdobeXD to Custom Theme                        |             |
-| 00 | NDA   | **Custom Gutenberg Block**, ACF Pro, AdobeXD to Custom Theme         |             |
-| 00 | NDA   | Functions, Advanced PHP, Shortcodes, Hooks,	AJAX                |             |
-| 00 | NDA   | **Genesis**, AdobeXD to Custom Theme                                 |             |
-| 00 | NDA   | PSD to Custom Theme, **Isotope**, FancyBox                           |             |
-| 00 | NDA   | **WP Bakery** (Visual Composer), PSD to Custom Theme, Slick Slider   |             |             
-| 00 | NDA   | ACF Pro, Slick Slider, Foundation Tabs, PSD to Custom Theme      |             |             
-| 00 | NDA   | ACF Pro, Gravity Form, Foundation, FancyBox, PSD to Custom Theme |             |
+| №  | Title | Featured                                                           | Description |
+|----|-------|--------------------------------------------------------------------|-------------|
+| 00 | NDA   | **WooCommerce** Custom Theme (WC Hooks, WC Classes), Custom WP Widget                     | Education             |
+| 00 | NDA   | **Elementor** Custom Theme, WP Custom Plugin (CPT, Custom Taxonomy, Elementor Widget)    | Education  |
+| 00 | NDA   | **Divi Builder** Custom Theme                                      | Education             |
+| 00 | NDA   | **Genesis**, ACF Pro, AdobeXD to Custom Theme                      | Education             |
+| 00 | NDA   | **Custom Gutenberg Block**, ACF Pro, AdobeXD to Custom Theme       | Education             |
+| 00 | NDA   | Functions, Advanced PHP, Shortcodes, Hooks, AJAX                   | Education             |
+| 00 | NDA   | **Genesis**, AdobeXD to Custom Theme, AJAX Load More + FancyBox    | Education Project  |
+| 00 | NDA   | PSD to Custom Theme, **Isotope**, FancyBox                         | Education Project  |
+| 00 | NDA   | **WP Bakery** (Visual Composer), PSD to Custom Theme, Slick Slider | Education Project  |        
+| 00 | NDA   | ACF Pro, Slick Slider, Foundation Tabs, PSD to Custom Theme        | Education Project  |          
+| 00 | NDA   | ACF Pro, Gravity Form, Foundation, FancyBox, PSD to Custom Theme   | Education Project  |
 

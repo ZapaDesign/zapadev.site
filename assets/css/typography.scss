@@ -88,7 +88,7 @@ input {
 .nuxt-content {
     word-break: break-word;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3 {
         color: var(--head-text-color);
         border-bottom: 1px solid var(--sub-text-color);
 
@@ -152,10 +152,10 @@ input {
         color: var(--accent-color);
         font-size: 24px;
         @media (min-width: 720px) {
-            font-size: 32px;
+            font-size: 36px;
         }
         @media (min-width: 1920px) {
-            font-size: vw(32);
+            font-size: vw(36);
         }
     }
 
@@ -163,20 +163,26 @@ input {
         color: var(--accent-color);
         font-size: 22px;
         @media (min-width: 720px) {
-            font-size: 28px;
+            font-size: 32px;
+            &:not(:first-child) {
+                margin-top: 96px;
+            }
         }
         @media (min-width: 1920px) {
-            font-size: vw(28);
+            font-size: vw(32);
+            &:not(:first-child) {
+                margin-top: vw(96px);
+            }
         }
     }
 
     h3 {
         font-size: 20px;
         @media (min-width: 720px) {
-            font-size: 24px;
+            font-size: 26px;
         }
         @media (min-width: 1920px) {
-            font-size: vw(24);
+            font-size: vw(26);
         }
     }
 

@@ -1,6 +1,6 @@
 ---
 title: 'zapaDEV - zdGrid'
-description: '| Custom Responsive Flex SASS(SCSS) Grid'
+description: '| Custom Responsive Flex SASS(SCSS) Mini Grid System'
 createdAt: 2022-01-12
 ---
 
@@ -12,6 +12,13 @@ createdAt: 2022-01-12
 ## Code
 
 ```scss
+/*
+* Title: zapaDEV Grid
+* Description: Responsive Flex SASS(SCSS) Mini Grid System (Grid, Gutters, ...)
+* Author: zapaDEV
+* Version: 0.01a
+*/
+
 .zdcontainer {
     max-width: $global-width;
     margin-left: auto;

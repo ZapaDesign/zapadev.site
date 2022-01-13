@@ -17,7 +17,7 @@ createdAt: 2022-01-13
 text-decoration: text-decoration-line || text-decoration-color || text-decoration-style || text-decoration-thickness
 ```
 
-###### text-decoration-line
+#### text-decoration-line
 Тип линии подчеркивания
 ```scss
 text-decoration-line: underline; // подчёркивание;
@@ -28,19 +28,19 @@ text-decoration-line: underline line-through; // подчёркивание + з
 text-decoration-line: none; //  убирает вышеперечисленные эффекты;
 ```
 
-###### text-decoration-color
+#### text-decoration-color
 Цвет линии подчеркивания
 ```css
 text-decoration-color: ;
 ```
 
-###### text-underline-offset
+#### text-underline-offset
 Растояние до линии подчеркивания
 ```css
 text-underline-offset: ;
 ```
 
-###### text-decoration-thickness
+#### text-decoration-thickness
 Толщина линии подчеркивания
 ```css
 text-decoration-thickness: ;
@@ -182,7 +182,7 @@ E::before
 E::after
 ```
 
-## CSS Cheat Sheet
+## Image CSS Cheat Sheet
 
 ![](/blog/CSS-CHEAT-SHEET-p1-2019-update.png)
 ![](/blog/CSS-CHEAT-SHEET-p2-2019-update.png)

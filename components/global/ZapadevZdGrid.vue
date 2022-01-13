@@ -1,5 +1,6 @@
 <template>
     <div class="zdcontainer">
+        <h4>No Gutters</h4>
         <div class="zdgrid">
             <div class="zdcell lg-3">lg-3</div>
             <div class="zdcell lg-3">lg-3</div>
@@ -8,7 +9,7 @@
         </div>
         <br>
 
-        <p>zdgrid--x-y</p>
+        <h4>Gutters (.zdgrid--x-y)</h4>
         <div class="zdgrid zdgrid--x-y">
             <div class="zdcell lg-1">lg-1</div>
             <div class="zdcell lg-1">lg-1</div>
