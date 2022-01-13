@@ -12,49 +12,41 @@ createdAt: 2022-01-12
 ## Code
 
 ```scss
-$global-width: 1920px;
-$grid-gutters: 20px;
-$grid-columns: 12;
-
-$breakpoints: (
-    md: 721px,
-    lg: 1201px,
-    xlg: 1501px,
-    xxlg: 19201px,
-);
-
-
-
 .zdcontainer {
     max-width: $global-width;
     margin-left: auto;
+    padding-left: $grid-gutters / 2;
+    padding-right: $grid-gutters / 2;
 }
 
 .zdgrid {
     display: flex;
     flex-wrap: wrap;
+}
 
-    .zdcell {
-        flex-basis: 100%;
-        box-sizing: border-box;
+.zdcell {
+    flex-basis: 100%;
+    box-sizing: border-box;
 
-        @each $breakpoint, $value in $breakpoints {
-            @media (min-width: $value) {
-                @for $i from 1 through $grid-columns {
-                    &.#{$breakpoint}-#{$i} {
-                        flex-basis: (100 / ($grid-columns / $i) ) * 1%;
-                    }
+    @each $breakpoint, $value in $breakpoints {
+        @media (min-width: $value) {
+            @for $i from 1 through $grid-columns {
+                &.#{$breakpoint}-#{$i} {
+                    flex-basis: (100 / ($grid-columns / $i) ) * 1%;
                 }
             }
         }
     }
+}
 
+
+.zdgrid {
     &--x {
-        margin-left: calc(#{$grid-gutters} / -2);
-        margin-right: calc(#{$grid-gutters} / -2);
+        margin-left: $grid-gutters / -2;
+        margin-right: $grid-gutters / -2;
         .zdcell {
-            margin-left: calc(#{$grid-gutters} / 2);
-            margin-right: calc(#{$grid-gutters} / 2);
+            margin-left: $grid-gutters / 2;
+            margin-right: $grid-gutters / 2;
 
             @each $breakpoint, $value in $breakpoints {
                 @media (min-width: $value) {
@@ -69,11 +61,11 @@ $breakpoints: (
     }
 
     &--y {
-        margin-top: calc(#{$grid-gutters} / -2);
-        margin-bottom: calc(#{$grid-gutters} / -2);
+        margin-top: $grid-gutters / -2;
+        margin-bottom: $grid-gutters / -2;
         .zdcell {
-            margin-top: calc(#{$grid-gutters} / 2);
-            margin-bottom: calc(#{$grid-gutters} / 2);
+            margin-top: $grid-gutters / 2;
+            margin-bottom: $grid-gutters / 2;
 
 
             @each $breakpoint, $value in $breakpoints {
@@ -89,9 +81,9 @@ $breakpoints: (
     }
 
     &--x-y {
-        margin: calc(#{$grid-gutters} / -2);
+        margin: $grid-gutters / -2;
         .zdcell {
-            margin: calc(#{$grid-gutters} / 2);
+            margin: $grid-gutters / 2;
 
             @each $breakpoint, $value in $breakpoints {
                 @media (min-width: $value) {

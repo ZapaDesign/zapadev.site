@@ -14,6 +14,8 @@ $breakpoints: (
 .zdcontainer {
     max-width: $global-width;
     margin-left: auto;
+    padding-left: $grid-gutters / 2;
+    padding-right: $grid-gutters / 2;
 }
 
 .zdgrid {
@@ -39,11 +41,11 @@ $breakpoints: (
 
 .zdgrid {
     &--x {
-        margin-left: calc(#{$grid-gutters} / -2);
-        margin-right: calc(#{$grid-gutters} / -2);
+        margin-left: $grid-gutters / -2;
+        margin-right: $grid-gutters / -2;
         .zdcell {
-            margin-left: calc(#{$grid-gutters} / 2);
-            margin-right: calc(#{$grid-gutters} / 2);
+            margin-left: $grid-gutters / 2;
+            margin-right: $grid-gutters / 2;
 
             @each $breakpoint, $value in $breakpoints {
                 @media (min-width: $value) {
@@ -58,11 +60,11 @@ $breakpoints: (
     }
 
     &--y {
-        margin-top: calc(#{$grid-gutters} / -2);
-        margin-bottom: calc(#{$grid-gutters} / -2);
+        margin-top: $grid-gutters / -2;
+        margin-bottom: $grid-gutters / -2;
         .zdcell {
-            margin-top: calc(#{$grid-gutters} / 2);
-            margin-bottom: calc(#{$grid-gutters} / 2);
+            margin-top: $grid-gutters / 2;
+            margin-bottom: $grid-gutters / 2;
 
 
             @each $breakpoint, $value in $breakpoints {
@@ -78,9 +80,9 @@ $breakpoints: (
     }
 
     &--x-y {
-        margin: calc(#{$grid-gutters} / -2);
+        margin: $grid-gutters / -2;
         .zdcell {
-            margin: calc(#{$grid-gutters} / 2);
+            margin: $grid-gutters / 2;
 
             @each $breakpoint, $value in $breakpoints {
                 @media (min-width: $value) {

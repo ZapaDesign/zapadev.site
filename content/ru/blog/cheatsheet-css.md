@@ -7,15 +7,26 @@ createdAt: 2022-01-13
 ## Links
 - [CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp)
 
-To exclude some image from lazyload add data-no-lazy="1" attribute. Or class="skip-lazy"
-
 ## zapaDEV
+
+> To exclude some image from lazyload add data-no-lazy="1" attribute. Or class="skip-lazy"
+
 ### Стилизация подчеркивания
+
 ```css
 text-decoration: underline;
-text-underline-offset: ; // растояние до линии подчеркивания
-text-decoration-color: ;  // 
-text-decoration-thickness: // толщина линии подчеркивания
+```
+Растояние до линии подчеркивания
+```css
+text-underline-offset: ;
+```
+Цвет линии подчеркивания
+```css
+text-decoration-color: ;
+```
+Толщина линии подчеркивания
+```css
+text-decoration-thickness: ;
 ```
 
 ### Пропорции
