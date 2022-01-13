@@ -26,7 +26,6 @@
                                 :class="{'selected' : day.markedDay}"
                             >
                                 {{ day.index }}
-                                {{day.markedDay}}
                             </div>
                         </td>
                     </tr>
@@ -148,6 +147,7 @@ table td {
 .cal {
     &__day {
         padding: 20px;
+        cursor: pointer;
         &.selected {
             background-color: var(--accent-color);
             //color: var(--accent-color);

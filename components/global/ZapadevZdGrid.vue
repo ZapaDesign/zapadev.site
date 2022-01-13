@@ -13,6 +13,16 @@
             <div class="zdcell lg-1">lg-1</div>
             <div class="zdcell lg-1">lg-1</div>
             <div class="zdcell lg-1">lg-1</div>
+            <div class="zdcell lg-6">lg-6</div>
+            <div class="zdcell lg-1">lg-1</div>
+            <div class="zdcell lg-1">lg-1</div>
+            <div class="zdcell lg-1">lg-1</div>
+        </div>
+        <br>
+        <div class="zdgrid zdgrid--x-y">
+            <div class="zdcell lg-1">lg-1</div>
+            <div class="zdcell lg-1">lg-1</div>
+            <div class="zdcell lg-1">lg-1</div>
             <div class="zdcell lg-1">lg-1</div>
             <div class="zdcell lg-1">lg-1</div>
             <div class="zdcell lg-1">lg-1</div>
@@ -50,7 +60,10 @@
             <div class="zdcell lg-6">lg-6</div>
             <div class="zdcell lg-6">lg-6</div>
         </div>
-
+        <br>
+        <div class="zdgrid zdgrid--x-y">
+            <div class="zdcell lg-12">lg-12</div>
+        </div>
 
     </div>
 </template>
@@ -63,11 +76,18 @@ export default {
 
 <style lang="scss" scoped>
 
+.zdgrid {
+    &--x-y {
+        .zdcell {
+            border-radius: 5px;
+        }
+    }
+}
+
 
 .zdcell {
     background-color: var(--main-color);
     padding: 20px;
-    border-radius: 5px;
 
     &:nth-child(even) {
         background-color: var(--accent-color);
