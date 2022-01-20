@@ -275,6 +275,7 @@ foreach ($course as $lesson) {
 
 Трейт:
 
+```php
 <?php 
 trait IteratorTrait
 {
