@@ -326,21 +326,21 @@ input {
         }
     }
 
-    p, ul, blockquote {
-        column-width: 800px;
-    }
-    .full p,
-    .full ul,
-    .full blockquote {
-        column-width: unset;
-    }
-
-    ul {
-        column-width: 600px;
-    }
-    .full ul {
-        column-width: unset;
-    }
+    //p, ul, blockquote {
+    //    column-width: 800px;
+    //}
+    //.full p,
+    //.full ul,
+    //.full blockquote {
+    //    column-width: unset;
+    //}
+    //
+    //ul {
+    //    column-width: 600px;
+    //}
+    //.full ul {
+    //    column-width: unset;
+    //}
 
     pre {
         margin-bottom: 16px;
