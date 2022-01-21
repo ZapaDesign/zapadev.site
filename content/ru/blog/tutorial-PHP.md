@@ -42,6 +42,8 @@ HERE; // После, обязательны перевод строки или
 ### Приведения типов
 
 ## ОПЕРАТОРЫ
+- [php.net - Операторы](https://www.php.net/manual/ru/language.operators.php)
+
 ```php
 `$a + $b`, `$a - $b`, `$a * $b`, `$a / $b`  
 `$a % $b`  
