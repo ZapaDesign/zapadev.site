@@ -8,8 +8,8 @@ date: 202-01-26
 What happens when...
 ====================
 
-This repository is an attempt *([c] попытка)* to answer the age-old *([п] очень давний)*
-interview question "What happens when you type *([г] напечатать)* google.com into your browser's address box and press
+This repository is an attempt *(попытка)* to answer the age-old *(очень давний)*
+interview question "What happens when you type *(напечатать)* google.com into your browser's address box and press
 enter?"
 
 Except instead of the usual story, we're going to try to answer this question
