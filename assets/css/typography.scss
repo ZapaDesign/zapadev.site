@@ -124,17 +124,37 @@ input {
         position: relative;
         font-weight: 700;
         margin-bottom: 16px;
-        margin-top: 48px;
         @media (min-width: 1920px) {
             margin-bottom: vw(16);
             margin-top: vw(48);
         }
+
+        &:not(:first-child) {
+            margin-top: 56px;
+            @media (min-width: 720px) {
+                margin-top: 90px;
+            }
+            @media (min-width: 1920px) {
+                margin-top: vw(90);
+            }
+        }
     }
 
     h5, h6 {
+        margin-top: 48px;
         margin-bottom: 12px;
         @media (min-width: 1920px) {
             margin-bottom: vw(12);
+        }
+
+        &:not(:first-child) {
+            margin-top: 48px;
+            @media (min-width: 720px) {
+                margin-top: 60px;
+            }
+            @media (min-width: 1920px) {
+                margin-top: vw(60);
+            }
         }
     }
 
@@ -161,22 +181,42 @@ input {
 
     h2 {
         color: var(--accent-color);
-        font-size: 22px;
+        font-size: 26px;
         @media (min-width: 720px) {
-            font-size: 32px;
+            font-size: 40px;
             &:not(:first-child) {
                 margin-top: 96px;
             }
         }
         @media (min-width: 1920px) {
-            font-size: vw(32);
+            font-size: vw(40);
             &:not(:first-child) {
                 margin-top: vw(96px);
             }
         }
+
+        &::before {
+            content: 'H2: ';
+            color: var(--gray);
+        }
     }
 
     h3 {
+        font-size: 22px;
+        @media (min-width: 720px) {
+            font-size: 32px;
+        }
+        @media (min-width: 1920px) {
+            font-size: vw(32);
+        }
+
+        &::before {
+            content: 'H3: ';
+            color: var(--gray);
+        }
+    }
+
+    h4 {
         font-size: 20px;
         @media (min-width: 720px) {
             font-size: 26px;
@@ -184,35 +224,40 @@ input {
         @media (min-width: 1920px) {
             font-size: vw(26);
         }
+
+        &::before {
+            content: 'H4: ';
+            color: var(--gray);
+        }
     }
 
-    h4 {
+    h5 {
         font-size: 18px;
+        @media (min-width: 720px) {
+            font-size: 24px;
+        }
+        @media (min-width: 1920px) {
+            font-size: vw(24);
+        }
+
+        &::before {
+            content: 'H5: ';
+            color: var(--gray);
+        }
+    }
+
+    h6 {
+        font-size: 17px;
         @media (min-width: 720px) {
             font-size: 22px;
         }
         @media (min-width: 1920px) {
             font-size: vw(22);
         }
-    }
 
-    h5 {
-        font-size: 17px;
-        @media (min-width: 720px) {
-            font-size: 20px;
-        }
-        @media (min-width: 1920px) {
-            font-size: vw(20);
-        }
-    }
-
-    h6 {
-        font-size: 16px;
-        @media (min-width: 720px) {
-            font-size: 18px;
-        }
-        @media (min-width: 1920px) {
-            font-size: vw(18);
+        &::before {
+            content: 'H6: ';
+            color: var(--gray);
         }
     }
 
