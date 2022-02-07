@@ -15,7 +15,14 @@ createdAt: 2021-12-24
 - [Docker Cheat Sheep - PDF](https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf)
 - [wsargent/docker-cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
 
-**Want to improve this cheat sheet?  See the [Contributing](#contributing) section!**
+## zapaDEV Docker Cheat Sheet
+
+```bash
+docker ps # показать запущеные контейнеры
+docker stop 'container_name' || 'container id' # остановить контейнер "container_name" или "container_id"
+```
+
+
 
 ## Table of Contents
 
