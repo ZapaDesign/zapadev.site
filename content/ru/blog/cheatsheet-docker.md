@@ -10,21 +10,362 @@ createdAt: 2021-12-24
 </div>
 
 
-### Links
+Links
+--------------------------
 
 - [Docker Cheat Sheep - PDF](https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf)
 - [wsargent/docker-cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
 
-## zapaDEV Docker Cheat Sheet
+zapaDEV Docker Cheat Sheet
+--------------------------
 
 ```bash
-docker ps # показать запущеные контейнеры
+docker run
+
+docker ps # показать запущенные контейнеры
+docker ps -a || --all # 
+
 docker stop 'container_name' || 'container id' # остановить контейнер "container_name" или "container_id"
+```
+```bash
+docker-compose up                            # запуск контейнеров
+docker-compose up -d || --detach             # запуск контейнеров в фоновом режиме
+docker-compose down                          # команда позволяет останавливать и удалять контейнеры и другие ресурсы, созданные командой docker-compose up
+docker-compose exec [service name] [command] # команда позволяет выполнить команду в выполняющемся контейнере
+docker-compose logs -f [service name]        # выводит журналы сервисов
+docker-compose ps                            # вывести список контейнеров
+docker-compose images                        # вывести список образов
+```
+
+
+Docker-compose Samples
+--------------------------
+### PHP
+- [Docker-compose настройка для сайта NGINX + MYSQL + PHP-FPM](https://miac.volmed.org.ru/wiki/index.php/Docker-compose_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%B4%D0%BB%D1%8F_%D1%81%D0%B0%D0%B9%D1%82%D0%B0_NGINX_%2B_MYSQL_%2B_PHP-FPM)
+- [Готовим локальную среду Docker для разработки на PHPГотовим локальную среду Docker для разработки на PHP](https://phptoday.ru/post/gotovim-lokalnuyu-sredu-docker-dlya-razrabotki-na-php)
+- [Настройка локальной среды разработки с помощью Docker Compose](https://justcodeit.ru/nastrojka-lokalnoj-sredy-razrabotki-s-pomoshhyu-docker-compose/)
+- [Локальная среда для PHP разработки с помощью Docker](https://tretyakov.net/post/lokalnaya-sreda-dlya-php-razrabotki-s-pomoshhyu-docker/)
+
+__Структура проектв__
+```
+[www]
+  - [hello.dev]
+    - index.php
+[mysql]
+[logs]
+[hosts]
+  - hello-dev.conf
+[images]
+  - [php]
+    - dockerfile
+    - php.ini
+docker-compose.yml
+```
+
+__images/php__
+```bash
+# Для начала указываем исходный образ, он будет использован как основа
+FROM php:7.1-fpm
+# Необязательная строка с указанием автора образа
+MAINTAINER PHPtoday.ru <info@phptoday.ru>
+
+# RUN выполняет идущую за ней команду в контексте нашего образа.
+# В данном случае мы установим некоторые зависимости и модули PHP.
+# Для установки модулей используем команду docker-php-ext-install.
+# На каждый RUN создается новый слой в образе, поэтому рекомендуется объединять команды.
+RUN apt-get update && apt-get install -y \
+        curl \
+        wget \
+        git \
+        libfreetype6-dev \
+        libjpeg62-turbo-dev \
+        libmcrypt-dev \
+        libpng-dev \
+    && docker-php-ext-install -j$(nproc) iconv mcrypt mbstring mysqli pdo_mysql zip \
+    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+    && docker-php-ext-install -j$(nproc) gd
+    
+# Куда же без composer'а.
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Добавим свой php.ini, можем в нем определять свои значения конфига
+ADD php.ini /usr/local/etc/php/conf.d/40-custom.ini
+
+# Указываем рабочую директорию для PHP
+WORKDIR /var/www
+
+# Запускаем контейнер
+# Из документации: The main purpose of a CMD is to provide defaults for an executing container. These defaults can include an executable, 
+# or they can omit the executable, in which case you must specify an ENTRYPOINT instruction as well.
+CMD ["php-fpm"]
+```
+Также в этой папке создадим пока пустой php.ini, чтобы не было ошибки при сборке образа. Можете добавить в него нужные вам настройки.
+
+__docker-compose.yml__
+```bash
+# Версия docker-compose
+version: '2'
+# Список наших сервисов (контейнеров)
+services:
+    nginx:
+    	# используем последний стабильный образ nginx
+        image: nginx:latest
+        # маршрутизируем порты
+        ports:
+            - "80:80"
+            - "443:443"
+        # монтируем директории, слева директории на основной машине, справа - куда они монтируются в контейнере
+        volumes:
+            - ./hosts:/etc/nginx/conf.d
+            - ./www:/var/www
+            - ./logs:/var/log/nginx
+        # nginx должен общаться с php контейнером
+        links:
+            - php
+    php:
+        # у нас свой образ для PHP, указываем путь к нему и говорим что его надо собрать
+        build: ./images/php
+        # этот образ будет общаться с mysql
+        links:
+            - mysql
+        # монтируем директорию с проектами
+        volumes:
+            - ./www:/var/www
+    mysql:
+        image: mysql:8
+        ports:
+            - "3306:3306"
+        volumes:
+            - ./mysql:/var/lib/mysql
+        # задаем пароль для root пользователя
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
+```
+
+__hello-dev.conf__
+```
+server {
+    index index.php;
+    server_name hello.dev;
+    error_log  /var/log/nginx/error.log;
+    access_log /var/log/nginx/access.log;
+    root /var/www/hello.dev;
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass php:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+    }
+}
+```
+
+### Wordpress
+- [Мультиконтейнерное приложение и Docker Compose](https://doka.guide/tools/docker-compose/#kratko)
+- [Установка WordPress в виде контейнера Docker в Linux](https://netpoint-dc.com/blog/ustanovka-wordpress-v-vide-kontainera-docker-v-linux/)
+- [DockerHub - Wordpress](https://hub.docker.com/_/wordpress)
+- [Docker Compose + WordPress. Как среда для разработки плагинов и тем](https://azzrael.ru/docker-compose-wordpress-php-mysql)
+- [VIDEO - Docker Compose + Wordpress. Разворачиваем контейнер для разработки плагинов и тем.](https://www.youtube.com/watch?v=38STqYmwRFE&t=1s)
+- [CI/CD проекта на WordPress](https://serveradmin.ru/ci-cd-proekta-na-wordpress/)
+-
+
+```bash
+version: '3'
+ 
+# docker-compose up -d
+services:
+ 
+  # https://hub.docker.com/_/wordpress
+  wordpress:
+    image: wordpress:4.1
+    ports:
+      - 80:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: azzrael
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: wpdb
+    depends_on:
+      - db
+    volumes:
+      - ./dev/my_plugin:/var/www/html/wp-content/plugins/my_plugin
+      - ./html:/var/www/html
+ 
+  # https://hub.docker.com/_/mysql
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: wpdb
+      MYSQL_USER: azzrael
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: rootpswd
+    volumes:
+      - ./mysql:/var/lib/mysql
+ 
+  # https://hub.docker.com/_/phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - db
+    ports:
+      - 8081:80
 ```
 
 
 
-## Table of Contents
+
+
+
+
+
+
+### Python
+
+```bash
+# Файл docker-compose должен начинаться с тега версии.
+# Мы используем "3" так как это - самая свежая версия на момент написания этого кода.
+
+version: "3"
+
+# Следует учитывать, что docker-composes работает с сервисами.
+# 1 сервис = 1 контейнер.
+# Сервисом может быть клиент, сервер, сервер баз данных...
+# Раздел, в котором будут описаны сервисы, начинается с 'services'.
+
+services:
+
+  # Как уже было сказано, мы собираемся создать клиентское и серверное приложения.
+  # Это означает, что нам нужно два сервиса.
+  # Первый сервис (контейнер): сервер.
+  # Назвать его можно так, как нужно разработчику.
+  # Понятное название сервиса помогает определить его роль.
+  # Здесь мы, для именования соответствующего сервиса, используем ключевое слово 'server'.
+
+  server:
+ 
+    # Ключевое слово "build" позволяет задать
+    # путь к файлу Dockerfile, который нужно использовать для создания образа,
+    # который позволит запустить сервис.
+    # Здесь 'server/' соответствует пути к папке сервера,
+    # которая содержит соответствующий Dockerfile.
+
+    build: server/
+
+    # Команда, которую нужно запустить после создания образа.
+    # Следующая команда означает запуск "python ./server.py".
+
+    command: python ./server.py
+
+    # Вспомните о том, что в качестве порта в 'server/server.py' указан порт 1234.
+    # Если мы хотим обратиться к серверу с нашего компьютера (находясь за пределами контейнера),
+    # мы должны организовать перенаправление этого порта на порт компьютера.
+    # Сделать это нам поможет ключевое слово 'ports'.
+    # При его использовании применяется следующая конструкция: [порт компьютера]:[порт контейнера]
+    # В нашем случае нужно использовать порт компьютера 1234 и организовать его связь с портом
+    # 1234 контейнера (так как именно на этот порт сервер 
+    # ожидает поступления запросов).
+
+    ports:
+      - 1234:1234
+
+  # Второй сервис (контейнер): клиент.
+  # Этот сервис назван 'client'.
+
+  client:
+    # Здесь 'client/ соответствует пути к папке, которая содержит
+    # файл Dockerfile для клиентской части системы.
+
+    build: client/
+
+    # Команда, которую нужно запустить после создания образа.
+    # Следующая команда означает запуск "python ./client.py".
+ 
+    command: python ./client.py
+
+    # Ключевое слово 'network_mode' используется для описания типа сети.
+    # Тут мы указываем то, что контейнер может обращаться к 'localhost' компьютера.
+
+    network_mode: host
+
+    # Ключевое слово 'depends_on' позволяет указывать, должен ли сервис,
+    # прежде чем запуститься, ждать, когда будут готовы к работе другие сервисы.
+    # Нам нужно, чтобы сервис 'client' дождался бы готовности к работе сервиса 'server'.
+ 
+    depends_on:
+      - server
+```
+
+### MERN
+[https://doka.guide/tools/docker-compose](https://doka.guide/tools/docker-compose/#prilozhenie-na-steke-mern)
+
+MERN — это аббревиатура от MongoDB, Express, React, Node.js. С помощью Docker Compose можно легко реализовать фулстек-приложение. 
+MERN является одним из популярных решений. Оно объединяет веб-сервер, базу данных и фреймворки для бэкенда и фронтенда.
+
+Обычно структура папок MERN-проекта выглядит следующим образом:
+```mermaid
+.
+├── backend
+│   ├── Dockerfile
+│   ...
+├── compose.yaml
+├── frontend
+│   ├── ...
+│   └── Dockerfile
+└── README.md
+```
+```bash
+services:
+  frontend:
+    build: frontend
+    ports:
+      - 3000:3000
+    stdin_open: true
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    container_name: frontend
+    restart: always
+    networks:
+      - react-express
+    depends_on:
+      - backend
+
+  backend:
+    container_name: backend
+    restart: always
+    build: backend
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - mongo
+    networks:
+      - express-mongo
+      - react-express
+
+  mongo:
+    container_name: mongo
+    restart: always
+    image: mongo:4.2.0
+    volumes:
+      - ./data:/data/db
+    networks:
+      - express-mongo
+
+networks:
+  react-express:
+  express-mongo:
+
+```
+
+Docker Tutorial
+---------------
+- [wsargent/docker-cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
+
+### Table of Contents
 
 * [Why Docker](#why-docker)
 * [Prerequisites](#prerequisites)
@@ -44,7 +385,7 @@ docker stop 'container_name' || 'container id' # остановить конте
 * [Tips](#tips)
 * [Contributing](#contributing)
 
-## Why Docker
+### Why Docker
 
 "With Docker, developers can build any app in any language using any toolchain. “Dockerized” apps are completely portable and can run anywhere - colleagues’ OS X and Windows laptops, QA servers running Ubuntu in the cloud, and production data center VMs running Red Hat.
 
@@ -52,31 +393,31 @@ Developers can get going quickly by starting with one of the 13,000+ apps availa
 
 Docker helps developers build and ship higher-quality applications, faster." -- [What is Docker](https://www.docker.com/what-docker#copy1)
 
-## Prerequisites
+### Prerequisites
 
 I use [Oh My Zsh](https://github.com/ohmyzsh/oh-my-zsh) with the [Docker plugin](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#docker) for autocompletion of docker commands. YMMV.
 
-### Linux
+#### Linux
 
 The 3.10.x kernel is [the minimum requirement](https://docs.docker.com/engine/installation/binaries/#check-kernel-dependencies) for Docker.
 
-### MacOS
+#### MacOS
 
 10.8 “Mountain Lion” or newer is required.
 
-### Windows 10
+#### Windows 10
 
 Hyper-V must be enabled in BIOS
 
 VT-D must also be enabled if available (Intel Processors).
 
-### Windows Server
+#### Windows Server
 
 Windows Server 2016 is the minimum version required to install docker and docker-compose. Limitations exist on this version, such as multiple virtual networks and Linux containers. Windows Server 2019 and later are recommended.
 
-## Installation
+### Installation
 
-### Linux
+#### Linux
 
 Run this quick and easy install script provided by Docker:
 
@@ -104,7 +445,7 @@ That's it, you have a running Docker container.
 
 If you are a complete Docker newbie, you should probably follow the [series of tutorials](https://docs.docker.com/engine/getstarted/) now.
 
-### Windows 10
+#### Windows 10
 
 Instructions to install Docker Desktop for Windows can be found [here](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
@@ -124,7 +465,7 @@ To switch between Windows containers and Linux containers, right click the icon 
 
 Additionally, if you have WSL or WSL2 installed on your desktop, you might want to install the Linux Kernel for Windows. Instructions can be found [here](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/using-wsl2-in-a-docker-linux-container-on-windows-to-run-a/ba-p/1482133). This requires the Windows Subsystem for Linux feature. This will allow for containers to be accessed by WSL operating systems, as well as the efficiency gain from running WSL operating systems in docker. It is also preferred to use [Windows terminal](https://docs.microsoft.com/en-us/windows/terminal/get-started) for this.
 
-### Windows Server 2016 / 2019
+#### Windows Server 2016 / 2019
 
 Follow Microsoft's instructions that can be found [here](https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server#install-docker)
 
@@ -144,7 +485,7 @@ Windows Server 2016 is not able to run Linux images.
 
 Windows Server Build 2004 is capable of running both linux and windows containers simultaneously through Hyper-V isolation. When running containers, use the ```--isolation=hyperv``` command, which will isolate the container using a seperate kernel instance.
 
-### Check Version
+#### Check Version
 
 It is very important that you always know the current version of Docker you are currently running on at any point in time. This is very helpful because you get to know what features are compatible with what you have running. This is also important because you know what containers to run from the docker store when you are trying to get template containers. That said let see how to know which version of docker we have running currently.
 
@@ -164,11 +505,11 @@ $ docker version --format '{{json .}}'
 {"Client":{"Version":"1.8.0","ApiVersion":"1.20","GitCommit":"f5bae0a","GoVersion":"go1.4.2","Os":"linux","Arch":"am"}
 ```
 
-## Containers
+### Containers
 
 [Your basic isolated Docker process](http://etherealmind.com/basics-docker-containers-hypervisors-coreos/). Containers are to Virtual Machines as threads are to processes. Or you can think of them as chroots on steroids.
 
-### Lifecycle
+#### Lifecycle
 
 * [`docker create`](https://docs.docker.com/engine/reference/commandline/create) creates a container but does not start it.
 * [`docker rename`](https://docs.docker.com/engine/reference/commandline/rename/) allows the container to be renamed.
@@ -188,7 +529,7 @@ There's also a [logging driver](https://docs.docker.com/engine/admin/logging/ove
 
 Another useful option is `docker run --name yourname docker_image` because when you specify the `--name` inside the run command this will allow you to start and stop a container by calling it with the name the you specified when you created it.
 
-### Starting and Stopping
+#### Starting and Stopping
 
 * [`docker start`](https://docs.docker.com/engine/reference/commandline/start) starts a container so it is running.
 * [`docker stop`](https://docs.docker.com/engine/reference/commandline/stop) stops a running container.
@@ -206,7 +547,7 @@ If you want to expose container ports through the host, see the [exposing ports]
 
 Restart policies on crashed docker instances are [covered here](http://container42.com/2014/09/30/docker-restart-policies/).
 
-#### CPU Constraints
+##### CPU Constraints
 
 You can limit CPU, either using a percentage of all CPUs, or by using specific cores.
 
@@ -224,7 +565,7 @@ docker run -it --cpuset-cpus=0,4,6 agileek/cpuset-test
 
 Note that Docker can still **see** all of the CPUs inside the container -- it just isn't using all of them.  See <https://github.com/docker/docker/issues/20770> for more details.
 
-#### Memory Constraints
+##### Memory Constraints
 
 You can also set [memory constraints](https://docs.docker.com/engine/reference/run/#/user-memory-constraints) on Docker:
 
@@ -232,7 +573,7 @@ You can also set [memory constraints](https://docs.docker.com/engine/reference/r
 docker run -it -m 300M ubuntu:14.04 /bin/bash
 ```
 
-#### Capabilities
+##### Capabilities
 
 Linux capabilities can be set by using `cap-add` and `cap-drop`.  See <https://docs.docker.com/engine/reference/run/#/runtime-privilege-and-linux-capabilities> for details.  This should be used for greater security.
 
@@ -257,7 +598,7 @@ docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb debian bash
 More info about privileged containers [here](
 https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities).
 
-### Info
+#### Info
 
 * [`docker ps`](https://docs.docker.com/engine/reference/commandline/ps) shows running containers.
 * [`docker logs`](https://docs.docker.com/engine/reference/commandline/logs) gets logs from container.  (You can use a custom log driver, but logs is only available for `json-file` and `journald` in 1.10).
@@ -272,22 +613,22 @@ https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabi
 
 `docker stats --all` shows a list of all containers, default shows just running.
 
-### Import / Export
+#### Import / Export
 
 * [`docker cp`](https://docs.docker.com/engine/reference/commandline/cp) copies files or folders between a container and the local filesystem.
 * [`docker export`](https://docs.docker.com/engine/reference/commandline/export) turns container filesystem into tarball archive stream to STDOUT.
 
-### Executing Commands
+#### Executing Commands
 
 * [`docker exec`](https://docs.docker.com/engine/reference/commandline/exec) to execute a command in container.
 
 To enter a running container, attach a new shell process to a running container called foo, use: `docker exec -it foo /bin/bash`.
 
-## Images
+### Images
 
 Images are just [templates for docker containers](https://docs.docker.com/engine/understanding-docker/#how-does-a-docker-image-work).
 
-### Lifecycle
+#### Lifecycle
 
 * [`docker images`](https://docs.docker.com/engine/reference/commandline/images) shows all images.
 * [`docker import`](https://docs.docker.com/engine/reference/commandline/import) creates an image from a tarball.
@@ -297,16 +638,16 @@ Images are just [templates for docker containers](https://docs.docker.com/engine
 * [`docker load`](https://docs.docker.com/engine/reference/commandline/load) loads an image from a tar archive as STDIN, including images and tags (as of 0.7).
 * [`docker save`](https://docs.docker.com/engine/reference/commandline/save) saves an image to a tar archive stream to STDOUT with all parent layers, tags & versions (as of 0.7).
 
-### Info
+#### Info
 
 * [`docker history`](https://docs.docker.com/engine/reference/commandline/history) shows history of image.
 * [`docker tag`](https://docs.docker.com/engine/reference/commandline/tag) tags an image to a name (local or registry).
 
-### Cleaning up
+#### Cleaning up
 
 While you can use the `docker rmi` command to remove specific images, there's a tool called [docker-gc](https://github.com/spotify/docker-gc) that will safely clean up images that are no longer used by any containers. As of docker 1.13, `docker image prune` is also available for removing unused images. See [Prune](#prune).
 
-### Load/Save image
+#### Load/Save image
 
 Load an image from file:
 
@@ -320,7 +661,7 @@ Save an existing image:
 docker save my_image:my_tag | gzip > my_image.tar.gz
 ```
 
-### Import/Export container
+#### Import/Export container
 
 Import a container as an image from file:
 
@@ -334,26 +675,26 @@ Export an existing container:
 docker export my_container | gzip > my_container.tar.gz
 ```
 
-### Difference between loading a saved image and importing an exported container as an image
+#### Difference between loading a saved image and importing an exported container as an image
 
 Loading an image using the `load` command creates a new image including its history.  
 Importing a container as an image using the `import` command creates a new image excluding the history which results in a smaller image size compared to loading an image.
 
-## Networks
+### Networks
 
 Docker has a [networks](https://docs.docker.com/engine/userguide/networking/) feature. Docker automatically creates 3 network interfaces when you install it (bridge, host none). A new container is launched into the bridge network by default. To enable communication between multiple containers, you can create a new network and launch containers in it. This enables containers to communicate to each other while being isolated from containers that are not connected to the network. Furthermore, it allows to map container names to their IP addresses. See [working with networks](https://docs.docker.com/engine/userguide/networking/work-with-networks/) for more details.
 
-### Lifecycle
+#### Lifecycle
 
 * [`docker network create`](https://docs.docker.com/engine/reference/commandline/network_create/) NAME Create a new network (default type: bridge).
 * [`docker network rm`](https://docs.docker.com/engine/reference/commandline/network_rm/) NAME Remove one or more networks by name or identifier. No containers can be connected to the network when deleting it.
 
-### Info
+#### Info
 
 * [`docker network ls`](https://docs.docker.com/engine/reference/commandline/network_ls/) List networks
 * [`docker network inspect`](https://docs.docker.com/engine/reference/commandline/network_inspect/) NAME Display detailed information on one or more networks.
 
-### Connection
+#### Connection
 
 * [`docker network connect`](https://docs.docker.com/engine/reference/commandline/network_connect/) NETWORK CONTAINER Connect a container to a network
 * [`docker network disconnect`](https://docs.docker.com/engine/reference/commandline/network_disconnect/) NETWORK CONTAINER Disconnect a container from a network
@@ -371,7 +712,7 @@ $ docker run --rm -it --net iptastic --ip 203.0.113.2 nginx
 $ curl 203.0.113.2
 ```
 
-## Registry & Repository
+### Registry & Repository
 
 A repository is a *hosted* collection of tagged images that together create the file system for a container.
 
@@ -385,13 +726,13 @@ Docker.com hosts its own [index](https://hub.docker.com/) to a central registry 
 * [`docker pull`](https://docs.docker.com/engine/reference/commandline/pull) pulls an image from registry to local machine.
 * [`docker push`](https://docs.docker.com/engine/reference/commandline/push) pushes an image to the registry from local machine.
 
-### Run local registry
+#### Run local registry
 
 You can run a local registry by using the [docker distribution](https://github.com/docker/distribution) project and looking at the [local deploy](https://github.com/docker/docker.github.io/blob/master/registry/deploying.md) instructions.
 
 Also see the [mailing list](https://groups.google.com/a/dockerproject.org/forum/#!forum/distribution).
 
-## Dockerfile
+### Dockerfile
 
 [The configuration file](https://docs.docker.com/engine/reference/builder/). Sets up a Docker container when you run `docker build` on it. Vastly preferable to `docker commit`.
 
@@ -406,7 +747,7 @@ Here are some common text editors and their syntax highlighting modules you coul
 * [VS Code](https://github.com/Microsoft/vscode-docker)
 * Also see [Docker meets the IDE](https://domeide.github.io/)
 
-### Instructions
+#### Instructions
 
 * [.dockerignore](https://docs.docker.com/engine/reference/builder/#dockerignore-file)
 * [FROM](https://docs.docker.com/engine/reference/builder/#from) Sets the Base Image for subsequent instructions.
@@ -428,11 +769,11 @@ Here are some common text editors and their syntax highlighting modules you coul
 * [SHELL](https://docs.docker.com/engine/reference/builder/#shell) override default shell is used by docker to run commands.
 * [HEALTHCHECK](https://docs.docker.com/engine/reference/builder/#healthcheck) tells docker how to test a container to check that it is still working.
 
-### Tutorial
+#### Tutorial
 
 * [Flux7's Dockerfile Tutorial](https://www.flux7.com/tutorial/docker-tutorial-series-part-3-automation-is-the-word-using-dockerfile/)
 
-### Examples
+#### Examples
 
 * [Examples](https://docs.docker.com/engine/reference/builder/#dockerfile-examples)
 * [Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
@@ -441,11 +782,11 @@ Here are some common text editors and their syntax highlighting modules you coul
 * [Managing Container Configuration with Metadata](https://speakerdeck.com/garethr/managing-container-configuration-with-metadata)
 * [How to write excellent Dockerfiles](https://rock-it.pl/how-to-write-excellent-dockerfiles/)
 
-## Layers
+### Layers
 
 The versioned filesystem in Docker is based on layers. They're like [git commits or changesets for filesystems](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/).
 
-## Links
+### Links
 
 Links are how Docker containers talk to each other [through TCP/IP ports](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/). [Atlassian](https://blogs.atlassian.com/2013/11/docker-all-the-things-at-atlassian-automation-and-wiring/) show worked examples. You can also resolve [links by hostname](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/#/updating-the-etchosts-file).
 
@@ -478,16 +819,16 @@ To delete links, use `docker rm --link`.
 
 Generally, linking between docker services is a subset of "service discovery", a big problem if you're planning to use Docker at scale in production.  Please read [The Docker Ecosystem: Service Discovery and Distributed Configuration Stores](https://www.digitalocean.com/community/tutorials/the-docker-ecosystem-service-discovery-and-distributed-configuration-stores) for more info.
 
-## Volumes
+### Volumes
 
 Docker volumes are [free-floating filesystems](https://docs.docker.com/engine/tutorials/dockervolumes/). They don't have to be connected to a particular container. You can use volumes mounted from [data-only containers](https://medium.com/@ramangupta/why-docker-data-containers-are-good-589b3c6c749e) for portability. As of Docker 1.9.0, Docker has named volumes which replace data-only containers. Consider using named volumes to implement it rather than data containers.
 
-### Lifecycle
+#### Lifecycle
 
 * [`docker volume create`](https://docs.docker.com/engine/reference/commandline/volume_create/)
 * [`docker volume rm`](https://docs.docker.com/engine/reference/commandline/volume_rm/)
 
-### Info
+#### Info
 
 * [`docker volume ls`](https://docs.docker.com/engine/reference/commandline/volume_ls/)
 * [`docker volume inspect`](https://docs.docker.com/engine/reference/commandline/volume_inspect/)
@@ -512,7 +853,7 @@ You may also consider running data-only containers as described [here](http://co
 
 Be aware that you can [mount files as volumes](#volumes-can-be-files).
 
-## Exposing ports
+### Exposing ports
 
 Exposing incoming ports through the host container is [fiddly but doable](https://docs.docker.com/engine/reference/run/#expose-incoming-ports).
 
@@ -558,7 +899,7 @@ If you forget what you mapped the port to on the host container, use `docker por
 docker port CONTAINER $CONTAINERPORT
 ```
 
-## Best Practices
+### Best Practices
 
 This is where general Docker best practices and war stories go:
 
@@ -568,7 +909,7 @@ This is where general Docker best practices and war stories go:
 * [Building a Development Environment With Docker](https://tersesystems.com/2013/11/20/building-a-development-environment-with-docker/)
 * [Discourse in a Docker Container](https://samsaffron.com/archive/2013/11/07/discourse-in-a-docker-container)
 
-## Docker-Compose
+### Docker-Compose
 
 Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration. To learn more about all the features of Compose, see the [list of features](https://docs.docker.com/compose/overview/#features).
 
@@ -586,7 +927,7 @@ docker-compose stop
 
 You can bring everything down, removing the containers entirely, with the down command. Pass `--volumes` to also remove the data volume.
 
-## Security
+### Security
 
 This is where security tips about Docker go. The Docker [security](https://docs.docker.com/engine/security/security/) page goes into more detail.
 
@@ -596,7 +937,7 @@ Docker should not be your only defense. You should secure and harden it.
 
 For an understanding of what containers leave exposed, you should read [Understanding and Hardening Linux Containers](https://www.nccgroup.trust/globalassets/our-research/us/whitepapers/2016/april/ncc_group_understanding_hardening_linux_containers-1-1.pdf) by [Aaron Grattafiori](https://twitter.com/dyn___). This is a complete and comprehensive guide to the issues involved with containers, with a plethora of links and footnotes leading on to yet more useful content. The security tips following are useful if you've already hardened containers in the past, but are not a substitute for understanding.
 
-### Security Tips
+#### Security Tips
 
 For greatest security, you want to run Docker inside a virtual machine. This is straight from the Docker Security Team Lead -- [slides](http://www.slideshare.net/jpetazzo/linux-containers-lxc-docker-and-security) / [notes](http://www.projectatomic.io/blog/2014/08/is-it-safe-a-look-at-docker-and-security-from-linuxcon/). Then, run with AppArmor / seccomp / SELinux / grsec etc to [limit the container permissions](http://linux-audit.com/docker-security-best-practices-for-your-vessel-and-containers/). See the [Docker 1.10 security features](https://blog.docker.com/2016/02/docker-engine-1-10-security/) for more details.
 
@@ -655,32 +996,32 @@ RUN groupadd -r user && useradd -r -g user user
 USER user
 ```
 
-### User Namespaces
+#### User Namespaces
 
 There's also work on [user namespaces](https://s3hh.wordpress.com/2013/07/19/creating-and-using-containers-without-privilege/) -- it is in 1.10 but is not enabled by default.
 
 To enable user namespaces ("remap the userns") in Ubuntu 15.10, [follow the blog example](https://raesene.github.io/blog/2016/02/04/Docker-User-Namespaces/).
 
-### Security Videos
+#### Security Videos
 
 * [Using Docker Safely](https://youtu.be/04LOuMgNj9U)
 * [Securing your applications using Docker](https://youtu.be/KmxOXmPhZbk)
 * [Container security: Do containers actually contain?](https://youtu.be/a9lE9Urr6AQ)
 * [Linux Containers: Future or Fantasy?](https://www.youtube.com/watch?v=iN6QbszB1R8)
 
-### Security Roadmap
+#### Security Roadmap
 
 The Docker roadmap talks about [seccomp support](https://github.com/docker/docker/blob/master/ROADMAP.md#11-security).
 There is an AppArmor policy generator called [bane](https://github.com/jfrazelle/bane), and they're working on [security profiles](https://github.com/docker/docker/issues/17142).
 
-## Tips
+### Tips
 
 Sources:
 
 * [15 Docker Tips in 5 minutes](http://sssslide.com/speakerdeck.com/bmorearty/15-docker-tips-in-5-minutes)
 * [CodeFresh Everyday Hacks Docker](https://codefresh.io/blog/everyday-hacks-docker/)
 
-### Prune
+#### Prune
 
 The new [Data Management Commands](https://github.com/docker/docker/pull/26108) have landed as of Docker 1.13:
 
@@ -690,11 +1031,11 @@ The new [Data Management Commands](https://github.com/docker/docker/pull/26108) 
 * `docker container prune`
 * `docker image prune`
 
-### df
+#### df
 
 `docker system df` presents a summary of the space currently used by different docker objects.
 
-### Heredoc Docker Container
+#### Heredoc Docker Container
 
 ```sh
 docker build -t htop - << EOF
@@ -703,7 +1044,7 @@ RUN apk --no-cache add htop
 EOF
 ```
 
-### Last IDs
+#### Last IDs
 
 ```sh
 alias dl='docker ps -l -q'
@@ -711,13 +1052,13 @@ docker run ubuntu echo hello world
 docker commit $(dl) helloworld
 ```
 
-### Commit with command (needs Dockerfile)
+#### Commit with command (needs Dockerfile)
 
 ```sh
 docker commit -run='{"Cmd":["postgres", "-too -many -opts"]}' $(dl) postgres
 ```
 
-### Get IP address
+#### Get IP address
 
 ```sh
 docker inspect $(dl) | grep -wm1 IPAddress | cut -d '"' -f 4
@@ -746,67 +1087,67 @@ docker build \
   some-directory/
 ```
 
-### Get port mapping
+#### Get port mapping
 
 ```sh
 docker inspect -f '{{range $p, $conf := .NetworkSettings.Ports}} {{$p}} -> {{(index $conf 0).HostPort}} {{end}}' <containername>
 ```
 
-### Find containers by regular expression
+#### Find containers by regular expression
 
 ```sh
 for i in $(docker ps -a | grep "REGEXP_PATTERN" | cut -f1 -d" "); do echo $i; done
 ```
 
-### Get Environment Settings
+#### Get Environment Settings
 
 ```sh
 docker run --rm ubuntu env
 ```
 
-### Kill running containers
+#### Kill running containers
 
 ```sh
 docker kill $(docker ps -q)
 ```
 
-### Delete all containers (force!! running or stopped containers)
+#### Delete all containers (force!! running or stopped containers)
 
 ```sh
 docker rm -f $(docker ps -qa)
 ```
 
-### Delete old containers
+#### Delete old containers
 
 ```sh
 docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm
 ```
 
-### Delete stopped containers
+#### Delete stopped containers
 
 ```sh
 docker rm -v $(docker ps -a -q -f status=exited)
 ```
 
-### Delete containers after stopping
+#### Delete containers after stopping
 
 ```sh
 docker stop $(docker ps -aq) && docker rm -v $(docker ps -aq)
 ```
 
-### Delete dangling images
+#### Delete dangling images
 
 ```sh
 docker rmi $(docker images -q -f dangling=true)
 ```
 
-### Delete all images
+#### Delete all images
 
 ```sh
 docker rmi $(docker images -q)
 ```
 
-### Delete dangling volumes
+#### Delete dangling volumes
 
 As of Docker 1.9:
 
@@ -816,13 +1157,13 @@ docker volume rm $(docker volume ls -q -f dangling=true)
 
 In 1.9.0, the filter `dangling=false` does _not_ work - it is ignored and will list all volumes.
 
-### Show image dependencies
+#### Show image dependencies
 
 ```sh
 docker images -viz | dot -Tpng -o docker.png
 ```
 
-### Slimming down Docker containers
+#### Slimming down Docker containers
 
 - Cleaning APT in a `RUN` layer - This should be done in the same layer as other `apt` commands. Otherwise, the previous layers still persist the original information and your images will still be fat.
     ```Dockerfile
@@ -842,7 +1183,7 @@ docker images -viz | dot -Tpng -o docker.png
     gzip -dc image.tgz | docker import - flat-image-name
     ```
 
-### Monitor system resource utilization for running containers
+#### Monitor system resource utilization for running containers
 
 To check the CPU, memory, and network I/O usage of a single container, you can use:
 
@@ -886,7 +1227,7 @@ Remove all exited containers:
 docker rm -f $(docker ps -a | grep Exit | awk '{ print $1 }')
 ```
 
-### Volumes can be files
+#### Volumes can be files
 
 Be aware that you can mount files as volumes. For example you can inject a configuration file like this:
 
@@ -901,21 +1242,21 @@ vim httpd.conf
 docker run --rm -it -v "$PWD/httpd.conf:/usr/local/apache2/conf/httpd.conf:ro" -p "80:80" httpd
 ```
 
-## Contributing
+### Contributing
 
 Here's how to contribute to this cheat sheet.
 
-### Open README.md
+#### Open README.md
 
 Click [README.md](https://github.com/wsargent/docker-cheat-sheet/blob/master/README.md) <-- this link
 
 ![Click This](images/click.png)
 
-### Edit Page
+#### Edit Page
 
 ![Edit This](images/edit.png)
 
-### Make Changes and Commit
+#### Make Changes and Commit
 
 ![Change This](images/change.png)
 
