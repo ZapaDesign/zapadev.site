@@ -15,6 +15,9 @@ Links
 
 - [Docker Cheat Sheep - PDF](https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf)
 - [wsargent/docker-cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
+- [Среда разработки PHP на базе Docker](https://habr.com/ru/post/519500/)
+- [Laradock](https://laradock.io/)
+- [PHPDocker.io](https://phpdocker.io/)
 
 zapaDEV Docker Cheat Sheet
 --------------------------
@@ -44,6 +47,7 @@ Docker-compose Samples
 - [Docker-compose настройка для сайта NGINX + MYSQL + PHP-FPM](https://miac.volmed.org.ru/wiki/index.php/Docker-compose_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%B4%D0%BB%D1%8F_%D1%81%D0%B0%D0%B9%D1%82%D0%B0_NGINX_%2B_MYSQL_%2B_PHP-FPM)
 - [Готовим локальную среду Docker для разработки на PHPГотовим локальную среду Docker для разработки на PHP](https://phptoday.ru/post/gotovim-lokalnuyu-sredu-docker-dlya-razrabotki-na-php)
 - [Локальная среда для PHP разработки с помощью Docker](https://tretyakov.net/post/lokalnaya-sreda-dlya-php-razrabotki-s-pomoshhyu-docker/)
+- [Разработка под Docker. Локальное окружение. Часть 2 — Nginx+PHP+MySql+phpMyAdmin](https://habr.com/ru/post/460173/)
 
 __Структура проектв__
 ```
