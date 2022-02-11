@@ -43,7 +43,6 @@ Docker-compose Samples
 ### PHP
 - [Docker-compose настройка для сайта NGINX + MYSQL + PHP-FPM](https://miac.volmed.org.ru/wiki/index.php/Docker-compose_%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%B4%D0%BB%D1%8F_%D1%81%D0%B0%D0%B9%D1%82%D0%B0_NGINX_%2B_MYSQL_%2B_PHP-FPM)
 - [Готовим локальную среду Docker для разработки на PHPГотовим локальную среду Docker для разработки на PHP](https://phptoday.ru/post/gotovim-lokalnuyu-sredu-docker-dlya-razrabotki-na-php)
-- [Настройка локальной среды разработки с помощью Docker Compose](https://justcodeit.ru/nastrojka-lokalnoj-sredy-razrabotki-s-pomoshhyu-docker-compose/)
 - [Локальная среда для PHP разработки с помощью Docker](https://tretyakov.net/post/lokalnaya-sreda-dlya-php-razrabotki-s-pomoshhyu-docker/)
 
 __Структура проектв__
@@ -162,6 +161,9 @@ server {
     }
 }
 ```
+
+### Laravel
+- [Настройка локальной среды разработки с помощью Docker Compose](https://justcodeit.ru/nastrojka-lokalnoj-sredy-razrabotki-s-pomoshhyu-docker-compose/)
 
 ### Wordpress
 - [Мультиконтейнерное приложение и Docker Compose](https://doka.guide/tools/docker-compose/#kratko)
