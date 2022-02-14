@@ -19,6 +19,12 @@ Links
 - [Laradock](https://laradock.io/)
 - [PHPDocker.io](https://phpdocker.io/)
 
+Repositories
+------------
+- [LAMP (Apache, MySql 8.0, PhpMyAdmin and Php)](https://github.com/jcavat/docker-lamp)
+- [LEMP (PHP-FPM, Nginx and MySQL)](https://github.com/dyarleniber/docker-php)
+- [docker-wordpress](https://github.com/serversideup/docker-wordpress)
+
 zapaDEV Docker Cheat Sheet
 --------------------------
 
