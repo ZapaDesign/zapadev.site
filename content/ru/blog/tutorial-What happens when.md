@@ -8,8 +8,9 @@ date: 202-01-26
 What happens when...
 ====================
 
-This repository is an attempt *(попытка)* to answer the age-old *(очень давний)*
-interview question "What happens when you type *(напечатать)* google.com into your browser's address box and press
+
+This repository is an <em title="[c] попытка">attempt</em> to answer the <em title="[п] очень давний">age-old</em>
+interview question "What happens when you <em title="[г] напечатать">type</em> google.com into your browser's address box and press
 enter?"
 
 Except instead of the usual story, we're going to try to answer this question
@@ -24,13 +25,6 @@ This is all licensed under the terms of the `Creative Commons Zero`_ license.
 Read this in `简体中文`_ (simplified Chinese), `日本語`_ (Japanese) and `한국어`_
 (Korean). NOTE: these have not been reviewed by the alex/what-happens-when
 maintainers.
-
-Table of Contents
-====================
-
-.. contents::
-:backlinks: none
-:local:
 
 The "g" key is pressed
 ----------------------

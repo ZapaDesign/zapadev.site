@@ -60,7 +60,7 @@ export default {
     }
 
     section {
-        flex: 2;
+        flex: 3;
         min-width: 250px;
         padding-right: 2vw;
         @media (min-width: 1920px) {
@@ -69,11 +69,11 @@ export default {
     }
 
     section:last-child {
-        flex: 3;
+        flex: 4;
     }
 
     section:first-child {
-        flex: 5;
+        flex: 10;
     }
 
     h2 {
