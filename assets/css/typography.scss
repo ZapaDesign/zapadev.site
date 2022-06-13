@@ -303,6 +303,7 @@ input {
         margin-bottom: 16px;
         border-collapse: collapse;
         border: 1px solid $linesColor;
+
         @media (min-width: 1920px) {
             margin-bottom: vw(16);
             border: vw(1) solid $linesColor;
@@ -341,6 +342,28 @@ input {
 
             &:hover td {
                 text-decoration: none;
+            }
+        }
+
+        tbody {
+            word-break: normal;
+        }
+
+        @media (max-width: 1199px) {
+            border: 0;
+
+            thead {
+                display: none;
+            }
+
+            tr, td {
+                display: block;
+                border: 0;
+                text-align: center;
+            }
+            tr {
+                margin-bottom: 20px;
+                border: 1px solid $linesColor;
             }
         }
     }
