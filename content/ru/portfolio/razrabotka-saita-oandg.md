@@ -15,6 +15,7 @@ link: oandg.com
 tags: 
   - wordpress
   - webdesign
+  - graphdesign
 ---
 
 ![](/portfolio/portfolio_oandg_img_001.jpg)

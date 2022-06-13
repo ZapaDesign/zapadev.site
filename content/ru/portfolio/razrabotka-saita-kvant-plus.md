@@ -16,6 +16,7 @@ createdAt: "2018-10-16"
 tags: 
   - wordpress
   - webdesign
+  - graphdesign
 otherLanguages:
   - locale: en
     path: /en/portfolio/razrabotka-saita-001

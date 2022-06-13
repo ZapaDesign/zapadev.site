@@ -14,6 +14,7 @@ createdAt: "2020-10-16"
 tags:
   - js_vue_nuxt
   - webdesign
+  - graphdesign
 ---
 
 ![](/portfolio/portfolio_item_003_img_001.jpg)

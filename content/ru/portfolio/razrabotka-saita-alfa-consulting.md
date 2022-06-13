@@ -14,6 +14,7 @@ createdAt: "2016-08-16"
 tags: 
   - wordpress
   - webdesign
+  - graphdesign
 ---
 
 ![](/portfolio/portfolio_alfa-consulting_img_001.jpg)

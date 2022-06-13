@@ -23,6 +23,7 @@ link: masterclass.pl.ua
 tags: 
   - wordpress
   - webdesign
+  - graphdesign
 ---
   
 <div class="full">

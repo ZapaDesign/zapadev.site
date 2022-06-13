@@ -13,6 +13,7 @@ createdAt: "2015-10-16"
 tags: 
   - wordpress
   - webdesign
+  - graphdesign
 ---
 ![](/portfolio/portfolio_zapadesign-2016_img_001.jpg)
 
