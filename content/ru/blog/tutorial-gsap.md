@@ -339,17 +339,9 @@ const setX = gsap.quickSetter("#id", "x", "px");
 document.addEventListener("pointermove", e => setX(e.clientX) );
 ```
 
-### []()
-```js
 
-```
+## Samples
 
-### []()
-```js
+- [https://www.reformcollective.com/](https://www.reformcollective.com/)
 
-```
 
-### []()
-```js
-
-```
