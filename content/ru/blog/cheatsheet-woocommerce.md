@@ -4,11 +4,46 @@ description: "| Шпаргалка по WooCommerce [Хуки, ...]"
 createdAt: 2021-09-07
 ---
 
+## Shop / Product archives
+#### Change the add to cart text on product archives by product types
+- [Off DOC](https://web.archive.org/web/20161031114003/https://docs.woocommerce.com/document/change-add-to-cart-button-text/)  
+Add the following to your functions.php file and edit the buttons text.
+```php
+<?php
+add_filter( 'woocommerce_product_add_to_cart_text' , 'custom_woocommerce_product_add_to_cart_text' );
+/**
+ * custom_woocommerce_template_loop_add_to_cart
+*/
+function custom_woocommerce_product_add_to_cart_text() {
+	global $product;
+	
+	$product_type = $product->product_type;
+	
+	switch ( $product_type ) {
+		case 'external':
+			return __( 'Buy product', 'woocommerce' );
+		break;
+		case 'grouped':
+			return __( 'View products', 'woocommerce' );
+		break;
+		case 'simple':
+			return __( 'Add to cart', 'woocommerce' );
+		break;
+		case 'variable':
+			return __( 'Select options', 'woocommerce' );
+		break;
+		default:
+			return __( 'Read more', 'woocommerce' );
+	}
+	
+}
+```
+
 ## Single Product
 
 ### Editing product data tabs / Кастомизация вкладок на странице продукта
+- [Off DOC](https://docs.woocommerce.com/document/editing-product-data-tabs/)
 
-[Off DOC](https://docs.woocommerce.com/document/editing-product-data-tabs/)
 #### Removing Tabs  
 Use the following snippet to remove specific tabs
 ```php
@@ -107,7 +142,6 @@ function woo_new_product_tab_content() {
 	
 }
 ```
-
 #### The Additional Information tab
 
 Please note that the “Additional Information” tab will only show if the product has weight, dimensions or attributes (with “Visible on the product page” checked). If you try to apply a change to that tab and if the product does not have weight, dimensions or attribute, you will get an error message similar to:
