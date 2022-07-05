@@ -1,5 +1,5 @@
 ---
-title: zapaDEV Certificate Generator - WP Plugin
+title: zapaDEV WP Certificate Generator - WP Plugin
 category: web
 description: "| разработка кастомного Wordpress плагина"
 thumbnail: placeholder.webp
@@ -15,5 +15,7 @@ tags:
   - webdesign
   - PHP
 ---
+
+Edit
 
 

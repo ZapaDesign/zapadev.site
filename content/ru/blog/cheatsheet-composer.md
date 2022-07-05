@@ -12,6 +12,13 @@ Links
 - [КАК ПОЛЬЗОВАТЬСЯ COMPOSER](https://losst.ru/kak-polzovatsya-composer)
 
 
+zapaDEV Cheat Sheet
+-----------------
+```bash
+composer self-update     # Updete Composer version
+```
+
+
 Small Cheat Sheet
 -----------------
 - [devhints.io/composer](https://devhints.io/composer)
