@@ -1,6 +1,6 @@
 ---
 title: Шаблоны проектирования
-description: "| Паттерны/шаблоны проектирования (Design Pattern)"
+description: "| Паттерны/шаблоны проектирования (Design Patterns)"
 createdAt: 2022-07-12
 ---
 
