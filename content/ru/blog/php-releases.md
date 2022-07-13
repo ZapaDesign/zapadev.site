@@ -7,6 +7,37 @@ date: 2022-07-13
 PHP 8
 -----------------------------
 
+### 8.1
+PHP 8.1 — большое обновление языка PHP.
+
+Оно содержит множество новых возможностей, включая перечисления, readonly-свойства, callback-функции как объекты первого класса, файберы, пересечение типов, улучшения производительности и многое другое.
+
+#### Перечисления
+[RFC](https://wiki.php.net/rfc/enumerations)
+[Документация](https://www.php.net/manual/ru/language.enumerations.php)
+```php
+// PHP < 8.1
+class Status
+{
+    const DRAFT = 'draft';
+    const PUBLISHED = 'published';
+    const ARCHIVED = 'archived';
+}
+function acceptStatus(string $status) {...}
+```
+```php
+// PHP 8.1
+enum Status
+{
+    case Draft;
+    case Published;
+    case Archived;
+}
+function acceptStatus(Status $status) {...}
+```
+Используйте перечисления вместо набора констант, чтобы валидировать их автоматически во время выполнения кода.
+
+
 ### 8.0
 
 PHP 8.0 — большое обновление языка PHP.
@@ -185,7 +216,7 @@ $country = $session?->user?->getAddress()?->country;
 ```
 При сравнении с числовой строкой PHP 8 использует сравнение чисел. В противном случае число преобразуется в строку и используется сравнение строк.
 
-### Ошибки согласованности типов для встроенных функций
+#### Ошибки согласованности типов для встроенных функций
 [RFC](https://wiki.php.net/rfc/consistent_type_errors)
 ```php
 // PHP 7
