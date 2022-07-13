@@ -7,8 +7,12 @@ date: 2022-07-13
 PHP 8
 -----------------------------
 
+### 8.2
+- [https://wiki.php.net/rfc#php_82](https://wiki.php.net/rfc#php_82)
+
 ### 8.1
-[https://www.php.net/releases/8.1/ru.php](https://www.php.net/releases/8.1/ru.php)
+- [https://www.php.net/releases/8.1/ru.php](https://www.php.net/releases/8.1/ru.php)
+- [https://wiki.php.net/rfc#php_81](https://wiki.php.net/rfc#php_81)
 
 PHP 8.1 — большое обновление языка PHP.
 
@@ -362,7 +366,8 @@ PHP раньше поддерживал распаковку массивов с
 
 
 ### 8.0
-[https://www.php.net/releases/8.0/ru.php](https://www.php.net/releases/8.0/ru.php)
+- [https://www.php.net/releases/8.0/ru.php](https://www.php.net/releases/8.0/ru.php)
+- [https://wiki.php.net/rfc#php_80](https://wiki.php.net/rfc#php_80)
 
 PHP 8.0 — большое обновление языка PHP.
 
@@ -599,4 +604,34 @@ PHP 7
 -----------------------------
 
 ### 7.4
-[https://www.php.net/releases/7_4_0.php](https://www.php.net/releases/7_4_0.php)
+- [https://www.php.net/releases/7_4_0.php](https://www.php.net/releases/7_4_0.php)
+- [https://wiki.php.net/rfc#php_74](https://wiki.php.net/rfc#php_74)
+---
+- [What’s New in PHP 7.4 (Features, Deprecations, Speed)](https://kinsta.com/blog/php-7-4/)
+
+### 7.3
+- [https://wiki.php.net/rfc#php_73](https://wiki.php.net/rfc#php_73)
+
+### 7.2
+- [https://wiki.php.net/rfc#php_72](https://wiki.php.net/rfc#php_72)
+
+### 7.1
+- [https://wiki.php.net/rfc#php_71](https://wiki.php.net/rfc#php_71)
+
+### 7.0
+- [https://wiki.php.net/rfc#php_70](https://wiki.php.net/rfc#php_70)
+
+PHP 5
+-----------------------------
+
+### 5.6
+- [https://wiki.php.net/rfc#php_56](https://wiki.php.net/rfc#php_56)
+
+### 5.5
+- [https://wiki.php.net/rfc#php_55](https://wiki.php.net/rfc#php_55)
+
+### 5.4
+- [https://wiki.php.net/rfc#php_54](https://wiki.php.net/rfc#php_54)
+
+### 5.3
+- [https://wiki.php.net/rfc#php_53](https://wiki.php.net/rfc#php_53)

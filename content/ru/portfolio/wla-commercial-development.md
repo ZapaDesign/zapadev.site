@@ -21,6 +21,7 @@ tags:
 
 | №  | Title | Type                                                        | Description                                                                                                                
 |----|-------|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| 19 | NDA   | Redesign, Adding Functionality                              | **WooCommerce** (Custom Design), Pixel Perfect
 | 18 | NDA   | Adding Functionality, AdobeXD to Custom Woocommerce Pages   | **WooCommerce** (Custom Design, *YITH Woocommerce Gift Cart* integration), **Elementor** (*Elementor Custom Widget*), **GSAP3** (ScrollTrigger) Sticky Horizontal scroll section (with navigation), Pixel Perfect
 | 17 | NDA   | Adding Functionality                                        | **Elementor**, Elementor Redesign (+ adding responsive), Preloader, Elementor PopUp, Pixel Perfect,
 | 16 | NDA   | Adding Functionality                                        | Custom Ajax Filter Form, Custom Ajax Load More, Pixel Perfect
