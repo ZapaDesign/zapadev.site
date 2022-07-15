@@ -509,5 +509,7 @@ $product->get_name();
 ## WooCommerce REST API
 
 - [https://woocommerce.github.io/woocommerce-rest-api-docs/v3.html#introduction](https://woocommerce.github.io/woocommerce-rest-api-docs/v3.html#introduction)
-
-
+- [WooCommerce REST API](https://woocommerce.com/document/woocommerce-rest-api/)
+- [Getting started with the REST API](https://github.com/woocommerce/woocommerce/wiki/Getting-started-with-the-REST-API)
+- [WooCommerce REST API PHP Client Library](https://github.com/kloon/WooCommerce-REST-API-Client-Library)
+- [WooCommerce REST API Client Library](https://gerhardpotgieter.com/2014/02/10/woocommerce-rest-api-client-library/)
