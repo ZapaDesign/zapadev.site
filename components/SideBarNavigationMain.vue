@@ -7,10 +7,27 @@
             <Logo/>
         </nuxt-link>
 
-        <!-- <nuxt-link :to="'/' + $i18n.locale + '/'" exact v-on:click.native="toggle">
+
+        <nuxt-link exact class="mainNavigation__link mainNavigation__link--mobile"
+                   :to="'/' + $i18n.locale + '/'"
+                   v-on:click.native="toggle">
             <div>{{ $t('links.home') }}</div>
-            <div class="mainNavigation_icon"><svg><use xlink:href="../assets/icons.svg#icon_services"></use></svg></div>
-        </nuxt-link> -->
+            <div class="mainNavigation__icon">
+                <svg>
+                    <use xlink:href="../assets/icons.svg#icon_services"></use>
+                </svg>
+            </div>
+        </nuxt-link>
+        <nuxt-link exact class="mainNavigation__link" :to="'/' + $i18n.locale + '/'">
+            <div>{{ $t('links.home') }}</div>
+            <div class="mainNavigation__icon">
+                <svg>
+                    <use xlink:href="../assets/icons.svg#icon_services"></use>
+                </svg>
+            </div>
+        </nuxt-link>
+
+
 
 
         <nuxt-link class="mainNavigation__link mainNavigation__link--mobile"

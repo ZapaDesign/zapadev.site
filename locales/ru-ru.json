@@ -6,7 +6,7 @@
 	"blog-description": "Привет! Меня зовут Сергей и вы попали на мой сайт-портфолио",
 	"also-available-in": "También disponible en",
 	"links": {
-		"home": "Сопроводительное письмо",
+		"home": "Главная",
 		"aboutme": "Давай знакомиться",
 		"skills": "Умею в...",
 		"portfolio": "Портфолио",
@@ -16,8 +16,8 @@
 		"russian": "Версия на русском"
 	},
 	"home": {
-		"title": "Сопроводительное письмо",
-		"description": "| для работадателя"
+		"title": "",
+		"description": ""
 	},
 	"aboutme": {
 		"title": "ДАВАЙ ЗНАКОМИТЬСЯ",

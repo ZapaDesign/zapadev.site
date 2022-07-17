@@ -1,9 +1,15 @@
 <template>
     <div class="page home">
-        <PageHeader :title="$t('home.title')" :description="$t('home.description')"/>
+<!--        <PageHeader :title="$t('home.title')" :description="$t('home.description')"/>-->
         <div class="content">
             <div v-if='cover_letter'>
                 <nuxt-content :document="cover_letter"/>
+                <section class="home__section home__section--hero">
+                    <Logo/>
+                </section>
+                <section class="home__section">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam beatae cumque est facere hic illo libero magnam molestias perspiciatis quaerat, qui quidem quos saepe sapiente sequi voluptas, voluptate voluptates!
+                </section>
             </div>
         </div>
     </div>
@@ -27,6 +33,21 @@ export default {
 
 <style lang="scss" scoped>
 
+.home {
+    &__section {
+        &--hero {
+            min-height: 100vh;
+            margin-top: -20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(../assets/img/logo-bg--home.svg);
+            background-size: contain;
+            position: center;
+        }
+    }
+}
+
 .content {
     justify-content: center;
     align-items: flex-start;
@@ -35,7 +56,6 @@ export default {
         max-width: 800px;
     }
 }
-
 
 .title {
     font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,

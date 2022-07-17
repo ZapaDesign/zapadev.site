@@ -6,7 +6,7 @@
 	"blog-description": "Привіт! Мене звати Сергій. Ви переглядаете мій сайт-портфоліо",
 	"also-available-in": "Aussi disponible en",
 	"links": {
-		"home": "Супровідний лист",
+		"home": "Головна",
 		"aboutme": "Давай знайомитися",
 		"skills": "Умію в...",
 		"portfolio": "Портфоліо",
@@ -16,8 +16,8 @@
 		"russian": "Версия на русском"
 	},
 	"home": {
-		"title": "Супровідний лист",
-		"description": "| для роботодавця"
+		"title": "",
+		"description": ""
 	},
 	"aboutme": {
 		"title": "ДАВАЙ ЗНАЙОМИТИСЯ",
