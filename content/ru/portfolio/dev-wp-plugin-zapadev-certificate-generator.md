@@ -13,10 +13,11 @@ tags:
   - webdesign
   - PHP
 ---
+
 ## В процессе разработки...
 - *название:* zapaDEV WP Certificate Generator
 - *версия:* 0.0.1
-- *линк:* [https://github.com/ZapaDesign/zapaDEV-WP-Certificate-Generator](https://github.com/ZapaDesign/zapaDEV-WP-Certificate-Generator)
+- *линк:* [GitHub - ZapaDesign/zapaDEV-WP-Certificate-Generator](https://github.com/ZapaDesign/zapaDEV-WP-Certificate-Generator)
 
 Задача была разработать плагин для быстрой генерации сертификатов по готовому шаблону. К этому процессу добавился момент обучения. Поэтому функционал разросся.
 
