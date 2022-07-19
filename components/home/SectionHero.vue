@@ -25,7 +25,7 @@ export default {
                     trigger: ".home-hero",
                     start: "center center",
                     end: "bottom top",
-                    markers: true,
+                    markers: false,
                     scrub: true,
                     pin: true,
                 }
@@ -59,16 +59,15 @@ export default {
 <style lang="scss">
 .home-section {
     min-height: 100vh;
-    padding: 5vh 0;
 }
 
 .home-hero {
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: url(/assets/img/logo-bg--home.svg);
     background-size: contain;
     position: center;
-    margin-top: -20px;
 }
 </style>

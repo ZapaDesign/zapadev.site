@@ -2,9 +2,7 @@ ul {
     list-style: none;
 }
 
-a,
-a:active,
-a:visited {
+a {
     color: var(--main-text-color);
     text-underline-offset: 5px;
     text-decoration-thickness: 1px;
@@ -16,9 +14,7 @@ a:visited {
 }
 
 strong {
-    a,
-    a:active,
-    a:visited {
+    a {
         color: var(--accent-color);
     }
 

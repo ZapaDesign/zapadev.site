@@ -2,13 +2,10 @@
     <div class="page home">
 <!--        <PageHeader :title="$t('home.title')" :description="$t('home.description')"/>-->
         <div class="content">
-            <div v-if='cover_letter'>
-                <nuxt-content :document="cover_letter"/>
-
+            <div>
                 <SectionHero />
-
                 <SectionSkills />
-
+                <SectionPersonal />
             </div>
         </div>
     </div>
@@ -17,9 +14,10 @@
 <script>
 
 import Logo from "../components/Logo";
+import SectionPersonal from "../components/home/SectionPersonal";
 export default {
     name: 'home',
-    components: {Logo},
+    components: {SectionPersonal, Logo},
     async asyncData(context) {
         const {$content, app} = context
         const defaultLocale = app.i18n.locale
@@ -34,14 +32,21 @@ export default {
 
 <style lang="scss">
 
+.home {
+    .content {
+        padding-top: 0;
+    }
+}
+
 .content {
-    justify-content: center;
-    align-items: flex-start;
+    //justify-content: center;
+    //align-items: flex-start;
 
     ::v-deep .nuxt-content {
         max-width: 800px;
     }
 }
+
 
 .title {
     font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
