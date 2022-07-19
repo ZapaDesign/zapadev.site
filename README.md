@@ -5,6 +5,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/09521260-b80e-487d-a503-38dc670d046b/deploy-status)](https://app.netlify.com/sites/zapadesign/deploys)
 
+Node.js 14.19.3
+
 ## Build Setup
 
 ```bash
