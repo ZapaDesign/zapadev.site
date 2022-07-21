@@ -21,7 +21,8 @@
     "nuxt": "^2.13.0",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-i18n": "^6.12.2",
-    "prism-themes": "^1.4.1"
+    "prism-themes": "^1.4.1",
+    "three": "^0.142.0"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.1.1",
