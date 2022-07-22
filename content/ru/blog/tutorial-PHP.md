@@ -10,6 +10,12 @@ date: 2021-12-29
 ```
 
 ### Links
+- [Как прокачаться в PHP: 70 ресурсов из опроса русскоязычного сообщества](https://habr.com/ru/company/skyeng/blog/666626/)
+- [PHP The Right Way](https://phptherightway.com/)
+- [PHP Правильный путь](https://getjump.github.io/ru-php-the-right-way/)
+- [github.com/phptodayorg/php-must-watch](https://github.com/phptodayorg/php-must-watch)
+- [Карта развития веб-разработчика](https://github.com/arturpanteleev/webdev-map)
+---
 - [php.net](https://www.php.net/)
 - [PSR-2: Coding Style Guide](https://www.php-fig.org/psr/psr-2/#4-classes-properties-and-methods)
 - [PSR-4: Autoloader](https://www.php-fig.org/psr/psr-4/)
@@ -17,8 +23,6 @@ date: 2021-12-29
 
 Типы данных
 -----------
-
-
 - boolean: true/false (TRUE/FALSE, True/False)
 - integer: целое чило
 - float: число с плавающей точуой
@@ -733,6 +737,8 @@ echo "\$foo==$foo; тип: " . gettype ($foo) . "<br />\n";
 `!=` // не равно  
 `=` // присваевание  
 ```
+
+
 ```php
 `&` // присваевание по ссылке
 
@@ -748,6 +754,8 @@ var_damp($a, $b) // 5, 5
 $a = 7;
 var_damp($a, $b) // 7, 7
 ```
+
+
 ```php
 `==` // сравнение  
 `===`, `!==` //   
@@ -758,6 +766,8 @@ var_damp($a, $b) // 7, 7
 `.` // конкатенация  
 `+=`, `-=`, `*=`, `/=`, `.=` // комбинированые операторы `$a = $a + 2 $a += 2`
 ```
+
+
 ```php
 `<=>` // Космический корабль (spaceship).
 
@@ -815,6 +825,10 @@ echo $a <=> $b; // 1
 ### IF, ELSE, ELSEIF
 
 ```php
+if (exp) 
+   statement
+```
+```php
 if() ...;
 if() {...};
 if() {...} else {...};
@@ -824,6 +838,23 @@ if() {...} elseif {...} elseif {...};
 if() {...} elseif {...} elseif {...} else {...};
 ```
 
+
+
+#### Тернарный оператор PHP / ?: / ??
+
+```php
+$var = condition ? exp1 : exp2;
+```
+```php
+// PHP 5.3
+$var = $value ?: "Другое значение"; // еквивалентно $var = $value ? $value : "Другое значение";
+// Этот вариант полезно использовать, когда нужно изменить значение переменной, только в случае, когда проверяемая переменная не равняется true
+```
+```php
+// PHP 7
+$var = $value ?? "Другое значение"; // // еквивалентно $var = isset($value) ? $value : "Другое значение";
+// Такой вариант полезно использовать, если нужно сначала проверить существует ли переменная. Т. е., если переменная не существует, то использовать какое-то другое значение.
+```
 ### SWITCH CASE
 
 ```php
@@ -844,10 +875,26 @@ svitch($var) {
 }
 ```
 
-### Альткрнативный синтаксис управляющих структур
+### Альтернативный синтаксис управляющих структур
 
 Для:
-- if
+- **if**
+```php
+<?php if ($a == 5): ?>
+A равно 5
+<?php endif; ?>
+```
+```php
+if ($a == 5):
+    echo "a равно 5";
+    echo "...";
+elseif ($a == 6):
+    echo "a равно 6";
+    echo "!!!";
+else:
+    echo "a не равно ни 5 ни 6";
+endif;
+```
 - while
 - for
 - forech
