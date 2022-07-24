@@ -2,7 +2,7 @@
 title: zapaDEV e7n WFMS FrameWork
 category: web
 description: "| учебная разработка PHP фреймворка и интернет магазина на его осонове по курсу WFMS"
-thumbnail: placeholder.webp
+thumbnail: portfolio_e7n_wfms_frw_thumbnail.jpg
 excerpt: Учебная разработка PHP фреймворка и интернет магазина на его осонове по курсу WFMS
 list:
 - PHP/PHP OOP/HTML5/CSS3/JS/jQuery
