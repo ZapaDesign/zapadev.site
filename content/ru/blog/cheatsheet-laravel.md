@@ -20,3 +20,17 @@ createdAt: 2021-09-02
 ## CheatSheet Laravel
 
 [Web Version](https://learninglaravel.net/cheatsheet/)
+
+## List
+```bash
+- Laravel Sail
+- Laravel Sanctum
+
+- starter Kits:
+  - Laravel Breeze
+  - Laravel Jetstream
+
+- Inertia
+- Vite (replaced Laravel Mix)
+```
+
