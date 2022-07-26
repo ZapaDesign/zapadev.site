@@ -4,6 +4,16 @@ description: "| Шпаргалка по Git [консольные команды
 createdAt: 2021-09-02
 ---
 
+## zapaDEV Cheat Sheet
+``` bash
+git status
+git add .
+git commit -m '...'
+git push origin $branch$
+
+git pull origin $branch$
+```
+
 ## Консольные команды
 
 ### Создать новый репозиторий
