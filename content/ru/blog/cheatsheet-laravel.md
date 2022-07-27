@@ -9,6 +9,8 @@ createdAt: 2021-09-02
 - [https://laravel.su/](https://laravel.su/)
 - [Русская документация Laravel 8](https://laravel.su/docs/8.x/installation)
 
+- [Laravel Sail под Windows](https://habr.com/ru/post/658753/)
+
 > **Laravel - Mix**  
 > [Off Doc Rus](https://laravel.su/docs/5.4/mix)
 >
@@ -34,3 +36,18 @@ createdAt: 2021-09-02
 - Vite (replaced Laravel Mix)
 ```
 
+## zapaDEV
+```bash
+
+## base
+
+composer create-project laravel/laravel .
+php artisan migrate
+
+## Laravel Inertia project
+composer create-project laravel/laravel .
+php artisan migrate
+
+composer require inertiajs/inertia-laravel
+php artisan inertia:middleware
+```
