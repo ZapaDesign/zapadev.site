@@ -4,7 +4,7 @@
 
 <script>
 import { gsap } from "gsap"
-import * as Three from 'three'
+// import * as Three from 'three'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger);
 
